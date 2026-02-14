@@ -59,7 +59,7 @@ export function HomeHeaderLayoutMobile({
               playHaptic('Light')
               emitSoftReset()
             }}>
-            <Logo width={80} />
+            <Logo width={120} />
           </PressableScale>
         </View>
 
