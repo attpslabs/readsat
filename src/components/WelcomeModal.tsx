@@ -106,16 +106,7 @@ export function WelcomeModal({control}: WelcomeModalProps) {
                   a.p_0,
                 ]}>
                 <View style={[a.flex_row, a.align_center, a.gap_xs]}>
-                  <Logo width={26} />
-                  <Text
-                    style={[
-                      a.text_2xl,
-                      a.font_semi_bold,
-                      a.user_select_none,
-                      {color: '#423b30', letterSpacing: -0.5},
-                    ]}>
-                    Reads
-                  </Text>
+                  <Logo width={90} />
                 </View>
               </View>
               <View

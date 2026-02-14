@@ -91,7 +91,13 @@ export function createSinglePathSVG2({path}: {path: string}) {
   })
 }
 
-export function createMultiPathSVG({paths}: {paths: string[]}) {
+export function createMultiPathSVG({
+  paths,
+  viewBox,
+}: {
+  paths: string[]
+  viewBox?: string
+}) {
   return React.forwardRef<Svg, Props>(function LogoImpl(props, ref) {
     const {fill, size, style, gradient, ...rest} = useCommonSVGProps(props)
 
@@ -100,7 +106,7 @@ export function createMultiPathSVG({paths}: {paths: string[]}) {
         fill="none"
         {...rest}
         ref={ref}
-        viewBox="0 0 24 24"
+        viewBox={viewBox || '0 0 24 24'}
         width={size}
         height={size}
         style={[style]}>

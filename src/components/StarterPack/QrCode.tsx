@@ -7,7 +7,6 @@ import {type AppBskyGraphDefs, AppBskyGraphStarterpack} from '@atproto/api'
 import {Trans} from '@lingui/macro'
 
 import {Logo} from '#/view/icons/Logo'
-import {Logotype} from '#/view/icons/Logotype'
 import {atoms as a, useTheme} from '#/alf'
 import {LinearGradientBackground} from '#/components/LinearGradientBackground'
 import {Text} from '#/components/Typography'
@@ -86,10 +85,7 @@ export function QrCode({
             <Trans>
               on
               <View style={[a.flex_row, a.align_center, {gap: 6}]}>
-                <Logo width={25} fill="white" />
-                <View style={[{marginTop: 3.5}]}>
-                  <Logotype width={72} fill="white" />
-                </View>
+                <Logo width={80} fill="white" />
               </View>
             </Trans>
           </Text>
