@@ -40,6 +40,7 @@ import {Text} from '#/components/Typography'
 import {VerificationCheckButton} from '#/components/verification/VerificationCheckButton'
 import {IS_IOS} from '#/env'
 import {GermButton} from '../components/GermButton'
+import {GoodreadsButton} from '../components/GoodreadsButton'
 import {EditProfileDialog} from './EditProfileDialog'
 import {ProfileHeaderHandle} from './Handle'
 import {ProfileHeaderMetrics} from './Metrics'
@@ -167,6 +168,8 @@ let ProfileHeaderStandard = ({
               {profile.associated?.germ && (
                 <GermButton germ={profile.associated.germ} profile={profile} />
               )}
+
+              <GoodreadsButton did={profile.did} />
 
               {!isMe &&
                 !isBlockedUser &&

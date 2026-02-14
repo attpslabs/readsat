@@ -9,7 +9,12 @@ import {cleanError} from '#/lib/strings/errors'
 import {isOverMaxGraphemeCount} from '#/lib/strings/helpers'
 import {logger} from '#/logger'
 import {type ImageMeta} from '#/state/gallery'
+import {
+  useGoodreadsMutation,
+  useGoodreadsQuery,
+} from '#/state/queries/goodreads'
 import {useProfileUpdateMutation} from '#/state/queries/profile'
+import {useSession} from '#/state/session'
 import {ErrorMessage} from '#/view/com/util/error/ErrorMessage'
 import * as Toast from '#/view/com/util/Toast'
 import {EditableUserAvatar} from '#/view/com/util/UserAvatar'
@@ -126,12 +131,23 @@ function DialogInner({
   const [newUserAvatar, setNewUserAvatar] = useState<
     ImageMeta | undefined | null
   >()
+  const {currentAccount} = useSession()
+  const {data: existingGoodreadsUrl} = useGoodreadsQuery({
+    did: currentAccount?.did,
+  })
+  const {mutateAsync: goodreadsMutation} = useGoodreadsMutation()
+  const initialGoodreadsUrl = existingGoodreadsUrl ?? ''
+  const [goodreadsUrl, setGoodreadsUrl] = useState<string | undefined>(
+    undefined,
+  )
+  const effectiveGoodreadsUrl = goodreadsUrl ?? initialGoodreadsUrl
 
   const dirty =
     displayName !== initialDisplayName ||
     description !== initialDescription ||
     userAvatar !== profile.avatar ||
-    userBanner !== profile.banner
+    userBanner !== profile.banner ||
+    effectiveGoodreadsUrl !== initialGoodreadsUrl
 
   useEffect(() => {
     setDirty(dirty)
@@ -185,6 +201,12 @@ function DialogInner({
         newUserAvatar,
         newUserBanner,
       })
+      if (effectiveGoodreadsUrl !== initialGoodreadsUrl && currentAccount) {
+        await goodreadsMutation({
+          did: currentAccount.did,
+          url: effectiveGoodreadsUrl.trim() || null,
+        })
+      }
       control.close(() => onUpdate?.())
       Toast.show(_(msg({message: 'Profile updated', context: 'toast'})))
     } catch (e: any) {
@@ -192,6 +214,7 @@ function DialogInner({
     }
   }, [
     updateProfileMutation,
+    goodreadsMutation,
     profile,
     onUpdate,
     control,
@@ -199,6 +222,9 @@ function DialogInner({
     description,
     newUserAvatar,
     newUserBanner,
+    effectiveGoodreadsUrl,
+    initialGoodreadsUrl,
+    currentAccount,
     setImageError,
     _,
   ])
@@ -211,6 +237,10 @@ function DialogInner({
     text: description,
     maxCount: DESCRIPTION_MAX_GRAPHEMES,
   })
+  const goodreadsUrlInvalid =
+    effectiveGoodreadsUrl !== '' &&
+    !effectiveGoodreadsUrl.startsWith('https://goodreads.com/') &&
+    !effectiveGoodreadsUrl.startsWith('https://www.goodreads.com/')
 
   const cancelButton = useCallback(
     () => (
@@ -239,7 +269,8 @@ function DialogInner({
           !dirty ||
           isUpdatingProfile ||
           displayNameTooLong ||
-          descriptionTooLong
+          descriptionTooLong ||
+          goodreadsUrlInvalid
         }
         size="small"
         color="primary"
@@ -260,6 +291,7 @@ function DialogInner({
       isUpdatingProfile,
       displayNameTooLong,
       descriptionTooLong,
+      goodreadsUrlInvalid,
     ],
   )
 
@@ -384,6 +416,39 @@ function DialogInner({
                 value={DESCRIPTION_MAX_GRAPHEMES}
                 other="Description is too long. The maximum number of characters is #."
               />
+            </Text>
+          )}
+        </View>
+
+        <View>
+          <TextField.LabelText>
+            <Trans>Goodreads Profile</Trans>
+          </TextField.LabelText>
+          <TextField.Root isInvalid={goodreadsUrlInvalid}>
+            <Dialog.Input
+              key={initialGoodreadsUrl}
+              defaultValue={initialGoodreadsUrl}
+              onChangeText={setGoodreadsUrl}
+              label={_(msg`Goodreads profile URL`)}
+              placeholder="https://goodreads.com/user/show/..."
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType="url"
+              testID="editProfileGoodreadsInput"
+            />
+          </TextField.Root>
+          {goodreadsUrlInvalid && (
+            <Text
+              style={[
+                a.text_sm,
+                a.mt_xs,
+                a.font_semi_bold,
+                {color: t.palette.negative_400},
+              ]}>
+              <Trans>
+                URL must start with https://goodreads.com/ or
+                https://www.goodreads.com/
+              </Trans>
             </Text>
           )}
         </View>
