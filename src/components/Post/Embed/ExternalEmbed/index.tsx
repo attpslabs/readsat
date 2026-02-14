@@ -11,6 +11,7 @@ import {shareUrl} from '#/lib/sharing'
 import {parseEmbedPlayerFromUrl} from '#/lib/strings/embed-player'
 import {toNiceDomain} from '#/lib/strings/url-helpers'
 import {useExternalEmbedsPrefs} from '#/state/preferences'
+import {useTileForUrl} from '#/state/queries/tile'
 import {atoms as a, useTheme} from '#/alf'
 import {Divider} from '#/components/Divider'
 import {Earth_Stroke2_Corner0_Rounded as Globe} from '#/components/icons/Globe'
@@ -20,6 +21,7 @@ import {IS_NATIVE} from '#/env'
 import {ExternalGif} from './ExternalGif'
 import {ExternalPlayer} from './ExternalPlayer'
 import {GifEmbed} from './Gif'
+import {TileEmbed} from './TileEmbed'
 
 export const ExternalEmbed = ({
   link,
@@ -36,6 +38,7 @@ export const ExternalEmbed = ({
   const t = useTheme()
   const playHaptic = useHaptics()
   const externalEmbedPrefs = useExternalEmbedsPrefs()
+  const {manifest: tileManifest, did: tileDid} = useTileForUrl(link.uri)
   const niceUrl = toNiceDomain(link.uri)
   const imageUri = link.thumb
   const embedPlayerParams = React.useMemo(() => {
@@ -58,6 +61,14 @@ export const ExternalEmbed = ({
       shareUrl(link.uri)
     }
   }, [link.uri, playHaptic])
+
+  if (tileManifest && tileDid) {
+    return (
+      <View style={style}>
+        <TileEmbed manifest={tileManifest} did={tileDid} />
+      </View>
+    )
+  }
 
   if (embedPlayerParams?.source === 'tenor') {
     const parsedAlt = parseAltFromGIFDescription(link.description)
