@@ -19,7 +19,7 @@ import Svg, {Path, type SvgProps} from 'react-native-svg'
 import {Image} from 'expo-image'
 import * as SplashScreen from 'expo-splash-screen'
 
-import {Logotype} from '#/view/icons/Logotype'
+// Logotype removed - reads wordmark is now the main Logo
 // @ts-ignore
 import splashImagePointer from '../assets/splash/splash.png'
 // @ts-ignore
@@ -211,7 +211,7 @@ export function Splash(props: React.PropsWithChildren<Props>) {
                 opacity: 0,
               },
             ]}>
-            <Logotype fill="#fff" width={90} />
+            <Logo fill="#fff" width={90} />
           </Animated.View>
         </View>
       )}

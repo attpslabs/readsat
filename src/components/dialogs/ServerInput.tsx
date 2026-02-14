@@ -144,9 +144,9 @@ function DialogInner({
           <SegmentedControl.Item
             testID="bskyServiceSelectBtn"
             value={BSKY_SERVICE}
-            label={_(msg`Bluesky`)}>
+            label={_(msg`Reads`)}>
             <SegmentedControl.ItemText>
-              {_(msg`Bluesky`)}
+              {_(msg`Reads`)}
             </SegmentedControl.ItemText>
           </SegmentedControl.Item>
           <SegmentedControl.Item
