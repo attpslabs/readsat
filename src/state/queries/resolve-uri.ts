@@ -5,6 +5,7 @@ import {
   type UseQueryResult,
 } from '@tanstack/react-query'
 
+import {expandHandle} from '#/lib/strings/handles'
 import {STALE} from '#/state/queries'
 import {useAgent} from '#/state/session'
 import {useUnstableProfileViewCache} from './profile'
@@ -30,25 +31,28 @@ export function useResolveUriQuery(uri: string | undefined): UriUseQueryResult {
 export function useResolveDidQuery(didOrHandle: string | undefined) {
   const agent = useAgent()
   const {getUnstableProfile} = useUnstableProfileViewCache()
+  const expanded = didOrHandle ? expandHandle(didOrHandle) : undefined
 
   return useQuery<string, Error>({
     staleTime: STALE.HOURS.ONE,
-    queryKey: RQKEY(didOrHandle ?? ''),
+    queryKey: RQKEY(expanded ?? ''),
     queryFn: async () => {
-      if (!didOrHandle) return ''
-      // Just return the did if it's already one
-      if (didOrHandle.startsWith('did:')) return didOrHandle
+      if (!expanded) return ''
+      if (expanded.startsWith('did:')) return expanded
 
-      const res = await agent.resolveHandle({handle: didOrHandle})
+      const res = await agent.resolveHandle({handle: expanded})
       return res.data.did
     },
     initialData: () => {
-      // Return undefined if no did or handle
-      if (!didOrHandle) return
-      const profile = getUnstableProfile(didOrHandle)
+      if (!expanded) return
+      const profile =
+        getUnstableProfile(expanded) ||
+        (didOrHandle !== expanded
+          ? getUnstableProfile(didOrHandle!)
+          : undefined)
       return profile?.did
     },
-    enabled: !!didOrHandle,
+    enabled: !!expanded,
   })
 }
 
@@ -57,5 +61,6 @@ export function precacheResolvedUri(
   handle: string,
   did: string,
 ) {
-  queryClient.setQueryData<string>(RQKEY(handle), did)
+  const expanded = expandHandle(handle)
+  queryClient.setQueryData<string>(RQKEY(expanded), did)
 }

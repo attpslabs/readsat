@@ -3,14 +3,17 @@ import psl from 'psl'
 import TLDs from 'tlds'
 
 import {BSKY_SERVICE} from '#/lib/constants'
-import {isInvalidHandle} from '#/lib/strings/handles'
+import {RESERVED_ROUTES} from '#/lib/routes/reserved'
+import {displayHandle, isInvalidHandle} from '#/lib/strings/handles'
 import {startUriToStarterPackUri} from '#/lib/strings/starter-pack'
 import {logger} from '#/logger'
 
 export const BSKY_APP_HOST = 'https://bsky.app'
+export const READS_AT_HOST = 'https://reads.at'
 const BSKY_TRUSTED_HOSTS = [
   'bsky\\.app',
   'bsky\\.social',
+  'reads\\.at',
   'blueskyweb\\.xyz',
   'blueskyweb\\.zendesk\\.com',
   ...(__DEV__ ? ['localhost:19006', 'localhost:8100'] : []),
@@ -80,7 +83,7 @@ export function toShortUrl(url: string): string {
 
 export function toShareUrl(url: string): string {
   if (!url.startsWith('https')) {
-    const urlp = new URL('https://bsky.app')
+    const urlp = new URL('https://reads.at')
     urlp.pathname = url
     url = urlp.toString()
   }
@@ -92,7 +95,9 @@ export function toBskyAppUrl(url: string): string {
 }
 
 export function isBskyAppUrl(url: string): boolean {
-  return url.startsWith('https://bsky.app/')
+  return (
+    url.startsWith('https://bsky.app/') || url.startsWith('https://reads.at/')
+  )
 }
 
 export function isRelativeUrl(url: string): boolean {
@@ -100,10 +105,7 @@ export function isRelativeUrl(url: string): boolean {
 }
 
 export function isBskyRSSUrl(url: string): boolean {
-  return (
-    (url.startsWith('https://bsky.app/') || isRelativeUrl(url)) &&
-    /\/rss\/?$/.test(url)
-  )
+  return (isBskyAppUrl(url) || isRelativeUrl(url)) && /\/rss\/?$/.test(url)
 }
 
 export function isExternalUrl(url: string): boolean {
@@ -120,7 +122,7 @@ export function isBskyPostUrl(url: string): boolean {
   if (isBskyAppUrl(url)) {
     try {
       const urlp = new URL(url)
-      return /profile\/(?<name>[^/]+)\/post\/(?<rkey>[^/]+)/i.test(
+      return /(?:^\/profile\/)?(?<name>[^/]+)\/post\/(?<rkey>[^/]+)/i.test(
         urlp.pathname,
       )
     } catch {}
@@ -132,7 +134,7 @@ export function isBskyCustomFeedUrl(url: string): boolean {
   if (isBskyAppUrl(url)) {
     try {
       const urlp = new URL(url)
-      return /profile\/(?<name>[^/]+)\/feed\/(?<rkey>[^/]+)/i.test(
+      return /(?:^\/profile\/)?(?<name>[^/]+)\/feed\/(?<rkey>[^/]+)/i.test(
         urlp.pathname,
       )
     } catch {}
@@ -144,7 +146,7 @@ export function isBskyListUrl(url: string): boolean {
   if (isBskyAppUrl(url)) {
     try {
       const urlp = new URL(url)
-      return /profile\/(?<name>[^/]+)\/lists\/(?<rkey>[^/]+)/i.test(
+      return /(?:^\/profile\/)?(?<name>[^/]+)\/lists\/(?<rkey>[^/]+)/i.test(
         urlp.pathname,
       )
     } catch {
@@ -238,6 +240,12 @@ export function postUriToRelativePath(
       options?.handle && !isInvalidHandle(options.handle)
         ? options.handle
         : hostname
+    if (!handleOrDid.startsWith('did:')) {
+      const clean = displayHandle(handleOrDid)
+      if (!RESERVED_ROUTES.has(clean.toLowerCase())) {
+        return `/${clean}/post/${rkey}`
+      }
+    }
     return `/profile/${handleOrDid}/post/${rkey}`
   } catch {
     return undefined
@@ -322,8 +330,11 @@ export function splitApexDomain(hostname: string): [string, string] {
 }
 
 export function createBskyAppAbsoluteUrl(path: string): string {
-  const sanitizedPath = path.replace(BSKY_APP_HOST, '').replace(/^\/+/, '')
-  return `${BSKY_APP_HOST.replace(/\/$/, '')}/${sanitizedPath}`
+  const sanitizedPath = path
+    .replace(READS_AT_HOST, '')
+    .replace(BSKY_APP_HOST, '')
+    .replace(/^\/+/, '')
+  return `${READS_AT_HOST.replace(/\/$/, '')}/${sanitizedPath}`
 }
 
 export function createProxiedUrl(url: string): string {

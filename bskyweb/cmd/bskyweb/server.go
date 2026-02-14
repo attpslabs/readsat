@@ -357,6 +357,24 @@ func serve(cctx *cli.Context) error {
 	e.GET("/sitemap/users.xml.gz", server.handleSitemapUsersIndex)
 	e.GET("/sitemap/users/*", server.handleSitemapUsersSubpage)
 
+	// clean username routes (/:handleOrDID instead of /profile/:handleOrDID)
+	// Echo's radix tree router gives priority to fixed routes over parameterized,
+	// so these won't conflict with /search, /settings, etc.
+	e.GET("/:handleOrDID", server.WebProfile)
+	e.GET("/:handleOrDID/follows", server.WebGeneric)
+	e.GET("/:handleOrDID/followers", server.WebGeneric)
+	e.GET("/:handleOrDID/known-followers", server.WebGeneric)
+	e.GET("/:handleOrDID/search", server.WebGeneric)
+	e.GET("/:handleOrDID/lists/:rkey", server.WebGeneric)
+	e.GET("/:handleOrDID/feed/:rkey", server.WebFeed)
+	e.GET("/:handleOrDID/feed/:rkey/liked-by", server.WebGeneric)
+	e.GET("/:handleOrDID/labeler/liked-by", server.WebGeneric)
+	e.GET("/:ident/rss", server.WebProfileRSS)
+	e.GET("/:handleOrDID/post/:rkey", server.WebPost)
+	e.GET("/:handleOrDID/post/:rkey/liked-by", server.WebGeneric)
+	e.GET("/:handleOrDID/post/:rkey/reposted-by", server.WebGeneric)
+	e.GET("/:handleOrDID/post/:rkey/quotes", server.WebGeneric)
+
 	if linkHost != "" {
 		linkUrl, err := url.Parse(linkHost)
 		if err != nil {
@@ -467,6 +485,19 @@ func (srv *Server) LinkProxyMiddleware(url *url.URL) echo.MiddlewareFunc {
 	)
 }
 
+const selfSurfSuffix = ".self.surf"
+
+// expandShortHandle appends .self.surf to bare usernames (no dots, not a DID).
+func expandShortHandle(handle string) string {
+	if strings.HasPrefix(handle, "did:") {
+		return handle
+	}
+	if !strings.Contains(handle, ".") {
+		return handle + selfSurfSuffix
+	}
+	return handle
+}
+
 // handler for endpoint that have no specific server-side handling
 func (srv *Server) WebGeneric(c echo.Context) error {
 	data := srv.NewTemplateContext()
@@ -500,7 +531,7 @@ func (srv *Server) WebPost(c echo.Context) error {
 	if err != nil {
 		return c.Render(http.StatusOK, "post.html", data)
 	}
-	handleOrDIDParam := c.Param("handleOrDID")
+	handleOrDIDParam := expandShortHandle(c.Param("handleOrDID"))
 	handleOrDID, err := syntax.ParseAtIdentifier(handleOrDIDParam)
 	if err != nil {
 		return c.Render(http.StatusOK, "post.html", data)
@@ -606,7 +637,7 @@ func (srv *Server) WebStarterPack(c echo.Context) error {
 		log.Errorf("bad rkey: %v", err)
 		return c.Render(http.StatusOK, "starterpack.html", data)
 	}
-	handleOrDIDParam := c.Param("handleOrDID")
+	handleOrDIDParam := expandShortHandle(c.Param("handleOrDID"))
 	handleOrDID, err := syntax.ParseAtIdentifier(handleOrDIDParam)
 	if err != nil {
 		log.Errorf("bad identifier: %v", err)
@@ -638,7 +669,7 @@ func (srv *Server) WebProfile(c echo.Context) error {
 	data := srv.NewTemplateContext()
 
 	// sanity check arguments. don't 4xx, just let app handle if not expected format
-	handleOrDIDParam := c.Param("handleOrDID")
+	handleOrDIDParam := expandShortHandle(c.Param("handleOrDID"))
 	handleOrDID, err := syntax.ParseAtIdentifier(handleOrDIDParam)
 	if err != nil {
 		return c.Render(http.StatusOK, "profile.html", data)
@@ -679,7 +710,7 @@ func (srv *Server) WebFeed(c echo.Context) error {
 	if err != nil {
 		return c.Render(http.StatusOK, "feed.html", data)
 	}
-	handleOrDIDParam := c.Param("handleOrDID")
+	handleOrDIDParam := expandShortHandle(c.Param("handleOrDID"))
 	handleOrDID, err := syntax.ParseAtIdentifier(handleOrDIDParam)
 	if err != nil {
 		return c.Render(http.StatusOK, "feed.html", data)

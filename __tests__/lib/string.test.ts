@@ -270,8 +270,8 @@ describe('toShareUrl', () => {
   const inputs = ['https://bsky.app', '/3jk7x4irgv52r', 'item/test/123']
   const outputs = [
     'https://bsky.app',
-    'https://bsky.app/3jk7x4irgv52r',
-    'https://bsky.app/item/test/123',
+    'https://reads.at/3jk7x4irgv52r',
+    'https://reads.at/item/test/123',
   ]
 
   it('appends https, when not present', () => {

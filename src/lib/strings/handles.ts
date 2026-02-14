@@ -6,6 +6,7 @@ const VALIDATE_REGEX =
   /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$/
 
 export const MAX_SERVICE_HANDLE_LENGTH = 18
+export const SELF_SURF_SUFFIX = '.self.surf'
 
 export function makeValidHandle(str: string): string {
   if (str.length > 20) {
@@ -36,6 +37,26 @@ export function sanitizeHandle(
     : forceLeftToRight
       ? forceLTR(lowercasedWithPrefix)
       : lowercasedWithPrefix
+}
+
+export function displayHandle(handle: string): string {
+  if (isInvalidHandle(handle)) return handle
+  if (handle.endsWith(SELF_SURF_SUFFIX)) {
+    return handle.slice(0, -SELF_SURF_SUFFIX.length)
+  }
+  return handle
+}
+
+export function expandHandle(shortHandle: string): string {
+  if (shortHandle.startsWith('did:')) return shortHandle
+  if (!shortHandle.includes('.')) {
+    return `${shortHandle}${SELF_SURF_SUFFIX}`
+  }
+  return shortHandle
+}
+
+export function isSelfSurfHandle(handle: string): boolean {
+  return handle.endsWith(SELF_SURF_SUFFIX)
 }
 
 export interface IsValidHandle {

@@ -45,6 +45,10 @@ func (srv *Server) WebProfileRSS(c echo.Context) error {
 	req := c.Request()
 
 	identParam := c.Param("ident")
+	// Expand short handles: 'alice' -> 'alice.self.surf'
+	if !strings.Contains(identParam, ".") && !strings.HasPrefix(identParam, "did:") {
+		identParam = identParam + ".self.surf"
+	}
 
 	// if not a DID, try parsing as a handle and doing a redirect
 	if !strings.HasPrefix(identParam, "did:") {

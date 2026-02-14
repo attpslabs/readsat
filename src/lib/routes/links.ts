@@ -1,6 +1,7 @@
 import {type AppBskyGraphDefs, AtUri} from '@atproto/api'
 
-import {isInvalidHandle} from '#/lib/strings/handles'
+import {RESERVED_ROUTES} from '#/lib/routes/reserved'
+import {displayHandle, isInvalidHandle} from '#/lib/strings/handles'
 
 export function makeProfileLink(
   info: {
@@ -13,7 +14,17 @@ export function makeProfileLink(
   if (info.handle && !isInvalidHandle(info.handle)) {
     handleSegment = info.handle
   }
-  return [`/profile`, handleSegment, ...segments].join('/')
+
+  const cleanHandle = displayHandle(handleSegment)
+
+  if (
+    handleSegment.startsWith('did:') ||
+    RESERVED_ROUTES.has(cleanHandle.toLowerCase())
+  ) {
+    return [`/profile`, handleSegment, ...segments].join('/')
+  }
+
+  return [`/${cleanHandle}`, ...segments].join('/')
 }
 
 export function makeCustomFeedLink(
@@ -50,9 +61,9 @@ export function makeStarterPackLink(
   rkey?: string,
 ) {
   if (typeof starterPackOrName === 'string') {
-    return `https://bsky.app/start/${starterPackOrName}/${rkey}`
+    return `https://reads.at/start/${starterPackOrName}/${rkey}`
   } else {
     const uriRkey = new AtUri(starterPackOrName.uri).rkey
-    return `https://bsky.app/start/${starterPackOrName.creator.handle}/${uriRkey}`
+    return `https://reads.at/start/${starterPackOrName.creator.handle}/${uriRkey}`
   }
 }
