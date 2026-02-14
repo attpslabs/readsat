@@ -1,9 +1,6 @@
 import React, {useCallback} from 'react'
 import {LayoutAnimation} from 'react-native'
-import {
-  ComAtprotoServerCreateAccount,
-  type ComAtprotoServerDescribeServer,
-} from '@atproto/api'
+import {type ComAtprotoServerDescribeServer} from '@atproto/api'
 import {msg} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 import * as EmailValidator from 'email-validator'
@@ -20,30 +17,19 @@ export type ServiceDescription = ComAtprotoServerDescribeServer.OutputSchema
 
 const DEFAULT_DATE = new Date(Date.now() - 60e3 * 60 * 24 * 365 * 20) // default to 20 years ago
 
-export enum SignupStep {
-  INFO,
-  HANDLE,
-  CAPTCHA,
-}
-
 type SubmitTask = {
-  verificationCode: string | undefined
   mutableProcessed: boolean // OK to mutate assuming it's never read in render.
 }
 
 type ErrorField =
-  | 'invite-code'
   | 'email'
   | 'handle'
   | 'password'
+  | 'confirm-password'
   | 'date-of-birth'
 
 export type SignupState = {
   analytics?: AnalyticsContextType
-
-  hasPrev: boolean
-  activeStep: SignupStep
-  screenTransitionDirection: 'Forward' | 'Backward'
 
   serviceUrl: string
   serviceDescription?: ServiceDescription
@@ -51,8 +37,9 @@ export type SignupState = {
   dateOfBirth: Date
   email: string
   password: string
-  inviteCode: string
+  confirmPassword: string
   handle: string
+  tosAccepted: boolean
 
   error: string
   errorField?: ErrorField
@@ -68,17 +55,14 @@ export type SignupState = {
 
 export type SignupAction =
   | {type: 'setAnalytics'; value: AnalyticsContextType}
-  | {type: 'prev'}
-  | {type: 'next'}
-  | {type: 'finish'}
-  | {type: 'setStep'; value: SignupStep}
   | {type: 'setServiceUrl'; value: string}
   | {type: 'setServiceDescription'; value: ServiceDescription | undefined}
   | {type: 'setEmail'; value: string}
   | {type: 'setPassword'; value: string}
+  | {type: 'setConfirmPassword'; value: string}
   | {type: 'setDateOfBirth'; value: Date}
-  | {type: 'setInviteCode'; value: string}
   | {type: 'setHandle'; value: string}
+  | {type: 'setTosAccepted'; value: boolean}
   | {type: 'setError'; value: string; field?: ErrorField}
   | {type: 'clearError'}
   | {type: 'setIsLoading'; value: boolean}
@@ -88,18 +72,15 @@ export type SignupAction =
 export const initialState: SignupState = {
   analytics: undefined,
 
-  hasPrev: false,
-  activeStep: SignupStep.INFO,
-  screenTransitionDirection: 'Forward',
-
   serviceUrl: DEFAULT_SERVICE,
   serviceDescription: undefined,
   userDomain: '',
   dateOfBirth: DEFAULT_DATE,
   email: '',
   password: '',
+  confirmPassword: '',
   handle: '',
-  inviteCode: '',
+  tosAccepted: false,
 
   error: '',
   errorField: undefined,
@@ -110,10 +91,10 @@ export const initialState: SignupState = {
   // Tracking
   signupStartTime: Date.now(),
   fieldErrors: {
-    'invite-code': 0,
     email: 0,
     handle: 0,
     password: 0,
+    'confirm-password': 0,
     'date-of-birth': 0,
   },
   backgroundCount: 0,
@@ -133,28 +114,6 @@ export function reducer(s: SignupState, a: SignupAction): SignupState {
   switch (a.type) {
     case 'setAnalytics': {
       next.analytics = a.value
-      break
-    }
-    case 'prev': {
-      if (s.activeStep !== SignupStep.INFO) {
-        next.screenTransitionDirection = 'Backward'
-        next.activeStep--
-        next.error = ''
-        next.errorField = undefined
-      }
-      break
-    }
-    case 'next': {
-      if (s.activeStep !== SignupStep.CAPTCHA) {
-        next.screenTransitionDirection = 'Forward'
-        next.activeStep++
-        next.error = ''
-        next.errorField = undefined
-      }
-      break
-    }
-    case 'setStep': {
-      next.activeStep = a.value
       break
     }
     case 'setServiceUrl': {
@@ -178,16 +137,20 @@ export function reducer(s: SignupState, a: SignupAction): SignupState {
       next.password = a.value
       break
     }
+    case 'setConfirmPassword': {
+      next.confirmPassword = a.value
+      break
+    }
     case 'setDateOfBirth': {
       next.dateOfBirth = a.value
       break
     }
-    case 'setInviteCode': {
-      next.inviteCode = a.value
-      break
-    }
     case 'setHandle': {
       next.handle = a.value
+      break
+    }
+    case 'setTosAccepted': {
+      next.tosAccepted = a.value
       break
     }
     case 'setIsLoading': {
@@ -207,7 +170,7 @@ export function reducer(s: SignupState, a: SignupAction): SignupState {
           field: a.field,
           errorCount: next.fieldErrors[a.field],
           errorMessage: a.value,
-          activeStep: next.activeStep,
+          activeStep: 0,
         })
       }
       break
@@ -226,22 +189,14 @@ export function reducer(s: SignupState, a: SignupAction): SignupState {
 
       // Log background/foreground event during signup
       s.analytics?.metric('signup:backgrounded', {
-        activeStep: next.activeStep,
+        activeStep: 0,
         backgroundCount: next.backgroundCount,
       })
       break
     }
   }
 
-  next.hasPrev = next.activeStep !== SignupStep.INFO
-
   s.analytics?.logger.debug('signup', next)
-
-  if (s.activeStep !== next.activeStep) {
-    s.analytics?.logger.debug('signup: step changed', {
-      activeStep: next.activeStep,
-    })
-  }
 
   return next
 }
@@ -262,8 +217,14 @@ export function useSubmitSignup() {
 
   return useCallback(
     async (state: SignupState, dispatch: (action: SignupAction) => void) => {
+      if (!state.handle) {
+        return dispatch({
+          type: 'setError',
+          value: _(msg`Please choose your handle.`),
+          field: 'handle',
+        })
+      }
       if (!state.email) {
-        dispatch({type: 'setStep', value: SignupStep.INFO})
         return dispatch({
           type: 'setError',
           value: _(msg`Please enter your email.`),
@@ -271,7 +232,6 @@ export function useSubmitSignup() {
         })
       }
       if (!EmailValidator.validate(state.email)) {
-        dispatch({type: 'setStep', value: SignupStep.INFO})
         return dispatch({
           type: 'setError',
           value: _(msg`Your email appears to be invalid.`),
@@ -279,33 +239,41 @@ export function useSubmitSignup() {
         })
       }
       if (!state.password) {
-        dispatch({type: 'setStep', value: SignupStep.INFO})
         return dispatch({
           type: 'setError',
           value: _(msg`Please choose your password.`),
           field: 'password',
         })
       }
-      if (!state.handle) {
-        dispatch({type: 'setStep', value: SignupStep.HANDLE})
+      if (state.password.length < 8) {
         return dispatch({
           type: 'setError',
-          value: _(msg`Please choose your handle.`),
-          field: 'handle',
+          value: _(msg`Your password must be at least 8 characters long.`),
+          field: 'password',
         })
       }
-      if (
-        state.serviceDescription?.phoneVerificationRequired &&
-        !state.pendingSubmit?.verificationCode
-      ) {
-        dispatch({type: 'setStep', value: SignupStep.CAPTCHA})
-        ax.logger.error('Signup Flow Error', {
-          errorMessage: 'Verification captcha code was not set.',
-          registrationHandle: state.handle,
-        })
+      if (state.confirmPassword !== state.password) {
         return dispatch({
           type: 'setError',
-          value: _(msg`Please complete the verification captcha.`),
+          value: _(msg`Passwords do not match.`),
+          field: 'confirm-password',
+        })
+      }
+      if (!is13(state.dateOfBirth)) {
+        return dispatch({
+          type: 'setError',
+          value: _(
+            msg`You must be 13 years of age or older to create an account.`,
+          ),
+          field: 'date-of-birth',
+        })
+      }
+      if (!state.tosAccepted) {
+        return dispatch({
+          type: 'setError',
+          value: _(
+            msg`You must agree to the Terms of Service and Privacy Policy.`,
+          ),
         })
       }
       dispatch({type: 'setError', value: ''})
@@ -319,8 +287,6 @@ export function useSubmitSignup() {
             handle: createFullHandle(state.handle, state.userDomain),
             password: state.password,
             birthDate: state.dateOfBirth,
-            inviteCode: state.inviteCode.trim(),
-            verificationCode: state.pendingSubmit?.verificationCode,
           },
           {
             signupDuration: Date.now() - state.signupStartTime,
@@ -334,23 +300,11 @@ export function useSubmitSignup() {
 
         /*
          * Must happen last so that if the user has multiple tabs open and
-         * createAccount fails, one tab is not stuck in onboarding — Eric
+         * createAccount fails, one tab is not stuck in onboarding — Eric
          */
         onboardingDispatch({type: 'start'})
       } catch (e: any) {
-        let errMsg = e.toString()
-        if (e instanceof ComAtprotoServerCreateAccount.InvalidInviteCodeError) {
-          dispatch({
-            type: 'setError',
-            value: _(
-              msg`Invite code not accepted. Check that you input it correctly and try again.`,
-            ),
-            field: 'invite-code',
-          })
-          dispatch({type: 'setStep', value: SignupStep.INFO})
-          return
-        }
-
+        const errMsg = e.toString()
         const error = cleanError(errMsg)
         const isHandleError = error.toLowerCase().includes('handle')
 
@@ -360,7 +314,6 @@ export function useSubmitSignup() {
           value: error,
           field: isHandleError ? 'handle' : undefined,
         })
-        dispatch({type: 'setStep', value: isHandleError ? 2 : 1})
 
         ax.logger.error('Signup Flow Error', {
           errorMessage: error,

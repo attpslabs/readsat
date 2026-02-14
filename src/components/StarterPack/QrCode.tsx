@@ -8,8 +8,7 @@ import {Trans} from '@lingui/macro'
 
 import {Logo} from '#/view/icons/Logo'
 import {Logotype} from '#/view/icons/Logotype'
-import {useTheme} from '#/alf'
-import {atoms as a} from '#/alf'
+import {atoms as a, useTheme} from '#/alf'
 import {LinearGradientBackground} from '#/components/LinearGradientBackground'
 import {Text} from '#/components/Typography'
 import {IS_WEB} from '#/env'
@@ -70,7 +69,7 @@ export function QrCode({
               a.text_center,
               {color: 'white', fontSize: 18},
             ]}>
-            <Trans>Join the conversation</Trans>
+            <Trans>Join the bookclub</Trans>
           </Text>
           <View style={[a.rounded_sm, a.overflow_hidden]}>
             <QrCodeInner link={link} />

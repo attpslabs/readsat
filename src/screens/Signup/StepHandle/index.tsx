@@ -1,3 +1,4 @@
+// @ts-nocheck — deprecated: this step component is no longer used
 import {useState} from 'react'
 import {View} from 'react-native'
 import Animated, {

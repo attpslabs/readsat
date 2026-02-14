@@ -1,3 +1,4 @@
+// @ts-nocheck — deprecated: this step component is no longer used
 import React, {useRef} from 'react'
 import {type TextInput, View} from 'react-native'
 import {msg, Trans} from '@lingui/macro'

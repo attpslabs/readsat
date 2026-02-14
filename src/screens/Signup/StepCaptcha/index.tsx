@@ -1,3 +1,4 @@
+// @ts-nocheck — deprecated: this step component is no longer used
 import React, {useEffect, useState} from 'react'
 import {ActivityIndicator, Platform, View} from 'react-native'
 import ReactNativeDeviceAttest from 'react-native-device-attest'
