@@ -5,8 +5,8 @@ import {
   BSKY_SERVICE,
   BSKY_SERVICE_DID,
   PUBLIC_BSKY_SERVICE,
-  SELF_SURF_SERVICE,
-  SELF_SURF_SERVICE_DID,
+  READS_AT_SERVICE,
+  READS_AT_SERVICE_DID,
 } from '#/lib/constants'
 import {createFullHandle} from '#/lib/strings/handles'
 import {useDebouncedValue} from '#/components/live/utils'
@@ -111,9 +111,9 @@ export async function checkHandleAvailability(
         `Unexpected result of \`checkHandleAvailability\`: ${JSON.stringify(data.result)}`,
       )
     }
-  } else if (serviceDid === SELF_SURF_SERVICE_DID) {
-    // Resolve directly against self.surf since it may not be federated
-    const agent = new Agent(null, {service: SELF_SURF_SERVICE})
+  } else if (serviceDid === READS_AT_SERVICE_DID) {
+    // Resolve directly against reads.at since it may not be federated
+    const agent = new Agent(null, {service: READS_AT_SERVICE})
     try {
       const res = await agent.resolveHandle({handle})
       if (res.data.did) {

@@ -9,10 +9,10 @@ export const LOCAL_DEV_SERVICE =
 export const STAGING_SERVICE = 'https://staging.bsky.dev'
 export const BSKY_SERVICE = 'https://bsky.social'
 export const BSKY_SERVICE_DID = 'did:web:bsky.social'
-export const SELF_SURF_SERVICE = 'https://self.surf'
-export const SELF_SURF_SERVICE_DID = 'did:web:self.surf'
+export const READS_AT_SERVICE = 'https://reads.at'
+export const READS_AT_SERVICE_DID = 'did:web:reads.at'
 export const PUBLIC_BSKY_SERVICE = 'https://public.api.bsky.app'
-export const DEFAULT_SERVICE = SELF_SURF_SERVICE
+export const DEFAULT_SERVICE = READS_AT_SERVICE
 const HELP_DESK_LANG = 'en-us'
 export const HELP_DESK_URL = `https://blueskyweb.zendesk.com/hc/${HELP_DESK_LANG}`
 export const EMBED_SERVICE = 'https://embed.bsky.app'
@@ -134,6 +134,7 @@ export const BACK_HITSLOP = HITSLOP_30
 export const MAX_POST_LINES = 25
 
 export const BSKY_APP_ACCOUNT_DID = 'did:plc:z72i7hdynmk6r22z27h6tvur'
+export const READS_AT_ACCOUNT_DID = 'did:plc:j62tft4dizsntyugubmw43t4'
 
 export const BSKY_FEED_OWNER_DIDS = [
   BSKY_APP_ACCOUNT_DID,

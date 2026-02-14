@@ -6,7 +6,7 @@ const VALIDATE_REGEX =
   /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$/
 
 export const MAX_SERVICE_HANDLE_LENGTH = 18
-export const SELF_SURF_SUFFIX = '.self.surf'
+export const READS_AT_SUFFIX = '.reads.at'
 
 export function makeValidHandle(str: string): string {
   if (str.length > 20) {
@@ -41,8 +41,8 @@ export function sanitizeHandle(
 
 export function displayHandle(handle: string): string {
   if (isInvalidHandle(handle)) return handle
-  if (handle.endsWith(SELF_SURF_SUFFIX)) {
-    return handle.slice(0, -SELF_SURF_SUFFIX.length)
+  if (handle.endsWith(READS_AT_SUFFIX)) {
+    return handle.slice(0, -READS_AT_SUFFIX.length)
   }
   return handle
 }
@@ -50,13 +50,13 @@ export function displayHandle(handle: string): string {
 export function expandHandle(shortHandle: string): string {
   if (shortHandle.startsWith('did:')) return shortHandle
   if (!shortHandle.includes('.')) {
-    return `${shortHandle}${SELF_SURF_SUFFIX}`
+    return `${shortHandle}${READS_AT_SUFFIX}`
   }
   return shortHandle
 }
 
-export function isSelfSurfHandle(handle: string): boolean {
-  return handle.endsWith(SELF_SURF_SUFFIX)
+export function isReadsAtHandle(handle: string): boolean {
+  return handle.endsWith(READS_AT_SUFFIX)
 }
 
 export interface IsValidHandle {

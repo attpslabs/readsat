@@ -14,8 +14,8 @@ import {useQueryClient} from '@tanstack/react-query'
 
 import {uploadBlob} from '#/lib/api'
 import {
-  BSKY_APP_ACCOUNT_DID,
   DISCOVER_SAVED_FEED,
+  READS_AT_ACCOUNT_DID,
   TIMELINE_SAVED_FEED,
   VIDEO_SAVED_FEED,
 } from '#/lib/constants'
@@ -98,7 +98,7 @@ export function StepFinished() {
       await Promise.all([
         bulkWriteFollows(
           agent,
-          [BSKY_APP_ACCOUNT_DID, ...(listItems?.map(i => i.subject.did) ?? [])],
+          [READS_AT_ACCOUNT_DID, ...(listItems?.map(i => i.subject.did) ?? [])],
           starterPack
             ? {uri: starterPack.uri, cid: starterPack.cid}
             : undefined,
