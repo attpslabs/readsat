@@ -1,6 +1,6 @@
 /* eslint-disable bsky-internal/avoid-unwrapped-text */
 import React from 'react'
-import {AppBskyGraphDefs, AppBskyGraphStarterpack} from '@atproto/api'
+import {type AppBskyGraphDefs, AppBskyGraphStarterpack} from '@atproto/api'
 
 import {Butterfly} from './Butterfly.js'
 import {Img} from './Img.js'
@@ -9,9 +9,9 @@ export const STARTERPACK_HEIGHT = 630
 export const STARTERPACK_WIDTH = 1200
 export const TILE_SIZE = STARTERPACK_HEIGHT / 3
 
-const GRADIENT_TOP = '#0A7AFF'
-const GRADIENT_BOTTOM = '#59B9FF'
-const IMAGE_STROKE = '#359CFF'
+const GRADIENT_TOP = '#423b30'
+const GRADIENT_BOTTOM = '#f9ecdb'
+const IMAGE_STROKE = '#8a7e6f'
 
 export function StarterPack(props: {
   starterPack: AppBskyGraphDefs.StarterPackView

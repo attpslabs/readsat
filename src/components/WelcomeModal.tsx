@@ -86,7 +86,7 @@ export function WelcomeModal({control}: WelcomeModalProps) {
               maxHeight: 600,
               width: '90%',
               height: '90%',
-              backgroundColor: '#C0DCF0',
+              backgroundColor: '#d9cfc0',
             },
             a.rounded_lg,
             a.overflow_hidden,
@@ -112,7 +112,7 @@ export function WelcomeModal({control}: WelcomeModalProps) {
                       a.text_2xl,
                       a.font_semi_bold,
                       a.user_select_none,
-                      {color: '#354358', letterSpacing: -0.5},
+                      {color: '#423b30', letterSpacing: -0.5},
                     ]}>
                     Bluesky
                   </Text>
@@ -131,10 +131,10 @@ export function WelcomeModal({control}: WelcomeModalProps) {
                     gtMobile ? a.text_4xl : a.text_3xl,
                     a.font_semi_bold,
                     a.text_center,
-                    {color: '#354358'},
+                    {color: '#423b30'},
                     web({
                       backgroundImage:
-                        'linear-gradient(180deg, #313F54 0%, #667B99 83.65%, rgba(102, 123, 153, 0.50) 100%)',
+                        'linear-gradient(180deg, #423b30 0%, #8a7e6f 83.65%, rgba(138, 126, 111, 0.50) 100%)',
                       backgroundClip: 'text',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
@@ -159,7 +159,7 @@ export function WelcomeModal({control}: WelcomeModalProps) {
                     color="primary"
                     style={{
                       width: 200,
-                      backgroundColor: '#006AFF',
+                      backgroundColor: '#423b30',
                     }}>
                     <ButtonText>
                       <Trans>Create account</Trans>
@@ -175,7 +175,7 @@ export function WelcomeModal({control}: WelcomeModalProps) {
                     hoverStyle={[a.bg_transparent]}>
                     {({hovered}) => (
                       <ButtonText
-                        style={[hovered && [a.underline], {color: '#006AFF'}]}>
+                        style={[hovered && [a.underline], {color: '#423b30'}]}>
                         <Trans>Explore the app</Trans>
                       </ButtonText>
                     )}
@@ -186,7 +186,7 @@ export function WelcomeModal({control}: WelcomeModalProps) {
                     style={[
                       a.text_md,
                       a.text_center,
-                      {color: '#405168', lineHeight: 24},
+                      {color: '#6b6055', lineHeight: 24},
                     ]}>
                     <Trans>Already have an account?</Trans>{' '}
                     <Pressable
@@ -235,7 +235,7 @@ export function WelcomeModal({control}: WelcomeModalProps) {
                 <XIcon
                   size="md"
                   style={{
-                    color: '#354358',
+                    color: '#423b30',
                     opacity: hovered || pressed || focused ? 1 : 0.7,
                   }}
                 />

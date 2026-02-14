@@ -15,6 +15,7 @@ import {
 } from 'react-native'
 
 import {atoms as a, flatten, select, useTheme} from '#/alf'
+import {BRAND_DARK} from '#/alf/themes'
 import {type Props as SVGIconProps} from '#/components/icons/common'
 import {Text} from '#/components/Typography'
 
@@ -592,7 +593,13 @@ export function useSharedButtonTextStyles() {
     if (variant === 'solid') {
       if (color === 'primary') {
         if (!disabled) {
-          baseStyles.push({color: t.palette.white})
+          baseStyles.push({
+            color: select(t.name, {
+              light: t.palette.white,
+              dim: BRAND_DARK,
+              dark: BRAND_DARK,
+            }),
+          })
         } else {
           baseStyles.push({
             color: select(t.name, {

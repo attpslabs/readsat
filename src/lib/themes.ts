@@ -10,7 +10,7 @@ export const defaultTheme: Theme = {
   colorScheme: 'light',
   palette: {
     default: {
-      background: lightPalette.white,
+      background: lightPalette.contrast_0,
       backgroundLight: lightPalette.contrast_25,
       text: lightPalette.black,
       textLight: lightPalette.contrast_700,

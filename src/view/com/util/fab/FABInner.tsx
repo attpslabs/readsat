@@ -1,4 +1,4 @@
-import {type ComponentProps, type JSX} from 'react'
+import {cloneElement, type ComponentProps, type JSX} from 'react'
 import {
   type Pressable,
   type StyleProp,
@@ -12,7 +12,8 @@ import {PressableScale} from '#/lib/custom-animations/PressableScale'
 import {useHaptics} from '#/lib/haptics'
 import {useMinimalShellFabTransform} from '#/lib/hooks/useMinimalShellTransform'
 import {clamp} from '#/lib/numbers'
-import {atoms as a, ios, useBreakpoints, useTheme} from '#/alf'
+import {atoms as a, ios, select, useBreakpoints, useTheme} from '#/alf'
+import {BRAND_DARK} from '#/alf/themes'
 import {IS_WEB} from '#/env'
 
 export interface FABProps extends ComponentProps<typeof Pressable> {
@@ -33,6 +34,17 @@ export function FABInner({testID, icon, onPress, style, ...props}: FABProps) {
   const tabletSpacing = gtMobile
     ? {right: 50, bottom: 50}
     : {right: 24, bottom: clamp(insets.bottom, 15, 60) + 15}
+
+  const iconColor = select(t.name, {
+    light: t.palette.white,
+    dim: BRAND_DARK,
+    dark: BRAND_DARK,
+  })
+
+  const themedIcon = cloneElement(icon, {
+    fill: iconColor,
+    style: [icon.props.style, {color: iconColor}],
+  })
 
   return (
     <Animated.View
@@ -63,7 +75,7 @@ export function FABInner({testID, icon, onPress, style, ...props}: FABProps) {
           style,
         ]}
         {...props}>
-        {icon}
+        {themedIcon}
       </PressableScale>
     </Animated.View>
   )
