@@ -41,7 +41,10 @@ export function sanitizeHandle(
 
 export function displayHandle(handle: string): string {
   if (isInvalidHandle(handle)) return handle
-  if (handle.endsWith(READS_AT_SUFFIX)) {
+  if (
+    handle.length > READS_AT_SUFFIX.length &&
+    handle.endsWith(READS_AT_SUFFIX)
+  ) {
     return handle.slice(0, -READS_AT_SUFFIX.length)
   }
   return handle
