@@ -46,7 +46,6 @@ export function BookCard({book}: {book: HiveBook}) {
           source={{uri: book.cover || book.thumbnail}}
           style={[
             {width: 80, height: 120},
-            a.rounded_sm,
             {backgroundColor: t.palette.contrast_50},
           ]}
           resizeMode="cover"
@@ -56,7 +55,6 @@ export function BookCard({book}: {book: HiveBook}) {
         <View
           style={[
             {width: 80, height: 120},
-            a.rounded_sm,
             {backgroundColor: t.palette.contrast_100},
             a.align_center,
             a.justify_center,
@@ -107,7 +105,6 @@ export function BookCardSkeleton() {
       <View
         style={[
           {width: 80, height: 120},
-          a.rounded_sm,
           {backgroundColor: t.palette.contrast_50},
         ]}
       />

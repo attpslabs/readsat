@@ -2,8 +2,10 @@ import {Image, View} from 'react-native'
 import {Trans} from '@lingui/macro'
 import {useFocusEffect} from '@react-navigation/native'
 
-import {type NativeStackScreenProps} from '#/lib/routes/types'
-import {type CommonNavigatorParams} from '#/lib/routes/types'
+import {
+  type CommonNavigatorParams,
+  type NativeStackScreenProps,
+} from '#/lib/routes/types'
 import {
   formatAuthors,
   formatRating,
@@ -86,7 +88,6 @@ export function BookDetailScreen({route}: Props) {
                     source={{uri: book.cover || book.thumbnail}}
                     style={[
                       {width: 200, height: 300},
-                      a.rounded_md,
                       {backgroundColor: t.palette.contrast_50},
                     ]}
                     resizeMode="cover"
