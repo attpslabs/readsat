@@ -36,8 +36,7 @@ module.exports = async function (env, argv) {
   if (env.mode === 'development') {
     config.plugins.push(new ReactRefreshWebpackPlugin())
   } else {
-    // Support static CDN for chunks
-    config.output.publicPath = 'auto'
+    config.output.publicPath = '/'
   }
 
   if (GENERATE_STATS || OPEN_ANALYZER) {
