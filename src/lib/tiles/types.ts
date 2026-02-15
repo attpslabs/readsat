@@ -2,7 +2,7 @@ export interface TileResourceSrc {
   $type: 'blob'
   ref: {$link: string} // CID
   size: number
-  mimeType: string // Always 'application/octet-stream' per DASL spec
+  mimeType: string
 }
 
 export interface TileResource {
@@ -11,7 +11,6 @@ export interface TileResource {
 }
 
 export interface TileManifest {
-  $type: 'ing.dasl.masl'
   name: string
   resources: Record<string, TileResource> // "/" entry required
   description?: string
@@ -19,4 +18,11 @@ export interface TileManifest {
   background_color?: string
   theme_color?: string
   icons?: Array<{src: string; sizes?: string}>
+}
+
+// The AT Protocol record wraps the manifest in a `tile` field
+export interface TileMaslRecord {
+  $type: 'ing.dasl.masl'
+  tile: TileManifest
+  createdAt: string
 }
