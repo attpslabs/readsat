@@ -11,6 +11,7 @@ import {
 } from '#/state/queries/bookhive'
 import {atoms as a, useTheme} from '#/alf'
 import {Text} from '#/components/Typography'
+import {BookReaders} from './BookReaders'
 
 export function BookCard({book}: {book: HiveBook}) {
   const t = useTheme()
@@ -82,6 +83,9 @@ export function BookCard({book}: {book: HiveBook}) {
               ({ratingsCount})
             </Text>
           </View>
+        )}
+        {book.activity && book.activity.length > 0 && (
+          <BookReaders activity={book.activity} limit={5} />
         )}
       </View>
     </Pressable>

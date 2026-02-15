@@ -14,6 +14,12 @@ const BOOKHIVE_BASE =
   'http://localhost:8787/xrpc'
 const PAGE_LIMIT = 25
 
+export interface BookActivity {
+  type: 'started' | 'finished' | 'review'
+  userDid: string
+  userHandle: string
+}
+
 export interface HiveBook {
   id: string
   title: string
@@ -35,6 +41,7 @@ export interface HiveBook {
     isbn13?: string
     goodreadsId?: string
   }
+  activity?: BookActivity[]
   createdAt: string
   updatedAt: string
 }
@@ -43,7 +50,7 @@ export interface BookDetailResponse {
   book: HiveBook
   reviews: unknown[]
   comments: unknown[]
-  activity: unknown[]
+  activity: BookActivity[]
 }
 
 export interface BookMeta {
@@ -83,6 +90,32 @@ export function formatAuthors(authors: string): string {
 export function formatRating(rating: number | undefined): string {
   if (rating == null) return '0.0'
   return (rating / 1000).toFixed(1)
+}
+
+export function groupBookActivity(activity: BookActivity[]): {
+  reading: BookActivity[]
+  read: BookActivity[]
+} {
+  const seenReading = new Set<string>()
+  const seenRead = new Set<string>()
+  const reading: BookActivity[] = []
+  const read: BookActivity[] = []
+
+  for (const a of activity) {
+    if (a.type === 'started') {
+      if (!seenReading.has(a.userDid)) {
+        seenReading.add(a.userDid)
+        reading.push(a)
+      }
+    } else {
+      if (!seenRead.has(a.userDid)) {
+        seenRead.add(a.userDid)
+        read.push(a)
+      }
+    }
+  }
+
+  return {reading, read}
 }
 
 // Query keys

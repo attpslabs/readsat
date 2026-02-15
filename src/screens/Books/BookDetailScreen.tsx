@@ -16,6 +16,7 @@ import {atoms as a, useTheme} from '#/alf'
 import * as Layout from '#/components/Layout'
 import {Loader} from '#/components/Loader'
 import {H1, Text} from '#/components/Typography'
+import {BookReaders} from './BookReaders'
 
 type Props = NativeStackScreenProps<CommonNavigatorParams, 'BookDetail'>
 
@@ -45,6 +46,7 @@ export function BookDetailScreen({route}: Props) {
   const {data, isFetching, error, refetch} = useBookDetailQuery(hiveId)
 
   const book = data?.book
+  const activity = data?.activity ?? []
   const meta = parseBookMeta(book?.meta)
   const series = parseBookSeries(book?.series)
   const authors = book ? formatAuthors(book.authors) : ''
@@ -110,6 +112,16 @@ export function BookDetailScreen({route}: Props) {
                   <Text style={[a.text_sm, t.atoms.text_contrast_medium]}>
                     ({ratingsCount} ratings)
                   </Text>
+                </View>
+              )}
+
+              {/* Community */}
+              {activity.length > 0 && (
+                <View style={[a.gap_xs]}>
+                  <Text style={[a.text_md, a.font_bold, t.atoms.text]}>
+                    <Trans>Community</Trans>
+                  </Text>
+                  <BookReaders activity={activity} limit={0} />
                 </View>
               )}
 

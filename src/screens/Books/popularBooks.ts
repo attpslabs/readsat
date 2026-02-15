@@ -15,6 +15,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 9961521,
     createdAt: '2024-12-08T21:14:17.234Z',
     updatedAt: '2026-02-15T13:05:56.172Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:oiespunf6wfpglx2z46jetgp',
+        userHandle: 'dave.self.surf',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:kf7kejzn4dpqczmp6jd3uci6',
+        userHandle: 'jaystevens.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vspq46f5zmrlesaszlyfliy2',
+        userHandle: 'daffl.xyz',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:zykyklbppjqfsr53eluqxvm6',
+        userHandle: 'zschamis.selfhosted.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:e2fun4xcfwtcrqfdwhfnghxk',
+        userHandle: 'jaygles.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:zj3zvszbqsai5ma4utikorc7',
+        userHandle: 'gabrieleang.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_wtxLgdZ55lDgJM1Q6Qpe',
@@ -28,6 +80,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 5745964,
     createdAt: '2024-12-08T21:04:05.092Z',
     updatedAt: '2026-02-15T13:17:53.787Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:qlk5ujdbqbc37erbifiswopz',
+        userHandle: 'wubler.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:me4kozmcrc74z2wgkvqvkbfd',
+        userHandle: 'joeinn.es',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:heie2z2gbxdhqpa6evcuzx6g',
+        userHandle: 'ssredna.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_JkSZcZVeWpdZcafT9XfI',
@@ -41,6 +145,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 4517810,
     createdAt: '2024-12-08T21:14:16.506Z',
     updatedAt: '2026-02-15T13:17:45.567Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:k2ww4avnauzicvtsyjp7jyni',
+        userHandle: 'dennis.plumbob.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+    ],
   },
   {
     id: 'bk_lHcUGezO6A6KvWvnL4z5',
@@ -54,6 +210,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 4213626,
     createdAt: '2024-12-08T21:04:05.093Z',
     updatedAt: '2026-02-15T13:09:16.374Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_V1Ftv009HyONc4rs5IZb',
@@ -67,6 +275,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 4210014,
     createdAt: '2024-12-08T21:04:05.092Z',
     updatedAt: '2026-02-15T13:09:14.732Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:itdn7jfijsrb2zf6ufjfwjdm',
+        userHandle: 'suzzlo.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:kf7kejzn4dpqczmp6jd3uci6',
+        userHandle: 'jaystevens.me',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dzxtgutawxuwahdxfboc5njx',
+        userHandle: 'edwardbetts.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:me4kozmcrc74z2wgkvqvkbfd',
+        userHandle: 'joeinn.es',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:xcrptevdrnhgwftbtv5m7f3b',
+        userHandle: 'zbrox.com',
+      },
+    ],
   },
   {
     id: 'bk_iGGe9QYaMQ1sbLAizeYL',
@@ -80,6 +340,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 4179268,
     createdAt: '2024-12-08T21:04:05.093Z',
     updatedAt: '2026-02-15T13:09:16.629Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:oiespunf6wfpglx2z46jetgp',
+        userHandle: 'dave.self.surf',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:kf7kejzn4dpqczmp6jd3uci6',
+        userHandle: 'jaystevens.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:zykyklbppjqfsr53eluqxvm6',
+        userHandle: 'zschamis.selfhosted.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6ayddqghxhciedbaofoxkcbs',
+        userHandle: 'tynanpurdy.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_1HothF5eO44IqAraxAge',
@@ -93,6 +405,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 4125470,
     createdAt: '2024-12-08T21:14:16.506Z',
     updatedAt: '2026-02-15T13:09:17.195Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:a6mkzcr4nkm4qa4rlvexybwc',
+        userHandle: 'chris335.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+    ],
   },
   {
     id: 'bk_Yn2PzhEXcPSdGncKj3s1',
@@ -106,6 +470,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 3672127,
     createdAt: '2024-12-08T21:23:54.917Z',
     updatedAt: '2026-02-15T13:17:48.318Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_sh9cYWFdqXmAhPEBRToA',
@@ -119,6 +535,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 3462012,
     createdAt: '2025-05-20T19:58:17.226Z',
     updatedAt: '2026-02-15T13:09:14.552Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:odgxwakrg5r2zjetnrkxuh5c',
+        userHandle: 'ronbronson.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:agpb2oe3z55javntqnrnpnan',
+        userHandle: 'adamlenger.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dvh3s2edmdijbcv3k45ze22l',
+        userHandle: 'globberzorp.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ejrtpslygfssa2bdqug5uhx3',
+        userHandle: 'lizzy.dev',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_raeuUXM0PUke5zm9dIdN',
@@ -132,6 +600,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 3458847,
     createdAt: '2024-12-08T21:27:10.535Z',
     updatedAt: '2026-02-15T13:09:14.248Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:fip3nyk6tjo3senpq4ei2cxw',
+        userHandle: 'vicwalker.dev.br',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:me4kozmcrc74z2wgkvqvkbfd',
+        userHandle: 'joeinn.es',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:xuls7mblj3unlenr5bmjrbyb',
+        userHandle: 'volg.ar',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:56v3vdnrvq7p3oultao7ifgt',
+        userHandle: 'freiheit.wtf',
+      },
+    ],
   },
   {
     id: 'bk_DfrQ3iqbnbSnyzKqmOVy',
@@ -145,6 +665,43 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 3303380,
     createdAt: '2024-12-10T22:18:56.076Z',
     updatedAt: '2026-02-15T13:09:14.691Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:me4kozmcrc74z2wgkvqvkbfd',
+        userHandle: 'joeinn.es',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:gmwp5gj2p26acl6stthknbpb',
+        userHandle: 'mrstian.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_xFg5dZLv9Cwo0lBSiVQ4',
@@ -158,6 +715,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 3214451,
     createdAt: '2024-12-10T17:46:54.954Z',
     updatedAt: '2026-02-15T13:08:09.213Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:fthx2gjakdj4ynxxu5vysjty',
+        userHandle: 'dominik.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ejrtpslygfssa2bdqug5uhx3',
+        userHandle: 'lizzy.dev',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_hVo2LvuMrcTkyf5zh5MS',
@@ -171,6 +780,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 3166714,
     createdAt: '2024-12-10T17:46:54.954Z',
     updatedAt: '2026-02-15T13:08:09.218Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:r5ydilwsajro6eaqcszsgch7',
+        userHandle: 'algaebrother.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:fip3nyk6tjo3senpq4ei2cxw',
+        userHandle: 'vicwalker.dev.br',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:kf7kejzn4dpqczmp6jd3uci6',
+        userHandle: 'jaystevens.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vyonarl4fhghaalo7icvadt2',
+        userHandle: 'austintakes.photos',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:2xh5cmxtoob7ik2igusbngdt',
+        userHandle: 'akademy.uk',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+    ],
   },
   {
     id: 'bk_hKQOCrxb1IFht2SN15q5',
@@ -184,6 +845,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 2892490,
     createdAt: '2024-12-08T21:08:02.842Z',
     updatedAt: '2026-02-15T13:08:06.321Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:ephkzpinhaqcabtkugtbzrwu',
+        userHandle: 'byjp.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:xuls7mblj3unlenr5bmjrbyb',
+        userHandle: 'volg.ar',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_VXVjRjAS8ULIcWl0QLXN',
@@ -197,6 +910,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 2744664,
     createdAt: '2024-12-13T04:57:21.354Z',
     updatedAt: '2026-02-15T13:09:16.614Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:kf7kejzn4dpqczmp6jd3uci6',
+        userHandle: 'jaystevens.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:agpb2oe3z55javntqnrnpnan',
+        userHandle: 'adamlenger.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:zsmqrbrkcmenyll5tf4uzedt',
+        userHandle: 'samfromohio.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+    ],
   },
   {
     id: 'bk_HN27zGXGovv7QfMd60fj',
@@ -210,6 +975,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 2486035,
     createdAt: '2024-12-11T06:55:16.674Z',
     updatedAt: '2026-02-15T13:08:07.872Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:jhmdbcph6xja3hamtoi4kdy4',
+        userHandle: 'eirik.re',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dvh3s2edmdijbcv3k45ze22l',
+        userHandle: 'globberzorp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ejrtpslygfssa2bdqug5uhx3',
+        userHandle: 'lizzy.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:tft77e5qkblxtneeib4lp3zk',
+        userHandle: 'taurean.bryant.land',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:frr2jwhxdqxbtupqzvusstwt',
+        userHandle: 'afontaine.dev',
+      },
+    ],
   },
   {
     id: 'bk_fKPgvvpKfygrwJuBCFlo',
@@ -236,6 +1053,38 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 2175890,
     createdAt: '2024-12-10T22:22:36.228Z',
     updatedAt: '2026-02-15T13:17:51.795Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:fip3nyk6tjo3senpq4ei2cxw',
+        userHandle: 'vicwalker.dev.br',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:qlk5ujdbqbc37erbifiswopz',
+        userHandle: 'wubler.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_0jlLzKCp8lBxnAc3NLvV',
@@ -249,6 +1098,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 2087191,
     createdAt: '2024-12-11T06:56:50.634Z',
     updatedAt: '2026-02-15T13:08:07.684Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:o2mgdopxidsh3jeunqur7epc',
+        userHandle: 'mariusstuparu.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:uyjvm2kqevlb4pa6sf63476h',
+        userHandle: 'nickthesick.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:itdn7jfijsrb2zf6ufjfwjdm',
+        userHandle: 'suzzlo.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ephkzpinhaqcabtkugtbzrwu',
+        userHandle: 'byjp.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vcof6g32ijsa2lgqotgtddtb',
+        userHandle: 'ernie.bello.nyc',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6c7juxljgw4ms43kmx4wtvgc',
+        userHandle: 'aaronjz.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:kf7kejzn4dpqczmp6jd3uci6',
+        userHandle: 'jaystevens.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:u6nttbpfrjvdgyzjj6c7fih7',
+        userHandle: 'benjamin.bckr.me',
+      },
+    ],
   },
   {
     id: 'bk_yW3RgUVaS1LgRgJeAjjK',
@@ -262,6 +1163,33 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1917405,
     createdAt: '2024-12-28T20:52:51.732Z',
     updatedAt: '2026-02-15T13:08:08.512Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vrpyl2obctysjd3mz3zhcnce',
+        userHandle: 'vanecnx.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_jfOBnuyQGJyrMld8M5ZA',
@@ -275,6 +1203,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1860749,
     createdAt: '2025-01-31T22:59:04.460Z',
     updatedAt: '2026-02-15T13:09:17.677Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:ephkzpinhaqcabtkugtbzrwu',
+        userHandle: 'byjp.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:2xh5cmxtoob7ik2igusbngdt',
+        userHandle: 'akademy.uk',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:me4kozmcrc74z2wgkvqvkbfd',
+        userHandle: 'joeinn.es',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:so5zgo2p75slt2dptlqidv5d',
+        userHandle: 'roychristopher.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_Z6aDNDCRqRyeKXyDvTD3',
@@ -288,6 +1268,23 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1847414,
     createdAt: '2025-01-22T02:12:29.443Z',
     updatedAt: '2026-02-15T13:08:06.800Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:fip3nyk6tjo3senpq4ei2cxw',
+        userHandle: 'vicwalker.dev.br',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_BJSBLiUS49njhcVl2AK3',
@@ -301,6 +1298,13 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1790560,
     createdAt: '2024-12-20T03:39:26.108Z',
     updatedAt: '2026-02-15T13:09:15.658Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:fthx2gjakdj4ynxxu5vysjty',
+        userHandle: 'dominik.social',
+      },
+    ],
   },
   {
     id: 'bk_ZxQR3wvz4W6UiaMojfxA',
@@ -314,6 +1318,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1758058,
     createdAt: '2024-12-28T20:53:14.454Z',
     updatedAt: '2026-02-15T13:08:08.173Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:ephkzpinhaqcabtkugtbzrwu',
+        userHandle: 'byjp.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:odgxwakrg5r2zjetnrkxuh5c',
+        userHandle: 'ronbronson.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:fip3nyk6tjo3senpq4ei2cxw',
+        userHandle: 'vicwalker.dev.br',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ejrtpslygfssa2bdqug5uhx3',
+        userHandle: 'lizzy.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:nd4wkqfcfdca5kx27lxozvuc',
+        userHandle: 'max.szengel.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:gmwp5gj2p26acl6stthknbpb',
+        userHandle: 'mrstian.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_QNKZRAPH1w0hQK4oKTiW',
@@ -327,6 +1383,23 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1727453,
     createdAt: '2024-12-10T12:34:48.229Z',
     updatedAt: '2026-02-15T13:17:45.445Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:rfbfzdn7ducwdwzey7zapthp',
+        userHandle: 'niccoates.uk',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:e2fun4xcfwtcrqfdwhfnghxk',
+        userHandle: 'jaygles.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dbennnzmzjlsblyclnpunhpz',
+        userHandle: 'airun95.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_Kx6fO0k6R855d5LTwOVe',
@@ -340,6 +1413,33 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1716078,
     createdAt: '2025-12-23T22:46:38.955Z',
     updatedAt: '2026-02-15T13:09:18.088Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:rapcmhxajpxqgvx5mmza6ubh',
+        userHandle: 'modamo.xyz',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dbennnzmzjlsblyclnpunhpz',
+        userHandle: 'airun95.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_4PGh5qhWHZ3FJ5NUnrvS',
@@ -366,6 +1466,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1621623,
     createdAt: '2024-12-09T04:18:02.523Z',
     updatedAt: '2026-02-15T13:09:13.134Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:fip3nyk6tjo3senpq4ei2cxw',
+        userHandle: 'vicwalker.dev.br',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:5wm25vgenhgut3iqfjf4ozj5',
+        userHandle: 'eugenevinitsky.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:zsmqrbrkcmenyll5tf4uzedt',
+        userHandle: 'samfromohio.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+    ],
   },
   {
     id: 'bk_uRjhwQaNUXVoTlhDQc9F',
@@ -379,6 +1531,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1601967,
     createdAt: '2024-12-10T22:23:26.448Z',
     updatedAt: '2026-02-15T13:09:14.075Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:ephkzpinhaqcabtkugtbzrwu',
+        userHandle: 'byjp.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:odgxwakrg5r2zjetnrkxuh5c',
+        userHandle: 'ronbronson.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:odgxwakrg5r2zjetnrkxuh5c',
+        userHandle: 'ronbronson.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:yaknny2cxnqwtb63apit6j2q',
+        userHandle: 'joelh.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:me4kozmcrc74z2wgkvqvkbfd',
+        userHandle: 'joeinn.es',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:yjrp4qswaq7chkpl7tqbekup',
+        userHandle: 'drsarah.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_pEqEBHWIMZFXGgnT0KRr',
@@ -392,6 +1596,23 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1582050,
     createdAt: '2025-05-16T16:44:42.606Z',
     updatedAt: '2026-02-15T13:09:18.482Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:qlk5ujdbqbc37erbifiswopz',
+        userHandle: 'wubler.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:zkzduvj3qrzjge2prth4migt',
+        userHandle: 'the-senators-aide.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_P1hJhVWrwsKboN6w19e8',
@@ -405,6 +1626,18 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1571209,
     createdAt: '2024-12-13T02:58:45.919Z',
     updatedAt: '2026-02-15T13:08:06.021Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:dbennnzmzjlsblyclnpunhpz',
+        userHandle: 'airun95.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_Jjbv0vundBcSkCH3rr8n',
@@ -418,10 +1651,42 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1522660,
     createdAt: '2025-06-18T07:15:31.028Z',
     updatedAt: '2026-02-15T13:08:08.379Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:itdn7jfijsrb2zf6ufjfwjdm',
+        userHandle: 'suzzlo.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ejrtpslygfssa2bdqug5uhx3',
+        userHandle: 'lizzy.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:zkzduvj3qrzjge2prth4migt',
+        userHandle: 'the-senators-aide.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_PhJLe9apMyFerdhWhuQD',
-    title: 'Ender’s Game',
+    title: "Ender's Game",
     authors: 'Orson Scott Card',
     thumbnail:
       'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1408303130i/375802._SY75_.jpg',
@@ -431,6 +1696,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1477471,
     createdAt: '2024-12-09T04:16:57.773Z',
     updatedAt: '2026-02-15T13:05:56.265Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:o2mgdopxidsh3jeunqur7epc',
+        userHandle: 'mariusstuparu.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:itdn7jfijsrb2zf6ufjfwjdm',
+        userHandle: 'suzzlo.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ephkzpinhaqcabtkugtbzrwu',
+        userHandle: 'byjp.me',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:kf7kejzn4dpqczmp6jd3uci6',
+        userHandle: 'jaystevens.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:agpb2oe3z55javntqnrnpnan',
+        userHandle: 'adamlenger.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vspq46f5zmrlesaszlyfliy2',
+        userHandle: 'daffl.xyz',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:zykyklbppjqfsr53eluqxvm6',
+        userHandle: 'zschamis.selfhosted.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vyonarl4fhghaalo7icvadt2',
+        userHandle: 'austintakes.photos',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+    ],
   },
   {
     id: 'bk_W6arwynEFCqakyXO5KFw',
@@ -444,6 +1761,23 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1423372,
     createdAt: '2024-12-11T20:03:22.579Z',
     updatedAt: '2026-02-15T13:17:49.376Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:qlk5ujdbqbc37erbifiswopz',
+        userHandle: 'wubler.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_hCZ3kFmJDPazT9Bhr4lV',
@@ -458,6 +1792,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1419399,
     createdAt: '2024-12-08T21:29:01.476Z',
     updatedAt: '2026-02-15T13:08:08.522Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:yiuzlirtniszx66rkbbrnqef',
+        userHandle: 'shishkin.org',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:uyjvm2kqevlb4pa6sf63476h',
+        userHandle: 'nickthesick.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:odgxwakrg5r2zjetnrkxuh5c',
+        userHandle: 'ronbronson.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ejrtpslygfssa2bdqug5uhx3',
+        userHandle: 'lizzy.dev',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vmqt4a4pf5jxvtalzjz2zsqk',
+        userHandle: 'samsour.de',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:aldvhiaxmrkbewll3abu3roz',
+        userHandle: 'anton.galiglobal.com',
+      },
+    ],
   },
   {
     id: 'bk_sehW6NkcQ6jvN9BiXUQQ',
@@ -471,6 +1857,48 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1369457,
     createdAt: '2024-12-10T22:23:26.242Z',
     updatedAt: '2026-02-15T13:09:14.028Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:itdn7jfijsrb2zf6ufjfwjdm',
+        userHandle: 'suzzlo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ejrtpslygfssa2bdqug5uhx3',
+        userHandle: 'lizzy.dev',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:gjqw6pjl2wvndjlmatxpenkz',
+        userHandle: 'funferall.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:t3vtlgklajvabdyznmjairvf',
+        userHandle: 'rickbronkhorst.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:afviyzewpvep5g4klh5wq2c7',
+        userHandle: 'verne.bsky.liberalrepublic.org',
+      },
+    ],
   },
   {
     id: 'bk_RUbnuIIL9fbHJtQf6Mrg',
@@ -484,6 +1912,13 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1355673,
     createdAt: '2024-12-12T13:10:10.038Z',
     updatedAt: '2026-02-15T13:17:45.449Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_GoDyrKTschfyDbgbRsel',
@@ -497,6 +1932,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1320621,
     createdAt: '2024-12-08T21:29:00.396Z',
     updatedAt: '2026-02-15T13:09:15.426Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:oypkibg4fkpfzlkjlb3rtqik',
+        userHandle: 'ignat.co',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:h3hhckvxaa7hldrjqpcbfhru',
+        userHandle: 'loves.brussels',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ubdeopbbkbgedccgbum7dhsh',
+        userHandle: 'callmephilip.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:me4kozmcrc74z2wgkvqvkbfd',
+        userHandle: 'joeinn.es',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:gmwp5gj2p26acl6stthknbpb',
+        userHandle: 'mrstian.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_PBsOZvDOQ4GP9PlajMCc',
@@ -510,6 +1997,48 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1318555,
     createdAt: '2025-01-22T02:03:19.315Z',
     updatedAt: '2026-02-15T13:09:16.537Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:dbennnzmzjlsblyclnpunhpz',
+        userHandle: 'airun95.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:wfml3smwyvohotnywklys5uq',
+        userHandle: 'alper.nl',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:6q6mbbuqc5aufxkxfve5ftnz',
+        userHandle: 'guiliam.bsky.cat',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_boJ589mXapYA8EwgTloT',
@@ -523,6 +2052,38 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1301642,
     createdAt: '2024-12-28T17:19:41.834Z',
     updatedAt: '2026-02-15T13:17:47.225Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:7t3rryg4ck5ifux2jokclglk',
+        userHandle: 'zhgnv.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_NagqwtoOTPTQDpxaEmJS',
@@ -536,6 +2097,23 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1298767,
     createdAt: '2025-07-04T23:27:46.548Z',
     updatedAt: '2026-02-15T13:08:42.696Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:itdn7jfijsrb2zf6ufjfwjdm',
+        userHandle: 'suzzlo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dbennnzmzjlsblyclnpunhpz',
+        userHandle: 'airun95.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_snNJGgooMd4YFGMqCc3C',
@@ -549,6 +2127,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1289561,
     createdAt: '2024-12-11T22:17:56.372Z',
     updatedAt: '2026-02-15T13:09:13.435Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hsic5h2zjyfr4wiyf64yh4pz',
+        userHandle: 'hacopian.de',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:n4tiqvpihsizt3vsdtnlaez6',
+        userHandle: 'ladyfallona.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:56v3vdnrvq7p3oultao7ifgt',
+        userHandle: 'freiheit.wtf',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:t3vtlgklajvabdyznmjairvf',
+        userHandle: 'rickbronkhorst.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:hekesxwmqrhmfbf77qe6jhe4',
+        userHandle: 'sheadscott.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_338AjknhhF1qlKhjxMBB',
@@ -562,6 +2192,23 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1276789,
     createdAt: '2025-12-23T22:46:38.955Z',
     updatedAt: '2026-02-15T13:09:18.872Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_elFT4TwhatWD6DHRKeL4',
@@ -575,6 +2222,58 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1270406,
     createdAt: '2024-12-11T06:50:20.931Z',
     updatedAt: '2026-02-15T13:08:45.769Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:yiuzlirtniszx66rkbbrnqef',
+        userHandle: 'shishkin.org',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:aq7owa5y7ndc2hzjz37wy7ma',
+        userHandle: 'tijs.org',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:pqwuemo2ic5tqmpwrajb2phi',
+        userHandle: 'brian.buller.cc',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:oypkibg4fkpfzlkjlb3rtqik',
+        userHandle: 'ignat.co',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:odgxwakrg5r2zjetnrkxuh5c',
+        userHandle: 'ronbronson.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:da6iyhwpub7pnqbj5booh2by',
+        userHandle: 'bradyhawkins.dev',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:jhmdbcph6xja3hamtoi4kdy4',
+        userHandle: 'eirik.re',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:imyu7ayhf22ffhscek4l5da3',
+        userHandle: 'seth.computer',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:tbzfsowmg4zj234pws47u3x6',
+        userHandle: 'mariuskimmina.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:rc5hnoopol3wn42aoje7bikv',
+        userHandle: 'robreyesr.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_0A0VBoVq1un0ZczJ6oZF',
@@ -588,6 +2287,38 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1221789,
     createdAt: '2024-12-08T21:29:00.397Z',
     updatedAt: '2026-02-15T13:09:15.485Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:odgxwakrg5r2zjetnrkxuh5c',
+        userHandle: 'ronbronson.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bhfuaumw2aieozvb2qw5rw6x',
+        userHandle: 'akaakp.bsky.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:t3vtlgklajvabdyznmjairvf',
+        userHandle: 'rickbronkhorst.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:yjrp4qswaq7chkpl7tqbekup',
+        userHandle: 'drsarah.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_r0HJNhXsMhsBX0tILKnn',
@@ -602,6 +2333,33 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1209718,
     createdAt: '2025-01-24T15:52:50.956Z',
     updatedAt: '2026-02-15T13:09:15.339Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:vyonarl4fhghaalo7icvadt2',
+        userHandle: 'austintakes.photos',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:6xtwe4lzdq4llotr7z2jl5tg',
+        userHandle: 'roblindsey.com',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:lp6i74uv6gowdciwlwr75cfe',
+        userHandle: 'ellarebee.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k6tnrkoziuj25p53r6zz3jcx',
+        userHandle: 'matt-kramer.com',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_xlEfbhEXaCuQWbzCe4JQ',
@@ -615,6 +2373,33 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1177080,
     createdAt: '2024-12-11T06:59:12.366Z',
     updatedAt: '2026-02-15T13:09:18.813Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:fip3nyk6tjo3senpq4ei2cxw',
+        userHandle: 'vicwalker.dev.br',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dpzkjdbjiygsrp4oqpydstlb',
+        userHandle: 'clseibold.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:dl5pqnjt3ydouwuosqi2v5jz',
+        userHandle: 'ricardomachado.site',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_d8sVOzdFgcsDZAaIpxfx',
@@ -628,6 +2413,43 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1154813,
     createdAt: '2024-12-15T03:40:30.985Z',
     updatedAt: '2026-02-15T13:17:46.827Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:zykyklbppjqfsr53eluqxvm6',
+        userHandle: 'zschamis.selfhosted.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:bpotnohnlgcj3fbmp7ugx4en',
+        userHandle: 'youronly.one',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:armut7dirmaum6vvdo3dnw2w',
+        userHandle: 'dalamb.me',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:sfjxpxxyvewb2zlxwoz2vduw',
+        userHandle: 'indexx.dev',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ee5bjnvs4b77zk3opc7zo2wt',
+        userHandle: 'userthomasedson.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:heie2z2gbxdhqpa6evcuzx6g',
+        userHandle: 'ssredna.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_JDhwt8Uo6XbYPfJ9u6fb',
@@ -641,6 +2463,13 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1154543,
     createdAt: '2024-12-11T06:54:36.652Z',
     updatedAt: '2026-02-15T13:17:46.529Z',
+    activity: [
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
   {
     id: 'bk_r4b0nqZ0z7vTUPrxYn09',
@@ -654,5 +2483,42 @@ export const POPULAR_BOOKS: HiveBook[] = [
     ratingsCount: 1146429,
     createdAt: '2024-12-08T21:38:07.668Z',
     updatedAt: '2026-02-15T13:17:50.497Z',
+    activity: [
+      {
+        type: 'started',
+        userDid: 'did:plc:rnpkyqnmsw4ipey6eotbdnnf',
+        userHandle: 'baileytownsend.dev',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:itdn7jfijsrb2zf6ufjfwjdm',
+        userHandle: 'suzzlo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:ybgnjhge62ngwh6toqe2lwxm',
+        userHandle: 'kkaarroo.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:zsmqrbrkcmenyll5tf4uzedt',
+        userHandle: 'samfromohio.bsky.social',
+      },
+      {
+        type: 'review',
+        userDid: 'did:plc:pnng64w6hs3lo6dz4rqf5ft3',
+        userHandle: 'pudgypuk.bsky.social',
+      },
+      {
+        type: 'started',
+        userDid: 'did:plc:k2ww4avnauzicvtsyjp7jyni',
+        userHandle: 'dennis.plumbob.social',
+      },
+      {
+        type: 'finished',
+        userDid: 'did:plc:vmmdvgrkhbky3thynqgmlqbe',
+        userHandle: 'msswank.bsky.social',
+      },
+    ],
   },
 ]
