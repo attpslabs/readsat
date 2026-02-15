@@ -89,6 +89,8 @@ export type CommonNavigatorParams = {
   VideoFeed: VideoFeedSourceContext
   Bookmarks: undefined
   FindContactsFlow: undefined
+  Books: undefined
+  BookDetail: {hiveId: string}
 }
 
 export type BottomTabNavigatorParams = CommonNavigatorParams & {
@@ -125,6 +127,7 @@ export type FlatNavigatorParams = CommonNavigatorParams & {
   Feeds: undefined
   Notifications: undefined
   Messages: {pushToConversation?: string; animation?: 'push' | 'pop'}
+  Books: undefined
 }
 
 export type AllNavigatorParams = CommonNavigatorParams & {
@@ -138,6 +141,7 @@ export type AllNavigatorParams = CommonNavigatorParams & {
   MyProfileTab: undefined
   MessagesTab: undefined
   Messages: {animation?: 'push' | 'pop'}
+  Books: undefined
 }
 
 // NOTE

@@ -29,6 +29,7 @@ import {
   Bell_Filled_Corner0_Rounded as BellFilled,
   Bell_Stroke2_Corner0_Rounded as Bell,
 } from '#/components/icons/Bell'
+import {Book, BookFilled} from '#/components/icons/Book'
 import {Bookmark, BookmarkFilled} from '#/components/icons/Bookmark'
 import {BulletList_Stroke2_Corner0_Rounded as List} from '#/components/icons/BulletList'
 import {
@@ -154,6 +155,7 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
     isAtSearch,
     isAtFeeds,
     isAtBookmarks,
+    isAtBooks,
     isAtNotifications,
     isAtMyProfile,
     isAtMessages,
@@ -240,6 +242,11 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
     setDrawerOpen(false)
   }, [navigation, setDrawerOpen])
 
+  const onPressBooks = React.useCallback(() => {
+    navigation.navigate('Books')
+    setDrawerOpen(false)
+  }, [navigation, setDrawerOpen])
+
   const onPressSettings = React.useCallback(() => {
     navigation.navigate('Settings')
     setDrawerOpen(false)
@@ -305,6 +312,7 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
               isActive={isAtBookmarks}
               onPress={onPressBookmarks}
             />
+            <BooksMenuItem isActive={isAtBooks} onPress={onPressBooks} />
             <ProfileMenuItem
               isActive={isAtMyProfile}
               onPress={onPressProfile}
@@ -576,6 +584,32 @@ let BookmarksMenuItem = ({
   )
 }
 BookmarksMenuItem = React.memo(BookmarksMenuItem)
+
+let BooksMenuItem = ({
+  isActive,
+  onPress,
+}: {
+  isActive: boolean
+  onPress: () => void
+}): React.ReactNode => {
+  const {_} = useLingui()
+  const t = useTheme()
+
+  return (
+    <MenuItem
+      icon={
+        isActive ? (
+          <BookFilled style={[t.atoms.text]} width={iconWidth} />
+        ) : (
+          <Book style={[t.atoms.text]} width={iconWidth} />
+        )
+      }
+      label={_(msg`Books`)}
+      onPress={onPress}
+    />
+  )
+}
+BooksMenuItem = React.memo(BooksMenuItem)
 
 let ProfileMenuItem = ({
   isActive,

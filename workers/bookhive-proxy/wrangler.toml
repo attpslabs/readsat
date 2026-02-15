@@ -1,0 +1,6 @@
+name = "bookhive-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+[vars]
+BOOKHIVE_ORIGIN = "https://bookhive.buzz"

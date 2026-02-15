@@ -79,6 +79,9 @@ export const router = new Router<AllNavigatableRoutes>({
   VideoFeed: '/video-feed',
   Bookmarks: '/saved',
   FindContactsFlow: '/find-contacts',
+  // books
+  Books: '/books',
+  BookDetail: '/books/:hiveId',
   // profiles, threads, lists — clean routes first (for URL building),
   // legacy /profile/ routes after (for backwards compat matching).
   // These MUST be last so /:name doesn't shadow fixed routes above.

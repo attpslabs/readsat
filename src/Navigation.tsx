@@ -72,6 +72,8 @@ import {TermsOfServiceScreen} from '#/view/screens/TermsOfService'
 import {BottomBar} from '#/view/shell/bottom-bar/BottomBar'
 import {createNativeStackNavigatorWithAuth} from '#/view/shell/createNativeStackNavigatorWithAuth'
 import {BookmarksScreen} from '#/screens/Bookmarks'
+import {BookDetailScreen} from '#/screens/Books/BookDetailScreen'
+import {BooksScreen} from '#/screens/Books/BooksScreen'
 import {SharedPreferencesTesterScreen} from '#/screens/E2E/SharedPreferencesTesterScreen'
 import {FindContactsFlowScreen} from '#/screens/FindContactsFlowScreen'
 import HashtagScreen from '#/screens/Hashtag'
@@ -628,6 +630,16 @@ function commonScreens(Stack: typeof Flat, unreadCountLabel?: string) {
           requireAuth: true,
           gestureEnabled: false,
         }}
+      />
+      <Stack.Screen
+        name="Books"
+        getComponent={() => BooksScreen}
+        options={{title: title(msg`Books`)}}
+      />
+      <Stack.Screen
+        name="BookDetail"
+        getComponent={() => BookDetailScreen}
+        options={{title: title(msg`Book Details`)}}
       />
     </>
   )

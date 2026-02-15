@@ -38,6 +38,7 @@ import {
   Bell_Filled_Corner0_Rounded as BellFilled,
   Bell_Stroke2_Corner0_Rounded as Bell,
 } from '#/components/icons/Bell'
+import {Book, BookFilled} from '#/components/icons/Book'
 import {Bookmark, BookmarkFilled} from '#/components/icons/Bookmark'
 import {
   BulletList_Filled_Corner0_Rounded as ListFilled,
@@ -668,6 +669,24 @@ export function DesktopLeftNav() {
               />
             }
             label={_(msg`Home`)}
+          />
+          <NavItem
+            href="/books"
+            icon={
+              <Book
+                aria-hidden={true}
+                width={NAV_ICON_WIDTH}
+                style={pal.text}
+              />
+            }
+            iconFilled={
+              <BookFilled
+                aria-hidden={true}
+                width={NAV_ICON_WIDTH}
+                style={pal.text}
+              />
+            }
+            label={_(msg`Books`)}
           />
           <NavItem
             href="/search"
