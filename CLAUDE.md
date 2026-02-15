@@ -29,9 +29,9 @@ yarn lint               # Run ESLint
 yarn typecheck          # Run TypeScript type checking
 
 # Internationalization
-# DO NOT run these commands - extraction and compilation are handled by CI
-yarn intl:extract       # Extract translation strings (nightly CI job)
-yarn intl:compile       # Compile translations for runtime (nightly CI job)
+# IMPORTANT: Run intl:build after adding/changing any msg()/Trans/plural strings
+# Skipping this causes gibberish hash IDs to appear instead of readable text
+yarn intl:build         # Extract AND compile i18n strings (run after i18n changes)
 
 # Build
 yarn build-web          # Build web version
@@ -300,9 +300,11 @@ function MyComponent() {
 
 **Commands:**
 ```bash
-# DO NOT run these commands - extraction and compilation are handled by a nightly CI job
-yarn intl:extract    # Extract new strings to locale files
-yarn intl:compile    # Compile translations for runtime
+# IMPORTANT: Run intl:build after adding or modifying any i18n strings (msg``, <Trans>, plural)
+# Failure to do this causes gibberish hash IDs to appear at runtime instead of readable text
+yarn intl:build      # Extract + compile all i18n strings (run this one)
+yarn intl:extract    # Extract only (subset of intl:build)
+yarn intl:compile    # Compile only (subset of intl:build)
 ```
 
 ## State Management
@@ -610,7 +612,7 @@ Only use `useMemo`/`useCallback` when you have a specific reason, such as:
 
 1. **Accessibility**: Always provide `label` prop for interactive elements, use `accessibilityHint` where helpful
 
-2. **Translations**: Wrap ALL user-facing strings with `msg()` or `<Trans>`
+2. **Translations**: Wrap ALL user-facing strings with `msg()` or `<Trans>`, then run `yarn intl:build` before committing
 
 3. **Styling**: Combine static atoms with theme atoms, use platform utilities for platform-specific styles
 
