@@ -14,7 +14,7 @@ const BOOKHIVE_BASE = __DEV__
 const PAGE_LIMIT = 25
 
 export interface BookActivity {
-  type: 'started' | 'finished' | 'review'
+  type: 'started' | 'finished' | 'review' | 'rated'
   userDid: string
   userHandle: string
 }
@@ -137,7 +137,8 @@ async function fetchSearchBooks(
   if (!res.ok) {
     throw new Error(`BookHive search failed: ${res.status}`)
   }
-  return res.json()
+  const data = await res.json()
+  return data.books
 }
 
 async function fetchBookDetail(hiveId: string): Promise<BookDetailResponse> {

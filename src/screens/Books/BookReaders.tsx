@@ -45,19 +45,22 @@ export function BookReaders({
   }
 
   return (
-    <View style={[a.flex_row, a.gap_lg, a.pt_sm]}>
+    <View style={[a.gap_lg, a.pt_sm]}>
       {limitedReading.length > 0 && (
-        <View style={[a.gap_2xs, {width: 120}]}>
+        <View style={[a.gap_2xs]}>
           <Text style={[a.text_xs, t.atoms.text_contrast_medium]}>
             {_(msg`Reading`)}
           </Text>
-          <View style={[a.flex_row, a.align_center]}>
+          <View style={[a.flex_row, a.flex_wrap, a.align_center, {rowGap: 8}]}>
             {limitedReading.map((entry, i) => {
               const profile = profileMap.get(entry.userHandle)
               return (
                 <View
                   key={entry.userDid}
-                  style={[i > 0 && {marginLeft: -8}, {zIndex: 100 - i}]}>
+                  style={[
+                    i > 0 && i % 10 !== 0 && {marginLeft: -8},
+                    {zIndex: 100 - i},
+                  ]}>
                   {profile ? (
                     <PreviewableUserAvatar
                       size={24}
@@ -98,13 +101,16 @@ export function BookReaders({
           <Text style={[a.text_xs, t.atoms.text_contrast_medium]}>
             {_(msg`Read`)}
           </Text>
-          <View style={[a.flex_row, a.align_center]}>
+          <View style={[a.flex_row, a.flex_wrap, a.align_center, {rowGap: 8}]}>
             {limitedRead.map((entry, i) => {
               const profile = profileMap.get(entry.userHandle)
               return (
                 <View
                   key={entry.userDid}
-                  style={[i > 0 && {marginLeft: -8}, {zIndex: 100 - i}]}>
+                  style={[
+                    i > 0 && i % 10 !== 0 && {marginLeft: -8},
+                    {zIndex: 100 - i},
+                  ]}>
                   {profile ? (
                     <PreviewableUserAvatar
                       size={24}
