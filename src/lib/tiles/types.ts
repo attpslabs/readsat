@@ -1,6 +1,8 @@
 export interface TileResourceSrc {
   $type: 'blob'
-  ref: {$link: string} // CID
+  // At runtime, the SDK transforms this into a CID object (BlobRef class).
+  // Use String(resource.src.ref) to reliably extract the CID string.
+  ref: {$link: string} | {toString(): string}
   size: number
   mimeType: string
 }

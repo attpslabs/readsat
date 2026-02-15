@@ -115,11 +115,11 @@ export async function loadTileContent(
   // Fetch all resources in parallel
   const results = await Promise.allSettled(
     entries.map(async ([path, resource]) => {
-      const base64 = await fetchBlobAsBase64(
-        serviceUrl,
-        did,
-        resource.src.ref.$link,
-      )
+      // The AT Protocol SDK transforms blob refs into BlobRef class instances
+      // where .ref is a CID object, not {$link: string}. Use String() to get
+      // the CID string from either form.
+      const cid = String(resource.src.ref)
+      const base64 = await fetchBlobAsBase64(serviceUrl, did, cid)
       return {path, dataUri: buildDataUri(base64, resource)}
     }),
   )
