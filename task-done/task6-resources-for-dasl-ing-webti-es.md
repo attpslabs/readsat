@@ -12,7 +12,7 @@ This documents how [linkna.me](https://linkna.me) publishes self-contained web t
 | pdsls.dev | https://pdsls.dev | PDS record inspector — verify your published tiles |
 | AT Protocol | https://atproto.com | The underlying protocol |
 | @atproto/api | https://www.npmjs.com/package/@atproto/api | TypeScript SDK for AT Protocol (blob uploads, record writes) |
-| linkna.me | https://linkna.me | Reference implementation (this project) |
+| linkna.me | https://linkna.me | Reference implementation (the app url enabling the goodreads tile that is rendered inside readsat) |
 | Example tiles | https://pdsls.dev/at://did:plc:izttpdp3l6vss5crelt5kcux/ing.dasl.masl | Reference `ing.dasl.masl` records to inspect on PDS |
 
 ## Overview
