@@ -85,7 +85,7 @@ msgstr "{0, plural, one {# seconde} other {# secondes}}"
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:222
 #: src/view/shell/bottom-bar/BottomBar.tsx:254
-#: src/view/shell/Drawer.tsx:530
+#: src/view/shell/Drawer.tsx:537
 msgid "{0, plural, one {# unread item} other {# unread items}}"
 msgstr "{0, plural, one {# élément non lu} other {# éléments non lus}}"
 
@@ -491,11 +491,11 @@ msgctxt "feeds"
 msgid "<0>{0}, </0><1>{1}, </1>and {2, plural, one {# other} other {# others}} are included in your starter pack"
 msgstr "<0>{0}, </0><1>{1} </1>et {2, plural, one {# autre} other {# autres}} sont inclus dans votre kit de démarrage"
 
-#: src/view/shell/Drawer.tsx:123
+#: src/view/shell/Drawer.tsx:124
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
 msgstr "<0>{0}</0> {1, plural, one {abonné·e} other {abonné·e·s}}"
 
-#: src/view/shell/Drawer.tsx:134
+#: src/view/shell/Drawer.tsx:135
 msgid "<0>{0}</0> {1, plural, one {following} other {following}}"
 msgstr "<0>{0}</0> {1, plural, one {abonnement} other {abonnements}}"
 
@@ -529,8 +529,8 @@ msgstr "<0>Vous</0> et<1> </1><2>{0} </2>faites partie de votre kit de démarrag
 msgid "⚠Invalid Handle"
 msgstr "⚠Pseudo invalide"
 
-#: src/screens/BookClubs/BookClubCard.tsx:105
-#: src/screens/BookClubs/BookClubSidebar.tsx:151
+#: src/screens/BookClubs/BookClubCard.tsx:151
+#: src/screens/BookClubs/BookClubSidebar.tsx:152
 msgid "1 member"
 msgstr ""
 
@@ -894,7 +894,7 @@ msgstr "Détails supplémentaires (1000 caractères maximum)"
 msgid "Additional details (limit 300 characters)"
 msgstr "Détails supplémentaires (300 caractères maximum)"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:145
+#: src/screens/BookClubs/BookClubSidebar.tsx:146
 msgid "Admin"
 msgstr ""
 
@@ -1339,8 +1339,8 @@ msgstr "Utiliser les fils d’actu recommandés par défaut"
 msgid "Apply Pull Request"
 msgstr "Appliquer la pull request"
 
-#: src/screens/BookClubs/PendingRequests.tsx:104
-#: src/screens/BookClubs/PendingRequests.tsx:113
+#: src/screens/BookClubs/PendingRequests.tsx:106
+#: src/screens/BookClubs/PendingRequests.tsx:115
 msgid "Approve"
 msgstr ""
 
@@ -1366,7 +1366,7 @@ msgid "Are you sure you want to delete this starter pack?"
 msgstr "Êtes-vous sûr de vouloir supprimer ce kit de démarrage ?"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:90
-#: src/screens/BookClubs/EditBookClubDialog.tsx:68
+#: src/screens/BookClubs/EditBookClubDialog.tsx:74
 #: src/screens/Profile/Header/EditProfileDialog.tsx:85
 msgid "Are you sure you want to discard your changes?"
 msgstr "Êtes-vous sûr de vouloir abandonner vos changements ?"
@@ -1693,16 +1693,16 @@ msgstr ""
 
 #: src/Navigation.tsx:650
 #: src/screens/BookClubs/BookClubsScreen.tsx:51
-#: src/view/shell/desktop/LeftNav.tsx:752
-#: src/view/shell/Drawer.tsx:655
+#: src/view/shell/desktop/LeftNav.tsx:748
+#: src/view/shell/Drawer.tsx:662
 msgid "Bookclubs"
 msgstr ""
 
 #: src/lib/interests.ts:54
 #: src/Navigation.tsx:640
-#: src/screens/Books/BooksScreen.tsx:197
-#: src/view/shell/desktop/LeftNav.tsx:734
-#: src/view/shell/Drawer.tsx:629
+#: src/screens/Books/BooksScreen.tsx:217
+#: src/view/shell/desktop/LeftNav.tsx:730
+#: src/view/shell/Drawer.tsx:636
 msgid "Books"
 msgstr "Livres"
 
@@ -1826,10 +1826,10 @@ msgstr "Caméra"
 #: src/features/liveEvents/components/LiveEventFeedOptionsMenu.tsx:151
 #: src/features/liveEvents/components/LiveEventFeedOptionsMenu.tsx:156
 #: src/lib/media/picker.tsx:38
-#: src/screens/BookClubs/EditBookClubDialog.tsx:193
-#: src/screens/BookClubs/EditBookClubDialog.tsx:199
-#: src/screens/BookClubs/EditBookClubDialog.tsx:300
-#: src/screens/BookClubs/EditBookClubDialog.tsx:306
+#: src/screens/BookClubs/EditBookClubDialog.tsx:198
+#: src/screens/BookClubs/EditBookClubDialog.tsx:204
+#: src/screens/BookClubs/EditBookClubDialog.tsx:303
+#: src/screens/BookClubs/EditBookClubDialog.tsx:309
 #: src/screens/Deactivated.tsx:149
 #: src/screens/Profile/Header/EditProfileDialog.tsx:248
 #: src/screens/Profile/Header/EditProfileDialog.tsx:256
@@ -1870,8 +1870,8 @@ msgstr "Annuler la citation"
 msgid "Cancel reactivation and sign out"
 msgstr "Annuler la réactivation et se déconnecter"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:188
-#: src/screens/BookClubs/BookClubSidebar.tsx:173
+#: src/screens/BookClubs/BookClubCard.tsx:180
+#: src/screens/BookClubs/BookClubSidebar.tsx:174
 msgid "Cancel request"
 msgstr ""
 
@@ -1916,8 +1916,8 @@ msgstr "Changer l’icône de l’application pour « {0} »"
 msgid "Change app language"
 msgstr "Changer la langue de l’appli."
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:332
-#: src/screens/BookClubs/EditBookClubDialog.tsx:337
+#: src/screens/BookClubs/EditBookClubDialog.tsx:335
+#: src/screens/BookClubs/EditBookClubDialog.tsx:340
 msgid "Change book"
 msgstr ""
 
@@ -1967,12 +1967,12 @@ msgstr "Modifications enregistrées"
 #: src/lib/hooks/useNotificationHandler.ts:102
 #: src/Navigation.tsx:565
 #: src/view/shell/bottom-bar/BottomBar.tsx:218
-#: src/view/shell/desktop/LeftNav.tsx:654
-#: src/view/shell/Drawer.tsx:498
+#: src/view/shell/desktop/LeftNav.tsx:650
+#: src/view/shell/Drawer.tsx:505
 msgid "Chat"
 msgstr "Discussions"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:245
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:165
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2090,6 +2090,10 @@ msgstr "Construisez votre propre page d’accueil ! Abonnez-vous à des fils d�
 msgid "Choose your password"
 msgstr "Choisissez votre mot de passe"
 
+#: src/view/shell/desktop/SidebarGenres.tsx:36
+msgid "Clear"
+msgstr ""
+
 #: src/screens/Settings/Settings.tsx:506
 msgid "Clear all storage data"
 msgstr "Effacer toutes les données de stockage"
@@ -2097,6 +2101,11 @@ msgstr "Effacer toutes les données de stockage"
 #: src/screens/Settings/Settings.tsx:508
 msgid "Clear all storage data (restart after this)"
 msgstr "Effacer toutes les données de stockage (redémarrer ensuite)"
+
+#: src/screens/Books/BooksScreen.tsx:236
+#: src/view/shell/desktop/SidebarGenres.tsx:32
+msgid "Clear genre filter"
+msgstr ""
 
 #: src/screens/Settings/AboutSettings.tsx:114
 #: src/screens/Settings/AboutSettings.tsx:118
@@ -2272,12 +2281,12 @@ msgstr "Ferme la visionneuse pour l’image d’en-tête"
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:153
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:157
-#: src/screens/BookClubs/EditBookClubDialog.tsx:228
-#: src/screens/BookClubs/EditBookClubDialog.tsx:234
+#: src/screens/BookClubs/EditBookClubDialog.tsx:233
+#: src/screens/BookClubs/EditBookClubDialog.tsx:239
 msgid "Club name"
 msgstr ""
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:111
+#: src/screens/BookClubs/BookClubSidebar.tsx:112
 msgid "Club settings"
 msgstr ""
 
@@ -2321,7 +2330,7 @@ msgid "Complete onboarding and start using your account"
 msgstr "Terminez le didacticiel et commencez à utiliser votre compte"
 
 #: src/view/com/feeds/ComposerPrompt.tsx:146
-#: src/view/shell/desktop/LeftNav.tsx:619
+#: src/view/shell/desktop/LeftNav.tsx:615
 msgid "Compose new post"
 msgstr "Écrire un nouveau post"
 
@@ -2708,11 +2717,11 @@ msgstr "Échec de l’envoi des contacts. Vous devez revérifier votre numéro d
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:103
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:68
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
-#: src/screens/Books/BooksScreen.tsx:106
+#: src/screens/Books/BooksScreen.tsx:112
 msgid "Couldn't load books. Tap to retry."
 msgstr ""
 
@@ -2789,11 +2798,11 @@ msgstr "Créer plutôt un avatar"
 msgid "Create another"
 msgstr "Créer un autre"
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:282
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:279
 msgid "Create bookclub"
 msgstr ""
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:295
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:292
 msgid "Create Bookclub"
 msgstr ""
 
@@ -2833,9 +2842,9 @@ msgstr "L’auteur·ice a été bloqué·e"
 msgid "Culture"
 msgstr "Culture"
 
-#: src/screens/BookClubs/BookClubCard.tsx:49
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:144
-#: src/screens/BookClubs/EditBookClubDialog.tsx:244
+#: src/screens/BookClubs/BookClubCard.tsx:95
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:109
+#: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
 
@@ -3027,8 +3036,8 @@ msgstr "Supprimé par Plivo dès qu’il est vérifié"
 msgid "Deleted list"
 msgstr "Liste supprimée"
 
-#: src/screens/BookClubs/PendingRequests.tsx:118
-#: src/screens/BookClubs/PendingRequests.tsx:127
+#: src/screens/BookClubs/PendingRequests.tsx:120
+#: src/screens/BookClubs/PendingRequests.tsx:129
 msgid "Deny"
 msgstr ""
 
@@ -3120,7 +3129,7 @@ msgid "Disabled"
 msgstr "Désactivé"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:92
-#: src/screens/BookClubs/EditBookClubDialog.tsx:71
+#: src/screens/BookClubs/EditBookClubDialog.tsx:76
 #: src/screens/Profile/Header/EditProfileDialog.tsx:87
 #: src/view/com/composer/Composer.tsx:1214
 #: src/view/com/composer/Composer.tsx:1262
@@ -3131,7 +3140,7 @@ msgid "Discard"
 msgstr "Abandonner"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:89
-#: src/screens/BookClubs/EditBookClubDialog.tsx:66
+#: src/screens/BookClubs/EditBookClubDialog.tsx:73
 #: src/screens/Profile/Header/EditProfileDialog.tsx:84
 msgid "Discard changes?"
 msgstr "Abandonner les changements ?"
@@ -3347,7 +3356,7 @@ msgid "e.g. Great Posters"
 msgstr "ex. Les meilleurs comptes"
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:158
-#: src/screens/BookClubs/EditBookClubDialog.tsx:235
+#: src/screens/BookClubs/EditBookClubDialog.tsx:240
 msgid "e.g. Romance Readers United"
 msgstr ""
 
@@ -3386,8 +3395,8 @@ msgstr "Modifier"
 msgid "Edit avatar"
 msgstr "Modifier l’avatar"
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:188
-#: src/screens/BookClubs/EditBookClubDialog.tsx:220
+#: src/screens/BookClubs/EditBookClubDialog.tsx:193
+#: src/screens/BookClubs/EditBookClubDialog.tsx:225
 msgid "Edit bookclub"
 msgstr ""
 
@@ -3799,8 +3808,8 @@ msgstr "Images sexuelles explicites."
 
 #: src/Navigation.tsx:819
 #: src/screens/Search/Shell.tsx:326
-#: src/view/shell/desktop/LeftNav.tsx:771
-#: src/view/shell/Drawer.tsx:446
+#: src/view/shell/desktop/LeftNav.tsx:767
+#: src/view/shell/Drawer.tsx:453
 msgid "Explore"
 msgstr "Explorer"
 
@@ -3864,7 +3873,7 @@ msgstr "Le changement de pseudo a échoué. Veuillez réessayer."
 msgid "Failed to create app password. Please try again."
 msgstr "La création du mot de passe d’application a échoué. Veuillez réessayer."
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:302
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:299
 msgid "Failed to create bookclub. Please try again."
 msgstr ""
 
@@ -4006,7 +4015,7 @@ msgstr "Échec du retrait de la vérification"
 msgid "Failed to resolve location. Please try again."
 msgstr "Échec de la géolocalisation. Veuillez réessayer."
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:346
+#: src/screens/BookClubs/EditBookClubDialog.tsx:349
 msgid "Failed to save changes. Please try again."
 msgstr ""
 
@@ -4029,7 +4038,7 @@ msgid "Failed to save your interests."
 msgstr "Échec de l’enregistrement de vos centres d’intérêt."
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:242
-#: src/screens/BookClubs/EditBookClubDialog.tsx:276
+#: src/screens/BookClubs/EditBookClubDialog.tsx:280
 msgid "Failed to search books"
 msgstr ""
 
@@ -4130,9 +4139,9 @@ msgstr "Ajouter/enlever le fil d’actu"
 msgid "Feed unavailable"
 msgstr "Fil d’actu indisponible"
 
-#: src/view/shell/desktop/RightNav.tsx:117
-#: src/view/shell/desktop/RightNav.tsx:118
-#: src/view/shell/Drawer.tsx:400
+#: src/view/shell/desktop/RightNav.tsx:120
+#: src/view/shell/desktop/RightNav.tsx:121
+#: src/view/shell/Drawer.tsx:407
 msgid "Feedback"
 msgstr "Commentaires"
 
@@ -4148,8 +4157,8 @@ msgstr "Commentaires envoyés au fournisseur du fil d’actu"
 #: src/screens/StarterPack/StarterPackScreen.tsx:193
 #: src/view/screens/Feeds.tsx:511
 #: src/view/screens/Profile.tsx:239
-#: src/view/shell/desktop/LeftNav.tsx:809
-#: src/view/shell/Drawer.tsx:562
+#: src/view/shell/desktop/LeftNav.tsx:805
+#: src/view/shell/Drawer.tsx:569
 msgid "Feeds"
 msgstr "Fils d’actu"
 
@@ -4174,6 +4183,10 @@ msgstr "Rechercher des mises à jour"
 #: src/screens/Settings/components/ExportCarDialog.tsx:43
 msgid "File saved successfully!"
 msgstr "Fichier enregistré avec succès !"
+
+#: src/view/shell/desktop/SidebarGenres.tsx:64
+msgid "Filter by {0}"
+msgstr ""
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:69
 msgid "Filter from feeds"
@@ -4506,6 +4519,10 @@ msgstr "Tiré de <0/>"
 msgid "Generate a starter pack"
 msgstr "Générer un kit de démarrage"
 
+#: src/view/shell/desktop/SidebarGenres.tsx:27
+msgid "Genres"
+msgstr ""
+
 #: src/screens/Profile/components/GermButton.tsx:85
 #: src/screens/Profile/components/GermButton.tsx:223
 msgid "Germ DM"
@@ -4524,7 +4541,7 @@ msgstr ""
 msgid "Germ DM reconnected"
 msgstr ""
 
-#: src/view/shell/Drawer.tsx:404
+#: src/view/shell/Drawer.tsx:411
 msgid "Get help"
 msgstr "Obtenir de l’aide"
 
@@ -4823,9 +4840,9 @@ msgstr "Conservé par Bluesky pendant 7 jours pour éviter les abus, puis suppri
 
 #: src/screens/Settings/Settings.tsx:252
 #: src/screens/Settings/Settings.tsx:256
-#: src/view/shell/desktop/RightNav.tsx:138
 #: src/view/shell/desktop/RightNav.tsx:141
-#: src/view/shell/Drawer.tsx:413
+#: src/view/shell/desktop/RightNav.tsx:144
+#: src/view/shell/Drawer.tsx:420
 msgid "Help"
 msgstr "Aide"
 
@@ -4994,8 +5011,8 @@ msgstr "Attendez ! Nous donnons progressivement accès à la vidéo et vous fai
 #: src/Navigation.tsx:814
 #: src/Navigation.tsx:834
 #: src/view/shell/bottom-bar/BottomBar.tsx:175
-#: src/view/shell/desktop/LeftNav.tsx:716
-#: src/view/shell/Drawer.tsx:472
+#: src/view/shell/desktop/LeftNav.tsx:712
+#: src/view/shell/Drawer.tsx:479
 msgid "Home"
 msgstr "Accueil"
 
@@ -5160,7 +5177,7 @@ msgstr "Importer des contacts"
 msgid "Import contacts to find your friends"
 msgstr "Importer des contacts pour retrouver vos amis"
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:259
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:256
 msgid "Import your Goodreads/StoryGraph library"
 msgstr ""
 
@@ -5364,7 +5381,7 @@ msgstr ""
 msgid "Journalism"
 msgstr "Journalisme"
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:72
+#: src/screens/BookClubs/EditBookClubDialog.tsx:77
 #: src/view/com/composer/Composer.tsx:1266
 #: src/view/com/composer/drafts/DraftsButton.tsx:134
 msgid "Keep editing"
@@ -5733,8 +5750,8 @@ msgstr "Liste réaffichée"
 #: src/view/screens/Lists.tsx:67
 #: src/view/screens/Profile.tsx:233
 #: src/view/screens/Profile.tsx:241
-#: src/view/shell/desktop/LeftNav.tsx:827
-#: src/view/shell/Drawer.tsx:577
+#: src/view/shell/desktop/LeftNav.tsx:823
+#: src/view/shell/Drawer.tsx:584
 msgid "Lists"
 msgstr "Listes"
 
@@ -5837,12 +5854,12 @@ msgstr "Déconnecté·e"
 msgid "Logged-out visibility"
 msgstr "Visibilité déconnectée"
 
-#: src/view/shell/desktop/RightNav.tsx:150
+#: src/view/shell/desktop/RightNav.tsx:153
 msgid "Logo by @sawaratsuki.bsky.social"
 msgstr "Logo par @sawaratsuki.bsky.social"
 
-#: src/view/shell/desktop/RightNav.tsx:147
-#: src/view/shell/Drawer.tsx:832
+#: src/view/shell/desktop/RightNav.tsx:150
+#: src/view/shell/Drawer.tsx:839
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr "Logo par <0>@sawaratsuki.bsky.social</0>"
 
@@ -6236,7 +6253,7 @@ msgstr "Accéder au kit de démarrage"
 msgid "Navigates to the next screen"
 msgstr "Navigue vers le prochain écran"
 
-#: src/view/shell/Drawer.tsx:84
+#: src/view/shell/Drawer.tsx:85
 msgid "Navigates to your profile"
 msgstr "Navigue vers votre profil"
 
@@ -6330,7 +6347,7 @@ msgctxt "action"
 msgid "New post"
 msgstr "Nouveau post"
 
-#: src/view/shell/desktop/LeftNav.tsx:627
+#: src/view/shell/desktop/LeftNav.tsx:623
 msgctxt "action"
 msgid "New Post"
 msgstr "Nouveau post"
@@ -6393,7 +6410,7 @@ msgstr "Pas de publicité, pas de traçage intrusif, pas de piège à engagement
 msgid "No app passwords yet"
 msgstr "Aucun mot de passe d’application"
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:327
+#: src/screens/BookClubs/EditBookClubDialog.tsx:330
 msgid "No book selected"
 msgstr ""
 
@@ -6402,11 +6419,15 @@ msgid "No bookclubs yet"
 msgstr ""
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:249
-#: src/screens/BookClubs/EditBookClubDialog.tsx:283
+#: src/screens/BookClubs/EditBookClubDialog.tsx:286
 msgid "No books found"
 msgstr ""
 
-#: src/screens/Books/BooksScreen.tsx:164
+#: src/screens/Books/BooksScreen.tsx:181
+msgid "No books found in this genre"
+msgstr ""
+
+#: src/screens/Books/BooksScreen.tsx:183
 msgid "No books match your search"
 msgstr ""
 
@@ -6681,8 +6702,8 @@ msgstr "Sons de notification"
 #: src/screens/Settings/Settings.tsx:203
 #: src/view/screens/Notifications.tsx:129
 #: src/view/shell/bottom-bar/BottomBar.tsx:249
-#: src/view/shell/desktop/LeftNav.tsx:790
-#: src/view/shell/Drawer.tsx:525
+#: src/view/shell/desktop/LeftNav.tsx:786
+#: src/view/shell/Drawer.tsx:532
 msgid "Notifications"
 msgstr "Notifications"
 
@@ -6806,7 +6827,7 @@ msgstr "Oups, quelque chose n’a pas marché !"
 msgid "Oops!"
 msgstr "Oups !"
 
-#: src/screens/BookClubs/BookClubCard.tsx:29
+#: src/screens/BookClubs/BookClubCard.tsx:74
 msgid "Open {0}"
 msgstr ""
 
@@ -7203,7 +7224,7 @@ msgstr "Photographie"
 msgid "Pictures meant for adults."
 msgstr "Images destinées aux adultes."
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:157
+#: src/screens/BookClubs/BookClubSidebar.tsx:158
 msgid "Pin club"
 msgstr ""
 
@@ -7226,7 +7247,7 @@ msgstr "Ajouter à l’accueil"
 msgid "Pin to Home"
 msgstr "Ajouter à l’accueil"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:163
+#: src/screens/BookClubs/BookClubSidebar.tsx:164
 msgid "Pin to sidebar"
 msgstr ""
 
@@ -7443,7 +7464,7 @@ msgstr "Veuillez écrire votre message ci-dessous :"
 msgid "Politics"
 msgstr "Politique"
 
-#: src/screens/Books/BooksScreen.tsx:86
+#: src/screens/Books/BooksScreen.tsx:92
 msgid "Popular"
 msgstr ""
 
@@ -7610,8 +7631,8 @@ msgstr "Langue principale"
 msgid "Primary Language"
 msgstr "Langue principale"
 
-#: src/view/shell/desktop/RightNav.tsx:126
-#: src/view/shell/desktop/RightNav.tsx:127
+#: src/view/shell/desktop/RightNav.tsx:129
+#: src/view/shell/desktop/RightNav.tsx:130
 msgid "Privacy"
 msgstr "Vie privée"
 
@@ -7639,8 +7660,8 @@ msgstr "Paramètres de confidentialité et sécurité"
 #: src/screens/Settings/AboutSettings.tsx:93
 #: src/screens/Signup/SignupForm.tsx:313
 #: src/view/screens/PrivacyPolicy.tsx:34
-#: src/view/shell/Drawer.tsx:827
-#: src/view/shell/Drawer.tsx:828
+#: src/view/shell/Drawer.tsx:834
+#: src/view/shell/Drawer.tsx:835
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
@@ -7666,9 +7687,9 @@ msgid "profile"
 msgstr "profil"
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:292
-#: src/view/shell/desktop/LeftNav.tsx:868
-#: src/view/shell/Drawer.tsx:83
-#: src/view/shell/Drawer.tsx:680
+#: src/view/shell/desktop/LeftNav.tsx:864
+#: src/view/shell/Drawer.tsx:84
+#: src/view/shell/Drawer.tsx:687
 msgid "Profile"
 msgstr "Profil"
 
@@ -8021,8 +8042,8 @@ msgstr "Supprimer le profil"
 msgid "Remove repost"
 msgstr "Supprimer le repost"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:197
-#: src/screens/BookClubs/BookClubSidebar.tsx:182
+#: src/screens/BookClubs/BookClubCard.tsx:189
+#: src/screens/BookClubs/BookClubSidebar.tsx:183
 msgid "Remove request"
 msgstr ""
 
@@ -8089,6 +8110,11 @@ msgstr "Supprimé de vos fils d’actu"
 #: src/components/verification/VerificationRemovePrompt.tsx:32
 msgid "Removed verification"
 msgstr "Vérification retirée"
+
+#: src/screens/Books/BooksScreen.tsx:237
+#: src/view/shell/desktop/SidebarGenres.tsx:33
+msgid "Removes the genre filter"
+msgstr ""
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:129
 #: src/view/com/posts/FeedShutdownMsg.tsx:133
@@ -8324,10 +8350,10 @@ msgstr "Notifications des reposts de vos reposts"
 msgid "Request code"
 msgstr "Demander le code"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:203
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:212
-#: src/screens/BookClubs/BookClubSidebar.tsx:188
-#: src/screens/BookClubs/BookClubSidebar.tsx:197
+#: src/screens/BookClubs/BookClubCard.tsx:195
+#: src/screens/BookClubs/BookClubCard.tsx:204
+#: src/screens/BookClubs/BookClubSidebar.tsx:189
+#: src/screens/BookClubs/BookClubSidebar.tsx:198
 msgid "Request to join"
 msgstr ""
 
@@ -8472,8 +8498,8 @@ msgstr "Retourne à l’étape précédente"
 #: src/components/live/EditLiveDialog.tsx:202
 #: src/components/live/EditLiveDialog.tsx:209
 #: src/components/StarterPack/QrCodeDialog.tsx:206
-#: src/screens/BookClubs/EditBookClubDialog.tsx:205
-#: src/screens/BookClubs/EditBookClubDialog.tsx:214
+#: src/screens/BookClubs/EditBookClubDialog.tsx:210
+#: src/screens/BookClubs/EditBookClubDialog.tsx:219
 #: src/screens/Profile/Header/EditProfileDialog.tsx:266
 #: src/screens/Profile/Header/EditProfileDialog.tsx:281
 #: src/screens/SavedFeeds.tsx:120
@@ -8543,8 +8569,8 @@ msgstr "Enregistrer ces choix pour la prochaine fois"
 msgid "Save to my feeds"
 msgstr "Enregistrer dans mes fils d’actu"
 
-#: src/view/shell/desktop/LeftNav.tsx:846
-#: src/view/shell/Drawer.tsx:603
+#: src/view/shell/desktop/LeftNav.tsx:842
+#: src/view/shell/Drawer.tsx:610
 msgctxt "link to bookmarks screen"
 msgid "Saved"
 msgstr "Conservés"
@@ -8606,8 +8632,8 @@ msgid "Search @{0}'s posts"
 msgstr "Rechercher dans les posts de @{0}"
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:220
-#: src/screens/BookClubs/EditBookClubDialog.tsx:255
-#: src/screens/Books/BooksScreen.tsx:209
+#: src/screens/BookClubs/EditBookClubDialog.tsx:260
+#: src/screens/Books/BooksScreen.tsx:229
 msgid "Search books..."
 msgstr ""
 
@@ -8758,8 +8784,8 @@ msgid "Select \"{interestsDisplayName}\" category"
 msgstr "Sélectionner la catégorie « {interestsDisplayName} »"
 
 #. Accessibility label for a username suggestion in the account creation flow
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:327
-#: src/screens/BookClubs/EditBookClubDialog.tsx:423
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:322
+#: src/screens/BookClubs/EditBookClubDialog.tsx:424
 #: src/screens/Signup/StepHandle/HandleSuggestions.tsx:42
 msgid "Select {0}"
 msgstr "Sélectionner {0}"
@@ -8939,7 +8965,7 @@ msgctxt "action"
 msgid "Send Email"
 msgstr "Envoyer l’e-mail"
 
-#: src/view/shell/Drawer.tsx:393
+#: src/view/shell/Drawer.tsx:400
 msgid "Send feedback"
 msgstr "Envoyer des commentaires"
 
@@ -9023,8 +9049,8 @@ msgstr "Définit l’e-mail pour la réinitialisation du mot de passe"
 
 #: src/Navigation.tsx:221
 #: src/screens/Settings/Settings.tsx:103
-#: src/view/shell/desktop/LeftNav.tsx:886
-#: src/view/shell/Drawer.tsx:693
+#: src/view/shell/desktop/LeftNav.tsx:882
+#: src/view/shell/Drawer.tsx:700
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -9277,6 +9303,10 @@ msgstr "Afficher l’avertissement et filtrer des fils d’actu"
 #: src/components/dialogs/nuxs/LiveNowBetaDialog.tsx:169
 msgid "Show when you’re live"
 msgstr "Rendez visibles vos streams"
+
+#: src/view/shell/desktop/SidebarGenres.tsx:65
+msgid "Shows books in this genre"
+msgstr ""
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:645
 msgid "Shows information about when this post was created"
@@ -9810,8 +9840,8 @@ msgstr "Dites-nous en un peu à propos de vous"
 msgid "Tell us a little more"
 msgstr "Dites-nous en un peu plus"
 
-#: src/view/shell/desktop/RightNav.tsx:133
-#: src/view/shell/desktop/RightNav.tsx:134
+#: src/view/shell/desktop/RightNav.tsx:136
+#: src/view/shell/desktop/RightNav.tsx:137
 msgid "Terms"
 msgstr "Conditions générales"
 
@@ -9823,8 +9853,8 @@ msgstr "Conditions générales"
 #: src/screens/Settings/AboutSettings.tsx:85
 #: src/screens/Signup/SignupForm.tsx:306
 #: src/view/screens/TermsOfService.tsx:34
-#: src/view/shell/Drawer.tsx:820
-#: src/view/shell/Drawer.tsx:822
+#: src/view/shell/Drawer.tsx:827
+#: src/view/shell/Drawer.tsx:829
 msgid "Terms of Service"
 msgstr "Conditions générales"
 
@@ -10717,13 +10747,13 @@ msgstr "Réafficher ce fil de discussion"
 msgid "Unmute video"
 msgstr "Rétablir le son de la vidéo"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:163
+#: src/screens/BookClubs/BookClubSidebar.tsx:164
 #: src/screens/ProfileList/components/Header.tsx:150
 #: src/screens/ProfileList/components/Header.tsx:157
 msgid "Unpin"
 msgstr "Désépingler"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:157
+#: src/screens/BookClubs/BookClubSidebar.tsx:158
 msgid "Unpin club"
 msgstr ""
 
@@ -11615,7 +11645,7 @@ msgstr "Voulez-vous enregistrer ça comme brouillon avant d’aller les consulte
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "Voulez-vous enregistrer ça comme brouillon à modifier plus tard ?"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:283
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:205
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11810,8 +11840,8 @@ msgstr "Vous pourrez changer ça plus tard depuis vos paramètres."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "Vous ne pouvez pas modifier votre date de naissance si vous êtes connectés avec un mot de passe d’application. Veuillez vous reconnecter avec votre mot de passe principal pour le faire."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:227
-#: src/screens/BookClubs/BookClubSidebar.tsx:207
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:156
+#: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
 

@@ -1,10 +1,11 @@
 import {useMemo, useRef, useState} from 'react'
-import {type TextInput, View} from 'react-native'
+import {Pressable, type TextInput, View} from 'react-native'
 import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 import {useFocusEffect} from '@react-navigation/native'
 import debounce from 'lodash.debounce'
 
+import {useBookGenreFilter} from '#/state/preferences/book-genre-filter'
 import {type HiveBook, useSearchBooksQuery} from '#/state/queries/bookhive'
 import {useSetMinimalShellMode} from '#/state/shell'
 import {List} from '#/view/com/util/List'
@@ -32,8 +33,10 @@ export function BooksScreen() {
   const textInput = useRef<TextInput>(null)
   const [searchText, setSearchText] = useState('')
   const [query, setQuery] = useState('')
+  const {selectedGenre, setSelectedGenre} = useBookGenreFilter()
 
   const isSearching = query.trim().length > 0
+  const isFiltering = isSearching || selectedGenre !== null
 
   useFocusEffect(() => {
     setMinimalShellMode(false)
@@ -48,7 +51,10 @@ export function BooksScreen() {
     fetchNextPage,
     error,
     refetch,
-  } = useSearchBooksQuery(isSearching ? query : undefined)
+  } = useSearchBooksQuery(
+    isFiltering ? query || undefined : undefined,
+    selectedGenre ?? undefined,
+  )
 
   const debouncedSetQuery = useMemo(
     () => debounce((q: string) => setQuery(q), 500),
@@ -78,8 +84,8 @@ export function BooksScreen() {
   const items = useMemo(() => {
     const result: FeedItem[] = []
 
-    // When not searching, show static popular books
-    if (!isSearching) {
+    // When not filtering, show static popular books
+    if (!isFiltering) {
       result.push({
         type: 'header',
         key: 'popular-header',
@@ -91,7 +97,7 @@ export function BooksScreen() {
       return result
     }
 
-    // Search mode
+    // Filter/search mode
     if (!isFetched && isFetching) {
       for (let i = 0; i < 8; i++) {
         result.push({type: 'loading', key: `loading-${i}`})
@@ -113,6 +119,14 @@ export function BooksScreen() {
       return result
     }
 
+    if (selectedGenre && !isSearching) {
+      result.push({
+        type: 'header',
+        key: 'genre-header',
+        title: selectedGenre,
+      })
+    }
+
     for (const book of searchBooks) {
       result.push({type: 'book', key: book.id, book})
     }
@@ -123,7 +137,9 @@ export function BooksScreen() {
 
     return result
   }, [
+    isFiltering,
     isSearching,
+    selectedGenre,
     isFetched,
     isFetching,
     isFetchingNextPage,
@@ -133,7 +149,7 @@ export function BooksScreen() {
   ])
 
   const onEndReached = () => {
-    if (!isSearching || isFetching || !hasNextPage || error) return
+    if (!isFiltering || isFetching || !hasNextPage || error) return
     fetchNextPage()
   }
 
@@ -161,7 +177,11 @@ export function BooksScreen() {
         return (
           <View style={[a.p_xl, a.align_center]}>
             <Text style={[a.text_md, t.atoms.text_contrast_medium]}>
-              <Trans>No books match your search</Trans>
+              {selectedGenre && !isSearching ? (
+                <Trans>No books found in this genre</Trans>
+              ) : (
+                <Trans>No books match your search</Trans>
+              )}
             </Text>
           </View>
         )
@@ -209,6 +229,31 @@ export function BooksScreen() {
               placeholder={_(msg`Search books...`)}
             />
           </View>
+          {selectedGenre && (
+            <View style={[a.px_lg, a.pb_sm, a.flex_row, a.align_center]}>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={_(msg`Clear genre filter`)}
+                accessibilityHint={_(msg`Removes the genre filter`)}
+                onPress={() => setSelectedGenre(null)}
+                style={[
+                  a.flex_row,
+                  a.align_center,
+                  a.gap_xs,
+                  a.px_sm,
+                  a.py_2xs,
+                  a.rounded_full,
+                  t.atoms.bg_contrast_50,
+                ]}>
+                <Text style={[a.text_sm, a.font_bold, t.atoms.text]}>
+                  {selectedGenre}
+                </Text>
+                <Text style={[a.text_xs, t.atoms.text_contrast_medium]}>
+                  &times;
+                </Text>
+              </Pressable>
+            </View>
+          )}
         </Layout.Center>
       </View>
 
@@ -218,8 +263,8 @@ export function BooksScreen() {
         keyExtractor={item => item.key}
         onEndReached={onEndReached}
         onEndReachedThreshold={2}
-        refreshing={isSearching && isFetching && isFetched}
-        onRefresh={isSearching ? () => refetch() : undefined}
+        refreshing={isFiltering && isFetching && isFetched}
+        onRefresh={isFiltering ? () => refetch() : undefined}
         desktopFixedHeight
         sideBorders={IS_WEB}
       />

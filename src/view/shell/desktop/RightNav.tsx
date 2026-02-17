@@ -10,6 +10,7 @@ import {useKawaiiMode} from '#/state/preferences/kawaii'
 import {useSession} from '#/state/session'
 import {DesktopFeeds} from '#/view/shell/desktop/Feeds'
 import {DesktopSearch} from '#/view/shell/desktop/Search'
+import {SidebarGenres} from '#/view/shell/desktop/SidebarGenres'
 import {SidebarTrendingTopics} from '#/view/shell/desktop/SidebarTrendingTopics'
 import {BookClubSidebar} from '#/screens/BookClubs/BookClubSidebar'
 import {
@@ -51,6 +52,7 @@ export function DesktopRightNav({routeName}: {routeName: string}) {
   const kawaii = useKawaiiMode()
   const gutters = useGutters(['base', 0, 'base', 'wide'])
   const isSearchScreen = routeName === 'Search'
+  const isBooks = routeName === 'Books'
   const isBookClubDetail = routeName === 'BookClubDetail'
   const webqueryParams = useWebQueryParams()
   const searchQuery = webqueryParams?.q
@@ -99,6 +101,8 @@ export function DesktopRightNav({routeName}: {routeName: string}) {
               <ProgressGuideList />
             </>
           )}
+
+          {isBooks && <SidebarGenres />}
 
           {showExploreScreenDuplicatedContent && (
             <SidebarLiveEventFeedsBanner />

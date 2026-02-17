@@ -49,6 +49,11 @@ export interface BookDetailResponse {
   activity: BookActivity[]
 }
 
+export interface GenreItem {
+  genre: string
+  count: number
+}
+
 export interface BookMeta {
   publisher?: string
   publicationYear?: string
@@ -116,18 +121,30 @@ export function groupBookActivity(activity: BookActivity[]): {
 
 // Query keys
 const RQKEY_ROOT = 'bookhive'
-export const RQKEY_SEARCH = (query: string) => [RQKEY_ROOT, 'search', query]
+export const RQKEY_SEARCH = (query: string, genre?: string) => [
+  RQKEY_ROOT,
+  'search',
+  query,
+  genre ?? '',
+]
 export const RQKEY_BOOK = (hiveId: string) => [RQKEY_ROOT, 'book', hiveId]
+export const RQKEY_GENRES = [RQKEY_ROOT, 'genres']
 
 async function fetchSearchBooks(
   query: string,
   offset: number,
+  genre?: string,
 ): Promise<HiveBook[]> {
   const params = new URLSearchParams({
-    q: query,
     limit: String(PAGE_LIMIT),
     offset: String(offset),
   })
+  if (query) {
+    params.set('q', query)
+  }
+  if (genre) {
+    params.set('genre', genre)
+  }
   const res = await fetch(
     `${BOOKHIVE_BASE}/buzz.bookhive.searchBooks?${params}`,
   )
@@ -136,6 +153,19 @@ async function fetchSearchBooks(
   }
   const data = await res.json()
   return data.books
+}
+
+async function fetchGenres(): Promise<GenreItem[]> {
+  const params = new URLSearchParams({
+    limit: '50',
+    minBooks: '10',
+  })
+  const res = await fetch(`${BOOKHIVE_BASE}/buzz.bookhive.listGenres?${params}`)
+  if (!res.ok) {
+    throw new Error(`BookHive listGenres failed: ${res.status}`)
+  }
+  const data = await res.json()
+  return data.genres
 }
 
 async function fetchBookDetail(hiveId: string): Promise<BookDetailResponse> {
@@ -147,13 +177,14 @@ async function fetchBookDetail(hiveId: string): Promise<BookDetailResponse> {
   return res.json()
 }
 
-export function useSearchBooksQuery(query?: string) {
+export function useSearchBooksQuery(query?: string, genre?: string) {
   const q = query?.trim() || ''
+  const g = genre?.trim() || ''
 
   return useInfiniteQuery({
-    queryKey: RQKEY_SEARCH(q),
+    queryKey: RQKEY_SEARCH(q, g),
     queryFn: async ({pageParam}) => {
-      const books = await fetchSearchBooks(q, pageParam)
+      const books = await fetchSearchBooks(q, pageParam, g || undefined)
       return {books, offset: pageParam}
     },
     initialPageParam: 0,
@@ -163,7 +194,15 @@ export function useSearchBooksQuery(query?: string) {
     },
     staleTime: STALE.MINUTES.FIVE,
     placeholderData: keepPreviousData,
-    enabled: q.length > 0,
+    enabled: q.length > 0 || g.length > 0,
+  })
+}
+
+export function useGenresQuery() {
+  return useQuery({
+    queryKey: RQKEY_GENRES,
+    queryFn: fetchGenres,
+    staleTime: STALE.HOURS.ONE,
   })
 }
 

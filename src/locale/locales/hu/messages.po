@@ -85,7 +85,7 @@ msgstr "{0, plural, one {# másodperce} other {# másodperce}}"
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:222
 #: src/view/shell/bottom-bar/BottomBar.tsx:254
-#: src/view/shell/Drawer.tsx:530
+#: src/view/shell/Drawer.tsx:537
 msgid "{0, plural, one {# unread item} other {# unread items}}"
 msgstr "{0, plural, one {# olvasatlan} other {# olvasatlan}}"
 
@@ -491,11 +491,11 @@ msgctxt "feeds"
 msgid "<0>{0}, </0><1>{1}, </1>and {2, plural, one {# other} other {# others}} are included in your starter pack"
 msgstr "<0>{0}, </0><1>{1} </1>és {2, plural, one {#} other {#}} további személy szerepel a kezdőcsomagodban"
 
-#: src/view/shell/Drawer.tsx:123
+#: src/view/shell/Drawer.tsx:124
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
 msgstr "<0>{0}</0> {1, plural, one {követő} other {követő}}"
 
-#: src/view/shell/Drawer.tsx:134
+#: src/view/shell/Drawer.tsx:135
 msgid "<0>{0}</0> {1, plural, one {following} other {following}}"
 msgstr "<0>{0}</0> {1, plural, one {követett} other {követett}}"
 
@@ -529,8 +529,8 @@ msgstr "<0>Te</0> és<1> </1><2>{0} </2>szerepeltek a kezdőcsomagodban"
 msgid "⚠Invalid Handle"
 msgstr "⚠Érvénytelen felhasználónév"
 
-#: src/screens/BookClubs/BookClubCard.tsx:105
-#: src/screens/BookClubs/BookClubSidebar.tsx:151
+#: src/screens/BookClubs/BookClubCard.tsx:151
+#: src/screens/BookClubs/BookClubSidebar.tsx:152
 msgid "1 member"
 msgstr ""
 
@@ -894,7 +894,7 @@ msgstr "További részletek (legfeljebb 1000 karakter)"
 msgid "Additional details (limit 300 characters)"
 msgstr "További részletek (legfeljebb 300 karakter)"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:145
+#: src/screens/BookClubs/BookClubSidebar.tsx:146
 msgid "Admin"
 msgstr ""
 
@@ -1339,8 +1339,8 @@ msgstr "Ajánlott hírfolyamok elfogadása"
 msgid "Apply Pull Request"
 msgstr "Lekéréses kérelem alkalmazása"
 
-#: src/screens/BookClubs/PendingRequests.tsx:104
-#: src/screens/BookClubs/PendingRequests.tsx:113
+#: src/screens/BookClubs/PendingRequests.tsx:106
+#: src/screens/BookClubs/PendingRequests.tsx:115
 msgid "Approve"
 msgstr ""
 
@@ -1366,7 +1366,7 @@ msgid "Are you sure you want to delete this starter pack?"
 msgstr "Biztosan törölni akarod ezt a kezdőcsomagot?"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:90
-#: src/screens/BookClubs/EditBookClubDialog.tsx:68
+#: src/screens/BookClubs/EditBookClubDialog.tsx:74
 #: src/screens/Profile/Header/EditProfileDialog.tsx:85
 msgid "Are you sure you want to discard your changes?"
 msgstr "Biztosan el akarod vetni a változtatásokat?"
@@ -1693,16 +1693,16 @@ msgstr ""
 
 #: src/Navigation.tsx:650
 #: src/screens/BookClubs/BookClubsScreen.tsx:51
-#: src/view/shell/desktop/LeftNav.tsx:752
-#: src/view/shell/Drawer.tsx:655
+#: src/view/shell/desktop/LeftNav.tsx:748
+#: src/view/shell/Drawer.tsx:662
 msgid "Bookclubs"
 msgstr ""
 
 #: src/lib/interests.ts:54
 #: src/Navigation.tsx:640
-#: src/screens/Books/BooksScreen.tsx:197
-#: src/view/shell/desktop/LeftNav.tsx:734
-#: src/view/shell/Drawer.tsx:629
+#: src/screens/Books/BooksScreen.tsx:217
+#: src/view/shell/desktop/LeftNav.tsx:730
+#: src/view/shell/Drawer.tsx:636
 msgid "Books"
 msgstr "Könyvek"
 
@@ -1826,10 +1826,10 @@ msgstr "Kamera"
 #: src/features/liveEvents/components/LiveEventFeedOptionsMenu.tsx:151
 #: src/features/liveEvents/components/LiveEventFeedOptionsMenu.tsx:156
 #: src/lib/media/picker.tsx:38
-#: src/screens/BookClubs/EditBookClubDialog.tsx:193
-#: src/screens/BookClubs/EditBookClubDialog.tsx:199
-#: src/screens/BookClubs/EditBookClubDialog.tsx:300
-#: src/screens/BookClubs/EditBookClubDialog.tsx:306
+#: src/screens/BookClubs/EditBookClubDialog.tsx:198
+#: src/screens/BookClubs/EditBookClubDialog.tsx:204
+#: src/screens/BookClubs/EditBookClubDialog.tsx:303
+#: src/screens/BookClubs/EditBookClubDialog.tsx:309
 #: src/screens/Deactivated.tsx:149
 #: src/screens/Profile/Header/EditProfileDialog.tsx:248
 #: src/screens/Profile/Header/EditProfileDialog.tsx:256
@@ -1870,8 +1870,8 @@ msgstr "Idézés megszakítása"
 msgid "Cancel reactivation and sign out"
 msgstr "Újraaktiválás megszakítása és kilépés"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:188
-#: src/screens/BookClubs/BookClubSidebar.tsx:173
+#: src/screens/BookClubs/BookClubCard.tsx:180
+#: src/screens/BookClubs/BookClubSidebar.tsx:174
 msgid "Cancel request"
 msgstr ""
 
@@ -1916,8 +1916,8 @@ msgstr "Alkalmazásikon megváltoztatása erre: {0}"
 msgid "Change app language"
 msgstr "Alkalmazás nyelvének megváltoztatása"
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:332
-#: src/screens/BookClubs/EditBookClubDialog.tsx:337
+#: src/screens/BookClubs/EditBookClubDialog.tsx:335
+#: src/screens/BookClubs/EditBookClubDialog.tsx:340
 msgid "Change book"
 msgstr ""
 
@@ -1967,12 +1967,12 @@ msgstr "Változtatások elmentve"
 #: src/lib/hooks/useNotificationHandler.ts:102
 #: src/Navigation.tsx:565
 #: src/view/shell/bottom-bar/BottomBar.tsx:218
-#: src/view/shell/desktop/LeftNav.tsx:654
-#: src/view/shell/Drawer.tsx:498
+#: src/view/shell/desktop/LeftNav.tsx:650
+#: src/view/shell/Drawer.tsx:505
 msgid "Chat"
 msgstr "Csevegés"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:245
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:165
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2090,6 +2090,10 @@ msgstr "Válaszd ki, hogy milyen idővonalakat akarsz böngészni! A közösség
 msgid "Choose your password"
 msgstr "Jelszó megadása"
 
+#: src/view/shell/desktop/SidebarGenres.tsx:36
+msgid "Clear"
+msgstr ""
+
 #: src/screens/Settings/Settings.tsx:506
 msgid "Clear all storage data"
 msgstr "Összes adat törlése"
@@ -2097,6 +2101,11 @@ msgstr "Összes adat törlése"
 #: src/screens/Settings/Settings.tsx:508
 msgid "Clear all storage data (restart after this)"
 msgstr "Összes adat törlése (A program újra fog indulni)"
+
+#: src/screens/Books/BooksScreen.tsx:236
+#: src/view/shell/desktop/SidebarGenres.tsx:32
+msgid "Clear genre filter"
+msgstr ""
 
 #: src/screens/Settings/AboutSettings.tsx:114
 #: src/screens/Settings/AboutSettings.tsx:118
@@ -2272,12 +2281,12 @@ msgstr "Borítókép-nézegető bezárása"
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:153
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:157
-#: src/screens/BookClubs/EditBookClubDialog.tsx:228
-#: src/screens/BookClubs/EditBookClubDialog.tsx:234
+#: src/screens/BookClubs/EditBookClubDialog.tsx:233
+#: src/screens/BookClubs/EditBookClubDialog.tsx:239
 msgid "Club name"
 msgstr ""
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:111
+#: src/screens/BookClubs/BookClubSidebar.tsx:112
 msgid "Club settings"
 msgstr ""
 
@@ -2321,7 +2330,7 @@ msgid "Complete onboarding and start using your account"
 msgstr "Regisztrációs varázsló befejezése és a Bluesky használatának megkezdése"
 
 #: src/view/com/feeds/ComposerPrompt.tsx:146
-#: src/view/shell/desktop/LeftNav.tsx:619
+#: src/view/shell/desktop/LeftNav.tsx:615
 msgid "Compose new post"
 msgstr "Új bejegyzés írása"
 
@@ -2708,11 +2717,11 @@ msgstr "A névjegyek feltöltése meghiúsult. A folytatáshoz ismét hitelesít
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:103
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:68
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
-#: src/screens/Books/BooksScreen.tsx:106
+#: src/screens/Books/BooksScreen.tsx:112
 msgid "Couldn't load books. Tap to retry."
 msgstr ""
 
@@ -2789,11 +2798,11 @@ msgstr "Profilkép létrehozása"
 msgid "Create another"
 msgstr "Másik létrehozása"
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:282
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:279
 msgid "Create bookclub"
 msgstr ""
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:295
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:292
 msgid "Create Bookclub"
 msgstr ""
 
@@ -2833,9 +2842,9 @@ msgstr "Letiltott szerző"
 msgid "Culture"
 msgstr "Kultúra"
 
-#: src/screens/BookClubs/BookClubCard.tsx:49
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:144
-#: src/screens/BookClubs/EditBookClubDialog.tsx:244
+#: src/screens/BookClubs/BookClubCard.tsx:95
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:109
+#: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
 
@@ -3027,8 +3036,8 @@ msgstr "A Plivo hitelesítés után törli ezeket az adatokat"
 msgid "Deleted list"
 msgstr "Törölt lista"
 
-#: src/screens/BookClubs/PendingRequests.tsx:118
-#: src/screens/BookClubs/PendingRequests.tsx:127
+#: src/screens/BookClubs/PendingRequests.tsx:120
+#: src/screens/BookClubs/PendingRequests.tsx:129
 msgid "Deny"
 msgstr ""
 
@@ -3120,7 +3129,7 @@ msgid "Disabled"
 msgstr "Letiltva"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:92
-#: src/screens/BookClubs/EditBookClubDialog.tsx:71
+#: src/screens/BookClubs/EditBookClubDialog.tsx:76
 #: src/screens/Profile/Header/EditProfileDialog.tsx:87
 #: src/view/com/composer/Composer.tsx:1214
 #: src/view/com/composer/Composer.tsx:1262
@@ -3131,7 +3140,7 @@ msgid "Discard"
 msgstr "Elvetés"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:89
-#: src/screens/BookClubs/EditBookClubDialog.tsx:66
+#: src/screens/BookClubs/EditBookClubDialog.tsx:73
 #: src/screens/Profile/Header/EditProfileDialog.tsx:84
 msgid "Discard changes?"
 msgstr "Változtatások elvetése"
@@ -3347,7 +3356,7 @@ msgid "e.g. Great Posters"
 msgstr "pl.: Nagyszerű emberek"
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:158
-#: src/screens/BookClubs/EditBookClubDialog.tsx:235
+#: src/screens/BookClubs/EditBookClubDialog.tsx:240
 msgid "e.g. Romance Readers United"
 msgstr ""
 
@@ -3386,8 +3395,8 @@ msgstr "Szerkesztés"
 msgid "Edit avatar"
 msgstr "Profilkép szerkesztése"
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:188
-#: src/screens/BookClubs/EditBookClubDialog.tsx:220
+#: src/screens/BookClubs/EditBookClubDialog.tsx:193
+#: src/screens/BookClubs/EditBookClubDialog.tsx:225
 msgid "Edit bookclub"
 msgstr ""
 
@@ -3799,8 +3808,8 @@ msgstr "Szexuális tartalmakat ábrázoló képek."
 
 #: src/Navigation.tsx:819
 #: src/screens/Search/Shell.tsx:326
-#: src/view/shell/desktop/LeftNav.tsx:771
-#: src/view/shell/Drawer.tsx:446
+#: src/view/shell/desktop/LeftNav.tsx:767
+#: src/view/shell/Drawer.tsx:453
 msgid "Explore"
 msgstr "Felfedezés"
 
@@ -3864,7 +3873,7 @@ msgstr "A felhasználónév megváltoztatása meghiúsult. Próbáld újra."
 msgid "Failed to create app password. Please try again."
 msgstr "Az alkalmazásjelszó létrehozása meghiúsult. Próbáld újra."
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:302
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:299
 msgid "Failed to create bookclub. Please try again."
 msgstr ""
 
@@ -4006,7 +4015,7 @@ msgstr "A hitelesítés eltávolítása meghiúsult"
 msgid "Failed to resolve location. Please try again."
 msgstr "A tartózkodási hely megállapítása meghiúsult. Próbáld újra."
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:346
+#: src/screens/BookClubs/EditBookClubDialog.tsx:349
 msgid "Failed to save changes. Please try again."
 msgstr ""
 
@@ -4029,7 +4038,7 @@ msgid "Failed to save your interests."
 msgstr "Az érdeklődési körök mentése meghiúsult."
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:242
-#: src/screens/BookClubs/EditBookClubDialog.tsx:276
+#: src/screens/BookClubs/EditBookClubDialog.tsx:280
 msgid "Failed to search books"
 msgstr ""
 
@@ -4130,9 +4139,9 @@ msgstr "Hírfolyam ki/be"
 msgid "Feed unavailable"
 msgstr "A hírfolyam nem elérhető"
 
-#: src/view/shell/desktop/RightNav.tsx:117
-#: src/view/shell/desktop/RightNav.tsx:118
-#: src/view/shell/Drawer.tsx:400
+#: src/view/shell/desktop/RightNav.tsx:120
+#: src/view/shell/desktop/RightNav.tsx:121
+#: src/view/shell/Drawer.tsx:407
 msgid "Feedback"
 msgstr "Visszajelzés"
 
@@ -4148,8 +4157,8 @@ msgstr "Elküldtük a visszajelzést az üzemeltetőnek"
 #: src/screens/StarterPack/StarterPackScreen.tsx:193
 #: src/view/screens/Feeds.tsx:511
 #: src/view/screens/Profile.tsx:239
-#: src/view/shell/desktop/LeftNav.tsx:809
-#: src/view/shell/Drawer.tsx:562
+#: src/view/shell/desktop/LeftNav.tsx:805
+#: src/view/shell/Drawer.tsx:569
 msgid "Feeds"
 msgstr "Hírfolyamok"
 
@@ -4174,6 +4183,10 @@ msgstr "Frissítések keresése"
 #: src/screens/Settings/components/ExportCarDialog.tsx:43
 msgid "File saved successfully!"
 msgstr "A fájl mentése sikeresen megtörtént"
+
+#: src/view/shell/desktop/SidebarGenres.tsx:64
+msgid "Filter by {0}"
+msgstr ""
 
 #: src/lib/moderation/useLabelBehaviorDescription.ts:69
 msgid "Filter from feeds"
@@ -4506,6 +4519,10 @@ msgstr "A(z) <0/> hírfolyamból"
 msgid "Generate a starter pack"
 msgstr "Kezdőcsomag létrehozása"
 
+#: src/view/shell/desktop/SidebarGenres.tsx:27
+msgid "Genres"
+msgstr ""
+
 #: src/screens/Profile/components/GermButton.tsx:85
 #: src/screens/Profile/components/GermButton.tsx:223
 msgid "Germ DM"
@@ -4524,7 +4541,7 @@ msgstr ""
 msgid "Germ DM reconnected"
 msgstr ""
 
-#: src/view/shell/Drawer.tsx:404
+#: src/view/shell/Drawer.tsx:411
 msgid "Get help"
 msgstr "Súgó"
 
@@ -4823,9 +4840,9 @@ msgstr "A visszaélések elkerülése érdekében a Bluesky 7 napig megtartja, m
 
 #: src/screens/Settings/Settings.tsx:252
 #: src/screens/Settings/Settings.tsx:256
-#: src/view/shell/desktop/RightNav.tsx:138
 #: src/view/shell/desktop/RightNav.tsx:141
-#: src/view/shell/Drawer.tsx:413
+#: src/view/shell/desktop/RightNav.tsx:144
+#: src/view/shell/Drawer.tsx:420
 msgid "Help"
 msgstr "Súgó"
 
@@ -4994,8 +5011,8 @@ msgstr "Egy pillanat! A videófeltöltés lehetősége még nem mindenki számá
 #: src/Navigation.tsx:814
 #: src/Navigation.tsx:834
 #: src/view/shell/bottom-bar/BottomBar.tsx:175
-#: src/view/shell/desktop/LeftNav.tsx:716
-#: src/view/shell/Drawer.tsx:472
+#: src/view/shell/desktop/LeftNav.tsx:712
+#: src/view/shell/Drawer.tsx:479
 msgid "Home"
 msgstr "Kezdőoldal"
 
@@ -5160,7 +5177,7 @@ msgstr "Névjegyek importálása"
 msgid "Import contacts to find your friends"
 msgstr "Importáld a névjegyeidet és találd meg az ismerőseidet!"
 
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:259
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:256
 msgid "Import your Goodreads/StoryGraph library"
 msgstr ""
 
@@ -5364,7 +5381,7 @@ msgstr ""
 msgid "Journalism"
 msgstr "Sajtó"
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:72
+#: src/screens/BookClubs/EditBookClubDialog.tsx:77
 #: src/view/com/composer/Composer.tsx:1266
 #: src/view/com/composer/drafts/DraftsButton.tsx:134
 msgid "Keep editing"
@@ -5733,8 +5750,8 @@ msgstr "Feloldottad a listán szereplő személyek némítását"
 #: src/view/screens/Lists.tsx:67
 #: src/view/screens/Profile.tsx:233
 #: src/view/screens/Profile.tsx:241
-#: src/view/shell/desktop/LeftNav.tsx:827
-#: src/view/shell/Drawer.tsx:577
+#: src/view/shell/desktop/LeftNav.tsx:823
+#: src/view/shell/Drawer.tsx:584
 msgid "Lists"
 msgstr "Listák"
 
@@ -5837,12 +5854,12 @@ msgstr "Kijelentkezve"
 msgid "Logged-out visibility"
 msgstr "Láthatóság kijelentkezett felhasználók számára"
 
-#: src/view/shell/desktop/RightNav.tsx:150
+#: src/view/shell/desktop/RightNav.tsx:153
 msgid "Logo by @sawaratsuki.bsky.social"
 msgstr "A logó szerzője: @sawaratsuki.bsky.social"
 
-#: src/view/shell/desktop/RightNav.tsx:147
-#: src/view/shell/Drawer.tsx:832
+#: src/view/shell/desktop/RightNav.tsx:150
+#: src/view/shell/Drawer.tsx:839
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr "A logó szerzője: <0>@sawaratsuki.bsky.social</0>"
 
@@ -6236,7 +6253,7 @@ msgstr "Ugrás a kezdőcsomaghoz"
 msgid "Navigates to the next screen"
 msgstr "Ugrás a következő képernyőre"
 
-#: src/view/shell/Drawer.tsx:84
+#: src/view/shell/Drawer.tsx:85
 msgid "Navigates to your profile"
 msgstr "Ugrás a profilodra"
 
@@ -6330,7 +6347,7 @@ msgctxt "action"
 msgid "New post"
 msgstr "Új bejegyzés"
 
-#: src/view/shell/desktop/LeftNav.tsx:627
+#: src/view/shell/desktop/LeftNav.tsx:623
 msgctxt "action"
 msgid "New Post"
 msgstr "Új bejegyzés"
@@ -6393,7 +6410,7 @@ msgstr "Ilyen egy közösségi oldal hirdetések, magánéletsértő nyomonköve
 msgid "No app passwords yet"
 msgstr "Még nem hoztál létre alkalmazásjelszavakat"
 
-#: src/screens/BookClubs/EditBookClubDialog.tsx:327
+#: src/screens/BookClubs/EditBookClubDialog.tsx:330
 msgid "No book selected"
 msgstr ""
 
@@ -6402,11 +6419,15 @@ msgid "No bookclubs yet"
 msgstr ""
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:249
-#: src/screens/BookClubs/EditBookClubDialog.tsx:283
+#: src/screens/BookClubs/EditBookClubDialog.tsx:286
 msgid "No books found"
 msgstr ""
 
-#: src/screens/Books/BooksScreen.tsx:164
+#: src/screens/Books/BooksScreen.tsx:181
+msgid "No books found in this genre"
+msgstr ""
+
+#: src/screens/Books/BooksScreen.tsx:183
 msgid "No books match your search"
 msgstr ""
 
@@ -6681,8 +6702,8 @@ msgstr "Értesítési hangok"
 #: src/screens/Settings/Settings.tsx:203
 #: src/view/screens/Notifications.tsx:129
 #: src/view/shell/bottom-bar/BottomBar.tsx:249
-#: src/view/shell/desktop/LeftNav.tsx:790
-#: src/view/shell/Drawer.tsx:525
+#: src/view/shell/desktop/LeftNav.tsx:786
+#: src/view/shell/Drawer.tsx:532
 msgid "Notifications"
 msgstr "Értesítések"
 
@@ -6806,7 +6827,7 @@ msgstr "Hoppá! Valami balul sült el!"
 msgid "Oops!"
 msgstr "Hoppá!"
 
-#: src/screens/BookClubs/BookClubCard.tsx:29
+#: src/screens/BookClubs/BookClubCard.tsx:74
 msgid "Open {0}"
 msgstr ""
 
@@ -7203,7 +7224,7 @@ msgstr "Fényképészet"
 msgid "Pictures meant for adults."
 msgstr "Felnőtteknek szánt képek."
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:157
+#: src/screens/BookClubs/BookClubSidebar.tsx:158
 msgid "Pin club"
 msgstr ""
 
@@ -7226,7 +7247,7 @@ msgstr "Kitűzés a kezdőoldalra"
 msgid "Pin to Home"
 msgstr "Kitűzés a kezdőoldalra"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:163
+#: src/screens/BookClubs/BookClubSidebar.tsx:164
 msgid "Pin to sidebar"
 msgstr ""
 
@@ -7443,7 +7464,7 @@ msgstr "Üzenet megadása:"
 msgid "Politics"
 msgstr "Politika"
 
-#: src/screens/Books/BooksScreen.tsx:86
+#: src/screens/Books/BooksScreen.tsx:92
 msgid "Popular"
 msgstr ""
 
@@ -7610,8 +7631,8 @@ msgstr "Elsődleges nyelv"
 msgid "Primary Language"
 msgstr "Elsődleges nyelv"
 
-#: src/view/shell/desktop/RightNav.tsx:126
-#: src/view/shell/desktop/RightNav.tsx:127
+#: src/view/shell/desktop/RightNav.tsx:129
+#: src/view/shell/desktop/RightNav.tsx:130
 msgid "Privacy"
 msgstr "Adatvédelem"
 
@@ -7639,8 +7660,8 @@ msgstr "Adatvédelmi- és biztonsági beállítások"
 #: src/screens/Settings/AboutSettings.tsx:93
 #: src/screens/Signup/SignupForm.tsx:313
 #: src/view/screens/PrivacyPolicy.tsx:34
-#: src/view/shell/Drawer.tsx:827
-#: src/view/shell/Drawer.tsx:828
+#: src/view/shell/Drawer.tsx:834
+#: src/view/shell/Drawer.tsx:835
 msgid "Privacy Policy"
 msgstr "Adatvédelmi irányelvek"
 
@@ -7666,9 +7687,9 @@ msgid "profile"
 msgstr "profil"
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:292
-#: src/view/shell/desktop/LeftNav.tsx:868
-#: src/view/shell/Drawer.tsx:83
-#: src/view/shell/Drawer.tsx:680
+#: src/view/shell/desktop/LeftNav.tsx:864
+#: src/view/shell/Drawer.tsx:84
+#: src/view/shell/Drawer.tsx:687
 msgid "Profile"
 msgstr "Profil"
 
@@ -8021,8 +8042,8 @@ msgstr "Profil eltávolítása"
 msgid "Remove repost"
 msgstr "Megosztott bejegyzés eltávolítása"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:197
-#: src/screens/BookClubs/BookClubSidebar.tsx:182
+#: src/screens/BookClubs/BookClubCard.tsx:189
+#: src/screens/BookClubs/BookClubSidebar.tsx:183
 msgid "Remove request"
 msgstr ""
 
@@ -8089,6 +8110,11 @@ msgstr "Eltávolítva a hírfolyamgyűjteményből"
 #: src/components/verification/VerificationRemovePrompt.tsx:32
 msgid "Removed verification"
 msgstr "Hitelesítés eltávolítva"
+
+#: src/screens/Books/BooksScreen.tsx:237
+#: src/view/shell/desktop/SidebarGenres.tsx:33
+msgid "Removes the genre filter"
+msgstr ""
 
 #: src/view/com/posts/FeedShutdownMsg.tsx:129
 #: src/view/com/posts/FeedShutdownMsg.tsx:133
@@ -8324,10 +8350,10 @@ msgstr "Értesítések megosztott bejegyzések megosztásáról"
 msgid "Request code"
 msgstr "Kód kérelmezése"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:203
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:212
-#: src/screens/BookClubs/BookClubSidebar.tsx:188
-#: src/screens/BookClubs/BookClubSidebar.tsx:197
+#: src/screens/BookClubs/BookClubCard.tsx:195
+#: src/screens/BookClubs/BookClubCard.tsx:204
+#: src/screens/BookClubs/BookClubSidebar.tsx:189
+#: src/screens/BookClubs/BookClubSidebar.tsx:198
 msgid "Request to join"
 msgstr ""
 
@@ -8472,8 +8498,8 @@ msgstr "Vissza az előző lépéshez"
 #: src/components/live/EditLiveDialog.tsx:202
 #: src/components/live/EditLiveDialog.tsx:209
 #: src/components/StarterPack/QrCodeDialog.tsx:206
-#: src/screens/BookClubs/EditBookClubDialog.tsx:205
-#: src/screens/BookClubs/EditBookClubDialog.tsx:214
+#: src/screens/BookClubs/EditBookClubDialog.tsx:210
+#: src/screens/BookClubs/EditBookClubDialog.tsx:219
 #: src/screens/Profile/Header/EditProfileDialog.tsx:266
 #: src/screens/Profile/Header/EditProfileDialog.tsx:281
 #: src/screens/SavedFeeds.tsx:120
@@ -8543,8 +8569,8 @@ msgstr "Beállítások megjegyzése"
 msgid "Save to my feeds"
 msgstr "Mentés a hírfolyamgyűjteménybe"
 
-#: src/view/shell/desktop/LeftNav.tsx:846
-#: src/view/shell/Drawer.tsx:603
+#: src/view/shell/desktop/LeftNav.tsx:842
+#: src/view/shell/Drawer.tsx:610
 msgctxt "link to bookmarks screen"
 msgid "Saved"
 msgstr "Mentett"
@@ -8606,8 +8632,8 @@ msgid "Search @{0}'s posts"
 msgstr "Keresés @{0} bejegyzései között"
 
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:220
-#: src/screens/BookClubs/EditBookClubDialog.tsx:255
-#: src/screens/Books/BooksScreen.tsx:209
+#: src/screens/BookClubs/EditBookClubDialog.tsx:260
+#: src/screens/Books/BooksScreen.tsx:229
 msgid "Search books..."
 msgstr ""
 
@@ -8758,8 +8784,8 @@ msgid "Select \"{interestsDisplayName}\" category"
 msgstr "{interestsDisplayName} kategória kiválasztása"
 
 #. Accessibility label for a username suggestion in the account creation flow
-#: src/screens/BookClubs/CreateBookClubScreen.tsx:327
-#: src/screens/BookClubs/EditBookClubDialog.tsx:423
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:322
+#: src/screens/BookClubs/EditBookClubDialog.tsx:424
 #: src/screens/Signup/StepHandle/HandleSuggestions.tsx:42
 msgid "Select {0}"
 msgstr "{0} kiválasztása"
@@ -8939,7 +8965,7 @@ msgctxt "action"
 msgid "Send Email"
 msgstr "E-mail küldése"
 
-#: src/view/shell/Drawer.tsx:393
+#: src/view/shell/Drawer.tsx:400
 msgid "Send feedback"
 msgstr "Visszajelzés küldése"
 
@@ -9023,8 +9049,8 @@ msgstr "E-mail cím beállítása jelszóvisszaállításhoz"
 
 #: src/Navigation.tsx:221
 #: src/screens/Settings/Settings.tsx:103
-#: src/view/shell/desktop/LeftNav.tsx:886
-#: src/view/shell/Drawer.tsx:693
+#: src/view/shell/desktop/LeftNav.tsx:882
+#: src/view/shell/Drawer.tsx:700
 msgid "Settings"
 msgstr "Beállítások"
 
@@ -9277,6 +9303,10 @@ msgstr "Figyelmeztetés és kiszűrés a hírfolyamokból"
 #: src/components/dialogs/nuxs/LiveNowBetaDialog.tsx:169
 msgid "Show when you’re live"
 msgstr "Saját élő állapot megjelenítése"
+
+#: src/view/shell/desktop/SidebarGenres.tsx:65
+msgid "Shows books in this genre"
+msgstr ""
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:645
 msgid "Shows information about when this post was created"
@@ -9812,8 +9842,8 @@ msgstr "Mesélj magadról!"
 msgid "Tell us a little more"
 msgstr "További részletek"
 
-#: src/view/shell/desktop/RightNav.tsx:133
-#: src/view/shell/desktop/RightNav.tsx:134
+#: src/view/shell/desktop/RightNav.tsx:136
+#: src/view/shell/desktop/RightNav.tsx:137
 msgid "Terms"
 msgstr "Feltételek"
 
@@ -9825,8 +9855,8 @@ msgstr "Feltételek"
 #: src/screens/Settings/AboutSettings.tsx:85
 #: src/screens/Signup/SignupForm.tsx:306
 #: src/view/screens/TermsOfService.tsx:34
-#: src/view/shell/Drawer.tsx:820
-#: src/view/shell/Drawer.tsx:822
+#: src/view/shell/Drawer.tsx:827
+#: src/view/shell/Drawer.tsx:829
 msgid "Terms of Service"
 msgstr "Felhasználási feltételek"
 
@@ -10719,13 +10749,13 @@ msgstr "Válaszlánc némításának feloldása"
 msgid "Unmute video"
 msgstr "Videó némításának feloldása"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:163
+#: src/screens/BookClubs/BookClubSidebar.tsx:164
 #: src/screens/ProfileList/components/Header.tsx:150
 #: src/screens/ProfileList/components/Header.tsx:157
 msgid "Unpin"
 msgstr "Kitűzés feloldása"
 
-#: src/screens/BookClubs/BookClubSidebar.tsx:157
+#: src/screens/BookClubs/BookClubSidebar.tsx:158
 msgid "Unpin club"
 msgstr ""
 
@@ -11617,7 +11647,7 @@ msgstr "Szeretnéd piszkozatként menteni ezt a bejegyzést, mielőtt megnyitod 
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "Szeretnéd piszkozatként menteni ezt a bejegyzést?"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:283
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:205
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11812,8 +11842,8 @@ msgstr "Ezt a beállítást később is módosíthatod."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "Alkalmazásjelszó használata mellett nem változtathatod meg a születési dátumodat. Ezen műveet végrehajtásához a rendes jelszavaddal kell bejelentkezned."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:227
-#: src/screens/BookClubs/BookClubSidebar.tsx:207
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:156
+#: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
 
