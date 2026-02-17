@@ -507,15 +507,15 @@ export function useCancelJoinRequestMutation() {
         rkey,
       })
 
-      // Find and cancel the mirrored record on reads.at (best-effort)
+      // Find and cancel ALL mirrored records on reads.at (best-effort)
+      // There may be duplicates if a previous cancel failed silently.
       try {
-        // List member records from reads.at to find the mirror
         const mirrorRes = await agent.com.atproto.repo.listRecords({
           repo: READS_AT_ACCOUNT_DID,
           collection: BOOKCLUB_MEMBER_COLLECTION,
           limit: 100,
         })
-        const mirror = mirrorRes.data.records.find(r => {
+        const mirrors = mirrorRes.data.records.filter(r => {
           const val = r.value as BookClubMemberRecord
           return (
             val.club === clubUri &&
@@ -523,15 +523,17 @@ export function useCancelJoinRequestMutation() {
             val.status === 'pending'
           )
         })
-        if (mirror) {
-          const mirrorRkey = mirror.uri.split('/').pop()!
-          await callBookclubApi(
-            '/member/cancel',
-            {clubUri, rkey: mirrorRkey},
-            accessJwt,
-            currentAccount.pdsUrl,
-          )
-        }
+        await Promise.all(
+          mirrors.map(mirror => {
+            const mirrorRkey = mirror.uri.split('/').pop()!
+            return callBookclubApi(
+              '/member/cancel',
+              {clubUri, rkey: mirrorRkey},
+              accessJwt,
+              currentAccount.pdsUrl,
+            )
+          }),
+        )
       } catch (e) {
         logger.error('Failed to cancel mirrored join request', {
           safeMessage: e,
@@ -565,13 +567,22 @@ export function usePendingMembersQuery(clubUri: string, isAdmin: boolean) {
         collection: BOOKCLUB_MEMBER_COLLECTION,
         limit: 100,
       })
-      return res.data.records
+      const pending = res.data.records
         .map(r => ({
           uri: r.uri,
           rkey: r.uri.split('/').pop()!,
           record: r.value as BookClubMemberRecord,
         }))
         .filter(m => m.record.club === clubUri && m.record.status === 'pending')
+
+      // Deduplicate by DID — keep only the most recent request per user
+      const byDid = new Map<string, BookClubMemberEntry>()
+      for (const m of pending) {
+        if (m.record.did) {
+          byDid.set(m.record.did, m)
+        }
+      }
+      return Array.from(byDid.values())
     },
     staleTime: STALE.MINUTES.ONE,
     enabled: !!clubUri && isAdmin,
