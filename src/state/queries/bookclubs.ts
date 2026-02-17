@@ -24,6 +24,11 @@ export const RQKEY_PENDING_MEMBERS = (clubUri: string) => [
   'pending-members',
   clubUri,
 ]
+export const RQKEY_MY_MEMBERSHIP = (clubUri: string) => [
+  RQKEY_ROOT,
+  'my-membership',
+  clubUri,
+]
 export const RQKEY_DETAIL = (rkey: string) => [RQKEY_ROOT, 'detail', rkey]
 
 /**
@@ -382,6 +387,37 @@ export function useMyJoinRequestQuery(clubUri: string) {
         return null
       } catch {
         return null
+      }
+    },
+    staleTime: STALE.MINUTES.ONE,
+    enabled: !!currentAccount && !!clubUri,
+  })
+}
+
+/**
+ * Check if the current user is an approved member of a club.
+ * Looks for a member record with status === 'approved' on the user's PDS.
+ */
+export function useMyMembershipQuery(clubUri: string) {
+  const agent = useAgent()
+  const {currentAccount} = useSession()
+
+  return useQuery<boolean>({
+    queryKey: RQKEY_MY_MEMBERSHIP(clubUri),
+    queryFn: async () => {
+      if (!currentAccount) return false
+      try {
+        const res = await agent.com.atproto.repo.listRecords({
+          repo: currentAccount.did,
+          collection: BOOKCLUB_MEMBER_COLLECTION,
+          limit: 100,
+        })
+        return res.data.records.some(r => {
+          const val = r.value as BookClubMemberRecord
+          return val.club === clubUri && val.status === 'approved'
+        })
+      } catch {
+        return false
       }
     },
     staleTime: STALE.MINUTES.ONE,

@@ -7,18 +7,12 @@ import {
   type CommonNavigatorParams,
   type NativeStackScreenProps,
 } from '#/lib/routes/types'
-import {
-  useBookClubQuery,
-  useCancelJoinRequestMutation,
-  useJoinBookClubMutation,
-  useMyJoinRequestQuery,
-} from '#/state/queries/bookclubs'
+import {useBookClubQuery} from '#/state/queries/bookclubs'
 import {useProfileQuery} from '#/state/queries/profile'
 import {useSession} from '#/state/session'
 import {useSetMinimalShellMode} from '#/state/shell'
 import {PreviewableUserAvatar} from '#/view/com/util/UserAvatar'
 import {atoms as a, useTheme} from '#/alf'
-import {Button, ButtonText} from '#/components/Button'
 import {EmojiArc_Stroke2_Corner0_Rounded as EmojiSmile} from '#/components/icons/Emoji'
 import {PaperPlane_Stroke2_Corner0_Rounded as PaperPlane} from '#/components/icons/PaperPlane'
 import * as Layout from '#/components/Layout'
@@ -32,7 +26,7 @@ export function BookClubDetailScreen({route}: Props) {
   const t = useTheme()
   const {_} = useLingui()
   const setMinimalShellMode = useSetMinimalShellMode()
-  const {hasSession, currentAccount} = useSession()
+  const {currentAccount} = useSession()
 
   useFocusEffect(() => {
     setMinimalShellMode(false)
@@ -44,37 +38,6 @@ export function BookClubDetailScreen({route}: Props) {
   const {data: adminProfile} = useProfileQuery({
     did: club?.record.admin ?? '',
   })
-
-  const {data: myRequest, isLoading: isLoadingRequest} = useMyJoinRequestQuery(
-    club?.uri ?? '',
-  )
-  const joinMutation = useJoinBookClubMutation()
-  const cancelMutation = useCancelJoinRequestMutation()
-
-  const hasPendingRequest = myRequest !== null && myRequest !== undefined
-  const isActionPending =
-    joinMutation.isPending || cancelMutation.isPending || isLoadingRequest
-
-  const onRequestToJoin = async () => {
-    if (!club) return
-    try {
-      await joinMutation.mutateAsync({clubUri: club.uri})
-    } catch {
-      // handled by mutation
-    }
-  }
-
-  const onCancelRequest = async () => {
-    if (!myRequest || !club) return
-    try {
-      await cancelMutation.mutateAsync({
-        clubUri: club.uri,
-        rkey: myRequest.rkey,
-      })
-    } catch {
-      // handled by mutation
-    }
-  }
 
   const book = club?.currentBook?.record
 
@@ -182,43 +145,6 @@ export function BookClubDetailScreen({route}: Props) {
                         {adminProfile?.displayName || club.record.admin}
                       </Text>
                     </View>
-
-                    {/* Join / Cancel button */}
-                    {hasSession && !isAdmin && (
-                      <View style={[a.mt_sm]}>
-                        {hasPendingRequest ? (
-                          <Button
-                            label={_(msg`Cancel request`)}
-                            size="small"
-                            color="secondary"
-                            disabled={isActionPending}
-                            onPress={onCancelRequest}>
-                            {cancelMutation.isPending ? (
-                              <Loader size="md" />
-                            ) : (
-                              <ButtonText>
-                                <Trans>Remove request</Trans>
-                              </ButtonText>
-                            )}
-                          </Button>
-                        ) : (
-                          <Button
-                            label={_(msg`Request to join`)}
-                            size="small"
-                            color="primary"
-                            disabled={isActionPending}
-                            onPress={onRequestToJoin}>
-                            {joinMutation.isPending ? (
-                              <Loader size="md" />
-                            ) : (
-                              <ButtonText>
-                                <Trans>Request to join</Trans>
-                              </ButtonText>
-                            )}
-                          </Button>
-                        )}
-                      </View>
-                    )}
 
                     {isAdmin && (
                       <Text

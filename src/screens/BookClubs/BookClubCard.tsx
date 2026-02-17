@@ -4,22 +4,67 @@ import {useLingui} from '@lingui/react'
 import {useNavigation} from '@react-navigation/native'
 
 import {type NavigationProp} from '#/lib/routes/types'
-import {type BookClubEntry} from '#/state/queries/bookclubs'
+import {
+  type BookClubEntry,
+  useCancelJoinRequestMutation,
+  useJoinBookClubMutation,
+  useMyJoinRequestQuery,
+  useMyMembershipQuery,
+} from '#/state/queries/bookclubs'
 import {useProfileQuery} from '#/state/queries/profile'
+import {useSession} from '#/state/session'
 import {PreviewableUserAvatar} from '#/view/com/util/UserAvatar'
 import {atoms as a, useTheme} from '#/alf'
+import {Button, ButtonText} from '#/components/Button'
+import {Loader} from '#/components/Loader'
 import {Text} from '#/components/Typography'
 
 export function BookClubCard({club}: {club: BookClubEntry}) {
   const t = useTheme()
   const {_} = useLingui()
   const navigation = useNavigation<NavigationProp>()
+  const {hasSession, currentAccount} = useSession()
   const {record, currentBook} = club
   const book = currentBook?.record
+  const isAdmin = currentAccount?.did === record.admin
 
   const {data: adminProfile} = useProfileQuery({did: record.admin})
 
+  const {data: myRequest, isLoading: isLoadingRequest} = useMyJoinRequestQuery(
+    club.uri,
+  )
+  const {data: isMember} = useMyMembershipQuery(club.uri)
+  const joinMutation = useJoinBookClubMutation()
+  const cancelMutation = useCancelJoinRequestMutation()
+
+  const hasPendingRequest = myRequest !== null && myRequest !== undefined
+  const isActionPending =
+    joinMutation.isPending || cancelMutation.isPending || isLoadingRequest
+
+  const onRequestToJoin = async () => {
+    try {
+      await joinMutation.mutateAsync({clubUri: club.uri})
+    } catch {
+      // handled by mutation
+    }
+  }
+
+  const onCancelRequest = async () => {
+    if (!myRequest) return
+    try {
+      await cancelMutation.mutateAsync({
+        clubUri: club.uri,
+        rkey: myRequest.rkey,
+      })
+    } catch {
+      // handled by mutation
+    }
+  }
+
+  const canNavigate = isAdmin || isMember === true
+
   const onPress = () => {
+    if (!canNavigate) return
     navigation.navigate('BookClubDetail', {rkey: club.rkey})
   }
 
@@ -28,7 +73,7 @@ export function BookClubCard({club}: {club: BookClubEntry}) {
       accessibilityRole="button"
       accessibilityLabel={_(msg`Open ${record.name}`)}
       accessibilityHint=""
-      onPress={onPress}
+      onPress={canNavigate ? onPress : undefined}
       style={[
         a.flex_row,
         a.gap_lg,
@@ -126,6 +171,43 @@ export function BookClubCard({club}: {club: BookClubEntry}) {
               )}
             </View>
           </View>
+
+          {/* Join / Cancel button */}
+          {hasSession && !isAdmin && (
+            <View style={[a.mt_sm]}>
+              {hasPendingRequest ? (
+                <Button
+                  label={_(msg`Cancel request`)}
+                  size="small"
+                  color="secondary"
+                  disabled={isActionPending}
+                  onPress={onCancelRequest}>
+                  {cancelMutation.isPending ? (
+                    <Loader size="md" />
+                  ) : (
+                    <ButtonText>
+                      <Trans>Remove request</Trans>
+                    </ButtonText>
+                  )}
+                </Button>
+              ) : (
+                <Button
+                  label={_(msg`Request to join`)}
+                  size="small"
+                  color="primary"
+                  disabled={isActionPending}
+                  onPress={onRequestToJoin}>
+                  {joinMutation.isPending ? (
+                    <Loader size="md" />
+                  ) : (
+                    <ButtonText>
+                      <Trans>Request to join</Trans>
+                    </ButtonText>
+                  )}
+                </Button>
+              )}
+            </View>
+          )}
         </View>
       </View>
     </Pressable>
