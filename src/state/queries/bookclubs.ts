@@ -472,8 +472,8 @@ export function useJoinBookClubMutation() {
         rkey: res.data.uri.split('/').pop()!,
       }
     },
-    onSuccess: (_, {clubUri}) => {
-      void queryClient.invalidateQueries({queryKey: RQKEY_MY_REQUEST(clubUri)})
+    onSuccess: (data, {clubUri}) => {
+      queryClient.setQueryData(RQKEY_MY_REQUEST(clubUri), data)
       void queryClient.invalidateQueries({
         queryKey: RQKEY_PENDING_MEMBERS(clubUri),
       })
@@ -541,7 +541,7 @@ export function useCancelJoinRequestMutation() {
       }
     },
     onSuccess: (_, {clubUri}) => {
-      void queryClient.invalidateQueries({queryKey: RQKEY_MY_REQUEST(clubUri)})
+      queryClient.setQueryData(RQKEY_MY_REQUEST(clubUri), null)
       void queryClient.invalidateQueries({
         queryKey: RQKEY_PENDING_MEMBERS(clubUri),
       })
