@@ -4,12 +4,14 @@ import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 import {useNavigation} from '@react-navigation/core'
 
-import {FEEDBACK_FORM_URL, HELP_DESK_URL} from '#/lib/constants'
+import {useChatwoot} from '#/lib/chatwoot'
+import {HELP_DESK_URL} from '#/lib/constants'
 import {useKawaiiMode} from '#/state/preferences/kawaii'
 import {useSession} from '#/state/session'
 import {DesktopFeeds} from '#/view/shell/desktop/Feeds'
 import {DesktopSearch} from '#/view/shell/desktop/Search'
 import {SidebarTrendingTopics} from '#/view/shell/desktop/SidebarTrendingTopics'
+import {BookClubSidebar} from '#/screens/BookClubs/BookClubSidebar'
 import {
   atoms as a,
   useGutters,
@@ -19,7 +21,7 @@ import {
 } from '#/alf'
 import {AppLanguageDropdown} from '#/components/AppLanguageDropdown'
 import {CENTER_COLUMN_OFFSET} from '#/components/Layout'
-import {InlineLinkText} from '#/components/Link'
+import {createStaticClick, InlineLinkText} from '#/components/Link'
 import {ProgressGuideList} from '#/components/ProgressGuide/List'
 import {Text} from '#/components/Typography'
 import {SidebarLiveEventFeedsBanner} from '#/features/liveEvents/components/SidebarLiveEventFeedsBanner'
@@ -44,10 +46,12 @@ function useWebQueryParams() {
 export function DesktopRightNav({routeName}: {routeName: string}) {
   const t = useTheme()
   const {_} = useLingui()
-  const {hasSession, currentAccount} = useSession()
+  const {hasSession} = useSession()
+  const chatwoot = useChatwoot()
   const kawaii = useKawaiiMode()
   const gutters = useGutters(['base', 0, 'base', 'wide'])
   const isSearchScreen = routeName === 'Search'
+  const isBookClubDetail = routeName === 'BookClubDetail'
   const webqueryParams = useWebQueryParams()
   const searchQuery = webqueryParams?.q
   const showExploreScreenDuplicatedContent =
@@ -83,26 +87,31 @@ export function DesktopRightNav({routeName}: {routeName: string}) {
           maxHeight: '100vh',
         }),
       ]}>
-      {!isSearchScreen && <DesktopSearch />}
-
-      {hasSession && (
+      {isBookClubDetail && webqueryParams?.rkey ? (
+        <BookClubSidebar rkey={webqueryParams.rkey} />
+      ) : (
         <>
-          <DesktopFeeds />
-          <ProgressGuideList />
+          {!isSearchScreen && <DesktopSearch />}
+
+          {hasSession && (
+            <>
+              <DesktopFeeds />
+              <ProgressGuideList />
+            </>
+          )}
+
+          {showExploreScreenDuplicatedContent && (
+            <SidebarLiveEventFeedsBanner />
+          )}
+          {showExploreScreenDuplicatedContent && <SidebarTrendingTopics />}
         </>
       )}
-
-      {showExploreScreenDuplicatedContent && <SidebarLiveEventFeedsBanner />}
-      {showExploreScreenDuplicatedContent && <SidebarTrendingTopics />}
 
       <Text style={[a.leading_snug, t.atoms.text_contrast_low]}>
         {hasSession && (
           <>
             <InlineLinkText
-              to={FEEDBACK_FORM_URL({
-                email: currentAccount?.email,
-                handle: currentAccount?.handle,
-              })}
+              {...createStaticClick(() => chatwoot.toggle())}
               style={[t.atoms.text_contrast_medium]}
               label={_(msg`Feedback`)}>
               {_(msg`Feedback`)}

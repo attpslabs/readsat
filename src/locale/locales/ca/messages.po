@@ -85,7 +85,7 @@ msgstr "{0, plural, one {# segon} other {# segons}}"
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:222
 #: src/view/shell/bottom-bar/BottomBar.tsx:254
-#: src/view/shell/Drawer.tsx:508
+#: src/view/shell/Drawer.tsx:530
 msgid "{0, plural, one {# unread item} other {# unread items}}"
 msgstr "{0, plural, one {# element sense llegir} other {# elements sense llegir}}"
 
@@ -235,7 +235,7 @@ msgstr "{0} min"
 msgid "{0}s"
 msgstr "{0} s"
 
-#: src/view/shell/desktop/LeftNav.tsx:455
+#: src/view/shell/desktop/LeftNav.tsx:458
 msgid "{count, plural, one {# unread item} other {# unread items}}"
 msgstr "{count, plural, one {# element sense llegir} other {# elements sense llegir}}"
 
@@ -491,11 +491,11 @@ msgctxt "feeds"
 msgid "<0>{0}, </0><1>{1}, </1>and {2, plural, one {# other} other {# others}} are included in your starter pack"
 msgstr "<0>{0}, </0><1>{1}, </1>i {2, plural, one {# altre} other {# altres}} estan inclosos al teu starter pack"
 
-#: src/view/shell/Drawer.tsx:120
+#: src/view/shell/Drawer.tsx:123
 msgid "<0>{0}</0> {1, plural, one {follower} other {followers}}"
 msgstr "<0>{0}</0> {1, plural, one {seguidor} other {seguidors}}"
 
-#: src/view/shell/Drawer.tsx:131
+#: src/view/shell/Drawer.tsx:134
 msgid "<0>{0}</0> {1, plural, one {following} other {following}}"
 msgstr "<0>{0}</0> {1, plural, one {seguint} other {seguint}}"
 
@@ -528,6 +528,11 @@ msgstr "<0>Tu</0> i<1> </1><2>{0} </2>esteu inclosos al teu starter pack"
 #: src/screens/Profile/Header/Handle.tsx:57
 msgid "⚠Invalid Handle"
 msgstr "⚠Identificador invàlid"
+
+#: src/screens/BookClubs/BookClubCard.tsx:105
+#: src/screens/BookClubs/BookClubSidebar.tsx:151
+msgid "1 member"
+msgstr ""
 
 #: src/components/dialogs/MutedWords.tsx:198
 msgid "24 hours"
@@ -590,7 +595,7 @@ msgstr "Una captura de pantalla d'una pàgina de perfil amb una icona de campana
 msgid "A screenshot of the post composer with a new button next to the post button that says \"Drafts\", with a rainbow firework effect. Below, the text in the composer reads \"Hey, did you hear the news? Bluesky has drafts now!!!\"."
 msgstr ""
 
-#: src/Navigation.tsx:537
+#: src/Navigation.tsx:540
 #: src/screens/Settings/AboutSettings.tsx:73
 #: src/screens/Settings/Settings.tsx:260
 #: src/screens/Settings/Settings.tsx:263
@@ -625,11 +630,11 @@ msgstr "Accepta aquest suggeriment d'idioma"
 msgid "Accessibility"
 msgstr "Accessibilitat"
 
-#: src/Navigation.tsx:388
+#: src/Navigation.tsx:391
 msgid "Accessibility Settings"
 msgstr "Configuració d'accessibilitat"
 
-#: src/Navigation.tsx:404
+#: src/Navigation.tsx:407
 #: src/screens/Login/LoginForm.tsx:191
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
@@ -712,7 +717,7 @@ msgstr "Els comptes amb una marca de verificació blava<0><1/></0>poden verifica
 msgid "Activity from others"
 msgstr "Activitat d'altres persones"
 
-#: src/Navigation.tsx:505
+#: src/Navigation.tsx:508
 msgid "Activity notifications"
 msgstr "Notificacions d'activitat"
 
@@ -767,8 +772,8 @@ msgstr "Afegeix text alternatiu (opcional)"
 
 #: src/screens/Settings/Settings.tsx:582
 #: src/screens/Settings/Settings.tsx:585
-#: src/view/shell/desktop/LeftNav.tsx:263
-#: src/view/shell/desktop/LeftNav.tsx:267
+#: src/view/shell/desktop/LeftNav.tsx:266
+#: src/view/shell/desktop/LeftNav.tsx:270
 msgid "Add another account"
 msgstr "Afegeix un altre compte"
 
@@ -888,6 +893,10 @@ msgstr "Detalls addicionals (límit de 1000 caràcters)"
 #: src/components/moderation/ReportDialog/index.tsx:532
 msgid "Additional details (limit 300 characters)"
 msgstr "Detalls addicionals (límit de 300 caràcters)"
+
+#: src/screens/BookClubs/BookClubSidebar.tsx:145
+msgid "Admin"
+msgstr ""
 
 #: src/view/com/composer/labels/LabelsBtn.tsx:158
 msgid "Adult"
@@ -1231,7 +1240,7 @@ msgstr "Qualsevol pot interactuar"
 msgid "Anyone who follows me"
 msgstr "Qualsevol que em segueixi"
 
-#: src/Navigation.tsx:545
+#: src/Navigation.tsx:548
 #: src/screens/Settings/AppIconSettings/index.tsx:64
 #: src/screens/Settings/AppIconSettings/SettingsListItem.tsx:18
 #: src/screens/Settings/AppIconSettings/SettingsListItem.tsx:23
@@ -1272,7 +1281,7 @@ msgstr "Els noms de contrasenyes d'aplicació han de tenir almenys 4 caràcters"
 msgid "App passwords"
 msgstr "Contrasenyes de l'aplicació"
 
-#: src/Navigation.tsx:356
+#: src/Navigation.tsx:359
 #: src/screens/Settings/AppPasswords.tsx:50
 msgid "App Passwords"
 msgstr "Contrasenyes de l'aplicació"
@@ -1313,7 +1322,7 @@ msgstr "Apel·la la suspensió"
 msgid "Appeal this decision"
 msgstr "Apel·la aquesta decisió"
 
-#: src/Navigation.tsx:396
+#: src/Navigation.tsx:399
 #: src/screens/Settings/AppearanceSettings.tsx:73
 #: src/screens/Settings/Settings.tsx:228
 #: src/screens/Settings/Settings.tsx:231
@@ -1329,6 +1338,11 @@ msgstr "Aplica els canals recomanats per defecte"
 #: src/screens/Settings/Settings.tsx:516
 msgid "Apply Pull Request"
 msgstr "Aplica la petició d'integració Pull Request"
+
+#: src/screens/BookClubs/PendingRequests.tsx:104
+#: src/screens/BookClubs/PendingRequests.tsx:113
+msgid "Approve"
+msgstr ""
 
 #: src/screens/PostThread/components/ThreadItemAnchor.tsx:674
 msgid "Archived from {0}"
@@ -1352,6 +1366,7 @@ msgid "Are you sure you want to delete this starter pack?"
 msgstr "Estàs segur que vols eliminar aquest starter pack?"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:90
+#: src/screens/BookClubs/EditBookClubDialog.tsx:68
 #: src/screens/Profile/Header/EditProfileDialog.tsx:85
 msgid "Are you sure you want to discard your changes?"
 msgstr "Estàs segur que vols descartar els canvis?"
@@ -1565,7 +1580,7 @@ msgstr "Bloquejada"
 msgid "Blocked accounts"
 msgstr "Comptes bloquejats"
 
-#: src/Navigation.tsx:197
+#: src/Navigation.tsx:200
 #: src/view/screens/ModerationBlockedAccounts.tsx:104
 msgid "Blocked Accounts"
 msgstr "Comptes bloquejats"
@@ -1668,15 +1683,26 @@ msgstr "Difumina les imatges"
 msgid "Blur images and filter from feeds"
 msgstr "Difumina les imatges i filtra-ho dels canals"
 
-#: src/Navigation.tsx:642
+#: src/Navigation.tsx:645
 msgid "Book Details"
 msgstr ""
 
+#: src/Navigation.tsx:660
+msgid "Bookclub"
+msgstr ""
+
+#: src/Navigation.tsx:650
+#: src/screens/BookClubs/BookClubsScreen.tsx:51
+#: src/view/shell/desktop/LeftNav.tsx:752
+#: src/view/shell/Drawer.tsx:655
+msgid "Bookclubs"
+msgstr ""
+
 #: src/lib/interests.ts:54
-#: src/Navigation.tsx:637
+#: src/Navigation.tsx:640
 #: src/screens/Books/BooksScreen.tsx:197
-#: src/view/shell/desktop/LeftNav.tsx:689
-#: src/view/shell/Drawer.tsx:607
+#: src/view/shell/desktop/LeftNav.tsx:734
+#: src/view/shell/Drawer.tsx:629
 msgid "Books"
 msgstr "Llibres"
 
@@ -1800,6 +1826,10 @@ msgstr "Càmera"
 #: src/features/liveEvents/components/LiveEventFeedOptionsMenu.tsx:151
 #: src/features/liveEvents/components/LiveEventFeedOptionsMenu.tsx:156
 #: src/lib/media/picker.tsx:38
+#: src/screens/BookClubs/EditBookClubDialog.tsx:193
+#: src/screens/BookClubs/EditBookClubDialog.tsx:199
+#: src/screens/BookClubs/EditBookClubDialog.tsx:300
+#: src/screens/BookClubs/EditBookClubDialog.tsx:306
 #: src/screens/Deactivated.tsx:149
 #: src/screens/Profile/Header/EditProfileDialog.tsx:248
 #: src/screens/Profile/Header/EditProfileDialog.tsx:256
@@ -1817,7 +1847,7 @@ msgstr "Càmera"
 #: src/view/com/composer/Composer.tsx:1538
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:43
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:52
-#: src/view/shell/desktop/LeftNav.tsx:214
+#: src/view/shell/desktop/LeftNav.tsx:217
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -1839,6 +1869,11 @@ msgstr "Cancel·la la citació de la publicació"
 #: src/screens/Deactivated.tsx:143
 msgid "Cancel reactivation and sign out"
 msgstr "Cancel·la la reactivació i surt"
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:188
+#: src/screens/BookClubs/BookClubSidebar.tsx:173
+msgid "Cancel request"
+msgstr ""
 
 #: src/screens/Search/Shell.tsx:360
 msgid "Cancel search"
@@ -1880,6 +1915,11 @@ msgstr "Canvia la icona de l'aplicació a \"{0}\\"
 #: src/components/AppLanguageDropdown.tsx:40
 msgid "Change app language"
 msgstr "Canvia l'idioma de l'aplicació"
+
+#: src/screens/BookClubs/EditBookClubDialog.tsx:332
+#: src/screens/BookClubs/EditBookClubDialog.tsx:337
+msgid "Change book"
+msgstr ""
 
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:94
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:98
@@ -1925,12 +1965,16 @@ msgid "Changes saved"
 msgstr "Canvis desats"
 
 #: src/lib/hooks/useNotificationHandler.ts:102
-#: src/Navigation.tsx:562
+#: src/Navigation.tsx:565
 #: src/view/shell/bottom-bar/BottomBar.tsx:218
-#: src/view/shell/desktop/LeftNav.tsx:609
-#: src/view/shell/Drawer.tsx:476
+#: src/view/shell/desktop/LeftNav.tsx:654
+#: src/view/shell/Drawer.tsx:498
 msgid "Chat"
 msgstr "Xat"
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:245
+msgid "Chat coming soon"
+msgstr ""
 
 #: src/screens/Messages/components/RequestButtons.tsx:78
 #: src/screens/Messages/components/RequestButtons.tsx:313
@@ -1951,7 +1995,7 @@ msgctxt "toast"
 msgid "Chat muted"
 msgstr "Xat silenciat"
 
-#: src/Navigation.tsx:572
+#: src/Navigation.tsx:575
 #: src/screens/Messages/components/InboxPreview.tsx:22
 msgid "Chat request inbox"
 msgstr "Safata de sol·licituds de xat"
@@ -1963,7 +2007,7 @@ msgid "Chat requests"
 msgstr "Sol·licituds de xat"
 
 #: src/components/dms/ConvoMenu.tsx:78
-#: src/Navigation.tsx:567
+#: src/Navigation.tsx:570
 #: src/screens/Messages/ChatList.tsx:81
 #: src/screens/Messages/ChatList.tsx:85
 #: src/screens/Messages/ChatList.tsx:380
@@ -2096,7 +2140,7 @@ msgstr "Fes clic aquí per actualitzar el teu correu"
 msgid "Click to open tag menu for {0}"
 msgstr "Fes clic per a obrir el menú d'etiquetes per a {0}"
 
-#: src/components/dms/MessageItem.tsx:318
+#: src/components/dms/MessageItem.tsx:326
 msgid "Click to retry failed message"
 msgstr "Clica aquí per provar d'enviar el missatge de nou"
 
@@ -2226,6 +2270,17 @@ msgstr "Tanca el selector d'emojis"
 msgid "Closes viewer for header image"
 msgstr "Tanca la visualització de la imatge de la capçalera"
 
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:153
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:157
+#: src/screens/BookClubs/EditBookClubDialog.tsx:228
+#: src/screens/BookClubs/EditBookClubDialog.tsx:234
+msgid "Club name"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubSidebar.tsx:111
+msgid "Club settings"
+msgstr ""
+
 #: src/view/com/notifications/NotificationFeedItem.tsx:601
 msgid "Collapse list of users"
 msgstr "Plega la llista d'usuaris"
@@ -2251,12 +2306,12 @@ msgstr "Comèdia"
 msgid "Comics"
 msgstr "Còmics"
 
-#: src/screens/Books/BookDetailScreen.tsx:122
+#: src/screens/Books/BookDetailScreen.tsx:123
 msgid "Community"
 msgstr ""
 
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:45
-#: src/Navigation.tsx:346
+#: src/Navigation.tsx:349
 #: src/view/screens/CommunityGuidelines.tsx:37
 msgid "Community Guidelines"
 msgstr "Directrius de la comunitat"
@@ -2266,7 +2321,7 @@ msgid "Complete onboarding and start using your account"
 msgstr "Finalitza el registre i comença a utilitzar el teu compte"
 
 #: src/view/com/feeds/ComposerPrompt.tsx:146
-#: src/view/shell/desktop/LeftNav.tsx:574
+#: src/view/shell/desktop/LeftNav.tsx:619
 msgid "Compose new post"
 msgstr "Crea una nova publicació"
 
@@ -2385,7 +2440,7 @@ msgstr "Contingut i multimèdia"
 msgid "Content and media"
 msgstr "Contingut i multimèdia"
 
-#: src/Navigation.tsx:521
+#: src/Navigation.tsx:524
 msgid "Content and Media"
 msgstr "Contingut i multimèdia"
 
@@ -2583,7 +2638,7 @@ msgstr "Copia el valor del registre TXT"
 
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:40
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:107
-#: src/Navigation.tsx:351
+#: src/Navigation.tsx:354
 #: src/view/screens/CopyrightPolicy.tsx:34
 msgid "Copyright Policy"
 msgstr "Política de drets d'autor"
@@ -2649,8 +2704,12 @@ msgstr "No s'han pogut carregar els contactes. {0}"
 msgid "Could not upload contacts. You need to re-verify your phone number to proceed"
 msgstr "No s'han pogut carregar els contactes. Cal que tornis a verificar el teu número de telèfon per continuar"
 
-#: src/screens/Books/BookDetailScreen.tsx:77
+#: src/screens/Books/BookDetailScreen.tsx:79
 msgid "Couldn't load book details. Tap to retry."
+msgstr ""
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:103
+msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
 #: src/screens/Books/BooksScreen.tsx:106
@@ -2680,7 +2739,7 @@ msgstr "Crea un codi QR per a un starter pack"
 
 #: src/components/StarterPack/ProfileStarterPacks.tsx:206
 #: src/components/StarterPack/ProfileStarterPacks.tsx:315
-#: src/Navigation.tsx:602
+#: src/Navigation.tsx:605
 msgid "Create a starter pack"
 msgstr "Crea un starter pack"
 
@@ -2730,6 +2789,14 @@ msgstr "Enlloc d'això, crea un avatar"
 msgid "Create another"
 msgstr "Crea'n un altre"
 
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:282
+msgid "Create bookclub"
+msgstr ""
+
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:295
+msgid "Create Bookclub"
+msgstr ""
+
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:350
 msgid "Create moderation list"
 msgstr "Crea una llista de moderació"
@@ -2765,6 +2832,12 @@ msgstr "S'ha bloquejat al creador"
 #: src/lib/interests.ts:57
 msgid "Culture"
 msgstr "Cultura"
+
+#: src/screens/BookClubs/BookClubCard.tsx:49
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:144
+#: src/screens/BookClubs/EditBookClubDialog.tsx:244
+msgid "Currently reading"
+msgstr ""
 
 #: src/components/dialogs/ServerInput.tsx:155
 #: src/components/dialogs/ServerInput.tsx:157
@@ -2954,8 +3027,13 @@ msgstr "Eliminat per Plivo després de la verificació"
 msgid "Deleted list"
 msgstr "Llista eliminada"
 
+#: src/screens/BookClubs/PendingRequests.tsx:118
+#: src/screens/BookClubs/PendingRequests.tsx:127
+msgid "Deny"
+msgstr ""
+
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:436
-#: src/screens/Books/BookDetailScreen.tsx:150
+#: src/screens/Books/BookDetailScreen.tsx:151
 #: src/screens/Profile/Header/EditProfileDialog.tsx:395
 #: src/screens/Profile/Header/EditProfileDialog.tsx:402
 msgid "Description"
@@ -2975,7 +3053,7 @@ msgstr "Desenganxa la citació"
 msgid "Detach quote post?"
 msgstr "Vols desenganxar la citació?"
 
-#: src/screens/Books/BookDetailScreen.tsx:166
+#: src/screens/Books/BookDetailScreen.tsx:167
 msgid "Details"
 msgstr ""
 
@@ -3042,6 +3120,7 @@ msgid "Disabled"
 msgstr "Desactivat"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:92
+#: src/screens/BookClubs/EditBookClubDialog.tsx:71
 #: src/screens/Profile/Header/EditProfileDialog.tsx:87
 #: src/view/com/composer/Composer.tsx:1214
 #: src/view/com/composer/Composer.tsx:1262
@@ -3052,6 +3131,7 @@ msgid "Discard"
 msgstr "Descarta"
 
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:89
+#: src/screens/BookClubs/EditBookClubDialog.tsx:66
 #: src/screens/Profile/Header/EditProfileDialog.tsx:84
 msgid "Discard changes?"
 msgstr "Vols descartar els canvis?"
@@ -3266,6 +3346,11 @@ msgstr "p. ex. nuesa artística."
 msgid "e.g. Great Posters"
 msgstr "p. ex. Gent interessant"
 
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:158
+#: src/screens/BookClubs/EditBookClubDialog.tsx:235
+msgid "e.g. Romance Readers United"
+msgstr ""
+
 #: src/components/dialogs/lists/CreateOrEditListDialog.tsx:354
 msgid "e.g. Spammers"
 msgstr "p. ex. Spammers"
@@ -3301,6 +3386,11 @@ msgstr "Edita"
 msgid "Edit avatar"
 msgstr "Edita l'avatar"
 
+#: src/screens/BookClubs/EditBookClubDialog.tsx:188
+#: src/screens/BookClubs/EditBookClubDialog.tsx:220
+msgid "Edit bookclub"
+msgstr ""
+
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:112
 msgid "Edit Feeds"
 msgstr "Edita els canals"
@@ -3335,7 +3425,7 @@ msgstr "Edita l'estat en directe"
 msgid "Edit moderation list"
 msgstr "Edita la llista de moderació"
 
-#: src/Navigation.tsx:361
+#: src/Navigation.tsx:364
 #: src/view/screens/Feeds.tsx:518
 msgid "Edit My Feeds"
 msgstr "Edita els meus canals"
@@ -3377,7 +3467,7 @@ msgstr "Edita la llista d'usuaris"
 msgid "Edit who can reply"
 msgstr "Edita qui pot respondre"
 
-#: src/Navigation.tsx:607
+#: src/Navigation.tsx:610
 msgid "Edit your starter pack"
 msgstr "Edita el teu starter pack"
 
@@ -3707,10 +3797,10 @@ msgstr "Contingut explícit o potencialment pertorbador."
 msgid "Explicit sexual images."
 msgstr "Imatges sexuals explícites."
 
-#: src/Navigation.tsx:801
+#: src/Navigation.tsx:819
 #: src/screens/Search/Shell.tsx:326
-#: src/view/shell/desktop/LeftNav.tsx:707
-#: src/view/shell/Drawer.tsx:424
+#: src/view/shell/desktop/LeftNav.tsx:771
+#: src/view/shell/Drawer.tsx:446
 msgid "Explore"
 msgstr "Explora"
 
@@ -3743,7 +3833,7 @@ msgstr "Contingut extern"
 msgid "External media may allow websites to collect information about you and your device. No information is sent or requested until you press the \"play\" button."
 msgstr "El contingut extern pot permetre que algunes webs recullin informació sobre tu i el teu dispositiu. No s'envia ni es demana cap informació fins que premis el botó \"reproduir\"."
 
-#: src/Navigation.tsx:380
+#: src/Navigation.tsx:383
 #: src/screens/Settings/ExternalMediaPreferences.tsx:34
 msgid "External Media Preferences"
 msgstr "Preferència del contingut extern"
@@ -3773,6 +3863,10 @@ msgstr "No s'ha pogut canviar l'identificador. Torna-ho a provar."
 #: src/screens/Settings/components/AddAppPasswordDialog.tsx:173
 msgid "Failed to create app password. Please try again."
 msgstr "No s'ha pogut crear la contrasenya d'aplicació. Torna-ho a provar."
+
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:302
+msgid "Failed to create bookclub. Please try again."
+msgstr ""
 
 #: src/components/dms/MessageProfileButton.tsx:37
 msgid "Failed to create conversation"
@@ -3820,6 +3914,10 @@ msgstr "No s'ha pogut amagar el suggeriment. Comprova la connexió a Internet"
 #: src/components/contacts/screens/ViewMatches.tsx:581
 msgid "Failed to launch SMS app"
 msgstr "No s'ha pogut iniciar l'aplicació d'SMS"
+
+#: src/screens/BookClubs/BookClubsScreen.tsx:80
+msgid "Failed to load bookclubs"
+msgstr ""
 
 #: src/screens/Messages/ChatList.tsx:282
 #: src/screens/Messages/Inbox.tsx:209
@@ -3908,6 +4006,10 @@ msgstr "No s'ha pogut eliminar la verificació"
 msgid "Failed to resolve location. Please try again."
 msgstr "La ubicació ha fallat. Torna-ho a provar."
 
+#: src/screens/BookClubs/EditBookClubDialog.tsx:346
+msgid "Failed to save changes. Please try again."
+msgstr ""
+
 #: src/view/com/composer/Composer.tsx:560
 msgid "Failed to save draft"
 msgstr "Error en desar l'esborrany"
@@ -3926,7 +4028,12 @@ msgctxt "toast"
 msgid "Failed to save your interests."
 msgstr "No s'han pogut desar els teus interessos."
 
-#: src/components/dms/MessageItem.tsx:311
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:242
+#: src/screens/BookClubs/EditBookClubDialog.tsx:276
+msgid "Failed to search books"
+msgstr ""
+
+#: src/components/dms/MessageItem.tsx:319
 msgid "Failed to send"
 msgstr "No s'ha pogut enviar"
 
@@ -3993,7 +4100,7 @@ msgstr "Compte fals o bot"
 msgid "False information about elections"
 msgstr "Informació falsa sobre les eleccions"
 
-#: src/Navigation.tsx:296
+#: src/Navigation.tsx:299
 msgid "Feed"
 msgstr "Canal"
 
@@ -4023,9 +4130,9 @@ msgstr "Alterna el canal"
 msgid "Feed unavailable"
 msgstr "Canal no disponible"
 
-#: src/view/shell/desktop/RightNav.tsx:107
-#: src/view/shell/desktop/RightNav.tsx:108
-#: src/view/shell/Drawer.tsx:378
+#: src/view/shell/desktop/RightNav.tsx:117
+#: src/view/shell/desktop/RightNav.tsx:118
+#: src/view/shell/Drawer.tsx:400
 msgid "Feedback"
 msgstr "Comentaris"
 
@@ -4035,14 +4142,14 @@ msgctxt "toast"
 msgid "Feedback sent to feed operator"
 msgstr "Comentaris enviats a l'operador del canal"
 
-#: src/Navigation.tsx:587
+#: src/Navigation.tsx:590
 #: src/screens/SavedFeeds.tsx:108
 #: src/screens/Search/SearchResults.tsx:78
 #: src/screens/StarterPack/StarterPackScreen.tsx:193
 #: src/view/screens/Feeds.tsx:511
 #: src/view/screens/Profile.tsx:239
-#: src/view/shell/desktop/LeftNav.tsx:745
-#: src/view/shell/Drawer.tsx:540
+#: src/view/shell/desktop/LeftNav.tsx:809
+#: src/view/shell/Drawer.tsx:562
 msgid "Feeds"
 msgstr "Canals"
 
@@ -4110,8 +4217,8 @@ msgstr "Finances"
 msgid "Find accounts to follow"
 msgstr "Troba comptes per a seguir"
 
-#: src/Navigation.tsx:428
-#: src/Navigation.tsx:629
+#: src/Navigation.tsx:431
+#: src/Navigation.tsx:632
 msgid "Find Contacts"
 msgstr "Troba contactes"
 
@@ -4268,7 +4375,7 @@ msgstr "Seguit per <0>{0}</0> i <1>{1}</1>"
 msgid "Followed by <0>{0}</0>, <1>{1}</1>, and {2, plural, one {# other} other {# others}}"
 msgstr "Seguit per <0>{0}</0>, <1>{1}</1>, i {2, plural, one {# altre} other {# altres}}"
 
-#: src/Navigation.tsx:250
+#: src/Navigation.tsx:253
 msgid "Followers of @{0} that you know"
 msgstr "Seguidors de @{0} que coneixes"
 
@@ -4311,7 +4418,7 @@ msgstr "Seguint {handle}"
 msgid "Following feed preferences"
 msgstr "Preferències del canal Seguint"
 
-#: src/Navigation.tsx:367
+#: src/Navigation.tsx:370
 #: src/screens/Settings/FollowingFeedPreferences.tsx:56
 msgid "Following Feed Preferences"
 msgstr "Preferències del canal Seguint"
@@ -4417,7 +4524,7 @@ msgstr ""
 msgid "Germ DM reconnected"
 msgstr ""
 
-#: src/view/shell/Drawer.tsx:382
+#: src/view/shell/Drawer.tsx:404
 msgid "Get help"
 msgstr "Aconsegueix ajuda"
 
@@ -4595,8 +4702,8 @@ msgid "Go to next"
 msgstr "Ves al següent"
 
 #: src/components/dms/ConvoMenu.tsx:241
-#: src/view/shell/desktop/LeftNav.tsx:318
-#: src/view/shell/desktop/LeftNav.tsx:324
+#: src/view/shell/desktop/LeftNav.tsx:321
+#: src/view/shell/desktop/LeftNav.tsx:327
 msgid "Go to profile"
 msgstr "Ves al perfil"
 
@@ -4689,7 +4796,7 @@ msgstr "Activitats nocives o d'alt risc"
 msgid "Harming or endangering minors"
 msgstr "Perjudicar o posar en perill els menors"
 
-#: src/Navigation.tsx:552
+#: src/Navigation.tsx:555
 msgid "Hashtag"
 msgstr "Etiqueta"
 
@@ -4716,9 +4823,9 @@ msgstr "Retingut per Bluesky durant 7 dies per evitar abusos, i després elimina
 
 #: src/screens/Settings/Settings.tsx:252
 #: src/screens/Settings/Settings.tsx:256
-#: src/view/shell/desktop/RightNav.tsx:128
-#: src/view/shell/desktop/RightNav.tsx:131
-#: src/view/shell/Drawer.tsx:391
+#: src/view/shell/desktop/RightNav.tsx:138
+#: src/view/shell/desktop/RightNav.tsx:141
+#: src/view/shell/Drawer.tsx:413
 msgid "Help"
 msgstr "Ajuda"
 
@@ -4884,11 +4991,11 @@ msgstr "No podem carregar el servei de moderació."
 msgid "Hold up! We’re gradually giving access to video, and you’re still waiting in line. Check back soon!"
 msgstr "Espera! A poc a poc estem donant accés al vídeo i encara estàs a la cua. Torna més tard!"
 
-#: src/Navigation.tsx:796
-#: src/Navigation.tsx:816
+#: src/Navigation.tsx:814
+#: src/Navigation.tsx:834
 #: src/view/shell/bottom-bar/BottomBar.tsx:175
-#: src/view/shell/desktop/LeftNav.tsx:671
-#: src/view/shell/Drawer.tsx:450
+#: src/view/shell/desktop/LeftNav.tsx:716
+#: src/view/shell/Drawer.tsx:472
 msgid "Home"
 msgstr "Inici"
 
@@ -5052,6 +5159,10 @@ msgstr "Importa contactes"
 #: src/components/contacts/FindContactsBannerNUX.tsx:70
 msgid "Import contacts to find your friends"
 msgstr "Importa contactes per trobar els teus amics"
+
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:259
+msgid "Import your Goodreads/StoryGraph library"
+msgstr ""
 
 #: src/screens/Settings/FindContactsSettings.tsx:513
 msgid "Imported on {0}"
@@ -5253,6 +5364,7 @@ msgstr ""
 msgid "Journalism"
 msgstr "Periodisme"
 
+#: src/screens/BookClubs/EditBookClubDialog.tsx:72
 #: src/view/com/composer/Composer.tsx:1266
 #: src/view/com/composer/drafts/DraftsButton.tsx:134
 msgid "Keep editing"
@@ -5295,7 +5407,7 @@ msgstr "Etiquetes al teu compte"
 msgid "Labels on your content"
 msgstr "Etiquetes al teu contingut"
 
-#: src/Navigation.tsx:223
+#: src/Navigation.tsx:226
 msgid "Language Settings"
 msgstr "Configuració d'idioma"
 
@@ -5476,7 +5588,7 @@ msgstr "Fes m'agrada a 10 publicacions"
 msgid "Like 10 posts to train the Discover feed"
 msgstr "Fes m'agrada a 10 publicacions per a entrenar el canal Discover"
 
-#: src/Navigation.tsx:465
+#: src/Navigation.tsx:468
 msgid "Like notifications"
 msgstr "Notificacions de \"M'agrada\""
 
@@ -5488,8 +5600,8 @@ msgstr "Fes m'agrada a aquest canal"
 msgid "Like this labeler"
 msgstr "Fes m'agrada a aquest etiquetador"
 
-#: src/Navigation.tsx:301
-#: src/Navigation.tsx:306
+#: src/Navigation.tsx:304
+#: src/Navigation.tsx:309
 msgid "Liked by"
 msgstr "Li ha agradat a"
 
@@ -5524,7 +5636,7 @@ msgstr "M'agrades"
 msgid "Likes of your reposts"
 msgstr "M'agrades de les teves republicacions"
 
-#: src/Navigation.tsx:489
+#: src/Navigation.tsx:492
 msgid "Likes of your reposts notifications"
 msgstr "Notificacions de m'agrades de les teves republicacions"
 
@@ -5537,7 +5649,7 @@ msgstr "M'agrades a aquesta publicació"
 msgid "Linear"
 msgstr "Lineal"
 
-#: src/Navigation.tsx:256
+#: src/Navigation.tsx:259
 msgid "List"
 msgstr "Llista"
 
@@ -5617,12 +5729,12 @@ msgctxt "toast"
 msgid "List unmuted"
 msgstr "Llista no silenciada"
 
-#: src/Navigation.tsx:177
+#: src/Navigation.tsx:180
 #: src/view/screens/Lists.tsx:67
 #: src/view/screens/Profile.tsx:233
 #: src/view/screens/Profile.tsx:241
-#: src/view/shell/desktop/LeftNav.tsx:763
-#: src/view/shell/Drawer.tsx:555
+#: src/view/shell/desktop/LeftNav.tsx:827
+#: src/view/shell/Drawer.tsx:577
 msgid "Lists"
 msgstr "Llistes"
 
@@ -5705,7 +5817,7 @@ msgstr "Carregant la configuració d'interaccions de la publicació..."
 msgid "Loading..."
 msgstr "Carregant…"
 
-#: src/Navigation.tsx:326
+#: src/Navigation.tsx:329
 msgid "Log"
 msgstr "Registre"
 
@@ -5725,12 +5837,12 @@ msgstr "Sessió tancada"
 msgid "Logged-out visibility"
 msgstr "Visibilitat pels usuaris no connectats"
 
-#: src/view/shell/desktop/RightNav.tsx:140
+#: src/view/shell/desktop/RightNav.tsx:150
 msgid "Logo by @sawaratsuki.bsky.social"
 msgstr "Logo per @sawaratsuki.bsky.social"
 
-#: src/view/shell/desktop/RightNav.tsx:137
-#: src/view/shell/Drawer.tsx:745
+#: src/view/shell/desktop/RightNav.tsx:147
+#: src/view/shell/Drawer.tsx:832
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr "Logo per <0>@sawaratsuki.bsky.social</0>"
 
@@ -5817,7 +5929,7 @@ msgstr "Imatge desada en un altre dispositiu"
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "Continguts que poden ser inquietants o inadequats per a alguns públics."
 
-#: src/Navigation.tsx:449
+#: src/Navigation.tsx:452
 msgid "Mention notifications"
 msgstr "Notificacions de mencions"
 
@@ -5870,7 +5982,7 @@ msgstr "El missatge és massa llarg"
 msgid "Message options"
 msgstr "Opcions del missatge"
 
-#: src/Navigation.tsx:811
+#: src/Navigation.tsx:829
 msgid "Messages"
 msgstr "Missatges"
 
@@ -5887,7 +5999,7 @@ msgstr ""
 msgid "Minor harassment or bullying"
 msgstr "Assetjament o intimidació lleu"
 
-#: src/Navigation.tsx:513
+#: src/Navigation.tsx:516
 msgid "Miscellaneous notifications"
 msgstr "Notificacions diverses"
 
@@ -5899,7 +6011,7 @@ msgstr "Enganyós"
 msgid "Missing media"
 msgstr "No es troba la imatge"
 
-#: src/Navigation.tsx:182
+#: src/Navigation.tsx:185
 #: src/screens/Moderation/index.tsx:99
 #: src/screens/Settings/Settings.tsx:192
 #: src/screens/Settings/Settings.tsx:195
@@ -5938,7 +6050,7 @@ msgstr "S'ha actualitzat la llista de moderació"
 msgid "Moderation lists"
 msgstr "Llistes de moderació"
 
-#: src/Navigation.tsx:187
+#: src/Navigation.tsx:190
 #: src/view/screens/ModerationModlists.tsx:67
 msgid "Moderation Lists"
 msgstr "Llistes de moderació"
@@ -5947,7 +6059,7 @@ msgstr "Llistes de moderació"
 msgid "moderation settings"
 msgstr "preferències de moderació"
 
-#: src/Navigation.tsx:316
+#: src/Navigation.tsx:319
 msgid "Moderation states"
 msgstr "Estats de moderació"
 
@@ -6071,7 +6183,7 @@ msgstr "Silencia paraules i etiquetes"
 msgid "Muted accounts"
 msgstr "Comptes silenciats"
 
-#: src/Navigation.tsx:192
+#: src/Navigation.tsx:195
 #: src/view/screens/ModerationMutedAccounts.tsx:116
 msgid "Muted Accounts"
 msgstr "Comptes silenciats"
@@ -6124,7 +6236,7 @@ msgstr "Ves a l'starter pack"
 msgid "Navigates to the next screen"
 msgstr "Navega a la pantalla següent"
 
-#: src/view/shell/Drawer.tsx:81
+#: src/view/shell/Drawer.tsx:84
 msgid "Navigates to your profile"
 msgstr "Navega al teu perfil"
 
@@ -6173,7 +6285,7 @@ msgstr "Adreça de correu nova"
 msgid "New Feature"
 msgstr "Funció nova"
 
-#: src/Navigation.tsx:481
+#: src/Navigation.tsx:484
 msgid "New follower notifications"
 msgstr "Notificacions de nou seguidor"
 
@@ -6218,7 +6330,7 @@ msgctxt "action"
 msgid "New post"
 msgstr "Nova publicació"
 
-#: src/view/shell/desktop/LeftNav.tsx:582
+#: src/view/shell/desktop/LeftNav.tsx:627
 msgctxt "action"
 msgid "New Post"
 msgstr "Nova publicació"
@@ -6280,6 +6392,19 @@ msgstr "Sense anuncis, sense seguiment invasiu, sense trampes d'interacció. Blu
 #: src/screens/Settings/AppPasswords.tsx:107
 msgid "No app passwords yet"
 msgstr "Encara no hi ha contrasenyes d'aplicació"
+
+#: src/screens/BookClubs/EditBookClubDialog.tsx:327
+msgid "No book selected"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubsScreen.tsx:97
+msgid "No bookclubs yet"
+msgstr ""
+
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:249
+#: src/screens/BookClubs/EditBookClubDialog.tsx:283
+msgid "No books found"
+msgstr ""
 
 #: src/screens/Books/BooksScreen.tsx:164
 msgid "No books match your search"
@@ -6378,6 +6503,10 @@ msgstr ""
 #: src/components/WhoCanReply.tsx:302
 msgid "No one but the author can quote this post."
 msgstr "Ningú més que l'autor pot citar aquesta publicació."
+
+#: src/screens/BookClubs/PendingRequests.tsx:31
+msgid "No pending requests"
+msgstr ""
 
 #: src/screens/Notifications/ActivityList.tsx:42
 msgid "No posts here"
@@ -6490,7 +6619,7 @@ msgstr "No disponible en aquesta plataforma."
 msgid "Not followed by anyone you're following"
 msgstr "No el segueix ningú a qui segueixes"
 
-#: src/Navigation.tsx:172
+#: src/Navigation.tsx:175
 #: src/view/screens/Profile.tsx:132
 msgid "Not Found"
 msgstr "No s'ha trobat"
@@ -6520,8 +6649,8 @@ msgstr "Aquí no hi ha res"
 msgid "Nothing saved yet"
 msgstr "Encara no hi ha res desat"
 
-#: src/Navigation.tsx:435
-#: src/Navigation.tsx:582
+#: src/Navigation.tsx:438
+#: src/Navigation.tsx:585
 #: src/view/screens/Notifications.tsx:135
 msgid "Notification settings"
 msgstr "Configuració de les notificacions"
@@ -6534,8 +6663,8 @@ msgstr "Sons de les notificacions"
 msgid "Notification Sounds"
 msgstr "Sons de les notificacions"
 
-#: src/Navigation.tsx:577
-#: src/Navigation.tsx:806
+#: src/Navigation.tsx:580
+#: src/Navigation.tsx:824
 #: src/screens/Notifications/ActivityList.tsx:30
 #: src/screens/Settings/NotificationSettings/ActivityNotificationSettings.tsx:90
 #: src/screens/Settings/NotificationSettings/index.tsx:92
@@ -6552,8 +6681,8 @@ msgstr "Sons de les notificacions"
 #: src/screens/Settings/Settings.tsx:203
 #: src/view/screens/Notifications.tsx:129
 #: src/view/shell/bottom-bar/BottomBar.tsx:249
-#: src/view/shell/desktop/LeftNav.tsx:726
-#: src/view/shell/Drawer.tsx:503
+#: src/view/shell/desktop/LeftNav.tsx:790
+#: src/view/shell/Drawer.tsx:525
 msgid "Notifications"
 msgstr "Notificacions"
 
@@ -6565,7 +6694,7 @@ msgstr "Notificacions per a tota la resta, com ara quan algú s'uneix a través 
 msgid "now"
 msgstr "ara"
 
-#: src/components/dms/MessageItem.tsx:275
+#: src/components/dms/MessageItem.tsx:283
 msgid "Now"
 msgstr "Ara"
 
@@ -6676,6 +6805,10 @@ msgstr "Ostres, alguna cosa ha anat malament!"
 #: src/view/screens/Profile.tsx:132
 msgid "Oops!"
 msgstr "Ostres!"
+
+#: src/screens/BookClubs/BookClubCard.tsx:29
+msgid "Open {0}"
+msgstr ""
 
 #: src/screens/Onboarding/StepProfile/index.tsx:294
 msgid "Open avatar creator"
@@ -7006,17 +7139,21 @@ msgstr ""
 msgid "Pause video"
 msgstr "Posa en pausa el vídeo"
 
+#: src/screens/BookClubs/PendingRequests.tsx:25
+msgid "Pending Requests"
+msgstr ""
+
 #: src/screens/ProfileList/index.tsx:168
 #: src/screens/Search/SearchResults.tsx:72
 #: src/screens/StarterPack/StarterPackScreen.tsx:192
 msgid "People"
 msgstr "Gent"
 
-#: src/Navigation.tsx:243
+#: src/Navigation.tsx:246
 msgid "People followed by @{0}"
 msgstr "Persones seguides per @{0}"
 
-#: src/Navigation.tsx:236
+#: src/Navigation.tsx:239
 msgid "People following @{0}"
 msgstr "Persones seguint a @{0}"
 
@@ -7066,6 +7203,10 @@ msgstr "Fotografia"
 msgid "Pictures meant for adults."
 msgstr "Imatges destinades a adults."
 
+#: src/screens/BookClubs/BookClubSidebar.tsx:157
+msgid "Pin club"
+msgstr ""
+
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:522
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:529
 #: src/screens/SavedFeeds.tsx:351
@@ -7084,6 +7225,10 @@ msgstr "Fixa a l'inici"
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:339
 msgid "Pin to Home"
 msgstr "Fixa a l'Inici"
+
+#: src/screens/BookClubs/BookClubSidebar.tsx:163
+msgid "Pin to sidebar"
+msgstr ""
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:481
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:488
@@ -7335,10 +7480,10 @@ msgstr "Publica-ho tot"
 msgid "Post blocked"
 msgstr "Publicació bloquejada"
 
-#: src/Navigation.tsx:269
-#: src/Navigation.tsx:276
-#: src/Navigation.tsx:283
-#: src/Navigation.tsx:290
+#: src/Navigation.tsx:272
+#: src/Navigation.tsx:279
+#: src/Navigation.tsx:286
+#: src/Navigation.tsx:293
 msgid "Post by @{0}"
 msgstr "Publicació per @{0}"
 
@@ -7372,7 +7517,7 @@ msgstr "Publicació amagada per tu"
 msgid "Post interaction settings"
 msgstr "Configuració de les interaccions de la publicació"
 
-#: src/Navigation.tsx:203
+#: src/Navigation.tsx:206
 #: src/screens/ModerationInteractionSettings/index.tsx:34
 msgid "Post Interaction Settings"
 msgstr "Configuració de les interaccions de la publicació"
@@ -7465,8 +7610,8 @@ msgstr "Idioma principal"
 msgid "Primary Language"
 msgstr "Idioma principal"
 
-#: src/view/shell/desktop/RightNav.tsx:116
-#: src/view/shell/desktop/RightNav.tsx:117
+#: src/view/shell/desktop/RightNav.tsx:126
+#: src/view/shell/desktop/RightNav.tsx:127
 msgid "Privacy"
 msgstr "Privacitat"
 
@@ -7475,8 +7620,8 @@ msgstr "Privacitat"
 msgid "Privacy and security"
 msgstr "Privadesa i seguretat"
 
-#: src/Navigation.tsx:412
-#: src/Navigation.tsx:420
+#: src/Navigation.tsx:415
+#: src/Navigation.tsx:423
 #: src/screens/Settings/ActivityPrivacySettings.tsx:40
 #: src/screens/Settings/PrivacyAndSecuritySettings.tsx:44
 msgid "Privacy and Security"
@@ -7489,13 +7634,13 @@ msgstr "Configuració de privadesa i seguretat"
 
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:35
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:102
-#: src/Navigation.tsx:336
+#: src/Navigation.tsx:339
 #: src/screens/Settings/AboutSettings.tsx:90
 #: src/screens/Settings/AboutSettings.tsx:93
 #: src/screens/Signup/SignupForm.tsx:313
 #: src/view/screens/PrivacyPolicy.tsx:34
-#: src/view/shell/Drawer.tsx:740
-#: src/view/shell/Drawer.tsx:741
+#: src/view/shell/Drawer.tsx:827
+#: src/view/shell/Drawer.tsx:828
 msgid "Privacy Policy"
 msgstr "Política de privacitat"
 
@@ -7521,9 +7666,9 @@ msgid "profile"
 msgstr "perfil"
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:292
-#: src/view/shell/desktop/LeftNav.tsx:804
-#: src/view/shell/Drawer.tsx:80
-#: src/view/shell/Drawer.tsx:632
+#: src/view/shell/desktop/LeftNav.tsx:868
+#: src/view/shell/Drawer.tsx:83
+#: src/view/shell/Drawer.tsx:680
 msgid "Profile"
 msgstr "Perfil"
 
@@ -7596,7 +7741,7 @@ msgstr "Codi QR descarregat!"
 msgid "QR code saved to your camera roll!"
 msgstr "Codi QR desat a la teva galeria"
 
-#: src/Navigation.tsx:457
+#: src/Navigation.tsx:460
 msgid "Quote notifications"
 msgstr "Notificacions de citacions"
 
@@ -7655,7 +7800,7 @@ msgstr "Reacciona amb {emoji}"
 msgid "Reactivate your account"
 msgstr "Torna a activar el teu compte"
 
-#: src/screens/Books/BookReaders.tsx:99
+#: src/screens/Books/BookReaders.tsx:102
 msgid "Read"
 msgstr ""
 
@@ -7770,6 +7915,7 @@ msgstr "Carrega les converses de nou"
 #: src/components/FeedCard.tsx:375
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:105
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:112
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:208
 #: src/screens/Bookmarks/index.tsx:267
 #: src/screens/Settings/Settings.tsx:682
 #: src/view/com/modals/UserAddRemoveLists.tsx:235
@@ -7808,6 +7954,10 @@ msgstr "Elimina l'avatar"
 #: src/view/com/util/UserBanner.tsx:191
 msgid "Remove Banner"
 msgstr "Elimina el bàner"
+
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:202
+msgid "Remove book"
+msgstr ""
 
 #: src/screens/Messages/components/MessageInputEmbed.tsx:212
 msgid "Remove embed"
@@ -7870,6 +8020,11 @@ msgstr "Elimina el perfil"
 #: src/components/PostControls/RepostButton.tsx:162
 msgid "Remove repost"
 msgstr "Elimina la republicació"
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:197
+#: src/screens/BookClubs/BookClubSidebar.tsx:182
+msgid "Remove request"
+msgstr ""
 
 #: src/view/com/composer/videos/SubtitleDialog.tsx:282
 msgid "Remove subtitle file"
@@ -7998,7 +8153,7 @@ msgstr "Aquesta resposta ha estat amagada per l'autor del fil de debat"
 msgid "Reply Hidden by You"
 msgstr "Has amagat aquesta resposta"
 
-#: src/Navigation.tsx:441
+#: src/Navigation.tsx:444
 msgid "Reply notifications"
 msgstr "Notificacions de respostes"
 
@@ -8119,7 +8274,7 @@ msgstr "Republica"
 msgid "Repost ({0, plural, one {# repost} other {# reposts}})"
 msgstr "Republica ({0, plural, one {# republicació} other {# republicacions}})"
 
-#: src/Navigation.tsx:473
+#: src/Navigation.tsx:476
 msgid "Repost notifications"
 msgstr "Notificacions de republicacions"
 
@@ -8160,7 +8315,7 @@ msgstr "Republicacions d'aquesta publicació"
 msgid "Reposts of your reposts"
 msgstr "Republicacions de les teves republicacions"
 
-#: src/Navigation.tsx:497
+#: src/Navigation.tsx:500
 msgid "Reposts of your reposts notifications"
 msgstr "Notificacions de les republicacions de les teves republicacions"
 
@@ -8168,6 +8323,13 @@ msgstr "Notificacions de les republicacions de les teves republicacions"
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:231
 msgid "Request code"
 msgstr "Demana un codi"
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:203
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:212
+#: src/screens/BookClubs/BookClubSidebar.tsx:188
+#: src/screens/BookClubs/BookClubSidebar.tsx:197
+msgid "Request to join"
+msgstr ""
 
 #: src/screens/Settings/AccessibilitySettings.tsx:58
 #: src/screens/Settings/AccessibilitySettings.tsx:63
@@ -8248,13 +8410,15 @@ msgstr "Torna a intentar l'última acció, que ha donat error"
 #: src/components/ageAssurance/AgeAssuranceErrors.tsx:30
 #: src/components/contacts/screens/VerifyNumber.tsx:349
 #: src/components/contacts/screens/VerifyNumber.tsx:354
-#: src/components/dms/MessageItem.tsx:322
+#: src/components/dms/MessageItem.tsx:330
 #: src/components/Error.tsx:65
 #: src/components/Lists.tsx:114
 #: src/components/moderation/ReportDialog/index.tsx:281
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:55
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:58
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
+#: src/screens/BookClubs/BookClubsScreen.tsx:83
+#: src/screens/BookClubs/BookClubsScreen.tsx:88
 #: src/screens/Login/LoginForm.tsx:328
 #: src/screens/Login/LoginForm.tsx:334
 #: src/screens/Messages/ChatList.tsx:292
@@ -8308,6 +8472,8 @@ msgstr "Ves al pas anterior"
 #: src/components/live/EditLiveDialog.tsx:202
 #: src/components/live/EditLiveDialog.tsx:209
 #: src/components/StarterPack/QrCodeDialog.tsx:206
+#: src/screens/BookClubs/EditBookClubDialog.tsx:205
+#: src/screens/BookClubs/EditBookClubDialog.tsx:214
 #: src/screens/Profile/Header/EditProfileDialog.tsx:266
 #: src/screens/Profile/Header/EditProfileDialog.tsx:281
 #: src/screens/SavedFeeds.tsx:120
@@ -8377,8 +8543,8 @@ msgstr "Desa aquestes opcions per a la propera vegada"
 msgid "Save to my feeds"
 msgstr "Desa-ho als meus canals"
 
-#: src/view/shell/desktop/LeftNav.tsx:782
-#: src/view/shell/Drawer.tsx:581
+#: src/view/shell/desktop/LeftNav.tsx:846
+#: src/view/shell/Drawer.tsx:603
 msgctxt "link to bookmarks screen"
 msgid "Saved"
 msgstr "Desats"
@@ -8388,7 +8554,7 @@ msgid "Saved Feeds"
 msgstr "Canals desats"
 
 #: src/components/dialogs/nuxs/BookmarksAnnouncement.tsx:143
-#: src/Navigation.tsx:621
+#: src/Navigation.tsx:624
 #: src/screens/Bookmarks/index.tsx:61
 msgid "Saved Posts"
 msgstr "Publicacions desades"
@@ -8434,11 +8600,13 @@ msgstr "Desplaça't cap a dalt"
 msgid "Search"
 msgstr "Cerca"
 
-#: src/Navigation.tsx:262
+#: src/Navigation.tsx:265
 #: src/screens/Profile/ProfileSearch.tsx:37
 msgid "Search @{0}'s posts"
 msgstr "Cerca a les publicacions de @{0}"
 
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:220
+#: src/screens/BookClubs/EditBookClubDialog.tsx:255
 #: src/screens/Books/BooksScreen.tsx:209
 msgid "Search books..."
 msgstr ""
@@ -8590,6 +8758,8 @@ msgid "Select \"{interestsDisplayName}\" category"
 msgstr "Selecciona la categoria \"{interestsDisplayName}\""
 
 #. Accessibility label for a username suggestion in the account creation flow
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:327
+#: src/screens/BookClubs/EditBookClubDialog.tsx:423
 #: src/screens/Signup/StepHandle/HandleSuggestions.tsx:42
 msgid "Select {0}"
 msgstr "Selecciona {0}"
@@ -8702,6 +8872,10 @@ msgstr "Tria el codi de telèfon"
 msgid "Select the {emojiName} emoji as your avatar"
 msgstr "Selecciona el {emojiName} emoji com al teu avatar"
 
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:169
+msgid "Select the first book to discuss"
+msgstr ""
+
 #: src/view/com/composer/select-language/PostLanguageSelectDialog.tsx:194
 msgid "Select up to 3 languages used in this post"
 msgstr "Selecciona fins a 3 idiomes utilitzats en aquesta publicació"
@@ -8765,7 +8939,7 @@ msgctxt "action"
 msgid "Send Email"
 msgstr "Envia correu"
 
-#: src/view/shell/Drawer.tsx:371
+#: src/view/shell/Drawer.tsx:393
 msgid "Send feedback"
 msgstr "Envia comentari"
 
@@ -8811,7 +8985,7 @@ msgstr "Envia un correu amb el codi de confirmació per l'eliminació del compte
 msgid "Sent to our phone number verification provider Plivo"
 msgstr "Enviat al nostre proveïdor de verificació de números de telèfon Plivo"
 
-#: src/screens/Books/BookDetailScreen.tsx:138
+#: src/screens/Books/BookDetailScreen.tsx:139
 msgid "Series: {0}{1}"
 msgstr ""
 
@@ -8847,10 +9021,10 @@ msgstr "Estableix la teva data de naixement a continuació i et permetrem tornar
 msgid "Sets email for password reset"
 msgstr "Estableix un correu per a restablir la contrasenya"
 
-#: src/Navigation.tsx:218
+#: src/Navigation.tsx:221
 #: src/screens/Settings/Settings.tsx:103
-#: src/view/shell/desktop/LeftNav.tsx:822
-#: src/view/shell/Drawer.tsx:645
+#: src/view/shell/desktop/LeftNav.tsx:886
+#: src/view/shell/Drawer.tsx:693
 msgid "Settings"
 msgstr "Configuració"
 
@@ -8992,7 +9166,7 @@ msgstr "Comparteix els teus contactes per trobar amics"
 msgid "Share your favorite feed!"
 msgstr "Comparteix el teu canal preferit!"
 
-#: src/Navigation.tsx:321
+#: src/Navigation.tsx:324
 msgid "Shared Preferences Tester"
 msgstr "Comprovador de preferències compartides"
 
@@ -9174,9 +9348,9 @@ msgstr "Inicia la sessió per veure la publicació"
 #: src/screens/SignupQueued.tsx:93
 #: src/screens/SignupQueued.tsx:96
 #: src/screens/Takendown.tsx:87
-#: src/view/shell/desktop/LeftNav.tsx:213
-#: src/view/shell/desktop/LeftNav.tsx:270
+#: src/view/shell/desktop/LeftNav.tsx:216
 #: src/view/shell/desktop/LeftNav.tsx:273
+#: src/view/shell/desktop/LeftNav.tsx:276
 msgid "Sign out"
 msgstr "Tanca sessió"
 
@@ -9185,7 +9359,7 @@ msgid "Sign Out"
 msgstr "Tanca la sessió"
 
 #: src/screens/Settings/Settings.tsx:301
-#: src/view/shell/desktop/LeftNav.tsx:210
+#: src/view/shell/desktop/LeftNav.tsx:213
 msgid "Sign out?"
 msgstr "Tancar la sessió?"
 
@@ -9342,6 +9516,17 @@ msgstr "Correu brossa o altres comportaments no autèntics o enganys"
 msgid "Sports"
 msgstr "Esports"
 
+#: src/screens/BookClubs/BookClubsScreen.tsx:57
+#: src/screens/BookClubs/BookClubsScreen.tsx:101
+msgid "Start a bookclub"
+msgstr ""
+
+#: src/Navigation.tsx:655
+#: src/screens/BookClubs/BookClubsScreen.tsx:107
+#: src/screens/BookClubs/CreateBookClubScreen.tsx:138
+msgid "Start a Bookclub"
+msgstr ""
+
 #: src/components/PostControls/ShareMenu/RecentChats.tsx:207
 msgid "Start a conversation, and it will appear here."
 msgstr "Enceta una conversa i apareixerà aquí."
@@ -9364,8 +9549,8 @@ msgstr "Comença a afegir gent"
 msgid "Start chat with {displayName}"
 msgstr "Comença un xat amb {displayName}"
 
-#: src/Navigation.tsx:592
-#: src/Navigation.tsx:597
+#: src/Navigation.tsx:595
+#: src/Navigation.tsx:600
 #: src/screens/StarterPack/Wizard/index.tsx:207
 msgid "Starter Pack"
 msgstr "Starter pack"
@@ -9421,7 +9606,7 @@ msgstr "L'emmagatzematge s'ha esborrat, cal que reinicieu l'aplicació ara."
 msgid "Stored as part of a secure code for matching with others"
 msgstr "Emmagatzemat com a part d'un codi segur per a la coincidència amb altres persones"
 
-#: src/Navigation.tsx:311
+#: src/Navigation.tsx:314
 #: src/screens/Settings/Settings.tsx:464
 msgid "Storybook"
 msgstr "Historial"
@@ -9518,7 +9703,7 @@ msgctxt "Name of app icon variant"
 msgid "Sunset"
 msgstr "Ocàs"
 
-#: src/Navigation.tsx:331
+#: src/Navigation.tsx:334
 #: src/view/screens/Support.tsx:34
 #: src/view/screens/Support.tsx:37
 msgid "Support"
@@ -9533,15 +9718,15 @@ msgstr "Encara no s'ha activat la compatibilitat amb aquesta funció al teu paí
 #: src/screens/Settings/Settings.tsx:127
 #: src/screens/Settings/Settings.tsx:141
 #: src/screens/Settings/Settings.tsx:622
-#: src/view/shell/desktop/LeftNav.tsx:248
+#: src/view/shell/desktop/LeftNav.tsx:251
 msgid "Switch account"
 msgstr "Canvia el compte"
 
-#: src/view/shell/desktop/LeftNav.tsx:111
+#: src/view/shell/desktop/LeftNav.tsx:114
 msgid "Switch accounts"
 msgstr "Canvia de compte"
 
-#: src/view/shell/desktop/LeftNav.tsx:347
+#: src/view/shell/desktop/LeftNav.tsx:350
 msgid "Switch to {0}"
 msgstr "Canvia a {0}"
 
@@ -9625,21 +9810,21 @@ msgstr "Explica'ns més coses sobre tu"
 msgid "Tell us a little more"
 msgstr "Explica'ns una mica més"
 
-#: src/view/shell/desktop/RightNav.tsx:123
-#: src/view/shell/desktop/RightNav.tsx:124
+#: src/view/shell/desktop/RightNav.tsx:133
+#: src/view/shell/desktop/RightNav.tsx:134
 msgid "Terms"
 msgstr "Condicions"
 
 #: src/components/dialogs/BirthDateSettings.tsx:182
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:30
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:97
-#: src/Navigation.tsx:341
+#: src/Navigation.tsx:344
 #: src/screens/Settings/AboutSettings.tsx:82
 #: src/screens/Settings/AboutSettings.tsx:85
 #: src/screens/Signup/SignupForm.tsx:306
 #: src/view/screens/TermsOfService.tsx:34
-#: src/view/shell/Drawer.tsx:733
-#: src/view/shell/Drawer.tsx:735
+#: src/view/shell/Drawer.tsx:820
+#: src/view/shell/Drawer.tsx:822
 msgid "Terms of Service"
 msgstr "Condicions del servei"
 
@@ -10207,7 +10392,7 @@ msgstr "Preferències dels fils de debat"
 msgid "Threaded"
 msgstr "En mode fils de debat"
 
-#: src/Navigation.tsx:374
+#: src/Navigation.tsx:377
 msgid "Threads Preferences"
 msgstr "Preferències dels fils de debat"
 
@@ -10273,7 +10458,7 @@ msgstr "Superior"
 msgid "Top replies first"
 msgstr "Primer les respostes principals"
 
-#: src/Navigation.tsx:557
+#: src/Navigation.tsx:560
 msgid "Topic"
 msgstr "Tema"
 
@@ -10532,10 +10717,15 @@ msgstr "Deixa de silenciar el fil de debat"
 msgid "Unmute video"
 msgstr "Deixa de silenciar el vídeo"
 
+#: src/screens/BookClubs/BookClubSidebar.tsx:163
 #: src/screens/ProfileList/components/Header.tsx:150
 #: src/screens/ProfileList/components/Header.tsx:157
 msgid "Unpin"
 msgstr "Deixa de fixar"
+
+#: src/screens/BookClubs/BookClubSidebar.tsx:157
+msgid "Unpin club"
+msgstr ""
 
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:522
 #: src/screens/Profile/components/ProfileFeedHeader.tsx:529
@@ -10817,7 +11007,7 @@ msgstr "La verificació ha fallat, torna-ho a provar."
 msgid "Verification settings"
 msgstr "Configuració de verificació"
 
-#: src/Navigation.tsx:211
+#: src/Navigation.tsx:214
 #: src/screens/Moderation/VerificationSettings.tsx:33
 msgid "Verification Settings"
 msgstr "Configuració de verificació"
@@ -10923,7 +11113,7 @@ msgstr "Vídeo"
 msgid "Video failed to process"
 msgstr "El vídeo no s'ha pogut processar"
 
-#: src/Navigation.tsx:613
+#: src/Navigation.tsx:616
 msgid "Video Feed"
 msgstr "Canal de vídeos"
 
@@ -11425,6 +11615,7 @@ msgstr "Vols desar-ho com a esborrany abans de veure els teus esborranys?"
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "Vols desar-ho com a esborrany per editar-ho més tard?"
 
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:283
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11618,6 +11809,11 @@ msgstr "Pots actualitzar-ho més tard des de la teva configuració."
 #: src/lib/strings/errors.ts:28
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "No pots actualitzar la teva data de naixement mentre fas servir una contrasenya d'aplicació. Inicia la sessió amb la teva contrasenya principal per actualitzar la teva data de naixement."
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:227
+#: src/screens/BookClubs/BookClubSidebar.tsx:207
+msgid "You created this club"
+msgstr ""
 
 #: src/screens/Profile/KnownFollowers.tsx:112
 msgid "You don't follow any users who follow @{name}."
@@ -11831,7 +12027,7 @@ msgid "You recently changed your birthdate"
 msgstr "Has canviat la teva data de naixement fa poc"
 
 #: src/screens/Settings/Settings.tsx:302
-#: src/view/shell/desktop/LeftNav.tsx:211
+#: src/view/shell/desktop/LeftNav.tsx:214
 msgid "You will be signed out of all your accounts."
 msgstr "Es tancarà la sessió de tots els teus comptes."
 
@@ -12039,7 +12235,7 @@ msgstr "El teu canal de seguint està buit! Segueix a més usuaris per a saber q
 msgid "Your full handle will be <0>@{0}</0>"
 msgstr "El teu identificador complet serà <0>@{0}</0>"
 
-#: src/Navigation.tsx:529
+#: src/Navigation.tsx:532
 #: src/screens/Search/modules/ExploreInterestsCard.tsx:67
 #: src/screens/Settings/ContentAndMediaSettings.tsx:93
 #: src/screens/Settings/ContentAndMediaSettings.tsx:96

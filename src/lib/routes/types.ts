@@ -91,6 +91,9 @@ export type CommonNavigatorParams = {
   FindContactsFlow: undefined
   Books: undefined
   BookDetail: {hiveId: string}
+  BookClubs: undefined
+  CreateBookClub: undefined
+  BookClubDetail: {rkey: string}
 }
 
 export type BottomTabNavigatorParams = CommonNavigatorParams & {
@@ -128,6 +131,7 @@ export type FlatNavigatorParams = CommonNavigatorParams & {
   Notifications: undefined
   Messages: {pushToConversation?: string; animation?: 'push' | 'pop'}
   Books: undefined
+  BookClubs: undefined
 }
 
 export type AllNavigatorParams = CommonNavigatorParams & {
@@ -142,6 +146,7 @@ export type AllNavigatorParams = CommonNavigatorParams & {
   MessagesTab: undefined
   Messages: {animation?: 'push' | 'pop'}
   Books: undefined
+  BookClubs: undefined
 }
 
 // NOTE

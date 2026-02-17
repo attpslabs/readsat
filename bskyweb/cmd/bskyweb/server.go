@@ -351,6 +351,11 @@ func serve(cctx *cli.Context) error {
 	e.GET("/books", server.WebGeneric)
 	e.GET("/books/:hiveId", server.WebGeneric)
 
+	// bookclubs
+	e.GET("/bookclubs", server.WebGeneric)
+	e.GET("/bookclubs/create", server.WebGeneric)
+	e.GET("/bookclubs/:rkey", server.WebGeneric)
+
 	// bookmarks
 	e.GET("/saved", server.WebGeneric)
 

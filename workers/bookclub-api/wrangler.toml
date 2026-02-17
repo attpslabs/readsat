@@ -1,0 +1,7 @@
+name = "bookclub-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+[vars]
+READSAT_PDS_URL = "https://self.surf"
+READSAT_HANDLE = "reads.at"

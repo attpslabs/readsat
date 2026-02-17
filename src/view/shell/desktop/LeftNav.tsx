@@ -19,6 +19,8 @@ import {
 import {sanitizeDisplayName} from '#/lib/strings/display-names'
 import {isInvalidHandle, sanitizeHandle} from '#/lib/strings/handles'
 import {emitSoftReset} from '#/state/events'
+import {usePinnedBookClubs} from '#/state/preferences/pinned-bookclubs'
+import {useBookClubQuery} from '#/state/queries/bookclubs'
 import {useFetchHandle} from '#/state/queries/handle'
 import {useUnreadMessageCount} from '#/state/queries/messages/list-conversations'
 import {useUnreadNotifications} from '#/state/queries/notifications/unread'
@@ -39,6 +41,7 @@ import {
   Bell_Stroke2_Corner0_Rounded as Bell,
 } from '#/components/icons/Bell'
 import {Book, BookFilled} from '#/components/icons/Book'
+import {BookClub, BookClubFilled} from '#/components/icons/BookClub'
 import {Bookmark, BookmarkFilled} from '#/components/icons/Bookmark'
 import {
   BulletList_Filled_Corner0_Rounded as ListFilled,
@@ -518,6 +521,44 @@ function NavItem({count, hasNew, href, icon, iconFilled, label}: NavItemProps) {
   )
 }
 
+function PinnedBookClubItem({rkey}: {rkey: string}) {
+  const pal = usePalette('default')
+  const {data: club} = useBookClubQuery(rkey)
+
+  if (!club) return null
+
+  return (
+    <NavItem
+      href={`/bookclubs/${rkey}`}
+      icon={
+        <BookClub aria-hidden={true} width={NAV_ICON_WIDTH} style={pal.text} />
+      }
+      iconFilled={
+        <BookClubFilled
+          aria-hidden={true}
+          width={NAV_ICON_WIDTH}
+          style={pal.text}
+        />
+      }
+      label={club.record.name}
+    />
+  )
+}
+
+function PinnedBookClubNavItems() {
+  const {pinnedRkeys} = usePinnedBookClubs()
+
+  if (pinnedRkeys.length === 0) return null
+
+  return (
+    <>
+      {pinnedRkeys.map(rkey => (
+        <PinnedBookClubItem key={rkey} rkey={rkey} />
+      ))}
+    </>
+  )
+}
+
 function ComposeBtn() {
   const {currentAccount} = useSession()
   const {getState} = useNavigation()
@@ -688,6 +729,25 @@ export function DesktopLeftNav() {
             }
             label={_(msg`Books`)}
           />
+          <NavItem
+            href="/bookclubs"
+            icon={
+              <BookClub
+                aria-hidden={true}
+                width={NAV_ICON_WIDTH}
+                style={pal.text}
+              />
+            }
+            iconFilled={
+              <BookClubFilled
+                aria-hidden={true}
+                width={NAV_ICON_WIDTH}
+                style={pal.text}
+              />
+            }
+            label={_(msg`Bookclubs`)}
+          />
+          <PinnedBookClubNavItems />
           <NavItem
             href="/search"
             icon={

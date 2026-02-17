@@ -7,10 +7,7 @@ import {
 import {STALE} from '#/state/queries'
 
 // BookHive API is proxied through a CORS-enabled Cloudflare Worker.
-// In development, run the worker locally: cd workers/bookhive-proxy && npx wrangler dev
-const BOOKHIVE_BASE = __DEV__
-  ? 'http://localhost:8787/xrpc'
-  : 'https://bookhive-proxy.attps.workers.dev/xrpc'
+const BOOKHIVE_BASE = 'https://bookhive-proxy.attps.workers.dev/xrpc'
 const PAGE_LIMIT = 25
 
 export interface BookActivity {

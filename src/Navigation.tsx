@@ -71,6 +71,9 @@ import {SupportScreen} from '#/view/screens/Support'
 import {TermsOfServiceScreen} from '#/view/screens/TermsOfService'
 import {BottomBar} from '#/view/shell/bottom-bar/BottomBar'
 import {createNativeStackNavigatorWithAuth} from '#/view/shell/createNativeStackNavigatorWithAuth'
+import {BookClubDetailScreen} from '#/screens/BookClubs/BookClubDetailScreen'
+import {BookClubsScreen} from '#/screens/BookClubs/BookClubsScreen'
+import {CreateBookClubScreen} from '#/screens/BookClubs/CreateBookClubScreen'
 import {BookmarksScreen} from '#/screens/Bookmarks'
 import {BookDetailScreen} from '#/screens/Books/BookDetailScreen'
 import {BooksScreen} from '#/screens/Books/BooksScreen'
@@ -640,6 +643,21 @@ function commonScreens(Stack: typeof Flat, unreadCountLabel?: string) {
         name="BookDetail"
         getComponent={() => BookDetailScreen}
         options={{title: title(msg`Book Details`)}}
+      />
+      <Stack.Screen
+        name="BookClubs"
+        getComponent={() => BookClubsScreen}
+        options={{title: title(msg`Bookclubs`)}}
+      />
+      <Stack.Screen
+        name="CreateBookClub"
+        getComponent={() => CreateBookClubScreen}
+        options={{title: title(msg`Start a Bookclub`), requireAuth: true}}
+      />
+      <Stack.Screen
+        name="BookClubDetail"
+        getComponent={() => BookClubDetailScreen}
+        options={{title: title(msg`Bookclub`)}}
       />
     </>
   )

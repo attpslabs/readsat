@@ -132,6 +132,11 @@ input:focus {
   display: block;
 }
 
+/* Hide Chatwoot default launcher bubble - we trigger it from the Feedback link */
+.woot-widget-bubble {
+  display: none !important;
+}
+
 /* NativeDropdown component */
 .radix-dropdown-item:focus,
 .nativeDropdown-item:focus {

@@ -82,6 +82,10 @@ export const router = new Router<AllNavigatableRoutes>({
   // books
   Books: '/books',
   BookDetail: '/books/:hiveId',
+  // bookclubs
+  BookClubs: '/bookclubs',
+  CreateBookClub: '/bookclubs/create',
+  BookClubDetail: '/bookclubs/:rkey',
   // profiles, threads, lists — clean routes first (for URL building),
   // legacy /profile/ routes after (for backwards compat matching).
   // These MUST be last so /:name doesn't shadow fixed routes above.

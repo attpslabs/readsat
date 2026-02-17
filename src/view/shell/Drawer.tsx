@@ -6,6 +6,7 @@ import {useLingui} from '@lingui/react'
 import {StackActions, useNavigation} from '@react-navigation/native'
 
 import {useActorStatus} from '#/lib/actor-status'
+import {useChatwoot} from '#/lib/chatwoot'
 import {FEEDBACK_FORM_URL, HELP_DESK_URL} from '#/lib/constants'
 import {type PressableScale} from '#/lib/custom-animations/PressableScale'
 import {useNavigationTabState} from '#/lib/hooks/useNavigationTabState'
@@ -15,6 +16,8 @@ import {sanitizeHandle} from '#/lib/strings/handles'
 import {colors} from '#/lib/styles'
 import {emitSoftReset} from '#/state/events'
 import {useKawaiiMode} from '#/state/preferences/kawaii'
+import {usePinnedBookClubs} from '#/state/preferences/pinned-bookclubs'
+import {useBookClubQuery} from '#/state/queries/bookclubs'
 import {useUnreadNotifications} from '#/state/queries/notifications/unread'
 import {useProfileQuery} from '#/state/queries/profile'
 import {type SessionAccount, useSession} from '#/state/session'
@@ -30,6 +33,7 @@ import {
   Bell_Stroke2_Corner0_Rounded as Bell,
 } from '#/components/icons/Bell'
 import {Book, BookFilled} from '#/components/icons/Book'
+import {BookClub, BookClubFilled} from '#/components/icons/BookClub'
 import {Bookmark, BookmarkFilled} from '#/components/icons/Bookmark'
 import {BulletList_Stroke2_Corner0_Rounded as List} from '#/components/icons/BulletList'
 import {
@@ -156,6 +160,7 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
     isAtFeeds,
     isAtBookmarks,
     isAtBooks,
+    isAtBookClubs,
     isAtNotifications,
     isAtMyProfile,
     isAtMessages,
@@ -247,19 +252,38 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
     setDrawerOpen(false)
   }, [navigation, setDrawerOpen])
 
+  const onPressBookClubs = React.useCallback(() => {
+    navigation.navigate('BookClubs')
+    setDrawerOpen(false)
+  }, [navigation, setDrawerOpen])
+
+  const onPressPinnedBookClub = React.useCallback(
+    (rkey: string) => {
+      navigation.navigate('BookClubDetail', {rkey})
+      setDrawerOpen(false)
+    },
+    [navigation, setDrawerOpen],
+  )
+
   const onPressSettings = React.useCallback(() => {
     navigation.navigate('Settings')
     setDrawerOpen(false)
   }, [navigation, setDrawerOpen])
 
+  const chatwoot = useChatwoot()
+
   const onPressFeedback = React.useCallback(() => {
-    Linking.openURL(
-      FEEDBACK_FORM_URL({
-        email: currentAccount?.email,
-        handle: currentAccount?.handle,
-      }),
-    )
-  }, [currentAccount])
+    if (IS_WEB) {
+      chatwoot.toggle()
+    } else {
+      Linking.openURL(
+        FEEDBACK_FORM_URL({
+          email: currentAccount?.email,
+          handle: currentAccount?.handle,
+        }),
+      )
+    }
+  }, [currentAccount, chatwoot])
 
   const onPressHelp = React.useCallback(() => {
     Linking.openURL(HELP_DESK_URL)
@@ -313,6 +337,11 @@ let DrawerContent = ({}: React.PropsWithoutRef<{}>): React.ReactNode => {
               onPress={onPressBookmarks}
             />
             <BooksMenuItem isActive={isAtBooks} onPress={onPressBooks} />
+            <BookClubsMenuItem
+              isActive={isAtBookClubs}
+              onPress={onPressBookClubs}
+            />
+            <PinnedBookClubDrawerItems onNavigate={onPressPinnedBookClub} />
             <ProfileMenuItem
               isActive={isAtMyProfile}
               onPress={onPressProfile}
@@ -611,6 +640,32 @@ let BooksMenuItem = ({
 }
 BooksMenuItem = React.memo(BooksMenuItem)
 
+let BookClubsMenuItem = ({
+  isActive,
+  onPress,
+}: {
+  isActive: boolean
+  onPress: () => void
+}): React.ReactNode => {
+  const {_} = useLingui()
+  const t = useTheme()
+
+  return (
+    <MenuItem
+      icon={
+        isActive ? (
+          <BookClubFilled style={[t.atoms.text]} width={iconWidth} />
+        ) : (
+          <BookClub style={[t.atoms.text]} width={iconWidth} />
+        )
+      }
+      label={_(msg`Bookclubs`)}
+      onPress={onPress}
+    />
+  )
+}
+BookClubsMenuItem = React.memo(BookClubsMenuItem)
+
 let ProfileMenuItem = ({
   isActive,
   onPress,
@@ -718,6 +773,45 @@ function MenuItem({icon, label, count, bold, onPress}: MenuItemProps) {
         </View>
       )}
     </Button>
+  )
+}
+
+function PinnedBookClubDrawerItem({
+  rkey,
+  onPress,
+}: {
+  rkey: string
+  onPress: (rkey: string) => void
+}) {
+  const t = useTheme()
+  const {data: club} = useBookClubQuery(rkey)
+
+  if (!club) return null
+
+  return (
+    <MenuItem
+      icon={<BookClub style={[t.atoms.text]} width={iconWidth} />}
+      label={club.record.name}
+      onPress={() => onPress(rkey)}
+    />
+  )
+}
+
+function PinnedBookClubDrawerItems({
+  onNavigate,
+}: {
+  onNavigate: (rkey: string) => void
+}) {
+  const {pinnedRkeys} = usePinnedBookClubs()
+
+  if (pinnedRkeys.length === 0) return null
+
+  return (
+    <>
+      {pinnedRkeys.map(rkey => (
+        <PinnedBookClubDrawerItem key={rkey} rkey={rkey} onPress={onNavigate} />
+      ))}
+    </>
   )
 }
 
