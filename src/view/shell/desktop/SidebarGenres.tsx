@@ -16,7 +16,9 @@ export function SidebarGenres() {
   const {data: genres, isLoading, error} = useGenresQuery()
   const {selectedGenre, setSelectedGenre} = useBookGenreFilter()
 
-  if (error || (!isLoading && !genres?.length)) return null
+  // Only hide if the API returned an empty list. Keep showing skeletons
+  // while the query retries on API failure so the sidebar doesn't vanish.
+  if (!isLoading && !error && genres?.length === 0) return null
 
   return (
     <View style={[a.p_lg, a.rounded_md, a.border, t.atoms.border_contrast_low]}>
@@ -39,7 +41,7 @@ export function SidebarGenres() {
       </View>
 
       <View style={[a.gap_xs]}>
-        {isLoading
+        {isLoading || (error && !genres)
           ? Array(8)
               .fill(0)
               .map((_n, i) => (

@@ -203,6 +203,8 @@ export function useGenresQuery() {
     queryKey: RQKEY_GENRES,
     queryFn: fetchGenres,
     staleTime: STALE.HOURS.ONE,
+    retry: 3,
+    retryDelay: attempt => Math.min(1000 * 2 ** attempt, 30000),
   })
 }
 
