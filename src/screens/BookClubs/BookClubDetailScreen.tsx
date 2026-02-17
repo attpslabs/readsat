@@ -1,18 +1,20 @@
 import {Image, View} from 'react-native'
 import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
-import {useFocusEffect} from '@react-navigation/native'
+import {useFocusEffect, useNavigation} from '@react-navigation/native'
 
 import {
   type CommonNavigatorParams,
   type NativeStackScreenProps,
+  type NavigationProp,
 } from '#/lib/routes/types'
-import {useBookClubQuery} from '#/state/queries/bookclubs'
+import {useBookClubQuery, useMyMembershipQuery} from '#/state/queries/bookclubs'
 import {useProfileQuery} from '#/state/queries/profile'
 import {useSession} from '#/state/session'
 import {useSetMinimalShellMode} from '#/state/shell'
 import {PreviewableUserAvatar} from '#/view/com/util/UserAvatar'
 import {atoms as a, useTheme} from '#/alf'
+import {Button, ButtonText} from '#/components/Button'
 import {EmojiArc_Stroke2_Corner0_Rounded as EmojiSmile} from '#/components/icons/Emoji'
 import {PaperPlane_Stroke2_Corner0_Rounded as PaperPlane} from '#/components/icons/PaperPlane'
 import * as Layout from '#/components/Layout'
@@ -25,6 +27,7 @@ export function BookClubDetailScreen({route}: Props) {
   const {rkey} = route.params
   const t = useTheme()
   const {_} = useLingui()
+  const navigation = useNavigation<NavigationProp>()
   const setMinimalShellMode = useSetMinimalShellMode()
   const {currentAccount} = useSession()
 
@@ -34,6 +37,10 @@ export function BookClubDetailScreen({route}: Props) {
 
   const {data: club, isLoading, error, refetch} = useBookClubQuery(rkey)
   const isAdmin = currentAccount?.did === club?.record.admin
+  const {data: isMember, isLoading: isMembershipLoading} = useMyMembershipQuery(
+    club?.uri ?? '',
+  )
+  const hasAccess = isAdmin || isMember === true
 
   const {data: adminProfile} = useProfileQuery({
     did: club?.record.admin ?? '',
@@ -56,7 +63,7 @@ export function BookClubDetailScreen({route}: Props) {
       <View style={[a.flex_1]}>
         <Layout.Content contentContainerStyle={[a.flex_1]}>
           <Layout.Center style={[a.flex_1]}>
-            {isLoading ? (
+            {isLoading || isMembershipLoading ? (
               <View style={[a.p_xl, a.align_center]}>
                 <Loader size="xl" />
               </View>
@@ -67,6 +74,44 @@ export function BookClubDetailScreen({route}: Props) {
                   onPress={() => refetch()}>
                   <Trans>Couldn't load bookclub. Tap to retry.</Trans>
                 </Text>
+              </View>
+            ) : club && !hasAccess ? (
+              <View
+                style={[
+                  a.flex_1,
+                  a.align_center,
+                  a.justify_center,
+                  a.gap_md,
+                  a.p_xl,
+                ]}>
+                <Text style={[a.text_lg, a.font_bold, t.atoms.text]}>
+                  <Trans>Members only</Trans>
+                </Text>
+                <Text
+                  style={[
+                    a.text_md,
+                    t.atoms.text_contrast_medium,
+                    a.text_center,
+                  ]}>
+                  <Trans>
+                    You need to be a member of this bookclub to view it.
+                  </Trans>
+                </Text>
+                <Button
+                  label={_(msg`Go back`)}
+                  size="large"
+                  color="primary"
+                  onPress={() => {
+                    if (navigation.canGoBack()) {
+                      navigation.goBack()
+                    } else {
+                      navigation.navigate('BookClubs')
+                    }
+                  }}>
+                  <ButtonText>
+                    <Trans>Go back</Trans>
+                  </ButtonText>
+                </Button>
               </View>
             ) : club ? (
               <View style={[a.flex_1]}>
@@ -171,7 +216,7 @@ export function BookClubDetailScreen({route}: Props) {
         </Layout.Content>
 
         {/* Disabled chat input - pinned to bottom */}
-        {club && (
+        {club && hasAccess && (
           <Layout.Center>
             <View style={[a.p_sm, {opacity: 0.5}]}>
               <View

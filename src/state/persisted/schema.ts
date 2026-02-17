@@ -129,7 +129,12 @@ const schema = z.object({
   mutedThreads: z.array(z.string()),
   trendingDisabled: z.boolean().optional(),
   trendingVideoDisabled: z.boolean().optional(),
-  pinnedBookClubs: z.array(z.string()).optional(),
+  pinnedBookClubs: z
+    .union([
+      z.record(z.string(), z.array(z.string())),
+      z.array(z.string()), // backwards compat, migrated in normalizeData
+    ])
+    .optional(),
 })
 export type Schema = z.infer<typeof schema>
 
@@ -177,7 +182,7 @@ export const defaults: Schema = {
   subtitlesEnabled: true,
   trendingDisabled: false,
   trendingVideoDisabled: false,
-  pinnedBookClubs: [],
+  pinnedBookClubs: {},
 }
 
 export function tryParse(rawData: string): Schema | undefined {

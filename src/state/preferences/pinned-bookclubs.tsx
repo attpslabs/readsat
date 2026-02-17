@@ -1,6 +1,9 @@
 import React from 'react'
 
 import * as persisted from '#/state/persisted'
+import {useSession} from '#/state/session'
+
+type PinnedMap = Record<string, string[]>
 
 interface PinnedBookClubsState {
   pinnedRkeys: string[]
@@ -17,26 +20,45 @@ const stateContext = React.createContext<PinnedBookClubsState>({
 })
 stateContext.displayName = 'PinnedBookClubsStateContext'
 
+function readMap(): PinnedMap {
+  const raw = persisted.get('pinnedBookClubs')
+  if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
+    return raw as PinnedMap
+  }
+  return {}
+}
+
 export function Provider({children}: React.PropsWithChildren<{}>) {
-  const [pinnedRkeys, setPinnedRkeys] = React.useState<string[]>(
-    persisted.get('pinnedBookClubs') ?? [],
-  )
+  const {currentAccount} = useSession()
+  const did = currentAccount?.did ?? ''
+
+  const [pinnedMap, setPinnedMap] = React.useState<PinnedMap>(readMap)
 
   React.useEffect(() => {
     return persisted.onUpdate('pinnedBookClubs', next => {
-      setPinnedRkeys(next ?? [])
+      if (next && typeof next === 'object' && !Array.isArray(next)) {
+        setPinnedMap(next as PinnedMap)
+      } else {
+        setPinnedMap({})
+      }
     })
   }, [])
 
+  const pinnedRkeys = did ? (pinnedMap[did] ?? []) : []
+
   const pin = (rkey: string) => {
-    const next = [...pinnedRkeys, rkey]
-    setPinnedRkeys(next)
+    if (!did) return
+    const currentForDid = pinnedMap[did] ?? []
+    const next = {...pinnedMap, [did]: [...currentForDid, rkey]}
+    setPinnedMap(next)
     persisted.write('pinnedBookClubs', next)
   }
 
   const unpin = (rkey: string) => {
-    const next = pinnedRkeys.filter(r => r !== rkey)
-    setPinnedRkeys(next)
+    if (!did) return
+    const currentForDid = pinnedMap[did] ?? []
+    const next = {...pinnedMap, [did]: currentForDid.filter(r => r !== rkey)}
+    setPinnedMap(next)
     persisted.write('pinnedBookClubs', next)
   }
 
@@ -47,7 +69,7 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
   const value = React.useMemo(
     () => ({pinnedRkeys, pin, unpin, isPinned}),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [pinnedRkeys],
+    [pinnedRkeys, did],
   )
 
   return <stateContext.Provider value={value}>{children}</stateContext.Provider>

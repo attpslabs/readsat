@@ -42,6 +42,17 @@ export function normalizeData(data: Schema) {
     })
   }
 
+  // Migrate pinnedBookClubs from old string[] format to Record<string, string[]>
+  try {
+    if (Array.isArray(next.pinnedBookClubs)) {
+      next.pinnedBookClubs = {}
+    }
+  } catch (e: any) {
+    logger.error('persisted state: failed to migrate pinnedBookClubs', {
+      safeMessage: e.message,
+    })
+  }
+
   return next
 }
 

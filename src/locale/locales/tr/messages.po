@@ -1972,7 +1972,7 @@ msgstr "Değişiklikler kaydedildi"
 msgid "Chat"
 msgstr "Mesajlar"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:165
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2090,7 +2090,7 @@ msgstr "Kendi zaman akışınızı seçin! Topluluk tarafından oluşturulan ak�
 msgid "Choose your password"
 msgstr "Şifrenizi seçin"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:36
+#: src/view/shell/desktop/SidebarGenres.tsx:35
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "Tüm depolama verilerini temizle (bundan sonra yeniden başlat)"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:31
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr "Bağlantılar yüklenemedi. Devam etmek için telefon numaranızı yenid
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:68
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "Kültür"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:109
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -4519,7 +4519,7 @@ msgstr "<0/> tarafından"
 msgid "Generate a starter pack"
 msgstr "Bir başlangıç ​​paketi oluşturun"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:27
+#: src/view/shell/desktop/SidebarGenres.tsx:26
 msgid "Genres"
 msgstr ""
 
@@ -4628,6 +4628,8 @@ msgstr "Şiddete övgü"
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5945,6 +5947,10 @@ msgstr ""
 #: src/view/com/composer/labels/LabelsBtn.tsx:209
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "Bazı gruplar için rahatsız edici ya da uygunsuz olabilecek medya."
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+msgid "Members only"
+msgstr ""
 
 #: src/Navigation.tsx:452
 msgid "Mention notifications"
@@ -8112,7 +8118,7 @@ msgid "Removed verification"
 msgstr "Doğrulama kaldırıldı"
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:33
+#: src/view/shell/desktop/SidebarGenres.tsx:32
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -11645,7 +11651,7 @@ msgstr "Taslaklarınıza göz atmadan önce bunu taslak olarak kaydetmek ister m
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "Bunu sonradan düzenlemek için taslak olarak kaydetmek ister misiniz?"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:205
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11840,7 +11846,7 @@ msgstr "Bunu daha sonra ayarlarınızdan güncelleyebilirsiniz."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "Doğum tarihinizi bir uygulama şifresi kullanırkan güncelleyemezsiniz. Doğum tarihinizi güncellemek için lütfen ana şifrenizle giriş yapın."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:156
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12030,6 +12036,10 @@ msgstr "Karekod kaydetmek için fotoğraf galerinize erişim izni vermelisiniz"
 #: src/view/com/composer/SelectMediaButton.tsx:460
 msgid "You need to allow access to your media library."
 msgstr "Medya galerinize erişim izni vermeniz gerekmektedir."
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+msgid "You need to be a member of this bookclub to view it."
+msgstr ""
 
 #: src/components/dialogs/EmailDialog/screens/Manage2FA/index.tsx:23
 msgid "You need to verify your email address before you can enable email 2FA."

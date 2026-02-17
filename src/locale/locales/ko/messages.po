@@ -1972,7 +1972,7 @@ msgstr "변경 사항을 저장했습니다"
 msgid "Chat"
 msgstr "대화"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:165
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2090,7 +2090,7 @@ msgstr "나만의 타임라인을 선택하세요! 커뮤니티에서 만든 피
 msgid "Choose your password"
 msgstr "비밀번호 입력"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:36
+#: src/view/shell/desktop/SidebarGenres.tsx:35
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "모든 스토리지 데이터 지우기 (이후 다시 시작)"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:31
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr "연락처를 업로드할 수 없습니다. 계속 진행하려면 전�
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:68
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "문화"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:109
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -4519,7 +4519,7 @@ msgstr "<0/>에서"
 msgid "Generate a starter pack"
 msgstr "스타터 팩 만들기"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:27
+#: src/view/shell/desktop/SidebarGenres.tsx:26
 msgid "Genres"
 msgstr ""
 
@@ -4628,6 +4628,8 @@ msgstr "폭력 미화"
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5945,6 +5947,10 @@ msgstr "다른 기기에 저장된 미디어"
 #: src/view/com/composer/labels/LabelsBtn.tsx:209
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "일부 사용자에게 불쾌감을 주거나 부적절할 수 있는 미디어."
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+msgid "Members only"
+msgstr ""
 
 #: src/Navigation.tsx:452
 msgid "Mention notifications"
@@ -8112,7 +8118,7 @@ msgid "Removed verification"
 msgstr "인증을 취소했습니다"
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:33
+#: src/view/shell/desktop/SidebarGenres.tsx:32
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -11645,7 +11651,7 @@ msgstr "임시 저장 목록으로 이동하기 전에 작성 중인 내용을 �
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "나중에 다시 편집할 수 있도록 임시 저장하시겠습니까?"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:205
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11840,7 +11846,7 @@ msgstr "나중에 설정에서 변경할 수 있습니다."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "앱 비밀번호를 사용 중이므로 생년월일을 업데이트할 수 없습니다. 생년월일을 변경하려면 기본 비밀번호로 로그인하세요."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:156
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12030,6 +12036,10 @@ msgstr "QR 코드를 저장하려면 사진 보관함에 대한 접근 권한을
 #: src/view/com/composer/SelectMediaButton.tsx:460
 msgid "You need to allow access to your media library."
 msgstr "미디어 라이브러리에 대한 접근 권한을 허용해야 합니다."
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+msgid "You need to be a member of this bookclub to view it."
+msgstr ""
 
 #: src/components/dialogs/EmailDialog/screens/Manage2FA/index.tsx:23
 msgid "You need to verify your email address before you can enable email 2FA."
