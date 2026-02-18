@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 個鐘"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:294
 msgid "2FA Confirmation"
 msgstr "雙重驗證"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "無障礙設定"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:208
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "用到"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:316
-#: src/screens/Login/LoginForm.tsx:321
+#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:338
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1972,7 +1972,7 @@ msgstr "已儲存變更"
 msgid "Chat"
 msgstr "傾偈"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:210
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2034,7 +2034,7 @@ msgstr "傾偈"
 msgid "Check my status"
 msgstr "檢查我嘅狀態"
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:323
 msgid "Check your email for a sign in code and enter it here."
 msgstr "喺呢度輸入傳送到你電郵嘅登入驗證碼。"
 
@@ -2090,7 +2090,7 @@ msgstr "自訂你自己嘅時間軸！社羣建立嘅動態源會幫你搵到啱
 msgid "Choose your password"
 msgstr "設定你嘅密碼"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:35
+#: src/view/shell/desktop/SidebarGenres.tsx:37
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "剷走所有儲存資料（跟住重啓）"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:31
+#: src/view/shell/desktop/SidebarGenres.tsx:33
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:283
+#: src/screens/Login/LoginForm.tsx:300
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "驗證碼"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:339
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Connecting to service..."
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr "上載唔到聯絡人，你需要重新驗證電話號碼先得"
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:75
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "文化"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:154
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -3650,7 +3650,7 @@ msgstr "輸入你想用嘅網域"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "輸入你用嚟建立帳號嘅電郵地址。我哋會傳送個驗證碼等你可以設定新密碼。"
 
-#: src/screens/Login/LoginForm.tsx:217
+#: src/screens/Login/LoginForm.tsx:234
 msgid "Enter the username or email address you used when you created your account"
 msgstr "請輸入你建立帳號嗰陣用嘅用戶名稱或電郵地址"
 
@@ -3663,7 +3663,7 @@ msgstr "輸入你嘅出世日期"
 msgid "Enter your email address"
 msgstr "輸入你嘅電郵地址"
 
-#: src/screens/Login/LoginForm.tsx:242
+#: src/screens/Login/LoginForm.tsx:259
 msgid "Enter your password"
 msgstr "輸入你嘅密碼"
 
@@ -4051,6 +4051,10 @@ msgstr "傳送唔到"
 msgid "Failed to send email, please try again."
 msgstr "傳送唔到郵件，唔該試多次。"
 
+#: src/screens/Login/LoginForm.tsx:190
+msgid "Failed to start sign in. Please try again."
+msgstr ""
+
 #: src/components/live/GoLiveDisabledDialog.tsx:76
 #: src/components/moderation/LabelsOnMeDialog.tsx:265
 #: src/screens/Messages/components/ChatDisabled.tsx:99
@@ -4184,7 +4188,7 @@ msgstr "取得更新"
 msgid "File saved successfully!"
 msgstr "檔案儲存成功！"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:64
+#: src/view/shell/desktop/SidebarGenres.tsx:66
 msgid "Filter by {0}"
 msgstr ""
 
@@ -4490,11 +4494,11 @@ msgstr "忘記無盡嘅騷擾"
 msgid "Forgot Password"
 msgstr "唔記得密碼"
 
-#: src/screens/Login/LoginForm.tsx:257
+#: src/screens/Login/LoginForm.tsx:274
 msgid "Forgot password?"
 msgstr "唔記得密碼？"
 
-#: src/screens/Login/LoginForm.tsx:268
+#: src/screens/Login/LoginForm.tsx:285
 msgid "Forgot?"
 msgstr "唔記得？"
 
@@ -4519,7 +4523,7 @@ msgstr "嚟自 <0/>"
 msgid "Generate a starter pack"
 msgstr "生成一個新手包"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:26
+#: src/view/shell/desktop/SidebarGenres.tsx:28
 msgid "Genres"
 msgstr ""
 
@@ -4628,8 +4632,8 @@ msgstr "歌頌暴力"
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:101
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:112
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5023,7 +5027,7 @@ msgid "Host:"
 msgstr "Host:"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:198
 msgid "Hosting provider"
 msgstr "託管服務提供者"
 
@@ -5224,7 +5228,7 @@ msgstr "應用程式內、推播、你跟嘅人"
 msgid "Inbox zero!"
 msgstr "收件箱乾淨晒！"
 
-#: src/screens/Login/LoginForm.tsx:161
+#: src/screens/Login/LoginForm.tsx:163
 msgid "Incorrect username or password"
 msgstr "用戶名稱或密碼唔啱"
 
@@ -5244,7 +5248,7 @@ msgstr "輸入新密碼"
 msgid "Input password for account deletion"
 msgstr "輸入密碼去刪除帳號"
 
-#: src/screens/Login/LoginForm.tsx:298
+#: src/screens/Login/LoginForm.tsx:315
 msgid "Input the code which has been emailed to you"
 msgstr "輸入電郵到你嘅驗證碼"
 
@@ -5272,7 +5276,7 @@ msgstr "同你介紹透過聯絡人尋找朋友"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "同你介紹帖文收藏（又稱書籤）"
 
-#: src/screens/Login/LoginForm.tsx:152
+#: src/screens/Login/LoginForm.tsx:154
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "雙重驗證確認碼無效。"
@@ -5840,9 +5844,9 @@ msgstr "撈緊……"
 msgid "Log"
 msgstr "日誌"
 
-#: src/screens/Login/LoginForm.tsx:178
-#: src/screens/Login/LoginForm.tsx:349
-#: src/screens/Login/LoginForm.tsx:355
+#: src/screens/Login/LoginForm.tsx:195
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:372
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5948,7 +5952,7 @@ msgstr "媒體已儲存到其他裝置"
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "可能會令某啲受眾感到不安或造成不適嘅媒體內容。"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
 msgid "Members only"
 msgstr ""
 
@@ -6255,7 +6259,7 @@ msgstr "去到新手包"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:350
+#: src/screens/Login/LoginForm.tsx:367
 msgid "Navigates to the next screen"
 msgstr "去到下一個畫面"
 
@@ -6950,6 +6954,10 @@ msgstr "打開調試條目嘅額外詳細資訊"
 msgid "Opens alt text dialog"
 msgstr "打開替代文字對話框"
 
+#: src/screens/Login/LoginForm.tsx:391
+msgid "Opens Bluesky authorization page to sign in"
+msgstr ""
+
 #: src/screens/Books/BookCard.tsx:33
 msgid "Opens book details"
 msgstr ""
@@ -7013,7 +7021,7 @@ msgstr "打開連結 {0}"
 msgid "Opens live status dialog"
 msgstr "打開直播狀態對話框"
 
-#: src/screens/Login/LoginForm.tsx:258
+#: src/screens/Login/LoginForm.tsx:275
 msgid "Opens password reset form"
 msgstr "打開密碼重設表單"
 
@@ -7037,6 +7045,10 @@ msgstr "打開呢個人嘅個人檔案"
 #: src/components/dialogs/MutedWords.tsx:304
 msgid "Options:"
 msgstr "選項："
+
+#: src/screens/Login/LoginForm.tsx:383
+msgid "or"
+msgstr ""
 
 #: src/screens/Deactivated.tsx:191
 msgid "Or, continue with another account."
@@ -7123,7 +7135,7 @@ msgstr "搵唔到頁面"
 msgid "Page Not Found"
 msgstr "搵唔到頁面"
 
-#: src/screens/Login/LoginForm.tsx:227
+#: src/screens/Login/LoginForm.tsx:244
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7399,7 +7411,7 @@ msgstr "請輸入你嘅邀請碼。"
 msgid "Please enter your new email address."
 msgstr "請輸入你新嘅電郵地址。"
 
-#: src/screens/Login/LoginForm.tsx:95
+#: src/screens/Login/LoginForm.tsx:97
 msgid "Please enter your password"
 msgstr "請輸入你嘅密碼"
 
@@ -7407,7 +7419,7 @@ msgstr "請輸入你嘅密碼"
 msgid "Please enter your password as well:"
 msgstr "請同時輸入密碼："
 
-#: src/screens/Login/LoginForm.tsx:89
+#: src/screens/Login/LoginForm.tsx:91
 msgid "Please enter your username"
 msgstr "請輸入你嘅用戶名稱"
 
@@ -8118,7 +8130,7 @@ msgid "Removed verification"
 msgstr "已撤回認證"
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:34
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -8429,7 +8441,7 @@ msgstr "重設密碼"
 msgid "Resync contacts"
 msgstr "重新同步聯絡人"
 
-#: src/screens/Login/LoginForm.tsx:329
+#: src/screens/Login/LoginForm.tsx:346
 msgid "Retries signing in"
 msgstr "試多次登入"
 
@@ -8451,8 +8463,8 @@ msgstr "試多次執行上一個出錯誤嘅動作"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:328
-#: src/screens/Login/LoginForm.tsx:334
+#: src/screens/Login/LoginForm.tsx:345
+#: src/screens/Login/LoginForm.tsx:351
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9310,7 +9322,7 @@ msgstr "顯示警告兼且喺動態源度篩選"
 msgid "Show when you’re live"
 msgstr "顯示直播狀態"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:65
+#: src/view/shell/desktop/SidebarGenres.tsx:67
 msgid "Shows books in this genre"
 msgstr ""
 
@@ -9377,6 +9389,11 @@ msgstr ""
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:524
 msgid "Sign in to view post"
 msgstr "登入以檢視帖文"
+
+#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:398
+msgid "Sign in with Bluesky"
+msgstr ""
 
 #: src/screens/Settings/Settings.tsx:270
 #: src/screens/Settings/Settings.tsx:272
@@ -9518,7 +9535,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "對唔住，我哋而家撈唔到帳號建議。"
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:113
+#: src/App.web.tsx:126
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "對唔住！你嘅登入階段過咗期，請重新登入。"
 
@@ -10574,7 +10591,7 @@ msgstr "連線唔到你嘅服務。請檢查你嘅網絡連線跟住試多次。
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:168
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11014,7 +11031,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "用戶名稱只能包含字母（a-z）、數字及連字號（-）。"
 
-#: src/screens/Login/LoginForm.tsx:199
+#: src/screens/Login/LoginForm.tsx:216
 msgid "Username or email address"
 msgstr "用戶名稱或電郵地址"
 
@@ -11651,7 +11668,7 @@ msgstr "睇其他草稿之前，你使唔使儲存現有內容先？"
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "你使唔使儲存現有內容做草稿，留返遲啲再編輯？"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:250
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11846,7 +11863,7 @@ msgstr "你可以遲啲喺設定度改返。"
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "用緊應用程式專用密碼嗰陣，係改唔到出世日期嘅。請用主密碼登入再去變更你嘅出世日期。"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:201
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12037,7 +12054,7 @@ msgstr "你必須授予相片圖庫取用權限先至可以儲存 QR code"
 msgid "You need to allow access to your media library."
 msgstr "你必須允許取用你嘅媒體內容。"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:96
 msgid "You need to be a member of this bookclub to view it."
 msgstr ""
 

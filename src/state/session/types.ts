@@ -51,4 +51,6 @@ export type SessionApiContext = {
    * `persistSessionHandler`.
    */
   partialRefreshSession: () => Promise<void>
+  loginWithOAuth: (oauthSession: unknown) => Promise<void>
+  resumeOAuthSession: (account: SessionAccount) => Promise<void>
 }

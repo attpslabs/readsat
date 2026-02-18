@@ -24,6 +24,8 @@ import {
   createAgentAndResume,
   sessionAccountToSession,
 } from './agent'
+import {createAgentFromOAuthSession} from './oauth-agent'
+import {getOAuthClient} from './oauth-client'
 import {type Action, getInitialState, reducer, type State} from './reducer'
 export {isSignupQueued} from './util'
 import {addSessionDebugLog} from './logging'
@@ -58,6 +60,8 @@ const ApiContext = createContext<SessionApiContext>({
   resumeSession: async () => {},
   removeAccount: () => {},
   partialRefreshSession: async () => {},
+  loginWithOAuth: async () => {},
+  resumeOAuthSession: async () => {},
 })
 ApiContext.displayName = 'SessionApiContext'
 
@@ -280,9 +284,11 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
     const signal = cancelPendingTask()
     const {data} = await agent.com.atproto.server.getSession()
     if (signal.aborted) return
+    const accountDid = agent.session?.did ?? agent.did
+    if (!accountDid) return
     store.dispatch({
       type: 'partial-refresh-session',
-      accountDid: agent.session!.did,
+      accountDid,
       patch: {
         handle: data.handle,
         emailConfirmed: data.emailConfirmed,
@@ -308,6 +314,71 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
     },
     [store, cancelPendingTask],
   )
+
+  const loginWithOAuth = useCallback<SessionApiContext['loginWithOAuth']>(
+    async oauthSession => {
+      addSessionDebugLog({type: 'method:start', method: 'login'})
+      const signal = cancelPendingTask()
+      const {agent, account} = await createAgentFromOAuthSession(
+        oauthSession as any,
+      )
+
+      if (signal.aborted) {
+        return
+      }
+      store.dispatch({
+        type: 'switched-to-account',
+        newAgent: agent as any,
+        newAccount: account,
+      })
+      ax.metric(
+        'account:loggedIn',
+        {logContext: 'LoginForm' as const, withPassword: false},
+        {session: utils.accountToSessionMetadata(account)},
+      )
+      addSessionDebugLog({type: 'method:end', method: 'login', account})
+    },
+    [ax, store, cancelPendingTask],
+  )
+
+  const resumeOAuthSession = useCallback<
+    SessionApiContext['resumeOAuthSession']
+  >(
+    async storedAccount => {
+      addSessionDebugLog({
+        type: 'method:start',
+        method: 'resumeSession',
+        account: storedAccount,
+      })
+      const signal = cancelPendingTask()
+
+      const client = getOAuthClient()
+      if (!client) {
+        throw new Error('OAuth client not initialized')
+      }
+
+      const oauthSession = await client.restore(storedAccount.did)
+      const {agent, account} = await createAgentFromOAuthSession(
+        oauthSession as any,
+      )
+
+      if (signal.aborted) {
+        return
+      }
+      store.dispatch({
+        type: 'switched-to-account',
+        newAgent: agent as any,
+        newAccount: account,
+      })
+      addSessionDebugLog({
+        type: 'method:end',
+        method: 'resumeSession',
+        account,
+      })
+    },
+    [store, cancelPendingTask],
+  )
+
   useEffect(() => {
     return persisted.onUpdate('session', nextSession => {
       const synced = nextSession
@@ -320,9 +391,16 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
       const syncedAccount = synced.accounts.find(
         a => a.did === synced.currentAccount?.did,
       )
-      if (syncedAccount && syncedAccount.refreshJwt) {
+      if (
+        syncedAccount &&
+        (syncedAccount.refreshJwt || syncedAccount.isOAuth)
+      ) {
         if (syncedAccount.did !== state.currentAgentState.did) {
-          resumeSession(syncedAccount)
+          if (syncedAccount.isOAuth) {
+            resumeOAuthSession(syncedAccount)
+          } else {
+            resumeSession(syncedAccount)
+          }
         } else {
           const agent = state.currentAgentState.agent as BskyAgent
           const prevSession = agent.session
@@ -336,7 +414,7 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
         }
       }
     })
-  }, [store, state, resumeSession])
+  }, [store, state, resumeSession, resumeOAuthSession])
 
   const stateContext = useMemo(
     () => ({
@@ -358,6 +436,8 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
       resumeSession,
       removeAccount,
       partialRefreshSession,
+      loginWithOAuth,
+      resumeOAuthSession,
     }),
     [
       createAccount,
@@ -367,6 +447,8 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
       resumeSession,
       removeAccount,
       partialRefreshSession,
+      loginWithOAuth,
+      resumeOAuthSession,
     ],
   )
 
@@ -383,7 +465,10 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
       addSessionDebugLog({type: 'agent:switch', prevAgent, nextAgent: agent})
       // We never reuse agents so let's fully neutralize the previous one.
       // This ensures it won't try to consume any refresh tokens.
-      prevAgent.dispose()
+      // OAuth agents (base Agent class) don't have dispose(), so check first.
+      if ('dispose' in prevAgent) {
+        ;(prevAgent as BskyAppAgent).dispose()
+      }
     }
   }, [agent])
 

@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 awr"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:294
 msgid "2FA Confirmation"
 msgstr "Cadarnhad 2FA"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Gosodiadau Hygyrchedd"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:208
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "Ar gael"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:316
-#: src/screens/Login/LoginForm.tsx:321
+#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:338
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1972,7 +1972,7 @@ msgstr "Newidiadau wedi'u cadw"
 msgid "Chat"
 msgstr "Sgyrsiau"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:210
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2034,7 +2034,7 @@ msgstr "Sgyrsiau"
 msgid "Check my status"
 msgstr "Gwirio fy statws"
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:323
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Gwiriwch eich e-bost am god mewngofnodi a rhowch ef yma."
 
@@ -2090,7 +2090,7 @@ msgstr "Dewiswch eich llinell amser eich hun! Mae ffrydiau adeiladwyd gan y gymu
 msgid "Choose your password"
 msgstr "Dewiswch eich cyfrinair"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:35
+#: src/view/shell/desktop/SidebarGenres.tsx:37
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "Clirio'r holl ddata storio (ailgychwyn ar ôl hyn)"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:31
+#: src/view/shell/desktop/SidebarGenres.tsx:33
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:283
+#: src/screens/Login/LoginForm.tsx:300
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "Cod cadarnhau"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:339
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Connecting to service..."
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr "Methu llwytho'r cysylltiadau. Mae angen i chi ailddilysu eich rhif ffôn
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:75
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "Diwylliant"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:154
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -3650,7 +3650,7 @@ msgstr "Rhowch y parth rydych chi am ei ddefnyddio"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Rhowch yr e-bost a ddefnyddiwyd gennych i greu eich cyfrif. Byddwn yn anfon \"cod ailosod\" atoch er mwyn i chi allu gosod cyfrinair newydd."
 
-#: src/screens/Login/LoginForm.tsx:217
+#: src/screens/Login/LoginForm.tsx:234
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Rhowch yr enw defnyddiwr neu'r cyfeiriad e-bost ddefnyddiwyd gennych pan wnaethoch chi greu eich cyfrif"
 
@@ -3663,7 +3663,7 @@ msgstr "Rhowch eich dyddiad geni"
 msgid "Enter your email address"
 msgstr "Rhowch eich cyfeiriad e-bost"
 
-#: src/screens/Login/LoginForm.tsx:242
+#: src/screens/Login/LoginForm.tsx:259
 msgid "Enter your password"
 msgstr "Rhowch eich cyfrinair"
 
@@ -4051,6 +4051,10 @@ msgstr "Methwyd anfon"
 msgid "Failed to send email, please try again."
 msgstr "Wedi methu anfon e-bost, ceisiwch eto."
 
+#: src/screens/Login/LoginForm.tsx:190
+msgid "Failed to start sign in. Please try again."
+msgstr ""
+
 #: src/components/live/GoLiveDisabledDialog.tsx:76
 #: src/components/moderation/LabelsOnMeDialog.tsx:265
 #: src/screens/Messages/components/ChatDisabled.tsx:99
@@ -4184,7 +4188,7 @@ msgstr "Estyn diweddariad"
 msgid "File saved successfully!"
 msgstr "Ffeil wedi'i chadw'n llwyddiannus!"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:64
+#: src/view/shell/desktop/SidebarGenres.tsx:66
 msgid "Filter by {0}"
 msgstr ""
 
@@ -4490,11 +4494,11 @@ msgstr "Anghofiwch y dwndwr"
 msgid "Forgot Password"
 msgstr "Wedi anghofio'ch cyfrinair"
 
-#: src/screens/Login/LoginForm.tsx:257
+#: src/screens/Login/LoginForm.tsx:274
 msgid "Forgot password?"
 msgstr "Wedi anghofio'ch cyfrinair?"
 
-#: src/screens/Login/LoginForm.tsx:268
+#: src/screens/Login/LoginForm.tsx:285
 msgid "Forgot?"
 msgstr "Wedi anghofio?"
 
@@ -4519,7 +4523,7 @@ msgstr "Oddi wrth <0/>"
 msgid "Generate a starter pack"
 msgstr "Creu pecyn cychwyn"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:26
+#: src/view/shell/desktop/SidebarGenres.tsx:28
 msgid "Genres"
 msgstr ""
 
@@ -4628,8 +4632,8 @@ msgstr "Gogoneddu trais"
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:101
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:112
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5023,7 +5027,7 @@ msgid "Host:"
 msgstr "Gwesteiwr:"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:198
 msgid "Hosting provider"
 msgstr "Darparwr gwesteio"
 
@@ -5224,7 +5228,7 @@ msgstr "O fewn yr ap, Gwthio, Pobl rydych yn eu dilyn"
 msgid "Inbox zero!"
 msgstr "Dim yn y blwch derbyn!"
 
-#: src/screens/Login/LoginForm.tsx:161
+#: src/screens/Login/LoginForm.tsx:163
 msgid "Incorrect username or password"
 msgstr "Enw defnyddiwr neu gyfrinair anghywir"
 
@@ -5244,7 +5248,7 @@ msgstr "Mewnbynnu cyfrinair newydd"
 msgid "Input password for account deletion"
 msgstr "Mewnbynnu cyfrinair ar gyfer dileu cyfrif"
 
-#: src/screens/Login/LoginForm.tsx:298
+#: src/screens/Login/LoginForm.tsx:315
 msgid "Input the code which has been emailed to you"
 msgstr "Mewnbynnwch y cod sydd wedi'i e-bostio atoch"
 
@@ -5272,7 +5276,7 @@ msgstr "Chwilio am ffrindiau drwy eich cysylltiadau"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Yn cyflwyno postiadau wedi'u cadw, hynny yw, nodau tudalen"
 
-#: src/screens/Login/LoginForm.tsx:152
+#: src/screens/Login/LoginForm.tsx:154
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Cod cadarnhau 2FA annilys."
@@ -5840,9 +5844,9 @@ msgstr "Yn llwytho..."
 msgid "Log"
 msgstr "Cofnod"
 
-#: src/screens/Login/LoginForm.tsx:178
-#: src/screens/Login/LoginForm.tsx:349
-#: src/screens/Login/LoginForm.tsx:355
+#: src/screens/Login/LoginForm.tsx:195
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:372
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5948,7 +5952,7 @@ msgstr "Cyfryngau wedi'u cadw ar ddyfais arall"
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "Cyfryngau a all fod yn annymunol neu'n amhriodol i rai cynulleidfaoedd."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
 msgid "Members only"
 msgstr ""
 
@@ -6255,7 +6259,7 @@ msgstr "Ewch i'r pecyn cychwyn"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:350
+#: src/screens/Login/LoginForm.tsx:367
 msgid "Navigates to the next screen"
 msgstr "Yn llywio i'r sgrin nesaf"
 
@@ -6950,6 +6954,10 @@ msgstr "Yn agor manylion ychwanegol cofnod dadfygio"
 msgid "Opens alt text dialog"
 msgstr "Yn agor deialog testun amgen"
 
+#: src/screens/Login/LoginForm.tsx:391
+msgid "Opens Bluesky authorization page to sign in"
+msgstr ""
+
 #: src/screens/Books/BookCard.tsx:33
 msgid "Opens book details"
 msgstr ""
@@ -7013,7 +7021,7 @@ msgstr "Yn agor y ddolen {0}"
 msgid "Opens live status dialog"
 msgstr "Yn agor deialog statws byw"
 
-#: src/screens/Login/LoginForm.tsx:258
+#: src/screens/Login/LoginForm.tsx:275
 msgid "Opens password reset form"
 msgstr "Yn agor ffurflen ailosod cyfrinair"
 
@@ -7037,6 +7045,10 @@ msgstr "Yn agor y proffil hwn"
 #: src/components/dialogs/MutedWords.tsx:304
 msgid "Options:"
 msgstr "Dewisiadau:"
+
+#: src/screens/Login/LoginForm.tsx:383
+msgid "or"
+msgstr ""
 
 #: src/screens/Deactivated.tsx:191
 msgid "Or, continue with another account."
@@ -7123,7 +7135,7 @@ msgstr "Heb ganfod y dudalen"
 msgid "Page Not Found"
 msgstr "Tudalen Heb ei Chanfod"
 
-#: src/screens/Login/LoginForm.tsx:227
+#: src/screens/Login/LoginForm.tsx:244
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7399,7 +7411,7 @@ msgstr "Rhowch eich cod gwahodd."
 msgid "Please enter your new email address."
 msgstr "Rhowch eich cyfeiriad e-bost newydd."
 
-#: src/screens/Login/LoginForm.tsx:95
+#: src/screens/Login/LoginForm.tsx:97
 msgid "Please enter your password"
 msgstr "Rhowch eich cyfrinair"
 
@@ -7407,7 +7419,7 @@ msgstr "Rhowch eich cyfrinair"
 msgid "Please enter your password as well:"
 msgstr "Rhowch eich cyfrinair hefyd:"
 
-#: src/screens/Login/LoginForm.tsx:89
+#: src/screens/Login/LoginForm.tsx:91
 msgid "Please enter your username"
 msgstr "Rhowch eich enw defnyddiwr"
 
@@ -8118,7 +8130,7 @@ msgid "Removed verification"
 msgstr "Dilysiad wedi'i ddileu"
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:34
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -8429,7 +8441,7 @@ msgstr "Ailosod cyfrinair"
 msgid "Resync contacts"
 msgstr "Ail gydweddu cysylltiadau"
 
-#: src/screens/Login/LoginForm.tsx:329
+#: src/screens/Login/LoginForm.tsx:346
 msgid "Retries signing in"
 msgstr "Yn ceisio mewngofnodi eto"
 
@@ -8451,8 +8463,8 @@ msgstr "Yn ceisio'r weithred olaf eto, oedd yn wallus"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:328
-#: src/screens/Login/LoginForm.tsx:334
+#: src/screens/Login/LoginForm.tsx:345
+#: src/screens/Login/LoginForm.tsx:351
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9310,7 +9322,7 @@ msgstr "Dangos rhybudd a hidlo o ffrydiau"
 msgid "Show when you’re live"
 msgstr "Dangos pan fyddwch yn fyw"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:65
+#: src/view/shell/desktop/SidebarGenres.tsx:67
 msgid "Shows books in this genre"
 msgstr ""
 
@@ -9377,6 +9389,11 @@ msgstr ""
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:524
 msgid "Sign in to view post"
 msgstr "Mewngofnodwch i weld y postiad"
+
+#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:398
+msgid "Sign in with Bluesky"
+msgstr ""
 
 #: src/screens/Settings/Settings.tsx:270
 #: src/screens/Settings/Settings.tsx:272
@@ -9518,7 +9535,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "Ymddiheuriadau, does dim modd i ni lwytho awgrymiadau cyfrifon ar hyn o bryd."
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:113
+#: src/App.web.tsx:126
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "Sori! Daeth eich sesiwn i ben. Mewngofnodwch eto."
 
@@ -10574,7 +10591,7 @@ msgstr "Methu cysylltu â'ch gwasanaeth. Gwiriwch eich cysylltiad rhyngrwyd a rh
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:168
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11014,7 +11031,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Gall enw defnyddiwr gynnwys dim ond llythrennau (a-z), rifau a chyplysnodau"
 
-#: src/screens/Login/LoginForm.tsx:199
+#: src/screens/Login/LoginForm.tsx:216
 msgid "Username or email address"
 msgstr "Enw defnyddiwr neu gyfeiriad e-bost"
 
@@ -11651,7 +11668,7 @@ msgstr "Hoffech chi gadw hwn fel drafft cyn edrych ar eich drafftiau?"
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "Hoffech chi gadw hwn fel drafft i'w olygu'n nes ymlaen?"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:250
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11846,7 +11863,7 @@ msgstr "Gallwch ddiweddaru hwn yn ddiweddarach o'ch gosodiadau."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "Does dim modd i chi ddiweddaru eich dyddiad geni wrth ddefnyddio cyfrinair ap. Mewngofnodwch gyda'ch prif gyfrinair i ddiweddaru eich dyddiad geni."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:201
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12037,7 +12054,7 @@ msgstr "Rhaid i chi ganiatáu mynediad i'ch llyfrgell ffotograffau i gadw cod QR
 msgid "You need to allow access to your media library."
 msgstr "Rhaid i chi ganiatáu mynediad i'ch llyfrgell cyfryngau."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:96
 msgid "You need to be a member of this bookclub to view it."
 msgstr ""
 

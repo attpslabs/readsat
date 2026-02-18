@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 saat"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:294
 msgid "2FA Confirmation"
 msgstr "2FA Onayı"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Erişilebilirlik Ayarları"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:208
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "Kullanılabilir"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:316
-#: src/screens/Login/LoginForm.tsx:321
+#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:338
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1972,7 +1972,7 @@ msgstr "Değişiklikler kaydedildi"
 msgid "Chat"
 msgstr "Mesajlar"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:210
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2034,7 +2034,7 @@ msgstr "Sohbetler"
 msgid "Check my status"
 msgstr "Durumumu kontrol et"
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:323
 msgid "Check your email for a sign in code and enter it here."
 msgstr "E-postanıza gelen giriş kodunu buraya girin."
 
@@ -2090,7 +2090,7 @@ msgstr "Kendi zaman akışınızı seçin! Topluluk tarafından oluşturulan ak�
 msgid "Choose your password"
 msgstr "Şifrenizi seçin"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:35
+#: src/view/shell/desktop/SidebarGenres.tsx:37
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "Tüm depolama verilerini temizle (bundan sonra yeniden başlat)"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:31
+#: src/view/shell/desktop/SidebarGenres.tsx:33
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:283
+#: src/screens/Login/LoginForm.tsx:300
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "Onay kodu"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:339
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Connecting to service..."
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr "Bağlantılar yüklenemedi. Devam etmek için telefon numaranızı yenid
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:75
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "Kültür"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:154
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -3650,7 +3650,7 @@ msgstr "Kullanmak istediğiniz alan adını girin"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Hesabınızı oluşturmak için kullandığınız e-postayı girin. Size yeni bir şifre belirlemeniz için bir \"sıfırlama kodu\" göndereceğiz."
 
-#: src/screens/Login/LoginForm.tsx:217
+#: src/screens/Login/LoginForm.tsx:234
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Hesabınızı oluştururken kullandığınız kullanıcı adını veya e-posta adresini girin"
 
@@ -3663,7 +3663,7 @@ msgstr "Doğum tarihinizi girin"
 msgid "Enter your email address"
 msgstr "E-posta adresinizi girin"
 
-#: src/screens/Login/LoginForm.tsx:242
+#: src/screens/Login/LoginForm.tsx:259
 msgid "Enter your password"
 msgstr "Şifrenizi girin"
 
@@ -4051,6 +4051,10 @@ msgstr "Gönderilemedi"
 msgid "Failed to send email, please try again."
 msgstr "E-posta gönderilemedi, lütfen tekrar deneyin."
 
+#: src/screens/Login/LoginForm.tsx:190
+msgid "Failed to start sign in. Please try again."
+msgstr ""
+
 #: src/components/live/GoLiveDisabledDialog.tsx:76
 #: src/components/moderation/LabelsOnMeDialog.tsx:265
 #: src/screens/Messages/components/ChatDisabled.tsx:99
@@ -4184,7 +4188,7 @@ msgstr "Güncellemeyi al"
 msgid "File saved successfully!"
 msgstr "Dosya başarıyla kaydedildi!"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:64
+#: src/view/shell/desktop/SidebarGenres.tsx:66
 msgid "Filter by {0}"
 msgstr ""
 
@@ -4490,11 +4494,11 @@ msgstr "Gürültüyü unutun"
 msgid "Forgot Password"
 msgstr "Şifremi Unuttum"
 
-#: src/screens/Login/LoginForm.tsx:257
+#: src/screens/Login/LoginForm.tsx:274
 msgid "Forgot password?"
 msgstr "Şifrenizi mi unuttunuz?"
 
-#: src/screens/Login/LoginForm.tsx:268
+#: src/screens/Login/LoginForm.tsx:285
 msgid "Forgot?"
 msgstr "Unuttunuz mu?"
 
@@ -4519,7 +4523,7 @@ msgstr "<0/> tarafından"
 msgid "Generate a starter pack"
 msgstr "Bir başlangıç ​​paketi oluşturun"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:26
+#: src/view/shell/desktop/SidebarGenres.tsx:28
 msgid "Genres"
 msgstr ""
 
@@ -4628,8 +4632,8 @@ msgstr "Şiddete övgü"
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:101
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:112
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5023,7 +5027,7 @@ msgid "Host:"
 msgstr "Sunucu adı:"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:198
 msgid "Hosting provider"
 msgstr "Barındırma sağlayıcısı"
 
@@ -5224,7 +5228,7 @@ msgstr "Uygulama içi, Anında, Takip ettikleriniz"
 msgid "Inbox zero!"
 msgstr "Gelen kutusu boş!"
 
-#: src/screens/Login/LoginForm.tsx:161
+#: src/screens/Login/LoginForm.tsx:163
 msgid "Incorrect username or password"
 msgstr "Geçersiz kullanıcı adı veya şifre"
 
@@ -5244,7 +5248,7 @@ msgstr "Yeni şifre girin"
 msgid "Input password for account deletion"
 msgstr "Hesap silme için şifre girin"
 
-#: src/screens/Login/LoginForm.tsx:298
+#: src/screens/Login/LoginForm.tsx:315
 msgid "Input the code which has been emailed to you"
 msgstr "Size e-posta olarak gönderilen kodu girin"
 
@@ -5272,7 +5276,7 @@ msgstr "Bağlantılarınızdan arkadaşlarınızı bulmayı sunarız"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Kayıtlı gönderileri yani yer imlerini sunarız"
 
-#: src/screens/Login/LoginForm.tsx:152
+#: src/screens/Login/LoginForm.tsx:154
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Geçersiz 2FA onay kodu."
@@ -5840,9 +5844,9 @@ msgstr "Yükleniyor..."
 msgid "Log"
 msgstr "Log"
 
-#: src/screens/Login/LoginForm.tsx:178
-#: src/screens/Login/LoginForm.tsx:349
-#: src/screens/Login/LoginForm.tsx:355
+#: src/screens/Login/LoginForm.tsx:195
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:372
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5948,7 +5952,7 @@ msgstr ""
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "Bazı gruplar için rahatsız edici ya da uygunsuz olabilecek medya."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
 msgid "Members only"
 msgstr ""
 
@@ -6255,7 +6259,7 @@ msgstr "Başlangıç paketine git"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:350
+#: src/screens/Login/LoginForm.tsx:367
 msgid "Navigates to the next screen"
 msgstr "Sonraki ekrana yönlendirir"
 
@@ -6950,6 +6954,10 @@ msgstr "Hata ayıklama girişi için ek ayrıntıları açar"
 msgid "Opens alt text dialog"
 msgstr "Alt metin diyaloğunu açar"
 
+#: src/screens/Login/LoginForm.tsx:391
+msgid "Opens Bluesky authorization page to sign in"
+msgstr ""
+
 #: src/screens/Books/BookCard.tsx:33
 msgid "Opens book details"
 msgstr ""
@@ -7013,7 +7021,7 @@ msgstr "{0} bağlantısını açar"
 msgid "Opens live status dialog"
 msgstr "Canlı yayın diyaloğunu açar"
 
-#: src/screens/Login/LoginForm.tsx:258
+#: src/screens/Login/LoginForm.tsx:275
 msgid "Opens password reset form"
 msgstr "Şifre sıfırlama formunu açar"
 
@@ -7037,6 +7045,10 @@ msgstr "Bu profili açar"
 #: src/components/dialogs/MutedWords.tsx:304
 msgid "Options:"
 msgstr "Seçenekler:"
+
+#: src/screens/Login/LoginForm.tsx:383
+msgid "or"
+msgstr ""
 
 #: src/screens/Deactivated.tsx:191
 msgid "Or, continue with another account."
@@ -7123,7 +7135,7 @@ msgstr "Sayfa bulunamadı"
 msgid "Page Not Found"
 msgstr "Sayfa Bulunamadı"
 
-#: src/screens/Login/LoginForm.tsx:227
+#: src/screens/Login/LoginForm.tsx:244
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7399,7 +7411,7 @@ msgstr "Lütfen davet kodunuzu girin."
 msgid "Please enter your new email address."
 msgstr "Lütfen yeni e-posta adresinizi girin."
 
-#: src/screens/Login/LoginForm.tsx:95
+#: src/screens/Login/LoginForm.tsx:97
 msgid "Please enter your password"
 msgstr "Lütfen şifrenizi girin"
 
@@ -7407,7 +7419,7 @@ msgstr "Lütfen şifrenizi girin"
 msgid "Please enter your password as well:"
 msgstr "Lütfen şifrenizi de girin:"
 
-#: src/screens/Login/LoginForm.tsx:89
+#: src/screens/Login/LoginForm.tsx:91
 msgid "Please enter your username"
 msgstr "Lütfen kullanıcı adınızı girin"
 
@@ -8118,7 +8130,7 @@ msgid "Removed verification"
 msgstr "Doğrulama kaldırıldı"
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:34
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -8429,7 +8441,7 @@ msgstr "Şifreyi sıfırla"
 msgid "Resync contacts"
 msgstr "Bağlantıları güncelle"
 
-#: src/screens/Login/LoginForm.tsx:329
+#: src/screens/Login/LoginForm.tsx:346
 msgid "Retries signing in"
 msgstr "Giriş yapmayı tekrar dener"
 
@@ -8451,8 +8463,8 @@ msgstr "Son hataya neden olan son eylemi tekrarlar"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:328
-#: src/screens/Login/LoginForm.tsx:334
+#: src/screens/Login/LoginForm.tsx:345
+#: src/screens/Login/LoginForm.tsx:351
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9310,7 +9322,7 @@ msgstr "Uyarı göster ve akışlardan filtrele"
 msgid "Show when you’re live"
 msgstr "Canlı yayına çıktığınızı gösterin"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:65
+#: src/view/shell/desktop/SidebarGenres.tsx:67
 msgid "Shows books in this genre"
 msgstr ""
 
@@ -9377,6 +9389,11 @@ msgstr ""
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:524
 msgid "Sign in to view post"
 msgstr "Gönderiyi görmek için giriş yap"
+
+#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:398
+msgid "Sign in with Bluesky"
+msgstr ""
 
 #: src/screens/Settings/Settings.tsx:270
 #: src/screens/Settings/Settings.tsx:272
@@ -9518,7 +9535,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "Üzgünüz, hesap önerilerini şu anda yükleyemiyoruz."
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:113
+#: src/App.web.tsx:126
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "Maalesef oturumunuzun süresi doldu. Lütfen tekrar giriş yapın."
 
@@ -10574,7 +10591,7 @@ msgstr "Sunucuya bağlanırken bir sorun oldu, lütfen internet bağlantınızı
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:168
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11014,7 +11031,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Kullanıcı adı sadece İngilizce harfler (a-z), rakamlar ve tire işareti barındırabilir"
 
-#: src/screens/Login/LoginForm.tsx:199
+#: src/screens/Login/LoginForm.tsx:216
 msgid "Username or email address"
 msgstr "Kullanıcı adı veya e-posta adresi"
 
@@ -11651,7 +11668,7 @@ msgstr "Taslaklarınıza göz atmadan önce bunu taslak olarak kaydetmek ister m
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "Bunu sonradan düzenlemek için taslak olarak kaydetmek ister misiniz?"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:250
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11846,7 +11863,7 @@ msgstr "Bunu daha sonra ayarlarınızdan güncelleyebilirsiniz."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "Doğum tarihinizi bir uygulama şifresi kullanırkan güncelleyemezsiniz. Doğum tarihinizi güncellemek için lütfen ana şifrenizle giriş yapın."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:201
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12037,7 +12054,7 @@ msgstr "Karekod kaydetmek için fotoğraf galerinize erişim izni vermelisiniz"
 msgid "You need to allow access to your media library."
 msgstr "Medya galerinize erişim izni vermeniz gerekmektedir."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:96
 msgid "You need to be a member of this bookclub to view it."
 msgstr ""
 

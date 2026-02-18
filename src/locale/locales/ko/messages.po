@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24시간"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:294
 msgid "2FA Confirmation"
 msgstr "2단계 인증"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "접근성 설정"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:208
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "사용 가능"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:316
-#: src/screens/Login/LoginForm.tsx:321
+#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:338
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1972,7 +1972,7 @@ msgstr "변경 사항을 저장했습니다"
 msgid "Chat"
 msgstr "대화"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:210
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2034,7 +2034,7 @@ msgstr "대화"
 msgid "Check my status"
 msgstr "내 상태 확인"
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:323
 msgid "Check your email for a sign in code and enter it here."
 msgstr "이메일에서 로그인 코드를 확인한 후 여기에 입력하세요."
 
@@ -2090,7 +2090,7 @@ msgstr "나만의 타임라인을 선택하세요! 커뮤니티에서 만든 피
 msgid "Choose your password"
 msgstr "비밀번호 입력"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:35
+#: src/view/shell/desktop/SidebarGenres.tsx:37
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "모든 스토리지 데이터 지우기 (이후 다시 시작)"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:31
+#: src/view/shell/desktop/SidebarGenres.tsx:33
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:283
+#: src/screens/Login/LoginForm.tsx:300
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "인증 코드"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:339
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Connecting to service..."
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr "연락처를 업로드할 수 없습니다. 계속 진행하려면 전�
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:75
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "문화"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:154
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -3650,7 +3650,7 @@ msgstr "사용할 도메인 입력"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "계정을 만들 때 사용한 이메일을 입력하세요. 새 비밀번호를 설정할 수 있도록 ‘재설정 코드’를 전송합니다."
 
-#: src/screens/Login/LoginForm.tsx:217
+#: src/screens/Login/LoginForm.tsx:234
 msgid "Enter the username or email address you used when you created your account"
 msgstr "계정을 만들 때 사용한 사용자 이름 또는 이메일 주소를 입력하세요"
 
@@ -3663,7 +3663,7 @@ msgstr "생년월일을 입력하세요"
 msgid "Enter your email address"
 msgstr "이메일 주소 입력"
 
-#: src/screens/Login/LoginForm.tsx:242
+#: src/screens/Login/LoginForm.tsx:259
 msgid "Enter your password"
 msgstr "비밀번호를 입력합니다"
 
@@ -4051,6 +4051,10 @@ msgstr "전송 실패"
 msgid "Failed to send email, please try again."
 msgstr "이메일을 전송하지 못했습니다. 다시 시도해 주세요."
 
+#: src/screens/Login/LoginForm.tsx:190
+msgid "Failed to start sign in. Please try again."
+msgstr ""
+
 #: src/components/live/GoLiveDisabledDialog.tsx:76
 #: src/components/moderation/LabelsOnMeDialog.tsx:265
 #: src/screens/Messages/components/ChatDisabled.tsx:99
@@ -4184,7 +4188,7 @@ msgstr "업데이트 확인"
 msgid "File saved successfully!"
 msgstr "파일을 성공적으로 저장했습니다!"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:64
+#: src/view/shell/desktop/SidebarGenres.tsx:66
 msgid "Filter by {0}"
 msgstr ""
 
@@ -4490,11 +4494,11 @@ msgstr "잡음은 잊어라"
 msgid "Forgot Password"
 msgstr "비밀번호 분실"
 
-#: src/screens/Login/LoginForm.tsx:257
+#: src/screens/Login/LoginForm.tsx:274
 msgid "Forgot password?"
 msgstr "비밀번호를 잊었나요?"
 
-#: src/screens/Login/LoginForm.tsx:268
+#: src/screens/Login/LoginForm.tsx:285
 msgid "Forgot?"
 msgstr "분실"
 
@@ -4519,7 +4523,7 @@ msgstr "<0/>에서"
 msgid "Generate a starter pack"
 msgstr "스타터 팩 만들기"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:26
+#: src/view/shell/desktop/SidebarGenres.tsx:28
 msgid "Genres"
 msgstr ""
 
@@ -4628,8 +4632,8 @@ msgstr "폭력 미화"
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:101
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:112
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5023,7 +5027,7 @@ msgid "Host:"
 msgstr "호스트:"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:198
 msgid "Hosting provider"
 msgstr "호스팅 제공자"
 
@@ -5224,7 +5228,7 @@ msgstr "인앱, 푸시, 내가 팔로우하는 사용자"
 msgid "Inbox zero!"
 msgstr "수신함 제로!"
 
-#: src/screens/Login/LoginForm.tsx:161
+#: src/screens/Login/LoginForm.tsx:163
 msgid "Incorrect username or password"
 msgstr "사용자 이름 또는 비밀번호가 올바르지 않습니다"
 
@@ -5244,7 +5248,7 @@ msgstr "새 비밀번호를 입력합니다"
 msgid "Input password for account deletion"
 msgstr "계정을 삭제하기 위해 비밀번호를 입력합니다"
 
-#: src/screens/Login/LoginForm.tsx:298
+#: src/screens/Login/LoginForm.tsx:315
 msgid "Input the code which has been emailed to you"
 msgstr "이메일로 전송된 코드를 입력합니다"
 
@@ -5272,7 +5276,7 @@ msgstr "연락처를 통한 친구 찾기 기능 소개"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "새로운 저장된 게시물(일명 '북마크')을 만나보세요"
 
-#: src/screens/Login/LoginForm.tsx:152
+#: src/screens/Login/LoginForm.tsx:154
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "잘못된 2단계 인증 코드입니다."
@@ -5840,9 +5844,9 @@ msgstr "불러오는 중…"
 msgid "Log"
 msgstr "로그"
 
-#: src/screens/Login/LoginForm.tsx:178
-#: src/screens/Login/LoginForm.tsx:349
-#: src/screens/Login/LoginForm.tsx:355
+#: src/screens/Login/LoginForm.tsx:195
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:372
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5948,7 +5952,7 @@ msgstr "다른 기기에 저장된 미디어"
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "일부 사용자에게 불쾌감을 주거나 부적절할 수 있는 미디어."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
 msgid "Members only"
 msgstr ""
 
@@ -6255,7 +6259,7 @@ msgstr "스타터 팩으로 이동하기"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:350
+#: src/screens/Login/LoginForm.tsx:367
 msgid "Navigates to the next screen"
 msgstr "다음 화면으로 이동합니다"
 
@@ -6950,6 +6954,10 @@ msgstr "디버그 항목에 대한 추가 세부 정보를 엽니다"
 msgid "Opens alt text dialog"
 msgstr "대체 텍스트 대화 상자를 엽니다"
 
+#: src/screens/Login/LoginForm.tsx:391
+msgid "Opens Bluesky authorization page to sign in"
+msgstr ""
+
 #: src/screens/Books/BookCard.tsx:33
 msgid "Opens book details"
 msgstr ""
@@ -7013,7 +7021,7 @@ msgstr "링크 {0}(을)를 엽니다"
 msgid "Opens live status dialog"
 msgstr "라이브 상태 대화 상자를 엽니다"
 
-#: src/screens/Login/LoginForm.tsx:258
+#: src/screens/Login/LoginForm.tsx:275
 msgid "Opens password reset form"
 msgstr "비밀번호 재설정 양식을 엽니다"
 
@@ -7037,6 +7045,10 @@ msgstr "이 프로필을 엽니다"
 #: src/components/dialogs/MutedWords.tsx:304
 msgid "Options:"
 msgstr "옵션:"
+
+#: src/screens/Login/LoginForm.tsx:383
+msgid "or"
+msgstr ""
 
 #: src/screens/Deactivated.tsx:191
 msgid "Or, continue with another account."
@@ -7123,7 +7135,7 @@ msgstr "페이지를 찾을 수 없습니다"
 msgid "Page Not Found"
 msgstr "페이지를 찾을 수 없습니다"
 
-#: src/screens/Login/LoginForm.tsx:227
+#: src/screens/Login/LoginForm.tsx:244
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7399,7 +7411,7 @@ msgstr "초대 코드를 입력해 주세요."
 msgid "Please enter your new email address."
 msgstr "새 이메일 주소를 입력해 주세요."
 
-#: src/screens/Login/LoginForm.tsx:95
+#: src/screens/Login/LoginForm.tsx:97
 msgid "Please enter your password"
 msgstr "비밀번호를 입력해 주세요"
 
@@ -7407,7 +7419,7 @@ msgstr "비밀번호를 입력해 주세요"
 msgid "Please enter your password as well:"
 msgstr "비밀번호를 입력해 주세요."
 
-#: src/screens/Login/LoginForm.tsx:89
+#: src/screens/Login/LoginForm.tsx:91
 msgid "Please enter your username"
 msgstr "사용자 이름을 입력해 주세요"
 
@@ -8118,7 +8130,7 @@ msgid "Removed verification"
 msgstr "인증을 취소했습니다"
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:34
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -8429,7 +8441,7 @@ msgstr "비밀번호 재설정"
 msgid "Resync contacts"
 msgstr "연락처 다시 동기화"
 
-#: src/screens/Login/LoginForm.tsx:329
+#: src/screens/Login/LoginForm.tsx:346
 msgid "Retries signing in"
 msgstr "로그인을 다시 시도합니다"
 
@@ -8451,8 +8463,8 @@ msgstr "오류가 발생한 마지막 작업을 다시 시도합니다"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:328
-#: src/screens/Login/LoginForm.tsx:334
+#: src/screens/Login/LoginForm.tsx:345
+#: src/screens/Login/LoginForm.tsx:351
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9310,7 +9322,7 @@ msgstr "경고 표시 및 피드에서 필터링"
 msgid "Show when you’re live"
 msgstr "내가 라이브 중일 때 표시하기"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:65
+#: src/view/shell/desktop/SidebarGenres.tsx:67
 msgid "Shows books in this genre"
 msgstr ""
 
@@ -9377,6 +9389,11 @@ msgstr ""
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:524
 msgid "Sign in to view post"
 msgstr "로그인하여 게시물 보기"
+
+#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:398
+msgid "Sign in with Bluesky"
+msgstr ""
 
 #: src/screens/Settings/Settings.tsx:270
 #: src/screens/Settings/Settings.tsx:272
@@ -9518,7 +9535,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "죄송합니다. 현재 계정 추천을 불러올 수 없습니다."
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:113
+#: src/App.web.tsx:126
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "죄송합니다. 세션이 만료되었습니다. 다시 로그인해 주세요."
 
@@ -10574,7 +10591,7 @@ msgstr "서비스에 연결할 수 없습니다. 인터넷 연결을 확인한 �
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:168
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11014,7 +11031,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "사용자 이름에는 영문자(a-z), 숫자, 하이픈만 사용할 수 있습니다"
 
-#: src/screens/Login/LoginForm.tsx:199
+#: src/screens/Login/LoginForm.tsx:216
 msgid "Username or email address"
 msgstr "사용자 이름 또는 이메일 주소"
 
@@ -11651,7 +11668,7 @@ msgstr "임시 저장 목록으로 이동하기 전에 작성 중인 내용을 �
 msgid "Would you like to save this as a draft to edit later?"
 msgstr "나중에 다시 편집할 수 있도록 임시 저장하시겠습니까?"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:250
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11846,7 +11863,7 @@ msgstr "나중에 설정에서 변경할 수 있습니다."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "앱 비밀번호를 사용 중이므로 생년월일을 업데이트할 수 없습니다. 생년월일을 변경하려면 기본 비밀번호로 로그인하세요."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:201
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12037,7 +12054,7 @@ msgstr "QR 코드를 저장하려면 사진 보관함에 대한 접근 권한을
 msgid "You need to allow access to your media library."
 msgstr "미디어 라이브러리에 대한 접근 권한을 허용해야 합니다."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:96
 msgid "You need to be a member of this bookclub to view it."
 msgstr ""
 

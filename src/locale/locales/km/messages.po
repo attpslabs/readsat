@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "២៤ ម៉ោង"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:294
 msgid "2FA Confirmation"
 msgstr "ការបញ្ជាក់ 2FA"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "ការកំណត់មានភាពងាយស្រួល"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:208
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr ""
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:316
-#: src/screens/Login/LoginForm.tsx:321
+#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:338
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1972,7 +1972,7 @@ msgstr ""
 msgid "Chat"
 msgstr "ជជែក"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:210
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2034,7 +2034,7 @@ msgstr ""
 msgid "Check my status"
 msgstr "ពិនិត្យស្ថានភាពរបស់ខ្ញុំ"
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:323
 msgid "Check your email for a sign in code and enter it here."
 msgstr ""
 
@@ -2090,7 +2090,7 @@ msgstr ""
 msgid "Choose your password"
 msgstr "ជ្រើសរើសពាក្យសម្ងាត់របស់អ្នក"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:35
+#: src/view/shell/desktop/SidebarGenres.tsx:37
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "សម្អាតទិន្នន័យផ្ទុកទាំងអស់ (ចាប់ផ្តើមឡើងវិញបន្ទាប់ពីនេះ)"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:31
+#: src/view/shell/desktop/SidebarGenres.tsx:33
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:283
+#: src/screens/Login/LoginForm.tsx:300
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "លេខកូដបញ្ជាក់"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:339
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Connecting to service..."
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr ""
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:75
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "វប្បធម៌"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:154
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -3650,7 +3650,7 @@ msgstr "បញ្ចូល Domain ដែលអ្នកចង់ប្រើ"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "បញ្ចូលអ៊ីមែលដែលអ្នកធ្លាប់បង្កើតគណនីរបស់អ្នក។ យើងនឹងផ្ញើ \"កំណត់លេខកូដឡើងវិញ\" ដល់អ្នក ដូច្នេះអ្នកអាចកំណត់ពាក្យសម្ងាត់ថ្មី"
 
-#: src/screens/Login/LoginForm.tsx:217
+#: src/screens/Login/LoginForm.tsx:234
 msgid "Enter the username or email address you used when you created your account"
 msgstr ""
 
@@ -3663,7 +3663,7 @@ msgstr ""
 msgid "Enter your email address"
 msgstr "បញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក"
 
-#: src/screens/Login/LoginForm.tsx:242
+#: src/screens/Login/LoginForm.tsx:259
 msgid "Enter your password"
 msgstr ""
 
@@ -4051,6 +4051,10 @@ msgstr "បរាជ័យក្នុងកាផ្ញើ"
 msgid "Failed to send email, please try again."
 msgstr ""
 
+#: src/screens/Login/LoginForm.tsx:190
+msgid "Failed to start sign in. Please try again."
+msgstr ""
+
 #: src/components/live/GoLiveDisabledDialog.tsx:76
 #: src/components/moderation/LabelsOnMeDialog.tsx:265
 #: src/screens/Messages/components/ChatDisabled.tsx:99
@@ -4184,7 +4188,7 @@ msgstr ""
 msgid "File saved successfully!"
 msgstr "ឯកសារត្រូវបានរក្សាទុកដោយជោគជ័យ!"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:64
+#: src/view/shell/desktop/SidebarGenres.tsx:66
 msgid "Filter by {0}"
 msgstr ""
 
@@ -4490,11 +4494,11 @@ msgstr ""
 msgid "Forgot Password"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:257
+#: src/screens/Login/LoginForm.tsx:274
 msgid "Forgot password?"
 msgstr "ភ្លេចពាក្យសម្ងា?ត់"
 
-#: src/screens/Login/LoginForm.tsx:268
+#: src/screens/Login/LoginForm.tsx:285
 msgid "Forgot?"
 msgstr "ភ្លេច?"
 
@@ -4519,7 +4523,7 @@ msgstr "ពី <0/>"
 msgid "Generate a starter pack"
 msgstr "បង្កើតកញ្ចប់ចាប់ផ្តើម"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:26
+#: src/view/shell/desktop/SidebarGenres.tsx:28
 msgid "Genres"
 msgstr ""
 
@@ -4628,8 +4632,8 @@ msgstr ""
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:101
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:112
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5023,7 +5027,7 @@ msgid "Host:"
 msgstr ""
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:198
 msgid "Hosting provider"
 msgstr ""
 
@@ -5224,7 +5228,7 @@ msgstr ""
 msgid "Inbox zero!"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:161
+#: src/screens/Login/LoginForm.tsx:163
 msgid "Incorrect username or password"
 msgstr "ឈ្មោះអ្នកប្រើ ឬពាក្យសម្ងាត់មិនត្រឹមត្រូវ"
 
@@ -5244,7 +5248,7 @@ msgstr "បញ្ចូលពាក្យសម្ងាត់ថ្មី"
 msgid "Input password for account deletion"
 msgstr "បញ្ចូលពាក្យសម្ងាត់សម្រាប់ការលុបគណនី"
 
-#: src/screens/Login/LoginForm.tsx:298
+#: src/screens/Login/LoginForm.tsx:315
 msgid "Input the code which has been emailed to you"
 msgstr "បញ្ចូលលេខកូដដែលបានផ្ញើទៅអ្នក"
 
@@ -5272,7 +5276,7 @@ msgstr ""
 msgid "Introducing saved posts AKA bookmarks"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:152
+#: src/screens/Login/LoginForm.tsx:154
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "លេខកូដបញ្ជាក់ 2FA មិនត្រឹមត្រូវ"
@@ -5840,9 +5844,9 @@ msgstr "កំពុងផ្ទុក..."
 msgid "Log"
 msgstr "កំណត់ហេតុ"
 
-#: src/screens/Login/LoginForm.tsx:178
-#: src/screens/Login/LoginForm.tsx:349
-#: src/screens/Login/LoginForm.tsx:355
+#: src/screens/Login/LoginForm.tsx:195
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:372
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5948,7 +5952,7 @@ msgstr ""
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "ប្រព័ន្ធផ្សព្វផ្សាយដែលអាចរំខាន ឬមិនសមរម្យសម្រាប់ទស្សនិកជនមួយចំនួន"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
 msgid "Members only"
 msgstr ""
 
@@ -6255,7 +6259,7 @@ msgstr ""
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:350
+#: src/screens/Login/LoginForm.tsx:367
 msgid "Navigates to the next screen"
 msgstr "រុករកទៅអេក្រង់បន្ទាប់"
 
@@ -6950,6 +6954,10 @@ msgstr "បើកព័ត៌មានលម្អិតបន្ថែមសម
 msgid "Opens alt text dialog"
 msgstr ""
 
+#: src/screens/Login/LoginForm.tsx:391
+msgid "Opens Bluesky authorization page to sign in"
+msgstr ""
+
 #: src/screens/Books/BookCard.tsx:33
 msgid "Opens book details"
 msgstr ""
@@ -7013,7 +7021,7 @@ msgstr ""
 msgid "Opens live status dialog"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:258
+#: src/screens/Login/LoginForm.tsx:275
 msgid "Opens password reset form"
 msgstr "បើកទម្រង់កំណត់ពាក្យសម្ងាត់ឡើងវិញ"
 
@@ -7036,6 +7044,10 @@ msgstr "បើកកម្រងព័ត៌មាននេះ"
 
 #: src/components/dialogs/MutedWords.tsx:304
 msgid "Options:"
+msgstr ""
+
+#: src/screens/Login/LoginForm.tsx:383
+msgid "or"
 msgstr ""
 
 #: src/screens/Deactivated.tsx:191
@@ -7123,7 +7135,7 @@ msgstr "រកមិនឃើញទំព័រ"
 msgid "Page Not Found"
 msgstr "រកមិនឃើញទំព័រ"
 
-#: src/screens/Login/LoginForm.tsx:227
+#: src/screens/Login/LoginForm.tsx:244
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7399,7 +7411,7 @@ msgstr "សូមបញ្ចូលលេខកូដអញ្ជើញរបស
 msgid "Please enter your new email address."
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:95
+#: src/screens/Login/LoginForm.tsx:97
 msgid "Please enter your password"
 msgstr ""
 
@@ -7407,7 +7419,7 @@ msgstr ""
 msgid "Please enter your password as well:"
 msgstr "សូមបញ្ចូលពាក្យសម្ងាត់របស់អ្នកផងដែរ៖"
 
-#: src/screens/Login/LoginForm.tsx:89
+#: src/screens/Login/LoginForm.tsx:91
 msgid "Please enter your username"
 msgstr ""
 
@@ -8118,7 +8130,7 @@ msgid "Removed verification"
 msgstr ""
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:34
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -8429,7 +8441,7 @@ msgstr "កំណត់ពាក្យសម្ងាត់ឡើងវិញ"
 msgid "Resync contacts"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:329
+#: src/screens/Login/LoginForm.tsx:346
 msgid "Retries signing in"
 msgstr ""
 
@@ -8451,8 +8463,8 @@ msgstr "ព្យាយាមម្តងទៀតនូវសកម្មភា
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:328
-#: src/screens/Login/LoginForm.tsx:334
+#: src/screens/Login/LoginForm.tsx:345
+#: src/screens/Login/LoginForm.tsx:351
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9310,7 +9322,7 @@ msgstr "បង្ហាញការព្រមាន និងត្រងព�
 msgid "Show when you’re live"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGenres.tsx:65
+#: src/view/shell/desktop/SidebarGenres.tsx:67
 msgid "Shows books in this genre"
 msgstr ""
 
@@ -9376,6 +9388,11 @@ msgstr ""
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:522
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:524
 msgid "Sign in to view post"
+msgstr ""
+
+#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:398
+msgid "Sign in with Bluesky"
 msgstr ""
 
 #: src/screens/Settings/Settings.tsx:270
@@ -9518,7 +9535,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr ""
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:113
+#: src/App.web.tsx:126
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr ""
 
@@ -10574,7 +10591,7 @@ msgstr ""
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:168
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11014,7 +11031,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:199
+#: src/screens/Login/LoginForm.tsx:216
 msgid "Username or email address"
 msgstr "ឈ្មោះអ្នកប្រើប្រាស់ ឬអាសយដ្ឋានអ៊ីមែល"
 
@@ -11651,7 +11668,7 @@ msgstr ""
 msgid "Would you like to save this as a draft to edit later?"
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:250
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11846,7 +11863,7 @@ msgstr ""
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:201
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12037,7 +12054,7 @@ msgstr "អ្នកត្រូវតែផ្តល់សិទ្ធិចូ
 msgid "You need to allow access to your media library."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:96
 msgid "You need to be a member of this bookclub to view it."
 msgstr ""
 

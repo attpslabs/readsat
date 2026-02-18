@@ -13,6 +13,7 @@ import {createFullHandle} from '#/lib/strings/handles'
 import {logger} from '#/logger'
 import {useSetHasCheckedForStarterPack} from '#/state/preferences/used-starter-packs'
 import {useSessionApi} from '#/state/session'
+import {startOAuthSignIn} from '#/state/session/oauth-client'
 import {useLoggedOutViewControls} from '#/state/shell/logged-out'
 import {atoms as a, ios, useTheme, web} from '#/alf'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
@@ -56,6 +57,7 @@ export const LoginForm = ({
 }) => {
   const t = useTheme()
   const [isProcessing, setIsProcessing] = useState(false)
+  const [isOAuthProcessing, setIsOAuthProcessing] = useState(false)
   const [errorField, setErrorField] = useState<
     'none' | 'identifier' | 'password' | '2fa'
   >('none')
@@ -171,6 +173,21 @@ export const LoginForm = ({
           setError(cleanError(errMsg))
         }
       }
+    }
+  }
+
+  const handleOAuthSignIn = async () => {
+    if (isProcessing || isOAuthProcessing) return
+    setIsOAuthProcessing(true)
+    setError('')
+
+    try {
+      await startOAuthSignIn()
+      // Never resolves — browser navigates away
+    } catch (e: any) {
+      setIsOAuthProcessing(false)
+      logger.error('OAuth sign in failed', {safeMessage: e?.message})
+      setError(_(msg`Failed to start sign in. Please try again.`))
     }
   }
 
@@ -358,6 +375,32 @@ export const LoginForm = ({
           </Button>
         )}
       </View>
+      {IS_WEB && (
+        <View style={[a.pt_lg, a.gap_md]}>
+          <View style={[a.flex_row, a.align_center, a.gap_md]}>
+            <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
+            <Text style={[a.text_sm, t.atoms.text_contrast_medium]}>
+              <Trans>or</Trans>
+            </Text>
+            <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
+          </View>
+          <Button
+            testID="oauthSignInButton"
+            label={_(msg`Sign in with Bluesky`)}
+            accessibilityHint={_(
+              msg`Opens Bluesky authorization page to sign in`,
+            )}
+            color="secondary"
+            size="large"
+            onPress={handleOAuthSignIn}
+            disabled={isProcessing || isOAuthProcessing}>
+            <ButtonText>
+              <Trans>Sign in with Bluesky</Trans>
+            </ButtonText>
+            {isOAuthProcessing && <ButtonIcon icon={Loader} />}
+          </Button>
+        </View>
+      )}
     </FormContainer>
   )
 }

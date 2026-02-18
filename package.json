@@ -74,6 +74,7 @@
   },
   "dependencies": {
     "@atproto/api": "^0.18.21",
+    "@atproto/oauth-client-browser": "^0.3.40",
     "@bitdrift/react-native": "^0.6.8",
     "@braintree/sanitize-url": "^6.0.2",
     "@bsky.app/alf": "^0.1.6",

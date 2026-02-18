@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 uair a thìde"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:294
 msgid "2FA Confirmation"
 msgstr "Daingneachadh 2FA"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Roghainnean na so-ruigsinneachd"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:191
+#: src/screens/Login/LoginForm.tsx:208
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "Ri fhaighinn"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:316
-#: src/screens/Login/LoginForm.tsx:321
+#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:338
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1972,7 +1972,7 @@ msgstr "Chaidh na h-atharraichean a shàbhaladh"
 msgid "Chat"
 msgstr "Cabadaich"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:202
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:210
 msgid "Chat coming soon"
 msgstr ""
 
@@ -2034,7 +2034,7 @@ msgstr "Cabadaich"
 msgid "Check my status"
 msgstr "Thoir sùil air an staid agam"
 
-#: src/screens/Login/LoginForm.tsx:306
+#: src/screens/Login/LoginForm.tsx:323
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Thoir sùil air a' phost-d agad is cuir an còd airson clàradh a-steach an-seo."
 
@@ -2090,7 +2090,7 @@ msgstr "Dealbh loidhne-ama dhut fhèin! Inbhirean leis a’ choimhearsnachd a bh
 msgid "Choose your password"
 msgstr "Tagh facal-faire dhut"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:35
+#: src/view/shell/desktop/SidebarGenres.tsx:37
 msgid "Clear"
 msgstr ""
 
@@ -2103,7 +2103,7 @@ msgid "Clear all storage data (restart after this)"
 msgstr "Falamhaich an dàta stòrais air fad (dèan ath-thòiseachadh às a dhèidh seo)"
 
 #: src/screens/Books/BooksScreen.tsx:236
-#: src/view/shell/desktop/SidebarGenres.tsx:31
+#: src/view/shell/desktop/SidebarGenres.tsx:33
 msgid "Clear genre filter"
 msgstr ""
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:283
+#: src/screens/Login/LoginForm.tsx:300
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "An còd dearbhaidh"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:339
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Connecting to service..."
 msgstr ""
 
@@ -2717,7 +2717,7 @@ msgstr "Cha b’ urrainn dhuinn an luchd-aithne a luchdadh suas. Feumaidh tu an 
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:74
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:75
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2843,7 +2843,7 @@ msgid "Culture"
 msgstr "Cultar"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:146
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:154
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -3650,7 +3650,7 @@ msgstr "Cuir a-steach an àrainn a tha thu airson cleachdadh"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Cuir a-steach am post-d a chleachd thu nuair a chruthaich thu an cunntas agad. Chuir sinn “còd ath-shuidheachaidh” thugad agus is urrainn dhut facal-faire ùr a chur an sàs leis."
 
-#: src/screens/Login/LoginForm.tsx:217
+#: src/screens/Login/LoginForm.tsx:234
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Cuir a-steach an t-ainm-cleachdaiche no seòladh a’ phuist-d a chleachd thu nuair a chruthaich thu an cunntas agad"
 
@@ -3663,7 +3663,7 @@ msgstr "Cuir a-steach latha do bhreith"
 msgid "Enter your email address"
 msgstr "Cuir a-steach an seòladh puist-d agad"
 
-#: src/screens/Login/LoginForm.tsx:242
+#: src/screens/Login/LoginForm.tsx:259
 msgid "Enter your password"
 msgstr "Cuir a-steach am facal-faire agad"
 
@@ -4051,6 +4051,10 @@ msgstr "Dh’fhàillig a chur"
 msgid "Failed to send email, please try again."
 msgstr "Cha b’ urrainn dhuinn am post-d a chur, feuch ris a-rithist."
 
+#: src/screens/Login/LoginForm.tsx:190
+msgid "Failed to start sign in. Please try again."
+msgstr ""
+
 #: src/components/live/GoLiveDisabledDialog.tsx:76
 #: src/components/moderation/LabelsOnMeDialog.tsx:265
 #: src/screens/Messages/components/ChatDisabled.tsx:99
@@ -4184,7 +4188,7 @@ msgstr "Faigh an t-ùrachadh"
 msgid "File saved successfully!"
 msgstr "Chaidh am faidhle a shàbhaladh!"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:64
+#: src/view/shell/desktop/SidebarGenres.tsx:66
 msgid "Filter by {0}"
 msgstr ""
 
@@ -4490,11 +4494,11 @@ msgstr "Coma leat an treamsgal"
 msgid "Forgot Password"
 msgstr "Dhìochuimhnich mi am facal-faire"
 
-#: src/screens/Login/LoginForm.tsx:257
+#: src/screens/Login/LoginForm.tsx:274
 msgid "Forgot password?"
 msgstr "Na dhìochuimhnich thu am facal-faire?"
 
-#: src/screens/Login/LoginForm.tsx:268
+#: src/screens/Login/LoginForm.tsx:285
 msgid "Forgot?"
 msgstr "Na dhìochuimhnich thu e?"
 
@@ -4519,7 +4523,7 @@ msgstr "O <0/>"
 msgid "Generate a starter pack"
 msgstr "Gin pacaid tòiseachaidh"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:26
+#: src/view/shell/desktop/SidebarGenres.tsx:28
 msgid "Genres"
 msgstr ""
 
@@ -4628,8 +4632,8 @@ msgstr "Glòrachadh ainneirt"
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:93
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:104
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:101
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:112
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -5023,7 +5027,7 @@ msgid "Host:"
 msgstr "An t-òstair:"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:198
 msgid "Hosting provider"
 msgstr "Solaraiche na h-òstaireachd"
 
@@ -5224,7 +5228,7 @@ msgstr "San aplacaid; push, daoine a tha thu gan leantainn"
 msgid "Inbox zero!"
 msgstr "Bogsa a-steach falamh!"
 
-#: src/screens/Login/LoginForm.tsx:161
+#: src/screens/Login/LoginForm.tsx:163
 msgid "Incorrect username or password"
 msgstr "Tha an t-ainm-cleachdaiche no facal-faire ceàrr"
 
@@ -5244,7 +5248,7 @@ msgstr "Cuir a-steach facal-faire ùr"
 msgid "Input password for account deletion"
 msgstr "Cuir a-steach am facal-faire airson an cunntas a sguabadh às"
 
-#: src/screens/Login/LoginForm.tsx:298
+#: src/screens/Login/LoginForm.tsx:315
 msgid "Input the code which has been emailed to you"
 msgstr "Cuir a-steach an còd a chuir sinn thugad air a’ phost-d"
 
@@ -5272,7 +5276,7 @@ msgstr "Faigh lorg air do charaidean tron luchd-aithne agad"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "’S urrainn dhuit puist a shàbhaladh mar chomharran-lìn a-nis"
 
-#: src/screens/Login/LoginForm.tsx:152
+#: src/screens/Login/LoginForm.tsx:154
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Tha an còd dearbhaidh 2FA mì-dhligheach."
@@ -5840,9 +5844,9 @@ msgstr "Ga luchdadh…"
 msgid "Log"
 msgstr "Loga"
 
-#: src/screens/Login/LoginForm.tsx:178
-#: src/screens/Login/LoginForm.tsx:349
-#: src/screens/Login/LoginForm.tsx:355
+#: src/screens/Login/LoginForm.tsx:195
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:372
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5948,7 +5952,7 @@ msgstr ""
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "Meadhanan a chuireadh dragh air cuid a dhaoine no a bhiodh mì-iomchaidh."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:80
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
 msgid "Members only"
 msgstr ""
 
@@ -6255,7 +6259,7 @@ msgstr "Tadhail air a’ phacaid tòiseachaidh"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:350
+#: src/screens/Login/LoginForm.tsx:367
 msgid "Navigates to the next screen"
 msgstr "Bheir seo thu gun ath-sgrìn"
 
@@ -6950,6 +6954,10 @@ msgstr "Fosglaidh seo mion-fhiosrachadh a bharrachd mu innteart dì-bhugachaidh"
 msgid "Opens alt text dialog"
 msgstr "Fosglaidh seo còmhradh na roghainn teacsa"
 
+#: src/screens/Login/LoginForm.tsx:391
+msgid "Opens Bluesky authorization page to sign in"
+msgstr ""
+
 #: src/screens/Books/BookCard.tsx:33
 msgid "Opens book details"
 msgstr ""
@@ -7013,7 +7021,7 @@ msgstr "Fosglaidh seo an ceangal {0}"
 msgid "Opens live status dialog"
 msgstr "Fosglaidh seo còmhradh an t-srutha bheò"
 
-#: src/screens/Login/LoginForm.tsx:258
+#: src/screens/Login/LoginForm.tsx:275
 msgid "Opens password reset form"
 msgstr "Fosglaidh seo foirm ath-shuidheachadh an fhacail-fhaire"
 
@@ -7037,6 +7045,10 @@ msgstr "Fosglaidh seo a’ phròifil"
 #: src/components/dialogs/MutedWords.tsx:304
 msgid "Options:"
 msgstr "Roghainnean:"
+
+#: src/screens/Login/LoginForm.tsx:383
+msgid "or"
+msgstr ""
 
 #: src/screens/Deactivated.tsx:191
 msgid "Or, continue with another account."
@@ -7123,7 +7135,7 @@ msgstr "Cha deach an duilleag a lorg"
 msgid "Page Not Found"
 msgstr "Cha deach an duilleag a lorg"
 
-#: src/screens/Login/LoginForm.tsx:227
+#: src/screens/Login/LoginForm.tsx:244
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7399,7 +7411,7 @@ msgstr "Cuir a-steach an còd cuiridh agad."
 msgid "Please enter your new email address."
 msgstr "Cuir a-steach an seòladh puist-d ùr agad."
 
-#: src/screens/Login/LoginForm.tsx:95
+#: src/screens/Login/LoginForm.tsx:97
 msgid "Please enter your password"
 msgstr "Cuir a-steach am facal-faire agad"
 
@@ -7407,7 +7419,7 @@ msgstr "Cuir a-steach am facal-faire agad"
 msgid "Please enter your password as well:"
 msgstr "Cuir a-steach am facal-faire agad cuideachd:"
 
-#: src/screens/Login/LoginForm.tsx:89
+#: src/screens/Login/LoginForm.tsx:91
 msgid "Please enter your username"
 msgstr "Cuir a-steach an t-ainm-cleachdaiche agad"
 
@@ -8118,7 +8130,7 @@ msgid "Removed verification"
 msgstr "Chaidh an dearbhadh a thoirt air falbh"
 
 #: src/screens/Books/BooksScreen.tsx:237
-#: src/view/shell/desktop/SidebarGenres.tsx:32
+#: src/view/shell/desktop/SidebarGenres.tsx:34
 msgid "Removes the genre filter"
 msgstr ""
 
@@ -8429,7 +8441,7 @@ msgstr "Ath-shuidhich am facal-faire"
 msgid "Resync contacts"
 msgstr "Ath-shioncronaich an luchd-aithne"
 
-#: src/screens/Login/LoginForm.tsx:329
+#: src/screens/Login/LoginForm.tsx:346
 msgid "Retries signing in"
 msgstr "Feuchaidh seo ri clàradh a-steach a-rithist"
 
@@ -8451,8 +8463,8 @@ msgstr "Feuchaidh seo ris a’ ghnìomh mu dheireadh a-rithist is e air fàillig
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:328
-#: src/screens/Login/LoginForm.tsx:334
+#: src/screens/Login/LoginForm.tsx:345
+#: src/screens/Login/LoginForm.tsx:351
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9310,7 +9322,7 @@ msgstr "Seall rabhadh is criathraich às na h-inbhirean e"
 msgid "Show when you’re live"
 msgstr "Leig ris nuair a bhios tu ri craoladh beò"
 
-#: src/view/shell/desktop/SidebarGenres.tsx:65
+#: src/view/shell/desktop/SidebarGenres.tsx:67
 msgid "Shows books in this genre"
 msgstr ""
 
@@ -9377,6 +9389,11 @@ msgstr ""
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:524
 msgid "Sign in to view post"
 msgstr "Clàraich a-steach airson am post seo fhaicinn"
+
+#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:398
+msgid "Sign in with Bluesky"
+msgstr ""
 
 #: src/screens/Settings/Settings.tsx:270
 #: src/screens/Settings/Settings.tsx:272
@@ -9518,7 +9535,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "Tha sinn duilich ach cha b’ urrainn dhuinn na cunntasan a mholamaid a luchdadh aig an ìre-sa."
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:113
+#: src/App.web.tsx:126
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "Tha sinn duilich! Dh’fhalbh an ùine air an t-seisean agad. Clàraich a-steach a-rithist."
 
@@ -10574,7 +10591,7 @@ msgstr "Chan urrainn dhuinn conaltradh a dhèanamh leis an t-seirbheis agad. Tho
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:168
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11014,7 +11031,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Chan fhaod ach litrichean (a-z), àireamhan is tàthanan a bhith ann an ainm-cleachdaiche"
 
-#: src/screens/Login/LoginForm.tsx:199
+#: src/screens/Login/LoginForm.tsx:216
 msgid "Username or email address"
 msgstr "Ainm-chleachdaiche no seòladh puist-d"
 
@@ -11651,7 +11668,7 @@ msgstr ""
 msgid "Would you like to save this as a draft to edit later?"
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:242
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:250
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
@@ -11846,7 +11863,7 @@ msgstr "’S urrainn dhut seo ùrachadh sna roghainnean agad uair sam bith."
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr "Chan urrainn dhut latha do bhreith ùrachadh is tu air clàradh a-steach le facal-faire aplacaid. Clàraich a-steach leis a’ phrìomh-fhacal-faire agad airson latha do bhreith ùrachadh."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:193
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:201
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12037,7 +12054,7 @@ msgstr "Feumaidh tu cead-inntrigidh do leabhar-lann nan dealbhan agad a thoirt s
 msgid "You need to allow access to your media library."
 msgstr "Feumaidh tu cead-inntrigidh do leabhar-lann nam meadhanan agad a thoirt seachad."
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:96
 msgid "You need to be a member of this bookclub to view it."
 msgstr ""
 

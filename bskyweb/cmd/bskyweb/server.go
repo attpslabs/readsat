@@ -319,6 +319,11 @@ func serve(cctx *cli.Context) error {
 	e.GET("/intent/compose", server.WebGeneric)
 	e.GET("/intent/verify-email", server.WebGeneric)
 	e.GET("/intent/age-assurance", server.WebGeneric)
+
+	// OAuth
+	e.GET("/oauth/callback", server.WebGeneric)
+	e.GET("/oauth/client-metadata.json", echo.WrapHandler(staticHandler))
+
 	e.GET("/messages", server.WebGeneric)
 	e.GET("/messages/:conversation", server.WebGeneric)
 

@@ -33,6 +33,7 @@ import {
   useSession,
   useSessionApi,
 } from '#/state/session'
+import {initOAuthClient} from '#/state/session/oauth-client'
 import {readLastActiveAccount} from '#/state/session/util'
 import {Provider as ShellStateProvider} from '#/state/shell'
 import {Provider as ComposerProvider} from '#/state/shell/composer'
@@ -83,7 +84,7 @@ prefetchLiveEvents()
 function InnerApp() {
   const [isReady, setIsReady] = useState(false)
   const {currentAccount} = useSession()
-  const {resumeSession} = useSessionApi()
+  const {resumeSession, loginWithOAuth, resumeOAuthSession} = useSessionApi()
   const theme = useColorModeTheme()
   const {_} = useLingui()
   const hasCheckedReferrer = useStarterPackEntry()
@@ -92,7 +93,19 @@ function InnerApp() {
   useEffect(() => {
     async function onLaunch(account?: SessionAccount) {
       try {
-        if (account) {
+        // Initialize OAuth client and check for callback redirect
+        const oauthResult = await initOAuthClient().catch(e => {
+          logger.warn('session: OAuth init failed', {message: e})
+          return null
+        })
+
+        if (oauthResult?.session) {
+          // Returning from an OAuth redirect — complete the login
+          await loginWithOAuth(oauthResult.session)
+        } else if (account?.isOAuth) {
+          // Restore an existing OAuth session from IndexedDB
+          await resumeOAuthSession(account)
+        } else if (account) {
           await resumeSession(account)
         } else {
           await features.init
@@ -105,7 +118,7 @@ function InnerApp() {
     }
     const account = readLastActiveAccount()
     onLaunch(account)
-  }, [resumeSession])
+  }, [resumeSession, loginWithOAuth, resumeOAuthSession])
 
   useEffect(() => {
     return listenSessionDropped(() => {
