@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 horoj"
 
-#: src/screens/Login/LoginForm.tsx:368
+#: src/screens/Login/LoginForm.tsx:327
 msgid "2FA Confirmation"
 msgstr "2FA-konfirmo"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Alireblecaj agordoj"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:282
+#: src/screens/Login/LoginForm.tsx:241
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1035,7 +1035,7 @@ msgstr "Permesi al viaj sekvantoj respondi"
 msgid "Allows access to direct messages"
 msgstr "Permesas aliron al rektaj mesaĝoj"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:179
+#: src/screens/Login/ForgotPasswordForm.tsx:146
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:236
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:242
 msgid "Already have a code?"
@@ -1431,10 +1431,10 @@ msgstr "Disponebla"
 #: src/components/moderation/LabelsOnMeDialog.tsx:334
 #: src/screens/Login/ChooseAccountForm.tsx:97
 #: src/screens/Login/ChooseAccountForm.tsx:101
-#: src/screens/Login/ForgotPasswordForm.tsx:126
-#: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:407
-#: src/screens/Login/LoginForm.tsx:412
+#: src/screens/Login/ForgotPasswordForm.tsx:104
+#: src/screens/Login/ForgotPasswordForm.tsx:109
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:371
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -2034,7 +2034,7 @@ msgstr "Babilejoj"
 msgid "Check my status"
 msgstr "Kontroli mian staton"
 
-#: src/screens/Login/LoginForm.tsx:397
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Kontrolu vian retpoŝton por trovi ensalut-kodon kaj entajpu ĝin ĉi tie."
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:374
+#: src/screens/Login/LoginForm.tsx:333
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2402,11 +2402,6 @@ msgstr ""
 #: src/view/com/modals/DeleteAccount.tsx:226
 msgid "Confirmation code"
 msgstr "Konfirmkodo"
-
-#: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:430
-msgid "Connecting to service..."
-msgstr ""
 
 #: src/ageAssurance/components/RedirectOverlay.tsx:296
 #: src/components/ageAssurance/AgeAssuranceRedirectDialog.tsx:208
@@ -3503,7 +3498,7 @@ msgstr "Retpoŝta 2FA malŝaltita"
 msgid "Email 2FA enabled"
 msgstr "Retpoŝta 2FA ŝaltita"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:94
+#: src/screens/Login/ForgotPasswordForm.tsx:72
 msgid "Email address"
 msgstr "Retpoŝtadreso"
 
@@ -3646,11 +3641,11 @@ msgstr "Entajpu la 6-cifran kodon senditan al {prettyNumber}"
 msgid "Enter the domain you want to use"
 msgstr "Entajpu la domajnon, kiun vi volas uzi"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:114
+#: src/screens/Login/ForgotPasswordForm.tsx:92
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Entajpu la retpoŝtadreson, kiun vi uzis por krei vian konton. Ni sendos al vi \"restarigan kodon\" por ke vi agordu novan pasvorton."
 
-#: src/screens/Login/LoginForm.tsx:308
+#: src/screens/Login/LoginForm.tsx:267
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Entajpu la uzantnomon aŭ retpoŝtadreson, kiun vi uzis kreante vian konton"
 
@@ -3658,12 +3653,12 @@ msgstr "Entajpu la uzantnomon aŭ retpoŝtadreson, kiun vi uzis kreante vian kon
 msgid "Enter your birthdate"
 msgstr "Entajpu vian naskiĝdaton"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:100
+#: src/screens/Login/ForgotPasswordForm.tsx:78
 #: src/screens/Signup/StepInfo/index.tsx:244
 msgid "Enter your email address"
 msgstr "Entajpu vian retpoŝtadreson"
 
-#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:292
 msgid "Enter your password"
 msgstr "Entajpu vian pasvorton"
 
@@ -3671,7 +3666,7 @@ msgstr "Entajpu vian pasvorton"
 msgid "Enter your username"
 msgstr ""
 
-#: src/screens/Login/index.tsx:141
+#: src/screens/Login/index.tsx:111
 msgid "Enter your username and password"
 msgstr "Entajpu vian uzantnomon kaj pasvorton"
 
@@ -4051,7 +4046,7 @@ msgstr "Malsukcesis sendi"
 msgid "Failed to send email, please try again."
 msgstr "Malsukcesis sendi retmesaĝon, bonvolu reprovi."
 
-#: src/screens/Login/LoginForm.tsx:201
+#: src/screens/Login/LoginForm.tsx:170
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4489,16 +4484,16 @@ msgstr "Eterne"
 msgid "Forget the noise"
 msgstr "Forgesu pri bruo"
 
-#: src/screens/Login/index.tsx:172
-#: src/screens/Login/index.tsx:188
+#: src/screens/Login/index.tsx:138
+#: src/screens/Login/index.tsx:152
 msgid "Forgot Password"
 msgstr "Mi forgesis pasvorton"
 
-#: src/screens/Login/LoginForm.tsx:348
+#: src/screens/Login/LoginForm.tsx:307
 msgid "Forgot password?"
 msgstr "Ĉu vi forgesis pasvorton?"
 
-#: src/screens/Login/LoginForm.tsx:359
+#: src/screens/Login/LoginForm.tsx:318
 msgid "Forgot?"
 msgstr "Ĉu vi forgesis?"
 
@@ -4720,7 +4715,7 @@ msgstr "Iri al konversacio kun {0}"
 msgid "Go to feed"
 msgstr "Iri al fluo"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:173
+#: src/screens/Login/ForgotPasswordForm.tsx:140
 msgid "Go to next"
 msgstr "Iri al la sekva"
 
@@ -5026,11 +5021,6 @@ msgstr "Hejmo"
 msgid "Host:"
 msgstr "Gastiganto:"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:272
-msgid "Hosting provider"
-msgstr "Provizanto de gastigo"
-
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:178
 msgid "Hot"
 msgstr "Populara"
@@ -5228,7 +5218,7 @@ msgstr "En-apaj, Ŝprucaj, Homoj kiujn vi sekvas"
 msgid "Inbox zero!"
 msgstr "Ricevujo malplenas!"
 
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:135
 msgid "Incorrect username or password"
 msgstr "Malĝusta uzantnomo aŭ pasvorto"
 
@@ -5248,7 +5238,7 @@ msgstr "Entajpu novan pasvorton"
 msgid "Input password for account deletion"
 msgstr "Entajpu pasvorton por forigi vian konton"
 
-#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:348
 msgid "Input the code which has been emailed to you"
 msgstr "Entajpu la kodon senditan al via retpoŝtadreso"
 
@@ -5276,7 +5266,7 @@ msgstr ""
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Ni prezentas \"konservitaj afiŝoj\" alinome \"legosignoj\""
 
-#: src/screens/Login/LoginForm.tsx:157
+#: src/screens/Login/LoginForm.tsx:126
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Nevalida 2FA-konfirmkodo."
@@ -5573,8 +5563,8 @@ msgstr "restas."
 msgid "Let me choose"
 msgstr "Lasu min elekti"
 
-#: src/screens/Login/index.tsx:173
-#: src/screens/Login/index.tsx:189
+#: src/screens/Login/index.tsx:139
+#: src/screens/Login/index.tsx:153
 msgid "Let's get your password reset!"
 msgstr "Ni restarigu vian pasvorton!"
 
@@ -5844,9 +5834,9 @@ msgstr "Ŝargado..."
 msgid "Log"
 msgstr "Protokolo"
 
-#: src/screens/Login/LoginForm.tsx:206
-#: src/screens/Login/LoginForm.tsx:440
-#: src/screens/Login/LoginForm.tsx:446
+#: src/screens/Login/LoginForm.tsx:175
+#: src/screens/Login/LoginForm.tsx:377
+#: src/screens/Login/LoginForm.tsx:383
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -6257,9 +6247,9 @@ msgstr "Iri al {0}"
 msgid "Navigate to starter pack"
 msgstr "Iri al startpako"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:149
-#: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:441
+#: src/screens/Login/ForgotPasswordForm.tsx:117
+#: src/screens/Login/ForgotPasswordForm.tsx:141
+#: src/screens/Login/LoginForm.tsx:378
 msgid "Navigates to the next screen"
 msgstr "Iras al la sekva ekrano"
 
@@ -6392,8 +6382,8 @@ msgstr "Novaĵoj"
 
 #: src/components/contacts/screens/ViewMatches.tsx:394
 #: src/components/contacts/screens/ViewMatches.tsx:409
-#: src/screens/Login/ForgotPasswordForm.tsx:148
-#: src/screens/Login/ForgotPasswordForm.tsx:155
+#: src/screens/Login/ForgotPasswordForm.tsx:116
+#: src/screens/Login/ForgotPasswordForm.tsx:123
 #: src/screens/Login/SetNewPasswordForm.tsx:185
 #: src/screens/Login/SetNewPasswordForm.tsx:191
 #: src/screens/Onboarding/StepFinished/index.tsx:329
@@ -6954,7 +6944,7 @@ msgstr "Malfermas pliajn detalojn por sencimigo"
 msgid "Opens alt text dialog"
 msgstr "Malfermas dialogujon de alternativa teksto"
 
-#: src/screens/Login/LoginForm.tsx:214
+#: src/screens/Login/LoginForm.tsx:183
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7021,7 +7011,7 @@ msgstr "Malfermas ligilon {0}"
 msgid "Opens live status dialog"
 msgstr "Malfermas tujelsendan statusan dialogujon"
 
-#: src/screens/Login/LoginForm.tsx:349
+#: src/screens/Login/LoginForm.tsx:308
 msgid "Opens password reset form"
 msgstr "Malfermas formularon por restarigi la pasvorton"
 
@@ -7046,7 +7036,7 @@ msgstr "Malfermas ĉi tiun profilon"
 msgid "Options:"
 msgstr "Opcioj:"
 
-#: src/screens/Login/LoginForm.tsx:265
+#: src/screens/Login/LoginForm.tsx:234
 msgid "or"
 msgstr ""
 
@@ -7135,7 +7125,7 @@ msgstr "Paĝo netrovita"
 msgid "Page Not Found"
 msgstr "Paĝo netrovita"
 
-#: src/screens/Login/LoginForm.tsx:318
+#: src/screens/Login/LoginForm.tsx:277
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7153,7 +7143,7 @@ msgstr "Pasvorto ŝanĝita"
 msgid "Password must be at least 8 characters long."
 msgstr "Pasvorto devas havi almenaŭ 8 signojn."
 
-#: src/screens/Login/index.tsx:202
+#: src/screens/Login/index.tsx:166
 msgid "Password updated"
 msgstr "Pasvorto ĝisdatigita"
 
@@ -7411,7 +7401,7 @@ msgstr "Bonvolu entajpi vian invitan kodon."
 msgid "Please enter your new email address."
 msgstr "Bonvolu entajpi vian novan retpoŝtadreson."
 
-#: src/screens/Login/LoginForm.tsx:100
+#: src/screens/Login/LoginForm.tsx:82
 msgid "Please enter your password"
 msgstr "Bonvolu entajpi vian pasvorton"
 
@@ -7419,7 +7409,7 @@ msgstr "Bonvolu entajpi vian pasvorton"
 msgid "Please enter your password as well:"
 msgstr "Bonvolu ankaŭ entajpi vian pasvorton:"
 
-#: src/screens/Login/LoginForm.tsx:94
+#: src/screens/Login/LoginForm.tsx:76
 msgid "Please enter your username"
 msgstr "Bonvolu entajpi vian uzantnomon"
 
@@ -8432,7 +8422,7 @@ msgstr "Restariga kodo"
 msgid "Reset onboarding state"
 msgstr "Restarigi staton de la lernilo"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:81
+#: src/screens/Login/ForgotPasswordForm.tsx:69
 msgid "Reset password"
 msgstr "Restarigi pasvorton"
 
@@ -8440,10 +8430,6 @@ msgstr "Restarigi pasvorton"
 #: src/screens/Settings/FindContactsSettings.tsx:538
 msgid "Resync contacts"
 msgstr "Resinkronigi kontaktojn"
-
-#: src/screens/Login/LoginForm.tsx:420
-msgid "Retries signing in"
-msgstr "Provoj ensaluti"
 
 #: src/view/com/util/error/ErrorMessage.tsx:62
 #: src/view/com/util/error/ErrorScreen.tsx:99
@@ -8463,8 +8449,6 @@ msgstr "Reprovas la lastan agon, kiu eraris"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:419
-#: src/screens/Login/LoginForm.tsx:425
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -8852,7 +8836,7 @@ msgstr "Elekti lingvojn de enhavo"
 msgid "Select duration"
 msgstr "Agordi daŭrecon"
 
-#: src/screens/Login/index.tsx:162
+#: src/screens/Login/index.tsx:128
 msgid "Select from an existing account"
 msgstr "Elektu el ekzistanta konto"
 
@@ -9061,7 +9045,7 @@ msgstr "Agordi kiu povas respondi al via afiŝo"
 msgid "Set your birthdate below and we'll get you back to posting and exploring in no time!"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:108
+#: src/screens/Login/ForgotPasswordForm.tsx:86
 msgid "Sets email for password reset"
 msgstr "Agordas retpoŝtadreson por restarigi pasvorton"
 
@@ -9344,10 +9328,10 @@ msgstr "Montras la enhavon"
 #: src/components/WelcomeModal.tsx:187
 #: src/components/WelcomeModal.tsx:199
 #: src/screens/Hashtag.tsx:240
-#: src/screens/Login/index.tsx:140
-#: src/screens/Login/index.tsx:161
-#: src/screens/Login/LoginForm.tsx:247
-#: src/screens/Login/LoginForm.tsx:253
+#: src/screens/Login/index.tsx:110
+#: src/screens/Login/index.tsx:127
+#: src/screens/Login/LoginForm.tsx:216
+#: src/screens/Login/LoginForm.tsx:222
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9392,8 +9376,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "Ensalutu por vidi la afiŝon"
 
-#: src/screens/Login/LoginForm.tsx:212
-#: src/screens/Login/LoginForm.tsx:221
+#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:190
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -10591,9 +10575,8 @@ msgstr "Ne eblas konektiĝi. Bonvolu kontroli vian retkonekton kaj reprovi."
 msgid "Unable to contact your service. Please check your internet connection and try again."
 msgstr "Ne eblis konekti al via servo. Bonvolu kontroli vian retkonekton kaj reprovi."
 
-#: src/screens/Login/ForgotPasswordForm.tsx:69
-#: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:171
+#: src/screens/Login/ForgotPasswordForm.tsx:57
+#: src/screens/Login/LoginForm.tsx:140
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11033,7 +11016,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Uzantnomo devas enhavi nur literojn (a-z), numerojn kaj dividstrekojn"
 
-#: src/screens/Login/LoginForm.tsx:290
+#: src/screens/Login/LoginForm.tsx:249
 msgid "Username or email address"
 msgstr "Uzantnomo aŭ retpoŝtadreso"
 
@@ -11824,7 +11807,7 @@ msgstr "Vi povas kaŝi maksimume {MAX_HIDDEN_REPLIES} respondojn."
 msgid "You can now choose to be notified when specific people post. If there’s someone you want timely updates from, go to their profile and find the new bell icon near the follow button."
 msgstr "Vi nun povas elekti ricevi sciigojn kiam specifaj homoj afiŝos. Se estas iu pri kiu vi volas akuratajn ĝisdatigojn, iru al ties profilo kaj trovu la novan sonorilan piktogramon apud la sekvi-butono."
 
-#: src/screens/Login/index.tsx:203
+#: src/screens/Login/index.tsx:167
 #: src/screens/Login/PasswordUpdatedForm.tsx:26
 msgid "You can now sign in with your new password."
 msgstr "Vi nun povas ensaluti per via nova pasvorto."
@@ -12118,7 +12101,7 @@ msgstr "Vi: {defaultEmbeddedContentMessage}"
 msgid "You: {short}"
 msgstr "Vi: {short}"
 
-#: src/screens/Login/LoginForm.tsx:232
+#: src/screens/Login/LoginForm.tsx:201
 msgid "you.bsky.social"
 msgstr ""
 
@@ -12271,7 +12254,7 @@ msgstr "Via deklarita aĝo estas pli juna ol 18. Kelkaj agordoj sube eble estas 
 msgid "Your email"
 msgstr "Via retpoŝtadreso"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:52
+#: src/screens/Login/ForgotPasswordForm.tsx:40
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:81
 #: src/screens/Signup/state.ts:237
 #: src/screens/Signup/StepInfo/index.tsx:132

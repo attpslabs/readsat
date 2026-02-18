@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
-import {Keyboard, View} from 'react-native'
-import {type ComAtprotoServerDescribeServer} from '@atproto/api'
+import {useState} from 'react'
+import {View} from 'react-native'
 import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 import * as EmailValidator from 'email-validator'
@@ -11,7 +10,6 @@ import {Agent} from '#/state/session/agent'
 import {atoms as a, useTheme, web} from '#/alf'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
 import {FormError} from '#/components/forms/FormError'
-import {HostingProvider} from '#/components/forms/HostingProvider'
 import * as TextField from '#/components/forms/TextField'
 import {At_Stroke2_Corner0_Rounded as At} from '#/components/icons/At'
 import {Loader} from '#/components/Loader'
@@ -19,22 +17,16 @@ import {Text} from '#/components/Typography'
 import {IS_WEB} from '#/env'
 import {FormContainer} from './FormContainer'
 
-type ServiceDescription = ComAtprotoServerDescribeServer.OutputSchema
-
 export const ForgotPasswordForm = ({
   error,
   serviceUrl,
-  serviceDescription,
   setError,
-  setServiceUrl,
   onPressBack,
   onEmailSent,
 }: {
   error: string
   serviceUrl: string
-  serviceDescription: ServiceDescription | undefined
   setError: (v: string) => void
-  setServiceUrl: (v: string) => void
   onPressBack: () => void
   onEmailSent: () => void
 }) => {
@@ -42,10 +34,6 @@ export const ForgotPasswordForm = ({
   const [isProcessing, setIsProcessing] = useState<boolean>(false)
   const [email, setEmail] = useState<string>('')
   const {_} = useLingui()
-
-  const onPressSelectService = React.useCallback(() => {
-    Keyboard.dismiss()
-  }, [])
 
   const onPressNext = async () => {
     if (!EmailValidator.validate(email)) {
@@ -79,16 +67,6 @@ export const ForgotPasswordForm = ({
     <FormContainer
       testID="forgotPasswordForm"
       titleText={<Trans>Reset password</Trans>}>
-      <View>
-        <TextField.LabelText>
-          <Trans>Hosting provider</Trans>
-        </TextField.LabelText>
-        <HostingProvider
-          serviceUrl={serviceUrl}
-          onSelectServiceUrl={setServiceUrl}
-          onOpenDialog={onPressSelectService}
-        />
-      </View>
       <View>
         <TextField.LabelText>
           <Trans>Email address</Trans>
@@ -134,29 +112,18 @@ export const ForgotPasswordForm = ({
             <View style={a.flex_1} />
           </>
         )}
-        {!serviceDescription ? (
-          <Button
-            label={_(msg`Connecting to service...`)}
-            size="large"
-            color="secondary"
-            disabled>
-            <ButtonIcon icon={Loader} />
-            <ButtonText>Connecting...</ButtonText>
-          </Button>
-        ) : (
-          <Button
-            label={_(msg`Next`)}
-            accessibilityHint={_(msg`Navigates to the next screen`)}
-            color="primary"
-            size="large"
-            onPress={onPressNext}
-            disabled={isProcessing}>
-            <ButtonText>
-              <Trans>Next</Trans>
-            </ButtonText>
-            {isProcessing && <ButtonIcon icon={Loader} />}
-          </Button>
-        )}
+        <Button
+          label={_(msg`Next`)}
+          accessibilityHint={_(msg`Navigates to the next screen`)}
+          color="primary"
+          size="large"
+          onPress={onPressNext}
+          disabled={isProcessing}>
+          <ButtonText>
+            <Trans>Next</Trans>
+          </ButtonText>
+          {isProcessing && <ButtonIcon icon={Loader} />}
+        </Button>
       </View>
       <View
         style={[

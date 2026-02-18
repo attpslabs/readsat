@@ -1,5 +1,6 @@
 // Regex from the go implementation
 // https://github.com/bluesky-social/indigo/blob/main/atproto/syntax/handle.go#L10
+import {BSKY_SERVICE, SELF_SURF_SERVICE} from '#/lib/constants'
 import {forceLTR} from '#/lib/strings/bidi'
 
 const VALIDATE_REGEX =
@@ -60,6 +61,18 @@ export function expandHandle(shortHandle: string): string {
 
 export function isReadsAtHandle(handle: string): boolean {
   return handle.endsWith(READS_AT_SUFFIX)
+}
+
+export function resolveServiceFromHandle(identifier: string): string {
+  const id = identifier.trim().toLowerCase()
+  if (id.includes('@')) return SELF_SURF_SERVICE
+  if (!id.includes('.')) return SELF_SURF_SERVICE
+  const domain = id.split('.').slice(1).join('.')
+  if (domain.endsWith('self.surf') || domain === 'self.surf')
+    return SELF_SURF_SERVICE
+  if (domain.endsWith('bsky.social') || domain === 'bsky.social')
+    return BSKY_SERVICE
+  return `https://${domain}`
 }
 
 export interface IsValidHandle {

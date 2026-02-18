@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 de ore"
 
-#: src/screens/Login/LoginForm.tsx:368
+#: src/screens/Login/LoginForm.tsx:327
 msgid "2FA Confirmation"
 msgstr "Confirmare 2FA"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Setări de accesibilitate"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:282
+#: src/screens/Login/LoginForm.tsx:241
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1035,7 +1035,7 @@ msgstr "Permiteți urmăritorilor dvs. să răspundă"
 msgid "Allows access to direct messages"
 msgstr "Permiteți accesul la mesajele directe"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:179
+#: src/screens/Login/ForgotPasswordForm.tsx:146
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:236
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:242
 msgid "Already have a code?"
@@ -1431,10 +1431,10 @@ msgstr "Disponibil"
 #: src/components/moderation/LabelsOnMeDialog.tsx:334
 #: src/screens/Login/ChooseAccountForm.tsx:97
 #: src/screens/Login/ChooseAccountForm.tsx:101
-#: src/screens/Login/ForgotPasswordForm.tsx:126
-#: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:407
-#: src/screens/Login/LoginForm.tsx:412
+#: src/screens/Login/ForgotPasswordForm.tsx:104
+#: src/screens/Login/ForgotPasswordForm.tsx:109
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:371
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -2034,7 +2034,7 @@ msgstr "Conversații"
 msgid "Check my status"
 msgstr "Verificați-mi statusul"
 
-#: src/screens/Login/LoginForm.tsx:397
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Verificați-vă adresa de e-mail pentru un cod de conectare și introduceți-l aici."
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:374
+#: src/screens/Login/LoginForm.tsx:333
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2402,11 +2402,6 @@ msgstr ""
 #: src/view/com/modals/DeleteAccount.tsx:226
 msgid "Confirmation code"
 msgstr "Cod de confirmare"
-
-#: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:430
-msgid "Connecting to service..."
-msgstr ""
 
 #: src/ageAssurance/components/RedirectOverlay.tsx:296
 #: src/components/ageAssurance/AgeAssuranceRedirectDialog.tsx:208
@@ -3503,7 +3498,7 @@ msgstr "A2F prin e-mail dezactivată"
 msgid "Email 2FA enabled"
 msgstr "A2F prin e-mail activată"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:94
+#: src/screens/Login/ForgotPasswordForm.tsx:72
 msgid "Email address"
 msgstr "Adresă de e-mail"
 
@@ -3646,11 +3641,11 @@ msgstr "Introduceți codul de 6 cifre trimis către {prettyNumber}"
 msgid "Enter the domain you want to use"
 msgstr "Introduceți domeniul pe care doriți să-l utilizați"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:114
+#: src/screens/Login/ForgotPasswordForm.tsx:92
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Introduceți e-mailul pe care l-ați folosit pentru a vă crea contul. Vă vom trimite un „cod de resetare” pentru a putea seta o parolă nouă."
 
-#: src/screens/Login/LoginForm.tsx:308
+#: src/screens/Login/LoginForm.tsx:267
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Introduceți numele de utilizator sau adresa de e-mail pe care le-ați folosit când ați creat contul"
 
@@ -3658,12 +3653,12 @@ msgstr "Introduceți numele de utilizator sau adresa de e-mail pe care le-ați f
 msgid "Enter your birthdate"
 msgstr "Introduceți-vă data nașterii"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:100
+#: src/screens/Login/ForgotPasswordForm.tsx:78
 #: src/screens/Signup/StepInfo/index.tsx:244
 msgid "Enter your email address"
 msgstr "Introduceți-vă adresa de e-mail"
 
-#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:292
 msgid "Enter your password"
 msgstr "Introduceți-vă parola"
 
@@ -3671,7 +3666,7 @@ msgstr "Introduceți-vă parola"
 msgid "Enter your username"
 msgstr ""
 
-#: src/screens/Login/index.tsx:141
+#: src/screens/Login/index.tsx:111
 msgid "Enter your username and password"
 msgstr "Introduceți-vă numele de utilizator și parola"
 
@@ -4051,7 +4046,7 @@ msgstr "Nu s-a putut trimite"
 msgid "Failed to send email, please try again."
 msgstr "Trimiterea e-mailului a eșuat, încercați din nou."
 
-#: src/screens/Login/LoginForm.tsx:201
+#: src/screens/Login/LoginForm.tsx:170
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4489,16 +4484,16 @@ msgstr "Permanent"
 msgid "Forget the noise"
 msgstr "Uitați de zgomot"
 
-#: src/screens/Login/index.tsx:172
-#: src/screens/Login/index.tsx:188
+#: src/screens/Login/index.tsx:138
+#: src/screens/Login/index.tsx:152
 msgid "Forgot Password"
 msgstr "Am uitat parola"
 
-#: src/screens/Login/LoginForm.tsx:348
+#: src/screens/Login/LoginForm.tsx:307
 msgid "Forgot password?"
 msgstr "Ați uitat parola?"
 
-#: src/screens/Login/LoginForm.tsx:359
+#: src/screens/Login/LoginForm.tsx:318
 msgid "Forgot?"
 msgstr "Ați uitat parola?"
 
@@ -4720,7 +4715,7 @@ msgstr "Mergeți la conversația cu {0}"
 msgid "Go to feed"
 msgstr "Mergeți la flux"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:173
+#: src/screens/Login/ForgotPasswordForm.tsx:140
 msgid "Go to next"
 msgstr "Mergeți la următorul"
 
@@ -5026,11 +5021,6 @@ msgstr "Acasă"
 msgid "Host:"
 msgstr "Gazdă:"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:272
-msgid "Hosting provider"
-msgstr "Furnizor de găzduire"
-
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:178
 msgid "Hot"
 msgstr "Fierbinți"
@@ -5228,7 +5218,7 @@ msgstr "În aplicație, Push, Persoane pe care le urmăriți"
 msgid "Inbox zero!"
 msgstr "Inbox zero!"
 
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:135
 msgid "Incorrect username or password"
 msgstr "Nume de utilizator sau parolă incorecte"
 
@@ -5248,7 +5238,7 @@ msgstr "Introduceți parola nouă"
 msgid "Input password for account deletion"
 msgstr "Introduceți parola pentru ștergerea contului"
 
-#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:348
 msgid "Input the code which has been emailed to you"
 msgstr "Introduceți codul care v-a fost trimis prin e-mail"
 
@@ -5276,7 +5266,7 @@ msgstr "Vă prezentăm găsirea prietenilor prin intermediul contactelor"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Vă prezentăm salvarea postărilor adică marcaje"
 
-#: src/screens/Login/LoginForm.tsx:157
+#: src/screens/Login/LoginForm.tsx:126
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Cod de confirmare A2F invalid."
@@ -5573,8 +5563,8 @@ msgstr "rămas de făcut."
 msgid "Let me choose"
 msgstr "Doresc să aleg"
 
-#: src/screens/Login/index.tsx:173
-#: src/screens/Login/index.tsx:189
+#: src/screens/Login/index.tsx:139
+#: src/screens/Login/index.tsx:153
 msgid "Let's get your password reset!"
 msgstr "Să vă resetăm parola!"
 
@@ -5844,9 +5834,9 @@ msgstr "Se Încarcă..."
 msgid "Log"
 msgstr "Jurnal"
 
-#: src/screens/Login/LoginForm.tsx:206
-#: src/screens/Login/LoginForm.tsx:440
-#: src/screens/Login/LoginForm.tsx:446
+#: src/screens/Login/LoginForm.tsx:175
+#: src/screens/Login/LoginForm.tsx:377
+#: src/screens/Login/LoginForm.tsx:383
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -6257,9 +6247,9 @@ msgstr "Navigare la {0}"
 msgid "Navigate to starter pack"
 msgstr "Navigați la pachetul de pornire"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:149
-#: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:441
+#: src/screens/Login/ForgotPasswordForm.tsx:117
+#: src/screens/Login/ForgotPasswordForm.tsx:141
+#: src/screens/Login/LoginForm.tsx:378
 msgid "Navigates to the next screen"
 msgstr "Navighează la următorul ecran"
 
@@ -6392,8 +6382,8 @@ msgstr "Știri"
 
 #: src/components/contacts/screens/ViewMatches.tsx:394
 #: src/components/contacts/screens/ViewMatches.tsx:409
-#: src/screens/Login/ForgotPasswordForm.tsx:148
-#: src/screens/Login/ForgotPasswordForm.tsx:155
+#: src/screens/Login/ForgotPasswordForm.tsx:116
+#: src/screens/Login/ForgotPasswordForm.tsx:123
 #: src/screens/Login/SetNewPasswordForm.tsx:185
 #: src/screens/Login/SetNewPasswordForm.tsx:191
 #: src/screens/Onboarding/StepFinished/index.tsx:329
@@ -6954,7 +6944,7 @@ msgstr "Deschide detalii suplimentare pentru o intrare de depanare"
 msgid "Opens alt text dialog"
 msgstr "Deschide dialogul de text alternativ"
 
-#: src/screens/Login/LoginForm.tsx:214
+#: src/screens/Login/LoginForm.tsx:183
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7021,7 +7011,7 @@ msgstr "Deschidere link {0}"
 msgid "Opens live status dialog"
 msgstr "Deschide dialogul de stare în direct"
 
-#: src/screens/Login/LoginForm.tsx:349
+#: src/screens/Login/LoginForm.tsx:308
 msgid "Opens password reset form"
 msgstr "Deschide formularul de resetare a parolei"
 
@@ -7046,7 +7036,7 @@ msgstr "Deschide acest profil"
 msgid "Options:"
 msgstr "Opțiuni:"
 
-#: src/screens/Login/LoginForm.tsx:265
+#: src/screens/Login/LoginForm.tsx:234
 msgid "or"
 msgstr ""
 
@@ -7135,7 +7125,7 @@ msgstr "Pagina nu a fost găsită"
 msgid "Page Not Found"
 msgstr "Pagina nu a fost găsită"
 
-#: src/screens/Login/LoginForm.tsx:318
+#: src/screens/Login/LoginForm.tsx:277
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7153,7 +7143,7 @@ msgstr "Parolă modificată"
 msgid "Password must be at least 8 characters long."
 msgstr "Parola trebuie să aibă cel puțin 8 caractere."
 
-#: src/screens/Login/index.tsx:202
+#: src/screens/Login/index.tsx:166
 msgid "Password updated"
 msgstr "Parolă actualizată"
 
@@ -7411,7 +7401,7 @@ msgstr "Vă rugăm să introduceți codul de invitație."
 msgid "Please enter your new email address."
 msgstr "Vă rugăm să introduceți noua adresă de e-mail."
 
-#: src/screens/Login/LoginForm.tsx:100
+#: src/screens/Login/LoginForm.tsx:82
 msgid "Please enter your password"
 msgstr "Vă rugăm să vă introduceți parola"
 
@@ -7419,7 +7409,7 @@ msgstr "Vă rugăm să vă introduceți parola"
 msgid "Please enter your password as well:"
 msgstr "Vă rugăm să introduceți și parola dvs.:"
 
-#: src/screens/Login/LoginForm.tsx:94
+#: src/screens/Login/LoginForm.tsx:76
 msgid "Please enter your username"
 msgstr "Vă rugăm să vă introduceți numele de utilizator"
 
@@ -8432,7 +8422,7 @@ msgstr "Resetare cod"
 msgid "Reset onboarding state"
 msgstr "Resetare stare înregistrare"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:81
+#: src/screens/Login/ForgotPasswordForm.tsx:69
 msgid "Reset password"
 msgstr "Resetați parola"
 
@@ -8440,10 +8430,6 @@ msgstr "Resetați parola"
 #: src/screens/Settings/FindContactsSettings.tsx:538
 msgid "Resync contacts"
 msgstr "Resincronizați contactele"
-
-#: src/screens/Login/LoginForm.tsx:420
-msgid "Retries signing in"
-msgstr "Reîncearcă conectarea"
 
 #: src/view/com/util/error/ErrorMessage.tsx:62
 #: src/view/com/util/error/ErrorScreen.tsx:99
@@ -8463,8 +8449,6 @@ msgstr "Reîncearcă ultima acțiune, care a eșuat"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:419
-#: src/screens/Login/LoginForm.tsx:425
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -8852,7 +8836,7 @@ msgstr "Selectați limbile conținutului"
 msgid "Select duration"
 msgstr "Selectare durată"
 
-#: src/screens/Login/index.tsx:162
+#: src/screens/Login/index.tsx:128
 msgid "Select from an existing account"
 msgstr "Selectați dintr-un cont existent"
 
@@ -9061,7 +9045,7 @@ msgstr "Stabiliți cine poate răspunde la postarea dvs."
 msgid "Set your birthdate below and we'll get you back to posting and exploring in no time!"
 msgstr "Stabiliți data nașterii mai jos și vă veți întoarce la creat postări și explorat în cel mai scurt timp!"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:108
+#: src/screens/Login/ForgotPasswordForm.tsx:86
 msgid "Sets email for password reset"
 msgstr "Setează e-mailul pentru resetarea parolei"
 
@@ -9344,10 +9328,10 @@ msgstr "Afișează conținutul"
 #: src/components/WelcomeModal.tsx:187
 #: src/components/WelcomeModal.tsx:199
 #: src/screens/Hashtag.tsx:240
-#: src/screens/Login/index.tsx:140
-#: src/screens/Login/index.tsx:161
-#: src/screens/Login/LoginForm.tsx:247
-#: src/screens/Login/LoginForm.tsx:253
+#: src/screens/Login/index.tsx:110
+#: src/screens/Login/index.tsx:127
+#: src/screens/Login/LoginForm.tsx:216
+#: src/screens/Login/LoginForm.tsx:222
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9392,8 +9376,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "Conectați-vă pentru a vizualiza postarea"
 
-#: src/screens/Login/LoginForm.tsx:212
-#: src/screens/Login/LoginForm.tsx:221
+#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:190
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -10591,9 +10575,8 @@ msgstr "Nu se poate conecta. Vă rugăm să vă verificați conexiunea la intern
 msgid "Unable to contact your service. Please check your internet connection and try again."
 msgstr "Nu vă putem contacta serviciul. Verificați conexiunea la internet și încercați din nou."
 
-#: src/screens/Login/ForgotPasswordForm.tsx:69
-#: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:171
+#: src/screens/Login/ForgotPasswordForm.tsx:57
+#: src/screens/Login/LoginForm.tsx:140
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11033,7 +11016,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Numele de utilizator trebuie să conțină doar litere (a-z), cifre și cratime"
 
-#: src/screens/Login/LoginForm.tsx:290
+#: src/screens/Login/LoginForm.tsx:249
 msgid "Username or email address"
 msgstr "Numele de utilizator sau adresa de e-mail"
 
@@ -11824,7 +11807,7 @@ msgstr "Puteți ascunde maxim {MAX_HIDDEN_REPLIES} răspunsuri."
 msgid "You can now choose to be notified when specific people post. If there’s someone you want timely updates from, go to their profile and find the new bell icon near the follow button."
 msgstr "Acum puteți alege să fiți notificat când anumite persoane postează. Dacă există cineva de la care doriți actualizări la timp, accesați-le profilul și găsiși noua pictogramă clopoțel lângă butonul „Urmărire”."
 
-#: src/screens/Login/index.tsx:203
+#: src/screens/Login/index.tsx:167
 #: src/screens/Login/PasswordUpdatedForm.tsx:26
 msgid "You can now sign in with your new password."
 msgstr "Acum vă puteți conecta cu noua parolă."
@@ -12118,7 +12101,7 @@ msgstr "Dvs.: {defaultEmbeddedContentMessage}"
 msgid "You: {short}"
 msgstr "Dvs.: {short}"
 
-#: src/screens/Login/LoginForm.tsx:232
+#: src/screens/Login/LoginForm.tsx:201
 msgid "you.bsky.social"
 msgstr ""
 
@@ -12271,7 +12254,7 @@ msgstr "Vârsta dvs. declarată este sub 18 ani. Este posibil ca unele setări d
 msgid "Your email"
 msgstr "E-mailul dvs."
 
-#: src/screens/Login/ForgotPasswordForm.tsx:52
+#: src/screens/Login/ForgotPasswordForm.tsx:40
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:81
 #: src/screens/Signup/state.ts:237
 #: src/screens/Signup/StepInfo/index.tsx:132

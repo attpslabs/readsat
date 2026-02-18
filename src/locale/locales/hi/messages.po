@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 घंटे"
 
-#: src/screens/Login/LoginForm.tsx:368
+#: src/screens/Login/LoginForm.tsx:327
 msgid "2FA Confirmation"
 msgstr "2FA पुष्टिकरण"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "सुलभता के सेटिंग"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:282
+#: src/screens/Login/LoginForm.tsx:241
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1035,7 +1035,7 @@ msgstr ""
 msgid "Allows access to direct messages"
 msgstr "आपके सीधे संदेशों तक पहुँच देता है"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:179
+#: src/screens/Login/ForgotPasswordForm.tsx:146
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:236
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:242
 msgid "Already have a code?"
@@ -1431,10 +1431,10 @@ msgstr ""
 #: src/components/moderation/LabelsOnMeDialog.tsx:334
 #: src/screens/Login/ChooseAccountForm.tsx:97
 #: src/screens/Login/ChooseAccountForm.tsx:101
-#: src/screens/Login/ForgotPasswordForm.tsx:126
-#: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:407
-#: src/screens/Login/LoginForm.tsx:412
+#: src/screens/Login/ForgotPasswordForm.tsx:104
+#: src/screens/Login/ForgotPasswordForm.tsx:109
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:371
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -2034,7 +2034,7 @@ msgstr ""
 msgid "Check my status"
 msgstr "मेरी स्थिति दिखाएँ"
 
-#: src/screens/Login/LoginForm.tsx:397
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Check your email for a sign in code and enter it here."
 msgstr ""
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:374
+#: src/screens/Login/LoginForm.tsx:333
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2402,11 +2402,6 @@ msgstr ""
 #: src/view/com/modals/DeleteAccount.tsx:226
 msgid "Confirmation code"
 msgstr "पुष्टिकरण कोड"
-
-#: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:430
-msgid "Connecting to service..."
-msgstr ""
 
 #: src/ageAssurance/components/RedirectOverlay.tsx:296
 #: src/components/ageAssurance/AgeAssuranceRedirectDialog.tsx:208
@@ -3503,7 +3498,7 @@ msgstr "ईमेल 2FA अक्षम करें"
 msgid "Email 2FA enabled"
 msgstr "ईमेल 2FA सक्षम"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:94
+#: src/screens/Login/ForgotPasswordForm.tsx:72
 msgid "Email address"
 msgstr "ईमेल"
 
@@ -3646,11 +3641,11 @@ msgstr ""
 msgid "Enter the domain you want to use"
 msgstr "आप जिस डोमेन का उपयोग करना चाहते हैं उसे दर्ज करें"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:114
+#: src/screens/Login/ForgotPasswordForm.tsx:92
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "वह ईमेल दर्ज करें जिसका उपयोग आपने अपना खाता बनाने के लिए किया था। हम आपको एक \"reset code\" भेजेंगे ताकि आप एक नया पासवर्ड सेट कर सकें।"
 
-#: src/screens/Login/LoginForm.tsx:308
+#: src/screens/Login/LoginForm.tsx:267
 msgid "Enter the username or email address you used when you created your account"
 msgstr ""
 
@@ -3658,12 +3653,12 @@ msgstr ""
 msgid "Enter your birthdate"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:100
+#: src/screens/Login/ForgotPasswordForm.tsx:78
 #: src/screens/Signup/StepInfo/index.tsx:244
 msgid "Enter your email address"
 msgstr "अपना ईमेल पता दर्ज करें"
 
-#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:292
 msgid "Enter your password"
 msgstr ""
 
@@ -3671,7 +3666,7 @@ msgstr ""
 msgid "Enter your username"
 msgstr ""
 
-#: src/screens/Login/index.tsx:141
+#: src/screens/Login/index.tsx:111
 msgid "Enter your username and password"
 msgstr "अपने उपयोगकर्ता नाम और पासवर्ड दर्ज करें"
 
@@ -4051,7 +4046,7 @@ msgstr "भेजने में असफल"
 msgid "Failed to send email, please try again."
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:201
+#: src/screens/Login/LoginForm.tsx:170
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4489,16 +4484,16 @@ msgstr "हमेशा"
 msgid "Forget the noise"
 msgstr ""
 
-#: src/screens/Login/index.tsx:172
-#: src/screens/Login/index.tsx:188
+#: src/screens/Login/index.tsx:138
+#: src/screens/Login/index.tsx:152
 msgid "Forgot Password"
 msgstr "पासवर्ड भूल गए"
 
-#: src/screens/Login/LoginForm.tsx:348
+#: src/screens/Login/LoginForm.tsx:307
 msgid "Forgot password?"
 msgstr "पासवर्ड भूल गए?"
 
-#: src/screens/Login/LoginForm.tsx:359
+#: src/screens/Login/LoginForm.tsx:318
 msgid "Forgot?"
 msgstr "भूल गए?"
 
@@ -4720,7 +4715,7 @@ msgstr "{0} के साथ बातचीत पर जाएँ"
 msgid "Go to feed"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:173
+#: src/screens/Login/ForgotPasswordForm.tsx:140
 msgid "Go to next"
 msgstr "अगले पर जाएँ"
 
@@ -5026,11 +5021,6 @@ msgstr "होम फ़ीड"
 msgid "Host:"
 msgstr "होस्ट:"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:272
-msgid "Hosting provider"
-msgstr "होस्टिंग प्रदाता"
-
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:178
 msgid "Hot"
 msgstr ""
@@ -5228,7 +5218,7 @@ msgstr ""
 msgid "Inbox zero!"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:135
 msgid "Incorrect username or password"
 msgstr "अमान्य उपयोगकर्ता नाम या पासवर्ड"
 
@@ -5248,7 +5238,7 @@ msgstr "नया पासवर्ड दर्ज करें"
 msgid "Input password for account deletion"
 msgstr "खाता मिटाने किए लिए पासवर्ड दर्ज करें"
 
-#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:348
 msgid "Input the code which has been emailed to you"
 msgstr "आपको ईमेल की गई कोड दर्ज करें"
 
@@ -5276,7 +5266,7 @@ msgstr ""
 msgid "Introducing saved posts AKA bookmarks"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:157
+#: src/screens/Login/LoginForm.tsx:126
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "अमान्य 2FA पुष्टिकरण कोड"
@@ -5573,8 +5563,8 @@ msgstr "बाक़ी"
 msgid "Let me choose"
 msgstr "मुझे चुनने दें।"
 
-#: src/screens/Login/index.tsx:173
-#: src/screens/Login/index.tsx:189
+#: src/screens/Login/index.tsx:139
+#: src/screens/Login/index.tsx:153
 msgid "Let's get your password reset!"
 msgstr "चलिए आपका पासवर्ड रीसेट करें!"
 
@@ -5844,9 +5834,9 @@ msgstr "लोड हो रहा है..."
 msgid "Log"
 msgstr "लॉग"
 
-#: src/screens/Login/LoginForm.tsx:206
-#: src/screens/Login/LoginForm.tsx:440
-#: src/screens/Login/LoginForm.tsx:446
+#: src/screens/Login/LoginForm.tsx:175
+#: src/screens/Login/LoginForm.tsx:377
+#: src/screens/Login/LoginForm.tsx:383
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -6257,9 +6247,9 @@ msgstr "{0} पर जाएँ"
 msgid "Navigate to starter pack"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:149
-#: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:441
+#: src/screens/Login/ForgotPasswordForm.tsx:117
+#: src/screens/Login/ForgotPasswordForm.tsx:141
+#: src/screens/Login/LoginForm.tsx:378
 msgid "Navigates to the next screen"
 msgstr "अगले स्क्रीन पर जाता है"
 
@@ -6392,8 +6382,8 @@ msgstr "समाचार"
 
 #: src/components/contacts/screens/ViewMatches.tsx:394
 #: src/components/contacts/screens/ViewMatches.tsx:409
-#: src/screens/Login/ForgotPasswordForm.tsx:148
-#: src/screens/Login/ForgotPasswordForm.tsx:155
+#: src/screens/Login/ForgotPasswordForm.tsx:116
+#: src/screens/Login/ForgotPasswordForm.tsx:123
 #: src/screens/Login/SetNewPasswordForm.tsx:185
 #: src/screens/Login/SetNewPasswordForm.tsx:191
 #: src/screens/Onboarding/StepFinished/index.tsx:329
@@ -6954,7 +6944,7 @@ msgstr "डीबग प्रविष्टि के लिए अतिर�
 msgid "Opens alt text dialog"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:214
+#: src/screens/Login/LoginForm.tsx:183
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7021,7 +7011,7 @@ msgstr ""
 msgid "Opens live status dialog"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:349
+#: src/screens/Login/LoginForm.tsx:308
 msgid "Opens password reset form"
 msgstr "पासवर्ड रीसेट फ़ॉर्म खोलें"
 
@@ -7046,7 +7036,7 @@ msgstr "यह प्रोफ़ाइल खोलता है"
 msgid "Options:"
 msgstr "विकल्प:"
 
-#: src/screens/Login/LoginForm.tsx:265
+#: src/screens/Login/LoginForm.tsx:234
 msgid "or"
 msgstr ""
 
@@ -7135,7 +7125,7 @@ msgstr "पृष्ठ नहीं मिला"
 msgid "Page Not Found"
 msgstr "पृष्ठ नहीं मिला"
 
-#: src/screens/Login/LoginForm.tsx:318
+#: src/screens/Login/LoginForm.tsx:277
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7153,7 +7143,7 @@ msgstr ""
 msgid "Password must be at least 8 characters long."
 msgstr ""
 
-#: src/screens/Login/index.tsx:202
+#: src/screens/Login/index.tsx:166
 msgid "Password updated"
 msgstr "पासवर्ड अपडेट किया गया"
 
@@ -7411,7 +7401,7 @@ msgstr "कृपया अपना ईमेल दर्ज करें।"
 msgid "Please enter your new email address."
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:100
+#: src/screens/Login/LoginForm.tsx:82
 msgid "Please enter your password"
 msgstr ""
 
@@ -7419,7 +7409,7 @@ msgstr ""
 msgid "Please enter your password as well:"
 msgstr "कृपया अपना पासवर्ड भी दर्ज करें:"
 
-#: src/screens/Login/LoginForm.tsx:94
+#: src/screens/Login/LoginForm.tsx:76
 msgid "Please enter your username"
 msgstr ""
 
@@ -8432,17 +8422,13 @@ msgstr "कोड रीसेट करें"
 msgid "Reset onboarding state"
 msgstr "ज्ञानप्राप्ति स्थिति को रीसेट करें"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:81
+#: src/screens/Login/ForgotPasswordForm.tsx:69
 msgid "Reset password"
 msgstr "पासवर्ड रीसेट करें"
 
 #: src/screens/Settings/FindContactsSettings.tsx:522
 #: src/screens/Settings/FindContactsSettings.tsx:538
 msgid "Resync contacts"
-msgstr ""
-
-#: src/screens/Login/LoginForm.tsx:420
-msgid "Retries signing in"
 msgstr ""
 
 #: src/view/com/util/error/ErrorMessage.tsx:62
@@ -8463,8 +8449,6 @@ msgstr "पिछली क्रिया का फिर से प्रय�
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:419
-#: src/screens/Login/LoginForm.tsx:425
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -8852,7 +8836,7 @@ msgstr "सामग्री भाषाएँ चुनें"
 msgid "Select duration"
 msgstr ""
 
-#: src/screens/Login/index.tsx:162
+#: src/screens/Login/index.tsx:128
 msgid "Select from an existing account"
 msgstr "मौजूदा खाते से चुनें"
 
@@ -9061,7 +9045,7 @@ msgstr ""
 msgid "Set your birthdate below and we'll get you back to posting and exploring in no time!"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:108
+#: src/screens/Login/ForgotPasswordForm.tsx:86
 msgid "Sets email for password reset"
 msgstr "पासवर्ड रीसेट करने के लिए ईमेल चुनता है"
 
@@ -9344,10 +9328,10 @@ msgstr ""
 #: src/components/WelcomeModal.tsx:187
 #: src/components/WelcomeModal.tsx:199
 #: src/screens/Hashtag.tsx:240
-#: src/screens/Login/index.tsx:140
-#: src/screens/Login/index.tsx:161
-#: src/screens/Login/LoginForm.tsx:247
-#: src/screens/Login/LoginForm.tsx:253
+#: src/screens/Login/index.tsx:110
+#: src/screens/Login/index.tsx:127
+#: src/screens/Login/LoginForm.tsx:216
+#: src/screens/Login/LoginForm.tsx:222
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9392,8 +9376,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:212
-#: src/screens/Login/LoginForm.tsx:221
+#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:190
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -10591,9 +10575,8 @@ msgstr "कनेक्ट करने में असफल। कृपय�
 msgid "Unable to contact your service. Please check your internet connection and try again."
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:69
-#: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:171
+#: src/screens/Login/ForgotPasswordForm.tsx:57
+#: src/screens/Login/LoginForm.tsx:140
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11033,7 +11016,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr ""
 
-#: src/screens/Login/LoginForm.tsx:290
+#: src/screens/Login/LoginForm.tsx:249
 msgid "Username or email address"
 msgstr "उपयोगकर्ता नाम या ईमेल पता"
 
@@ -11824,7 +11807,7 @@ msgstr ""
 msgid "You can now choose to be notified when specific people post. If there’s someone you want timely updates from, go to their profile and find the new bell icon near the follow button."
 msgstr ""
 
-#: src/screens/Login/index.tsx:203
+#: src/screens/Login/index.tsx:167
 #: src/screens/Login/PasswordUpdatedForm.tsx:26
 msgid "You can now sign in with your new password."
 msgstr "अब आप अपने नए पासवर्ड के साथ साइन इन कर सकते हैं।"
@@ -12118,7 +12101,7 @@ msgstr "आप: {defaultEmbeddedContentMessage}"
 msgid "You: {short}"
 msgstr "आप: {short}"
 
-#: src/screens/Login/LoginForm.tsx:232
+#: src/screens/Login/LoginForm.tsx:201
 msgid "you.bsky.social"
 msgstr ""
 
@@ -12271,7 +12254,7 @@ msgstr ""
 msgid "Your email"
 msgstr ""
 
-#: src/screens/Login/ForgotPasswordForm.tsx:52
+#: src/screens/Login/ForgotPasswordForm.tsx:40
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:81
 #: src/screens/Signup/state.ts:237
 #: src/screens/Signup/StepInfo/index.tsx:132

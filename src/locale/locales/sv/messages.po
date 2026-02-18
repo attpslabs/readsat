@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 timmar"
 
-#: src/screens/Login/LoginForm.tsx:368
+#: src/screens/Login/LoginForm.tsx:327
 msgid "2FA Confirmation"
 msgstr "2FA-bekräftelse"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Tillgänglighetsinställningar"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:282
+#: src/screens/Login/LoginForm.tsx:241
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1035,7 +1035,7 @@ msgstr "Tillåt svar från dina följare"
 msgid "Allows access to direct messages"
 msgstr "Ger tillgång till direktmeddelanden"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:179
+#: src/screens/Login/ForgotPasswordForm.tsx:146
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:236
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:242
 msgid "Already have a code?"
@@ -1431,10 +1431,10 @@ msgstr "Tillgängligt"
 #: src/components/moderation/LabelsOnMeDialog.tsx:334
 #: src/screens/Login/ChooseAccountForm.tsx:97
 #: src/screens/Login/ChooseAccountForm.tsx:101
-#: src/screens/Login/ForgotPasswordForm.tsx:126
-#: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:407
-#: src/screens/Login/LoginForm.tsx:412
+#: src/screens/Login/ForgotPasswordForm.tsx:104
+#: src/screens/Login/ForgotPasswordForm.tsx:109
+#: src/screens/Login/LoginForm.tsx:366
+#: src/screens/Login/LoginForm.tsx:371
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -2034,7 +2034,7 @@ msgstr "Chattar"
 msgid "Check my status"
 msgstr "Kontrollera min status"
 
-#: src/screens/Login/LoginForm.tsx:397
+#: src/screens/Login/LoginForm.tsx:356
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Titta i din e‑post efter en inloggningskod och ange den här."
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:374
+#: src/screens/Login/LoginForm.tsx:333
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2402,11 +2402,6 @@ msgstr ""
 #: src/view/com/modals/DeleteAccount.tsx:226
 msgid "Confirmation code"
 msgstr "Bekräftelsekod"
-
-#: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:430
-msgid "Connecting to service..."
-msgstr ""
 
 #: src/ageAssurance/components/RedirectOverlay.tsx:296
 #: src/components/ageAssurance/AgeAssuranceRedirectDialog.tsx:208
@@ -3503,7 +3498,7 @@ msgstr "2FA via e-post inaktiverat"
 msgid "Email 2FA enabled"
 msgstr "2FA via e-post är aktiverat"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:94
+#: src/screens/Login/ForgotPasswordForm.tsx:72
 msgid "Email address"
 msgstr "E-postadress"
 
@@ -3646,11 +3641,11 @@ msgstr "Ange den sexsiffriga kod som har skickats till {prettyNumber}"
 msgid "Enter the domain you want to use"
 msgstr "Ange den domän du vill använda"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:114
+#: src/screens/Login/ForgotPasswordForm.tsx:92
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Ange den e-postadress som du använde för att skapa ditt konto. Vi skickar dig en ”återställningskod” så att du kan ange ett nytt lösenord."
 
-#: src/screens/Login/LoginForm.tsx:308
+#: src/screens/Login/LoginForm.tsx:267
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Ange det användarnamn eller den e-postadress du använde när du skapade ditt konto"
 
@@ -3658,12 +3653,12 @@ msgstr "Ange det användarnamn eller den e-postadress du använde när du skapad
 msgid "Enter your birthdate"
 msgstr "Ange ditt födelsedatum"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:100
+#: src/screens/Login/ForgotPasswordForm.tsx:78
 #: src/screens/Signup/StepInfo/index.tsx:244
 msgid "Enter your email address"
 msgstr "Ange din e-postadress"
 
-#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:292
 msgid "Enter your password"
 msgstr "Ange ditt lösenord"
 
@@ -3671,7 +3666,7 @@ msgstr "Ange ditt lösenord"
 msgid "Enter your username"
 msgstr ""
 
-#: src/screens/Login/index.tsx:141
+#: src/screens/Login/index.tsx:111
 msgid "Enter your username and password"
 msgstr "Ange ditt användarnamn och lösenord"
 
@@ -4051,7 +4046,7 @@ msgstr "Det gick inte att skicka"
 msgid "Failed to send email, please try again."
 msgstr "Det gick inte att skicka e-postmeddelande. Försök igen."
 
-#: src/screens/Login/LoginForm.tsx:201
+#: src/screens/Login/LoginForm.tsx:170
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4489,16 +4484,16 @@ msgstr "Obegränsad"
 msgid "Forget the noise"
 msgstr "Slipp allt brus"
 
-#: src/screens/Login/index.tsx:172
-#: src/screens/Login/index.tsx:188
+#: src/screens/Login/index.tsx:138
+#: src/screens/Login/index.tsx:152
 msgid "Forgot Password"
 msgstr "Glömt lösenord"
 
-#: src/screens/Login/LoginForm.tsx:348
+#: src/screens/Login/LoginForm.tsx:307
 msgid "Forgot password?"
 msgstr "Glömt lösenordet?"
 
-#: src/screens/Login/LoginForm.tsx:359
+#: src/screens/Login/LoginForm.tsx:318
 msgid "Forgot?"
 msgstr "Glömt?"
 
@@ -4720,7 +4715,7 @@ msgstr "Gå till konversation med {0}"
 msgid "Go to feed"
 msgstr "Gå till flöde"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:173
+#: src/screens/Login/ForgotPasswordForm.tsx:140
 msgid "Go to next"
 msgstr "Gå till nästa"
 
@@ -5026,11 +5021,6 @@ msgstr "Hem"
 msgid "Host:"
 msgstr "Värd:"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:272
-msgid "Hosting provider"
-msgstr "Värdleverantör"
-
 #: src/screens/Search/modules/ExploreTrendingTopics.tsx:178
 msgid "Hot"
 msgstr "Hett"
@@ -5228,7 +5218,7 @@ msgstr "I appen, Push, Från personer du följer"
 msgid "Inbox zero!"
 msgstr "Inkorgen är tom!"
 
-#: src/screens/Login/LoginForm.tsx:166
+#: src/screens/Login/LoginForm.tsx:135
 msgid "Incorrect username or password"
 msgstr "Felaktigt användarnamn eller lösenord"
 
@@ -5248,7 +5238,7 @@ msgstr "Ange nytt lösenord"
 msgid "Input password for account deletion"
 msgstr "Ange lösenord för att radera kontot"
 
-#: src/screens/Login/LoginForm.tsx:389
+#: src/screens/Login/LoginForm.tsx:348
 msgid "Input the code which has been emailed to you"
 msgstr "Ange koden som har skickats till dig via e-post"
 
@@ -5276,7 +5266,7 @@ msgstr "Nu kan du hitta vänner med hjälp av dina kontakter"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Nu införs sparade inlägg, även kallat bokmärken"
 
-#: src/screens/Login/LoginForm.tsx:157
+#: src/screens/Login/LoginForm.tsx:126
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Ogiltig bekräftelsekod för 2FA."
@@ -5573,8 +5563,8 @@ msgstr "kvar."
 msgid "Let me choose"
 msgstr "Låt mig välja"
 
-#: src/screens/Login/index.tsx:173
-#: src/screens/Login/index.tsx:189
+#: src/screens/Login/index.tsx:139
+#: src/screens/Login/index.tsx:153
 msgid "Let's get your password reset!"
 msgstr "Låt oss få ditt lösenord återställt!"
 
@@ -5844,9 +5834,9 @@ msgstr "Laddar…"
 msgid "Log"
 msgstr "Logg"
 
-#: src/screens/Login/LoginForm.tsx:206
-#: src/screens/Login/LoginForm.tsx:440
-#: src/screens/Login/LoginForm.tsx:446
+#: src/screens/Login/LoginForm.tsx:175
+#: src/screens/Login/LoginForm.tsx:377
+#: src/screens/Login/LoginForm.tsx:383
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -6257,9 +6247,9 @@ msgstr "Navigera till {0}"
 msgid "Navigate to starter pack"
 msgstr "Navigera till startpaket"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:149
-#: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:441
+#: src/screens/Login/ForgotPasswordForm.tsx:117
+#: src/screens/Login/ForgotPasswordForm.tsx:141
+#: src/screens/Login/LoginForm.tsx:378
 msgid "Navigates to the next screen"
 msgstr "Navigerar till nästa ruta"
 
@@ -6392,8 +6382,8 @@ msgstr "Nyheter"
 
 #: src/components/contacts/screens/ViewMatches.tsx:394
 #: src/components/contacts/screens/ViewMatches.tsx:409
-#: src/screens/Login/ForgotPasswordForm.tsx:148
-#: src/screens/Login/ForgotPasswordForm.tsx:155
+#: src/screens/Login/ForgotPasswordForm.tsx:116
+#: src/screens/Login/ForgotPasswordForm.tsx:123
 #: src/screens/Login/SetNewPasswordForm.tsx:185
 #: src/screens/Login/SetNewPasswordForm.tsx:191
 #: src/screens/Onboarding/StepFinished/index.tsx:329
@@ -6954,7 +6944,7 @@ msgstr "Öppnar ytterligare detaljer för en loggpost"
 msgid "Opens alt text dialog"
 msgstr "Öppnar dialogruta för alternativtext"
 
-#: src/screens/Login/LoginForm.tsx:214
+#: src/screens/Login/LoginForm.tsx:183
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7021,7 +7011,7 @@ msgstr "Öppnar länken {0}"
 msgid "Opens live status dialog"
 msgstr "Öppnar dialogruta för livesändningsstatus"
 
-#: src/screens/Login/LoginForm.tsx:349
+#: src/screens/Login/LoginForm.tsx:308
 msgid "Opens password reset form"
 msgstr "Öppnar formulär för återställning av lösenord"
 
@@ -7046,7 +7036,7 @@ msgstr "Öppnar den här profilen"
 msgid "Options:"
 msgstr "Alternativ:"
 
-#: src/screens/Login/LoginForm.tsx:265
+#: src/screens/Login/LoginForm.tsx:234
 msgid "or"
 msgstr ""
 
@@ -7135,7 +7125,7 @@ msgstr "Sidan hittades inte"
 msgid "Page Not Found"
 msgstr "Sidan hittades inte"
 
-#: src/screens/Login/LoginForm.tsx:318
+#: src/screens/Login/LoginForm.tsx:277
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7153,7 +7143,7 @@ msgstr "Lösenordet har ändrats"
 msgid "Password must be at least 8 characters long."
 msgstr "Lösenordet måste vara minst 8 tecken långt."
 
-#: src/screens/Login/index.tsx:202
+#: src/screens/Login/index.tsx:166
 msgid "Password updated"
 msgstr "Lösenordet har uppdaterats"
 
@@ -7411,7 +7401,7 @@ msgstr "Ange din inbjudningskod."
 msgid "Please enter your new email address."
 msgstr "Ange din nya e-postadress."
 
-#: src/screens/Login/LoginForm.tsx:100
+#: src/screens/Login/LoginForm.tsx:82
 msgid "Please enter your password"
 msgstr "Ange ditt lösenord"
 
@@ -7419,7 +7409,7 @@ msgstr "Ange ditt lösenord"
 msgid "Please enter your password as well:"
 msgstr "Ange ditt lösenord också:"
 
-#: src/screens/Login/LoginForm.tsx:94
+#: src/screens/Login/LoginForm.tsx:76
 msgid "Please enter your username"
 msgstr "Ange ditt användarnamn"
 
@@ -8432,7 +8422,7 @@ msgstr "Återställningskod"
 msgid "Reset onboarding state"
 msgstr "Återställ status för kom-igång-guide"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:81
+#: src/screens/Login/ForgotPasswordForm.tsx:69
 msgid "Reset password"
 msgstr "Återställ lösenord"
 
@@ -8440,10 +8430,6 @@ msgstr "Återställ lösenord"
 #: src/screens/Settings/FindContactsSettings.tsx:538
 msgid "Resync contacts"
 msgstr "Synkronisera om kontakter"
-
-#: src/screens/Login/LoginForm.tsx:420
-msgid "Retries signing in"
-msgstr "Gör ett nytt inloggningsförsök"
 
 #: src/view/com/util/error/ErrorMessage.tsx:62
 #: src/view/com/util/error/ErrorScreen.tsx:99
@@ -8463,8 +8449,6 @@ msgstr "Försöker igen med den senaste misslyckade åtgärden"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:419
-#: src/screens/Login/LoginForm.tsx:425
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -8852,7 +8836,7 @@ msgstr "Välj innehållsspråk"
 msgid "Select duration"
 msgstr "Välj längd"
 
-#: src/screens/Login/index.tsx:162
+#: src/screens/Login/index.tsx:128
 msgid "Select from an existing account"
 msgstr "Välj ett befintligt konto"
 
@@ -9061,7 +9045,7 @@ msgstr "Ställ in vem som får svara på ditt inlägg"
 msgid "Set your birthdate below and we'll get you back to posting and exploring in no time!"
 msgstr "Ange ditt födelsedatum nedan så är du igång och kan börja skriva inlägg och utforska igen!"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:108
+#: src/screens/Login/ForgotPasswordForm.tsx:86
 msgid "Sets email for password reset"
 msgstr "Ställer in e-postadress för återställning av lösenord"
 
@@ -9344,10 +9328,10 @@ msgstr "Visar innehållet"
 #: src/components/WelcomeModal.tsx:187
 #: src/components/WelcomeModal.tsx:199
 #: src/screens/Hashtag.tsx:240
-#: src/screens/Login/index.tsx:140
-#: src/screens/Login/index.tsx:161
-#: src/screens/Login/LoginForm.tsx:247
-#: src/screens/Login/LoginForm.tsx:253
+#: src/screens/Login/index.tsx:110
+#: src/screens/Login/index.tsx:127
+#: src/screens/Login/LoginForm.tsx:216
+#: src/screens/Login/LoginForm.tsx:222
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9392,8 +9376,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "Logga in för att visa inlägg"
 
-#: src/screens/Login/LoginForm.tsx:212
-#: src/screens/Login/LoginForm.tsx:221
+#: src/screens/Login/LoginForm.tsx:181
+#: src/screens/Login/LoginForm.tsx:190
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -10591,9 +10575,8 @@ msgstr "Det gick inte att ansluta. Kontrollera din internetanslutning och förs�
 msgid "Unable to contact your service. Please check your internet connection and try again."
 msgstr "Det gick inte att ansluta till din tjänst. Kontrollera din internetanslutning."
 
-#: src/screens/Login/ForgotPasswordForm.tsx:69
-#: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:171
+#: src/screens/Login/ForgotPasswordForm.tsx:57
+#: src/screens/Login/LoginForm.tsx:140
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11033,7 +11016,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Användarnamn får endast innehålla bokstäver (a-z), siffror och bindestreck"
 
-#: src/screens/Login/LoginForm.tsx:290
+#: src/screens/Login/LoginForm.tsx:249
 msgid "Username or email address"
 msgstr "Användarnamn eller e-postadress"
 
@@ -11824,7 +11807,7 @@ msgstr "Du kan dölja max {MAX_HIDDEN_REPLIES} svar."
 msgid "You can now choose to be notified when specific people post. If there’s someone you want timely updates from, go to their profile and find the new bell icon near the follow button."
 msgstr "Du kan nu välja att få notiser när specifika personer publicerar inlägg. Om det är någon du vill få snabba uppdateringar från – gå till personens profil och leta efter den nya klockikonen bredvid följknappen."
 
-#: src/screens/Login/index.tsx:203
+#: src/screens/Login/index.tsx:167
 #: src/screens/Login/PasswordUpdatedForm.tsx:26
 msgid "You can now sign in with your new password."
 msgstr "Du kan nu logga in med ditt nya lösenord."
@@ -12118,7 +12101,7 @@ msgstr "Du: {defaultEmbeddedContentMessage}"
 msgid "You: {short}"
 msgstr "Du: {short}"
 
-#: src/screens/Login/LoginForm.tsx:232
+#: src/screens/Login/LoginForm.tsx:201
 msgid "you.bsky.social"
 msgstr ""
 
@@ -12271,7 +12254,7 @@ msgstr "Din angivna ålder är under 18 år. Därför kan vissa av inställninga
 msgid "Your email"
 msgstr "Din e-post"
 
-#: src/screens/Login/ForgotPasswordForm.tsx:52
+#: src/screens/Login/ForgotPasswordForm.tsx:40
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:81
 #: src/screens/Signup/state.ts:237
 #: src/screens/Signup/StepInfo/index.tsx:132

@@ -1,15 +1,12 @@
-import {useCallback, useRef, useState} from 'react'
+import {useRef, useState} from 'react'
 import {Keyboard, type TextInput, View} from 'react-native'
-import {
-  ComAtprotoServerCreateSession,
-  type ComAtprotoServerDescribeServer,
-} from '@atproto/api'
+import {ComAtprotoServerCreateSession} from '@atproto/api'
 import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 
 import {useRequestNotificationsPermission} from '#/lib/notifications/notifications'
 import {cleanError, isNetworkError} from '#/lib/strings/errors'
-import {createFullHandle} from '#/lib/strings/handles'
+import {resolveServiceFromHandle} from '#/lib/strings/handles'
 import {logger} from '#/logger'
 import {useSetHasCheckedForStarterPack} from '#/state/preferences/used-starter-packs'
 import {useSessionApi} from '#/state/session'
@@ -18,7 +15,6 @@ import {useLoggedOutViewControls} from '#/state/shell/logged-out'
 import {atoms as a, ios, useTheme, web} from '#/alf'
 import {Button, ButtonIcon, ButtonText} from '#/components/Button'
 import {FormError} from '#/components/forms/FormError'
-import {HostingProvider} from '#/components/forms/HostingProvider'
 import * as TextField from '#/components/forms/TextField'
 import {At_Stroke2_Corner0_Rounded as At} from '#/components/icons/At'
 import {Lock_Stroke2_Corner0_Rounded as Lock} from '#/components/icons/Lock'
@@ -28,28 +24,18 @@ import {Text} from '#/components/Typography'
 import {IS_IOS, IS_WEB} from '#/env'
 import {FormContainer} from './FormContainer'
 
-type ServiceDescription = ComAtprotoServerDescribeServer.OutputSchema
-
 export const LoginForm = ({
   error,
-  serviceUrl,
-  serviceDescription,
   initialHandle,
   setError,
-  setServiceUrl,
-  onPressRetryConnect,
   onPressBack,
   onPressForgotPassword,
   onAttemptSuccess,
   onAttemptFailed,
 }: {
   error: string
-  serviceUrl: string
-  serviceDescription: ServiceDescription | undefined
   initialHandle: string
   setError: (v: string) => void
-  setServiceUrl: (v: string) => void
-  onPressRetryConnect: () => void
   onPressBack: () => void
   onPressForgotPassword: () => void
   onAttemptSuccess: () => void
@@ -77,10 +63,6 @@ export const LoginForm = ({
   const {setShowLoggedOut} = useLoggedOutViewControls()
   const setHasCheckedForStarterPack = useSetHasCheckedForStarterPack()
 
-  const onPressSelectService = useCallback(() => {
-    Keyboard.dismiss()
-  }, [])
-
   const onPressNext = async () => {
     if (isProcessing) return
     Keyboard.dismiss()
@@ -105,32 +87,19 @@ export const LoginForm = ({
     setIsProcessing(true)
 
     try {
-      // try to guess the handle if the user just gave their own username
+      // Auto-detect PDS from handle and expand bare usernames
       let fullIdent = identifier
       if (
         !identifier.includes('@') && // not an email
-        !identifier.includes('.') && // not a domain
-        serviceDescription &&
-        serviceDescription.availableUserDomains.length > 0
+        !identifier.includes('.') // not a domain
       ) {
-        let matched = false
-        for (const domain of serviceDescription.availableUserDomains) {
-          if (fullIdent.endsWith(domain)) {
-            matched = true
-          }
-        }
-        if (!matched) {
-          fullIdent = createFullHandle(
-            identifier,
-            serviceDescription.availableUserDomains[0],
-          )
-        }
+        fullIdent = `${identifier}.self.surf`
       }
+      const service = resolveServiceFromHandle(fullIdent)
 
-      // TODO remove double login
       await login(
         {
-          service: serviceUrl,
+          service,
           identifier: fullIdent,
           password,
           authFactorToken: authFactorToken.trim(),
@@ -269,16 +238,6 @@ export const LoginForm = ({
       )}
       <View>
         <TextField.LabelText>
-          <Trans>Hosting provider</Trans>
-        </TextField.LabelText>
-        <HostingProvider
-          serviceUrl={serviceUrl}
-          onSelectServiceUrl={setServiceUrl}
-          onOpenDialog={onPressSelectService}
-        />
-      </View>
-      <View>
-        <TextField.LabelText>
           <Trans>Account</Trans>
         </TextField.LabelText>
         <View style={[a.gap_sm]}>
@@ -413,41 +372,18 @@ export const LoginForm = ({
             </ButtonText>
           </Button>
         )}
-        {!serviceDescription && error ? (
-          <Button
-            testID="loginRetryButton"
-            label={_(msg`Retry`)}
-            accessibilityHint={_(msg`Retries signing in`)}
-            color="primary_subtle"
-            size="large"
-            onPress={onPressRetryConnect}>
-            <ButtonText>
-              <Trans>Retry</Trans>
-            </ButtonText>
-          </Button>
-        ) : !serviceDescription ? (
-          <Button
-            label={_(msg`Connecting to service...`)}
-            size="large"
-            color="secondary"
-            disabled>
-            <ButtonIcon icon={Loader} />
-            <ButtonText>Connecting...</ButtonText>
-          </Button>
-        ) : (
-          <Button
-            testID="loginNextButton"
-            label={_(msg`Log in`)}
-            accessibilityHint={_(msg`Navigates to the next screen`)}
-            color="primary"
-            size="large"
-            onPress={onPressNext}>
-            <ButtonText>
-              <Trans>Log in</Trans>
-            </ButtonText>
-            {isProcessing && <ButtonIcon icon={Loader} />}
-          </Button>
-        )}
+        <Button
+          testID="loginNextButton"
+          label={_(msg`Log in`)}
+          accessibilityHint={_(msg`Navigates to the next screen`)}
+          color="primary"
+          size="large"
+          onPress={onPressNext}>
+          <ButtonText>
+            <Trans>Log in</Trans>
+          </ButtonText>
+          {isProcessing && <ButtonIcon icon={Loader} />}
+        </Button>
       </View>
     </FormContainer>
   )

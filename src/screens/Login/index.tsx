@@ -1,12 +1,10 @@
-import {useEffect, useRef, useState} from 'react'
+import {useRef, useState} from 'react'
 import {KeyboardAvoidingView} from 'react-native'
 import Animated, {FadeIn, LayoutAnimationConfig} from 'react-native-reanimated'
 import {msg} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 
-import {DEFAULT_SERVICE} from '#/lib/constants'
-import {logger} from '#/logger'
-import {useServiceQuery} from '#/state/queries/service'
+import {SELF_SURF_SERVICE} from '#/lib/constants'
 import {type SessionAccount, useSession} from '#/state/session'
 import {useLoggedOutView} from '#/state/shell/logged-out'
 import {LoggedOutLayout} from '#/view/com/util/layouts/LoggedOutLayout'
@@ -49,9 +47,6 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
   )
 
   const [error, setError] = useState('')
-  const [serviceUrl, setServiceUrl] = useState(
-    requestedAccount?.service || DEFAULT_SERVICE,
-  )
   const [initialHandle, setInitialHandle] = useState(
     requestedAccount?.handle || '',
   )
@@ -67,16 +62,8 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
   >('Forward')
 
   const ax = useAnalytics()
-  const {
-    data: serviceDescription,
-    error: serviceError,
-    refetch: refetchService,
-  } = useServiceQuery(serviceUrl)
 
   const onSelectAccount = (account?: SessionAccount) => {
-    if (account?.service) {
-      setServiceUrl(account.service)
-    }
     setInitialHandle(account?.handle || '')
     gotoForm(Forms.Login)
   }
@@ -88,22 +75,6 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
     setScreenTransitionDirection(index < nextIndex ? 'Forward' : 'Backward')
     setCurrentForm(form)
   }
-
-  useEffect(() => {
-    if (serviceError) {
-      setError(
-        _(
-          msg`Unable to contact your service. Please check your Internet connection.`,
-        ),
-      )
-      logger.warn(`Failed to fetch service description for ${serviceUrl}`, {
-        error: String(serviceError),
-      })
-      ax.metric('signin:hostingProviderFailedResolution', {})
-    } else {
-      setError('')
-    }
-  }, [serviceError, serviceUrl, _])
 
   const onPressForgotPassword = () => {
     gotoForm(Forms.ForgotPassword)
@@ -120,7 +91,7 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
 
   const onAttemptSuccess = () => {
     ax.metric('signin:success', {
-      isUsingCustomProvider: serviceUrl !== DEFAULT_SERVICE,
+      isUsingCustomProvider: false,
       timeTakenSeconds: Math.round((Date.now() - startTimeRef.current) / 1000),
       failedAttemptsCount: failedAttemptCountRef.current,
     })
@@ -144,16 +115,12 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
       content = (
         <LoginForm
           error={error}
-          serviceUrl={serviceUrl}
-          serviceDescription={serviceDescription}
           initialHandle={initialHandle}
           setError={setError}
           onAttemptFailed={onAttemptFailed}
           onAttemptSuccess={onAttemptSuccess}
-          setServiceUrl={setServiceUrl}
           onPressBack={goBack}
           onPressForgotPassword={onPressForgotPassword}
-          onPressRetryConnect={refetchService}
         />
       )
       break
@@ -175,10 +142,8 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
       content = (
         <ForgotPasswordForm
           error={error}
-          serviceUrl={serviceUrl}
-          serviceDescription={serviceDescription}
+          serviceUrl={SELF_SURF_SERVICE}
           setError={setError}
-          setServiceUrl={setServiceUrl}
           onPressBack={goBack}
           onEmailSent={() => gotoForm(Forms.SetNewPassword)}
         />
@@ -191,7 +156,7 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
       content = (
         <SetNewPasswordForm
           error={error}
-          serviceUrl={serviceUrl}
+          serviceUrl={SELF_SURF_SERVICE}
           setError={setError}
           onPressBack={goBack}
           onPasswordSet={() => gotoForm(Forms.PasswordUpdated)}
