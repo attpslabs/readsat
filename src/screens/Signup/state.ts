@@ -5,7 +5,7 @@ import {msg} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 import * as EmailValidator from 'email-validator'
 
-import {DEFAULT_SERVICE} from '#/lib/constants'
+import {SELF_SURF_SERVICE} from '#/lib/constants'
 import {cleanError} from '#/lib/strings/errors'
 import {createFullHandle} from '#/lib/strings/handles'
 import {getAge} from '#/lib/strings/time'
@@ -72,7 +72,7 @@ export type SignupAction =
 export const initialState: SignupState = {
   analytics: undefined,
 
-  serviceUrl: DEFAULT_SERVICE,
+  serviceUrl: SELF_SURF_SERVICE,
   serviceDescription: undefined,
   userDomain: '',
   dateOfBirth: DEFAULT_DATE,

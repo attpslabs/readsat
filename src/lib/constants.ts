@@ -11,6 +11,7 @@ export const BSKY_SERVICE = 'https://bsky.social'
 export const BSKY_SERVICE_DID = 'did:web:bsky.social'
 export const READS_AT_SERVICE = 'https://reads.at'
 export const READS_AT_SERVICE_DID = 'did:web:reads.at'
+export const SELF_SURF_SERVICE = 'https://self.surf'
 export const PUBLIC_BSKY_SERVICE = 'https://public.api.bsky.app'
 export const DEFAULT_SERVICE = READS_AT_SERVICE
 const HELP_DESK_LANG = 'en-us'
