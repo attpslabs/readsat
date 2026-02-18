@@ -58,6 +58,9 @@ export const LoginForm = ({
   const t = useTheme()
   const [isProcessing, setIsProcessing] = useState(false)
   const [isOAuthProcessing, setIsOAuthProcessing] = useState(false)
+  const [isOAuthExpanded, setIsOAuthExpanded] = useState(false)
+  const [oauthHandle, setOAuthHandle] = useState('')
+  const oauthInputRef = useRef<TextInput>(null)
   const [errorField, setErrorField] = useState<
     'none' | 'identifier' | 'password' | '2fa'
   >('none')
@@ -178,11 +181,19 @@ export const LoginForm = ({
 
   const handleOAuthSignIn = async () => {
     if (isProcessing || isOAuthProcessing) return
+
+    if (!isOAuthExpanded) {
+      setIsOAuthExpanded(true)
+      setTimeout(() => oauthInputRef.current?.focus(), 100)
+      return
+    }
+
     setIsOAuthProcessing(true)
     setError('')
 
     try {
-      await startOAuthSignIn()
+      const handle = oauthHandle.trim() || undefined
+      await startOAuthSignIn(handle)
       // Never resolves — browser navigates away
     } catch (e: any) {
       setIsOAuthProcessing(false)
@@ -193,6 +204,69 @@ export const LoginForm = ({
 
   return (
     <FormContainer testID="loginForm" titleText={<Trans>Log in</Trans>}>
+      {IS_WEB && (
+        <View>
+          {!isOAuthExpanded ? (
+            <Button
+              testID="oauthSignInButton"
+              label={_(msg`Sign in with Bluesky`)}
+              accessibilityHint={_(
+                msg`Opens Bluesky authorization page to sign in`,
+              )}
+              color="primary"
+              size="large"
+              onPress={handleOAuthSignIn}
+              disabled={isProcessing}>
+              <ButtonText>
+                <Trans>Sign in with Bluesky</Trans>
+              </ButtonText>
+            </Button>
+          ) : (
+            <View style={[a.flex_row, a.gap_sm]}>
+              <View style={[a.flex_1]}>
+                <TextField.Root>
+                  <TextField.Icon icon={At} />
+                  <TextField.Input
+                    testID="oauthHandleInput"
+                    inputRef={oauthInputRef}
+                    label={_(msg`you.bsky.social`)}
+                    placeholder="you.bsky.social"
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    autoComplete="username"
+                    returnKeyType="go"
+                    value={oauthHandle}
+                    onChangeText={setOAuthHandle}
+                    onSubmitEditing={handleOAuthSignIn}
+                    editable={!isOAuthProcessing}
+                  />
+                </TextField.Root>
+              </View>
+              <Button
+                testID="oauthSubmitButton"
+                label={_(msg`Sign in`)}
+                color="primary"
+                size="large"
+                onPress={handleOAuthSignIn}
+                disabled={isOAuthProcessing}>
+                <ButtonText>
+                  <Trans>Sign in</Trans>
+                </ButtonText>
+                {isOAuthProcessing && <ButtonIcon icon={Loader} />}
+              </Button>
+            </View>
+          )}
+        </View>
+      )}
+      {IS_WEB && (
+        <View style={[a.flex_row, a.align_center, a.gap_md]}>
+          <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
+          <Text style={[a.text_sm, t.atoms.text_contrast_medium]}>
+            <Trans>or</Trans>
+          </Text>
+          <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
+        </View>
+      )}
       <View>
         <TextField.LabelText>
           <Trans>Hosting provider</Trans>
@@ -375,32 +449,6 @@ export const LoginForm = ({
           </Button>
         )}
       </View>
-      {IS_WEB && (
-        <View style={[a.pt_lg, a.gap_md]}>
-          <View style={[a.flex_row, a.align_center, a.gap_md]}>
-            <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
-            <Text style={[a.text_sm, t.atoms.text_contrast_medium]}>
-              <Trans>or</Trans>
-            </Text>
-            <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
-          </View>
-          <Button
-            testID="oauthSignInButton"
-            label={_(msg`Sign in with Bluesky`)}
-            accessibilityHint={_(
-              msg`Opens Bluesky authorization page to sign in`,
-            )}
-            color="secondary"
-            size="large"
-            onPress={handleOAuthSignIn}
-            disabled={isProcessing || isOAuthProcessing}>
-            <ButtonText>
-              <Trans>Sign in with Bluesky</Trans>
-            </ButtonText>
-            {isOAuthProcessing && <ButtonIcon icon={Loader} />}
-          </Button>
-        </View>
-      )}
     </FormContainer>
   )
 }

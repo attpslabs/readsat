@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 heures"
 
-#: src/screens/Login/LoginForm.tsx:294
+#: src/screens/Login/LoginForm.tsx:368
 msgid "2FA Confirmation"
 msgstr "Confirmation 2FA"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Paramètres d’accessibilité"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:208
+#: src/screens/Login/LoginForm.tsx:282
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "Disponible"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:333
-#: src/screens/Login/LoginForm.tsx:338
+#: src/screens/Login/LoginForm.tsx:407
+#: src/screens/Login/LoginForm.tsx:412
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -2034,7 +2034,7 @@ msgstr "Discussions"
 msgid "Check my status"
 msgstr "Vérifier mon statut"
 
-#: src/screens/Login/LoginForm.tsx:323
+#: src/screens/Login/LoginForm.tsx:397
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Vérifiez votre boîte e-mail pour un code de connexion et saisissez-le ici."
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:300
+#: src/screens/Login/LoginForm.tsx:374
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "Code de confirmation"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:356
+#: src/screens/Login/LoginForm.tsx:430
 msgid "Connecting to service..."
 msgstr ""
 
@@ -3650,7 +3650,7 @@ msgstr "Entrez le domaine que vous voulez utiliser"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Saisissez l’e-mail que vous avez utilisé pour créer votre compte. Nous vous enverrons un « code de réinitialisation » pour vous permettre de changer de mot de passe."
 
-#: src/screens/Login/LoginForm.tsx:234
+#: src/screens/Login/LoginForm.tsx:308
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Entrer le pseudo ou l’adresse e-mail utilisée lors de la création de votre compte"
 
@@ -3663,7 +3663,7 @@ msgstr "Saisissez votre date de naissance"
 msgid "Enter your email address"
 msgstr "Entrez votre e-mail"
 
-#: src/screens/Login/LoginForm.tsx:259
+#: src/screens/Login/LoginForm.tsx:333
 msgid "Enter your password"
 msgstr "Saisir votre mot de passe"
 
@@ -4051,7 +4051,7 @@ msgstr "Échec de l’envoi"
 msgid "Failed to send email, please try again."
 msgstr "Échec de l’envoi de l’e-mail, veuillez réessayer."
 
-#: src/screens/Login/LoginForm.tsx:190
+#: src/screens/Login/LoginForm.tsx:201
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4494,11 +4494,11 @@ msgstr "Oubliez le bruit"
 msgid "Forgot Password"
 msgstr "Mot de passe oublié"
 
-#: src/screens/Login/LoginForm.tsx:274
+#: src/screens/Login/LoginForm.tsx:348
 msgid "Forgot password?"
 msgstr "Mot de passe oublié ?"
 
-#: src/screens/Login/LoginForm.tsx:285
+#: src/screens/Login/LoginForm.tsx:359
 msgid "Forgot?"
 msgstr "Oublié ?"
 
@@ -5027,7 +5027,7 @@ msgid "Host:"
 msgstr "Hébergeur :"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:198
+#: src/screens/Login/LoginForm.tsx:272
 msgid "Hosting provider"
 msgstr "Hébergeur"
 
@@ -5228,7 +5228,7 @@ msgstr "Dans l’app., alertes, des comptes suivis"
 msgid "Inbox zero!"
 msgstr "C’est vide !"
 
-#: src/screens/Login/LoginForm.tsx:163
+#: src/screens/Login/LoginForm.tsx:166
 msgid "Incorrect username or password"
 msgstr "Pseudo ou mot de passe incorrect"
 
@@ -5248,7 +5248,7 @@ msgstr "Entrez le nouveau mot de passe"
 msgid "Input password for account deletion"
 msgstr "Entrez le mot de passe pour la suppression du compte"
 
-#: src/screens/Login/LoginForm.tsx:315
+#: src/screens/Login/LoginForm.tsx:389
 msgid "Input the code which has been emailed to you"
 msgstr "Entrez le code qui vous a été envoyé par e-mail"
 
@@ -5276,7 +5276,7 @@ msgstr "Voici la recherche d’amis via les contacts"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Et voici les posts conservés (les signets)"
 
-#: src/screens/Login/LoginForm.tsx:154
+#: src/screens/Login/LoginForm.tsx:157
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Code de confirmation 2FA invalide."
@@ -5844,9 +5844,9 @@ msgstr "Chargement…"
 msgid "Log"
 msgstr "Journaux"
 
-#: src/screens/Login/LoginForm.tsx:195
-#: src/screens/Login/LoginForm.tsx:366
-#: src/screens/Login/LoginForm.tsx:372
+#: src/screens/Login/LoginForm.tsx:206
+#: src/screens/Login/LoginForm.tsx:440
+#: src/screens/Login/LoginForm.tsx:446
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -6259,7 +6259,7 @@ msgstr "Accéder au kit de démarrage"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:367
+#: src/screens/Login/LoginForm.tsx:441
 msgid "Navigates to the next screen"
 msgstr "Navigue vers le prochain écran"
 
@@ -6954,7 +6954,7 @@ msgstr "Ouvre des détails supplémentaires pour une entrée de débug"
 msgid "Opens alt text dialog"
 msgstr "Ouvre la boîte de dialogue sur le texte alt"
 
-#: src/screens/Login/LoginForm.tsx:391
+#: src/screens/Login/LoginForm.tsx:214
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7021,7 +7021,7 @@ msgstr "Ouvre le lien vers {0}"
 msgid "Opens live status dialog"
 msgstr "Ouvre la fenêtre de statut « En direct »"
 
-#: src/screens/Login/LoginForm.tsx:275
+#: src/screens/Login/LoginForm.tsx:349
 msgid "Opens password reset form"
 msgstr "Ouvre le formulaire de réinitialisation du mot de passe"
 
@@ -7046,7 +7046,7 @@ msgstr "Ouvre ce profil"
 msgid "Options:"
 msgstr "Options :"
 
-#: src/screens/Login/LoginForm.tsx:383
+#: src/screens/Login/LoginForm.tsx:265
 msgid "or"
 msgstr ""
 
@@ -7135,7 +7135,7 @@ msgstr "Page introuvable"
 msgid "Page Not Found"
 msgstr "Page introuvable"
 
-#: src/screens/Login/LoginForm.tsx:244
+#: src/screens/Login/LoginForm.tsx:318
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7411,7 +7411,7 @@ msgstr "Veuillez saisir votre code d’invitation."
 msgid "Please enter your new email address."
 msgstr "Veuillez saisir votre nouvelle adresse e-mail."
 
-#: src/screens/Login/LoginForm.tsx:97
+#: src/screens/Login/LoginForm.tsx:100
 msgid "Please enter your password"
 msgstr "Veuillez entrer votre mot de passe"
 
@@ -7419,7 +7419,7 @@ msgstr "Veuillez entrer votre mot de passe"
 msgid "Please enter your password as well:"
 msgstr "Veuillez également entrer votre mot de passe :"
 
-#: src/screens/Login/LoginForm.tsx:91
+#: src/screens/Login/LoginForm.tsx:94
 msgid "Please enter your username"
 msgstr "Veuillez entrer votre pseudo"
 
@@ -8441,7 +8441,7 @@ msgstr "Réinitialiser mot de passe"
 msgid "Resync contacts"
 msgstr "Resynchroniser les contacts"
 
-#: src/screens/Login/LoginForm.tsx:346
+#: src/screens/Login/LoginForm.tsx:420
 msgid "Retries signing in"
 msgstr "Réessaye de se connecter"
 
@@ -8463,8 +8463,8 @@ msgstr "Réessaye la dernière action, qui a échoué"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:345
-#: src/screens/Login/LoginForm.tsx:351
+#: src/screens/Login/LoginForm.tsx:419
+#: src/screens/Login/LoginForm.tsx:425
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9346,6 +9346,8 @@ msgstr "Affiche le contenu"
 #: src/screens/Hashtag.tsx:240
 #: src/screens/Login/index.tsx:140
 #: src/screens/Login/index.tsx:161
+#: src/screens/Login/LoginForm.tsx:247
+#: src/screens/Login/LoginForm.tsx:253
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9390,8 +9392,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "Se connecter pour voir le post"
 
-#: src/screens/Login/LoginForm.tsx:389
-#: src/screens/Login/LoginForm.tsx:398
+#: src/screens/Login/LoginForm.tsx:212
+#: src/screens/Login/LoginForm.tsx:221
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -10591,7 +10593,7 @@ msgstr "Impossible de contacter votre service. Vérifiez votre connexion Interne
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:168
+#: src/screens/Login/LoginForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11031,7 +11033,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Le pseudo ne doit contenir que des lettres sans accents (a–z), des nombres et des traits d’union"
 
-#: src/screens/Login/LoginForm.tsx:216
+#: src/screens/Login/LoginForm.tsx:290
 msgid "Username or email address"
 msgstr "Pseudo ou e-mail"
 
@@ -12115,6 +12117,10 @@ msgstr "Vous : {defaultEmbeddedContentMessage}"
 #: src/screens/Messages/components/ChatListItem.tsx:179
 msgid "You: {short}"
 msgstr "Vous : {short}"
+
+#: src/screens/Login/LoginForm.tsx:232
+msgid "you.bsky.social"
+msgstr ""
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:245
 msgid "You'll follow these people and {0} others"

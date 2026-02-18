@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 hores"
 
-#: src/screens/Login/LoginForm.tsx:294
+#: src/screens/Login/LoginForm.tsx:368
 msgid "2FA Confirmation"
 msgstr "Confirmació 2FA"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Configuració d'accessibilitat"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:208
+#: src/screens/Login/LoginForm.tsx:282
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "Disponible"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:333
-#: src/screens/Login/LoginForm.tsx:338
+#: src/screens/Login/LoginForm.tsx:407
+#: src/screens/Login/LoginForm.tsx:412
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -2034,7 +2034,7 @@ msgstr "Xats"
 msgid "Check my status"
 msgstr "Comprova el meu estat"
 
-#: src/screens/Login/LoginForm.tsx:323
+#: src/screens/Login/LoginForm.tsx:397
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Comprova el teu correu electrònic per a obtenir un codi d'inici de sessió i introdueix-lo aquí."
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:300
+#: src/screens/Login/LoginForm.tsx:374
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "Codi de confirmació"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:356
+#: src/screens/Login/LoginForm.tsx:430
 msgid "Connecting to service..."
 msgstr ""
 
@@ -3650,7 +3650,7 @@ msgstr "Introdueix el domini que vols utilitzar"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Introdueix el correu que vas fer servir per a crear el teu compte. T'enviarem un \"codi de restabliment\" perquè puguis posar una nova contrasenya."
 
-#: src/screens/Login/LoginForm.tsx:234
+#: src/screens/Login/LoginForm.tsx:308
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Entra el nom d'usuari o el correu que vas utilitzar per a crear el teu compte"
 
@@ -3663,7 +3663,7 @@ msgstr "Posa la teva data de naixement"
 msgid "Enter your email address"
 msgstr "Introdueix el teu correu"
 
-#: src/screens/Login/LoginForm.tsx:259
+#: src/screens/Login/LoginForm.tsx:333
 msgid "Enter your password"
 msgstr "Introdueix la teva contrasenya"
 
@@ -4051,7 +4051,7 @@ msgstr "No s'ha pogut enviar"
 msgid "Failed to send email, please try again."
 msgstr "No s'ha pogut enviar el correu. Torna-ho a provar."
 
-#: src/screens/Login/LoginForm.tsx:190
+#: src/screens/Login/LoginForm.tsx:201
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4494,11 +4494,11 @@ msgstr "Oblida't del soroll"
 msgid "Forgot Password"
 msgstr "He oblidat la contrasenya"
 
-#: src/screens/Login/LoginForm.tsx:274
+#: src/screens/Login/LoginForm.tsx:348
 msgid "Forgot password?"
 msgstr "Has oblidat la contrasenya?"
 
-#: src/screens/Login/LoginForm.tsx:285
+#: src/screens/Login/LoginForm.tsx:359
 msgid "Forgot?"
 msgstr "Oblidada?"
 
@@ -5027,7 +5027,7 @@ msgid "Host:"
 msgstr "Allotjament:"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:198
+#: src/screens/Login/LoginForm.tsx:272
 msgid "Hosting provider"
 msgstr "Proveïdor d'allotjament"
 
@@ -5228,7 +5228,7 @@ msgstr "Integrades a l'aplicació, push, gent a qui segueixes"
 msgid "Inbox zero!"
 msgstr "La safata està buida"
 
-#: src/screens/Login/LoginForm.tsx:163
+#: src/screens/Login/LoginForm.tsx:166
 msgid "Incorrect username or password"
 msgstr "Nom d'usuari o contrasenya incorrectes"
 
@@ -5248,7 +5248,7 @@ msgstr "Introdueix una nova contrasenya"
 msgid "Input password for account deletion"
 msgstr "Introdueix la contrasenya per a eliminar el compte"
 
-#: src/screens/Login/LoginForm.tsx:315
+#: src/screens/Login/LoginForm.tsx:389
 msgid "Input the code which has been emailed to you"
 msgstr "Introdueix el codi que has rebut per correu"
 
@@ -5276,7 +5276,7 @@ msgstr "Com pots trobar amics a través dels contactes"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Presentem les publicacions desades, més conegudes com a marcadors"
 
-#: src/screens/Login/LoginForm.tsx:154
+#: src/screens/Login/LoginForm.tsx:157
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "El codi de confirmació 2FA no és vàlid."
@@ -5844,9 +5844,9 @@ msgstr "Carregant…"
 msgid "Log"
 msgstr "Registre"
 
-#: src/screens/Login/LoginForm.tsx:195
-#: src/screens/Login/LoginForm.tsx:366
-#: src/screens/Login/LoginForm.tsx:372
+#: src/screens/Login/LoginForm.tsx:206
+#: src/screens/Login/LoginForm.tsx:440
+#: src/screens/Login/LoginForm.tsx:446
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -6259,7 +6259,7 @@ msgstr "Ves a l'starter pack"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:367
+#: src/screens/Login/LoginForm.tsx:441
 msgid "Navigates to the next screen"
 msgstr "Navega a la pantalla següent"
 
@@ -6954,7 +6954,7 @@ msgstr "Obre detalls addicionals per una entrada de depuració"
 msgid "Opens alt text dialog"
 msgstr "Obre el diàleg de text alternatiu"
 
-#: src/screens/Login/LoginForm.tsx:391
+#: src/screens/Login/LoginForm.tsx:214
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7021,7 +7021,7 @@ msgstr "Obre l'enllaç {0}"
 msgid "Opens live status dialog"
 msgstr "Obre el quadre de diàleg d'estat en directe"
 
-#: src/screens/Login/LoginForm.tsx:275
+#: src/screens/Login/LoginForm.tsx:349
 msgid "Opens password reset form"
 msgstr "Obre el formulari de restabliment de la contrasenya"
 
@@ -7046,7 +7046,7 @@ msgstr "Obre aquest perfil"
 msgid "Options:"
 msgstr "Opcions:"
 
-#: src/screens/Login/LoginForm.tsx:383
+#: src/screens/Login/LoginForm.tsx:265
 msgid "or"
 msgstr ""
 
@@ -7135,7 +7135,7 @@ msgstr "Pàgina no trobada"
 msgid "Page Not Found"
 msgstr "Pàgina no trobada"
 
-#: src/screens/Login/LoginForm.tsx:244
+#: src/screens/Login/LoginForm.tsx:318
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7411,7 +7411,7 @@ msgstr "Entra el teu codi d'invitació."
 msgid "Please enter your new email address."
 msgstr "Introdueix la teva nova adreça de correu."
 
-#: src/screens/Login/LoginForm.tsx:97
+#: src/screens/Login/LoginForm.tsx:100
 msgid "Please enter your password"
 msgstr "Introdueix la contrasenya"
 
@@ -7419,7 +7419,7 @@ msgstr "Introdueix la contrasenya"
 msgid "Please enter your password as well:"
 msgstr "Introdueix la teva contrasenya també:"
 
-#: src/screens/Login/LoginForm.tsx:91
+#: src/screens/Login/LoginForm.tsx:94
 msgid "Please enter your username"
 msgstr "Introdueix el nom d'usuari"
 
@@ -8441,7 +8441,7 @@ msgstr "Restableix la contrasenya"
 msgid "Resync contacts"
 msgstr "Resincronitza els contactes"
 
-#: src/screens/Login/LoginForm.tsx:346
+#: src/screens/Login/LoginForm.tsx:420
 msgid "Retries signing in"
 msgstr "Torna a intentar iniciar sessió"
 
@@ -8463,8 +8463,8 @@ msgstr "Torna a intentar l'última acció, que ha donat error"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:345
-#: src/screens/Login/LoginForm.tsx:351
+#: src/screens/Login/LoginForm.tsx:419
+#: src/screens/Login/LoginForm.tsx:425
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9346,6 +9346,8 @@ msgstr "Mostra el contingut"
 #: src/screens/Hashtag.tsx:240
 #: src/screens/Login/index.tsx:140
 #: src/screens/Login/index.tsx:161
+#: src/screens/Login/LoginForm.tsx:247
+#: src/screens/Login/LoginForm.tsx:253
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9390,8 +9392,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "Inicia la sessió per veure la publicació"
 
-#: src/screens/Login/LoginForm.tsx:389
-#: src/screens/Login/LoginForm.tsx:398
+#: src/screens/Login/LoginForm.tsx:212
+#: src/screens/Login/LoginForm.tsx:221
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -10591,7 +10593,7 @@ msgstr "No es pot contactar amb el teu servei. Comprova la teva connexió a inte
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:168
+#: src/screens/Login/LoginForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11031,7 +11033,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "El nom d'usuari només pot tenir lletres (a-z), nombres i guionets"
 
-#: src/screens/Login/LoginForm.tsx:216
+#: src/screens/Login/LoginForm.tsx:290
 msgid "Username or email address"
 msgstr "Nom d'usuari o correu"
 
@@ -12115,6 +12117,10 @@ msgstr "Tu: {defaultEmbeddedContentMessage}"
 #: src/screens/Messages/components/ChatListItem.tsx:179
 msgid "You: {short}"
 msgstr "Tu: {short}"
+
+#: src/screens/Login/LoginForm.tsx:232
+msgid "you.bsky.social"
+msgstr ""
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:245
 msgid "You'll follow these people and {0} others"

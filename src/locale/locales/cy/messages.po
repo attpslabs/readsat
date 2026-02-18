@@ -538,7 +538,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 awr"
 
-#: src/screens/Login/LoginForm.tsx:294
+#: src/screens/Login/LoginForm.tsx:368
 msgid "2FA Confirmation"
 msgstr "Cadarnhad 2FA"
 
@@ -635,7 +635,7 @@ msgid "Accessibility Settings"
 msgstr "Gosodiadau Hygyrchedd"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:208
+#: src/screens/Login/LoginForm.tsx:282
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -1433,8 +1433,8 @@ msgstr "Ar gael"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:126
 #: src/screens/Login/ForgotPasswordForm.tsx:131
-#: src/screens/Login/LoginForm.tsx:333
-#: src/screens/Login/LoginForm.tsx:338
+#: src/screens/Login/LoginForm.tsx:407
+#: src/screens/Login/LoginForm.tsx:412
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -2034,7 +2034,7 @@ msgstr "Sgyrsiau"
 msgid "Check my status"
 msgstr "Gwirio fy statws"
 
-#: src/screens/Login/LoginForm.tsx:323
+#: src/screens/Login/LoginForm.tsx:397
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Gwiriwch eich e-bost am god mewngofnodi a rhowch ef yma."
 
@@ -2393,7 +2393,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:300
+#: src/screens/Login/LoginForm.tsx:374
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -2404,7 +2404,7 @@ msgid "Confirmation code"
 msgstr "Cod cadarnhau"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:139
-#: src/screens/Login/LoginForm.tsx:356
+#: src/screens/Login/LoginForm.tsx:430
 msgid "Connecting to service..."
 msgstr ""
 
@@ -3650,7 +3650,7 @@ msgstr "Rhowch y parth rydych chi am ei ddefnyddio"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Rhowch yr e-bost a ddefnyddiwyd gennych i greu eich cyfrif. Byddwn yn anfon \"cod ailosod\" atoch er mwyn i chi allu gosod cyfrinair newydd."
 
-#: src/screens/Login/LoginForm.tsx:234
+#: src/screens/Login/LoginForm.tsx:308
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Rhowch yr enw defnyddiwr neu'r cyfeiriad e-bost ddefnyddiwyd gennych pan wnaethoch chi greu eich cyfrif"
 
@@ -3663,7 +3663,7 @@ msgstr "Rhowch eich dyddiad geni"
 msgid "Enter your email address"
 msgstr "Rhowch eich cyfeiriad e-bost"
 
-#: src/screens/Login/LoginForm.tsx:259
+#: src/screens/Login/LoginForm.tsx:333
 msgid "Enter your password"
 msgstr "Rhowch eich cyfrinair"
 
@@ -4051,7 +4051,7 @@ msgstr "Methwyd anfon"
 msgid "Failed to send email, please try again."
 msgstr "Wedi methu anfon e-bost, ceisiwch eto."
 
-#: src/screens/Login/LoginForm.tsx:190
+#: src/screens/Login/LoginForm.tsx:201
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4494,11 +4494,11 @@ msgstr "Anghofiwch y dwndwr"
 msgid "Forgot Password"
 msgstr "Wedi anghofio'ch cyfrinair"
 
-#: src/screens/Login/LoginForm.tsx:274
+#: src/screens/Login/LoginForm.tsx:348
 msgid "Forgot password?"
 msgstr "Wedi anghofio'ch cyfrinair?"
 
-#: src/screens/Login/LoginForm.tsx:285
+#: src/screens/Login/LoginForm.tsx:359
 msgid "Forgot?"
 msgstr "Wedi anghofio?"
 
@@ -5027,7 +5027,7 @@ msgid "Host:"
 msgstr "Gwesteiwr:"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:84
-#: src/screens/Login/LoginForm.tsx:198
+#: src/screens/Login/LoginForm.tsx:272
 msgid "Hosting provider"
 msgstr "Darparwr gwesteio"
 
@@ -5228,7 +5228,7 @@ msgstr "O fewn yr ap, Gwthio, Pobl rydych yn eu dilyn"
 msgid "Inbox zero!"
 msgstr "Dim yn y blwch derbyn!"
 
-#: src/screens/Login/LoginForm.tsx:163
+#: src/screens/Login/LoginForm.tsx:166
 msgid "Incorrect username or password"
 msgstr "Enw defnyddiwr neu gyfrinair anghywir"
 
@@ -5248,7 +5248,7 @@ msgstr "Mewnbynnu cyfrinair newydd"
 msgid "Input password for account deletion"
 msgstr "Mewnbynnu cyfrinair ar gyfer dileu cyfrif"
 
-#: src/screens/Login/LoginForm.tsx:315
+#: src/screens/Login/LoginForm.tsx:389
 msgid "Input the code which has been emailed to you"
 msgstr "Mewnbynnwch y cod sydd wedi'i e-bostio atoch"
 
@@ -5276,7 +5276,7 @@ msgstr "Chwilio am ffrindiau drwy eich cysylltiadau"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Yn cyflwyno postiadau wedi'u cadw, hynny yw, nodau tudalen"
 
-#: src/screens/Login/LoginForm.tsx:154
+#: src/screens/Login/LoginForm.tsx:157
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Cod cadarnhau 2FA annilys."
@@ -5844,9 +5844,9 @@ msgstr "Yn llwytho..."
 msgid "Log"
 msgstr "Cofnod"
 
-#: src/screens/Login/LoginForm.tsx:195
-#: src/screens/Login/LoginForm.tsx:366
-#: src/screens/Login/LoginForm.tsx:372
+#: src/screens/Login/LoginForm.tsx:206
+#: src/screens/Login/LoginForm.tsx:440
+#: src/screens/Login/LoginForm.tsx:446
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -6259,7 +6259,7 @@ msgstr "Ewch i'r pecyn cychwyn"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:149
 #: src/screens/Login/ForgotPasswordForm.tsx:174
-#: src/screens/Login/LoginForm.tsx:367
+#: src/screens/Login/LoginForm.tsx:441
 msgid "Navigates to the next screen"
 msgstr "Yn llywio i'r sgrin nesaf"
 
@@ -6954,7 +6954,7 @@ msgstr "Yn agor manylion ychwanegol cofnod dadfygio"
 msgid "Opens alt text dialog"
 msgstr "Yn agor deialog testun amgen"
 
-#: src/screens/Login/LoginForm.tsx:391
+#: src/screens/Login/LoginForm.tsx:214
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7021,7 +7021,7 @@ msgstr "Yn agor y ddolen {0}"
 msgid "Opens live status dialog"
 msgstr "Yn agor deialog statws byw"
 
-#: src/screens/Login/LoginForm.tsx:275
+#: src/screens/Login/LoginForm.tsx:349
 msgid "Opens password reset form"
 msgstr "Yn agor ffurflen ailosod cyfrinair"
 
@@ -7046,7 +7046,7 @@ msgstr "Yn agor y proffil hwn"
 msgid "Options:"
 msgstr "Dewisiadau:"
 
-#: src/screens/Login/LoginForm.tsx:383
+#: src/screens/Login/LoginForm.tsx:265
 msgid "or"
 msgstr ""
 
@@ -7135,7 +7135,7 @@ msgstr "Heb ganfod y dudalen"
 msgid "Page Not Found"
 msgstr "Tudalen Heb ei Chanfod"
 
-#: src/screens/Login/LoginForm.tsx:244
+#: src/screens/Login/LoginForm.tsx:318
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7411,7 +7411,7 @@ msgstr "Rhowch eich cod gwahodd."
 msgid "Please enter your new email address."
 msgstr "Rhowch eich cyfeiriad e-bost newydd."
 
-#: src/screens/Login/LoginForm.tsx:97
+#: src/screens/Login/LoginForm.tsx:100
 msgid "Please enter your password"
 msgstr "Rhowch eich cyfrinair"
 
@@ -7419,7 +7419,7 @@ msgstr "Rhowch eich cyfrinair"
 msgid "Please enter your password as well:"
 msgstr "Rhowch eich cyfrinair hefyd:"
 
-#: src/screens/Login/LoginForm.tsx:91
+#: src/screens/Login/LoginForm.tsx:94
 msgid "Please enter your username"
 msgstr "Rhowch eich enw defnyddiwr"
 
@@ -8441,7 +8441,7 @@ msgstr "Ailosod cyfrinair"
 msgid "Resync contacts"
 msgstr "Ail gydweddu cysylltiadau"
 
-#: src/screens/Login/LoginForm.tsx:346
+#: src/screens/Login/LoginForm.tsx:420
 msgid "Retries signing in"
 msgstr "Yn ceisio mewngofnodi eto"
 
@@ -8463,8 +8463,8 @@ msgstr "Yn ceisio'r weithred olaf eto, oedd yn wallus"
 #: src/components/StarterPack/ProfileStarterPacks.tsx:376
 #: src/screens/BookClubs/BookClubsScreen.tsx:83
 #: src/screens/BookClubs/BookClubsScreen.tsx:88
-#: src/screens/Login/LoginForm.tsx:345
-#: src/screens/Login/LoginForm.tsx:351
+#: src/screens/Login/LoginForm.tsx:419
+#: src/screens/Login/LoginForm.tsx:425
 #: src/screens/Messages/ChatList.tsx:292
 #: src/screens/Messages/components/MessageListError.tsx:25
 #: src/screens/Messages/Inbox.tsx:219
@@ -9346,6 +9346,8 @@ msgstr "Yn dangos y cynnwys"
 #: src/screens/Hashtag.tsx:240
 #: src/screens/Login/index.tsx:140
 #: src/screens/Login/index.tsx:161
+#: src/screens/Login/LoginForm.tsx:247
+#: src/screens/Login/LoginForm.tsx:253
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9390,8 +9392,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "Mewngofnodwch i weld y postiad"
 
-#: src/screens/Login/LoginForm.tsx:389
-#: src/screens/Login/LoginForm.tsx:398
+#: src/screens/Login/LoginForm.tsx:212
+#: src/screens/Login/LoginForm.tsx:221
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -10591,7 +10593,7 @@ msgstr "Methu cysylltu â'ch gwasanaeth. Gwiriwch eich cysylltiad rhyngrwyd a rh
 
 #: src/screens/Login/ForgotPasswordForm.tsx:69
 #: src/screens/Login/index.tsx:96
-#: src/screens/Login/LoginForm.tsx:168
+#: src/screens/Login/LoginForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11031,7 +11033,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Gall enw defnyddiwr gynnwys dim ond llythrennau (a-z), rifau a chyplysnodau"
 
-#: src/screens/Login/LoginForm.tsx:216
+#: src/screens/Login/LoginForm.tsx:290
 msgid "Username or email address"
 msgstr "Enw defnyddiwr neu gyfeiriad e-bost"
 
@@ -12115,6 +12117,10 @@ msgstr "Chi: {defaultEmbeddedContentMessage}"
 #: src/screens/Messages/components/ChatListItem.tsx:179
 msgid "You: {short}"
 msgstr "Chi: {short}"
+
+#: src/screens/Login/LoginForm.tsx:232
+msgid "you.bsky.social"
+msgstr ""
 
 #: src/screens/StarterPack/StarterPackLandingScreen.tsx:245
 msgid "You'll follow these people and {0} others"
