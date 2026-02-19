@@ -14,7 +14,7 @@ export function useAccountSwitcher() {
   const ax = useAnalytics()
   const [pendingDid, setPendingDid] = useState<string | null>(null)
   const {_} = useLingui()
-  const {resumeSession} = useSessionApi()
+  const {resumeSession, resumeOAuthSession} = useSessionApi()
   const {requestSwitchToAccount} = useLoggedOutViewControls()
 
   const onPressSwitchAccount = useCallback(
@@ -28,7 +28,14 @@ export function useAccountSwitcher() {
       }
       try {
         setPendingDid(account.did)
-        if (account.accessJwt) {
+        if (account.isOAuth) {
+          if (IS_WEB) {
+            history.pushState(null, '', '/')
+          }
+          await resumeOAuthSession(account)
+          ax.metric('account:loggedIn', {logContext, withPassword: false})
+          Toast.show(_(msg`Signed in as @${account.handle}`))
+        } else if (account.accessJwt) {
           if (IS_WEB) {
             // We're switching accounts, which remounts the entire app.
             // On mobile, this gets us Home, but on the web we also need reset the URL.
@@ -60,7 +67,14 @@ export function useAccountSwitcher() {
         setPendingDid(null)
       }
     },
-    [_, ax, resumeSession, requestSwitchToAccount, pendingDid],
+    [
+      _,
+      ax,
+      resumeSession,
+      resumeOAuthSession,
+      requestSwitchToAccount,
+      pendingDid,
+    ],
   )
 
   return {onPressSwitchAccount, pendingDid}
