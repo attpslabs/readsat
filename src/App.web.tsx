@@ -100,6 +100,9 @@ function InnerApp() {
 
         if (oauthResult?.session) {
           // Returning from an OAuth redirect — complete the login
+          // Replace /oauth/callback URL with /books so the NavigationContainer
+          // initializes at the Books screen instead of NotFound
+          window.history.replaceState(null, '', '/books')
           await loginWithOAuth(oauthResult.session)
         } else if (account?.isOAuth) {
           // Restore an existing OAuth session from IndexedDB
