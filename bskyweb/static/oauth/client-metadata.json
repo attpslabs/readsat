@@ -3,7 +3,7 @@
   "client_name": "Reads",
   "client_uri": "https://reads.at",
   "redirect_uris": ["https://reads.at/oauth/callback"],
-  "scope": "atproto",
+  "scope": "atproto transition:generic transition:chat.bsky",
   "grant_types": ["authorization_code", "refresh_token"],
   "response_types": ["code"],
   "token_endpoint_auth_method": "none",
