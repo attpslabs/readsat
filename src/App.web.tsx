@@ -1,6 +1,5 @@
 import '#/logger/sentry/setup' // must be near top
 import '#/view/icons'
-import './style.css'
 
 import {Fragment, useEffect, useState} from 'react'
 import {SafeAreaProvider} from 'react-native-safe-area-context'
