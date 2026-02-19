@@ -1,4 +1,4 @@
-import {useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {Keyboard, type TextInput, View} from 'react-native'
 import {ComAtprotoServerCreateSession} from '@atproto/api'
 import {msg, Trans} from '@lingui/macro'
@@ -62,6 +62,19 @@ export const LoginForm = ({
   const requestNotificationsPermission = useRequestNotificationsPermission()
   const {setShowLoggedOut} = useLoggedOutViewControls()
   const setHasCheckedForStarterPack = useSetHasCheckedForStarterPack()
+  const oauthAreaRef = useRef<View>(null)
+
+  useEffect(() => {
+    if (!IS_WEB || !isOAuthExpanded) return
+    const handler = (e: MouseEvent) => {
+      const node = oauthAreaRef.current as unknown as HTMLElement | null
+      if (node && !node.contains(e.target as Node)) {
+        setIsOAuthExpanded(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [isOAuthExpanded])
 
   const onPressNext = async () => {
     if (isProcessing) return
@@ -174,7 +187,7 @@ export const LoginForm = ({
   return (
     <FormContainer testID="loginForm" titleText={<Trans>Log in</Trans>}>
       {IS_WEB && (
-        <View>
+        <View ref={oauthAreaRef}>
           {!isOAuthExpanded ? (
             <Button
               testID="oauthSignInButton"
@@ -227,7 +240,7 @@ export const LoginForm = ({
           )}
         </View>
       )}
-      {IS_WEB && (
+      {IS_WEB && !isOAuthExpanded && (
         <View style={[a.flex_row, a.align_center, a.gap_md]}>
           <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
           <Text style={[a.text_sm, t.atoms.text_contrast_medium]}>
@@ -236,92 +249,94 @@ export const LoginForm = ({
           <View style={[a.flex_1, a.border_b, t.atoms.border_contrast_low]} />
         </View>
       )}
-      <View>
-        <TextField.LabelText>
-          <Trans>Account</Trans>
-        </TextField.LabelText>
-        <View style={[a.gap_sm]}>
-          <TextField.Root isInvalid={errorField === 'identifier'}>
-            <TextField.Icon icon={At} />
-            <TextField.Input
-              testID="loginUsernameInput"
-              inputRef={identifierRef}
-              label={_(msg`Username or email address`)}
-              autoCapitalize="none"
-              autoFocus={!IS_IOS}
-              autoCorrect={false}
-              autoComplete="username"
-              returnKeyType="next"
-              textContentType="username"
-              defaultValue={initialHandle || ''}
-              onChangeText={v => {
-                identifierValueRef.current = v
-                if (errorField) setErrorField('none')
-              }}
-              onSubmitEditing={() => {
-                passwordRef.current?.focus()
-              }}
-              blurOnSubmit={false} // prevents flickering due to onSubmitEditing going to next field
-              editable={!isProcessing}
-              accessibilityHint={_(
-                msg`Enter the username or email address you used when you created your account`,
-              )}
-            />
-          </TextField.Root>
+      {!isOAuthExpanded && (
+        <View>
+          <TextField.LabelText>
+            <Trans>Account</Trans>
+          </TextField.LabelText>
+          <View style={[a.gap_sm]}>
+            <TextField.Root isInvalid={errorField === 'identifier'}>
+              <TextField.Icon icon={At} />
+              <TextField.Input
+                testID="loginUsernameInput"
+                inputRef={identifierRef}
+                label={_(msg`Username or email address`)}
+                autoCapitalize="none"
+                autoFocus={!IS_IOS}
+                autoCorrect={false}
+                autoComplete="username"
+                returnKeyType="next"
+                textContentType="username"
+                defaultValue={initialHandle || ''}
+                onChangeText={v => {
+                  identifierValueRef.current = v
+                  if (errorField) setErrorField('none')
+                }}
+                onSubmitEditing={() => {
+                  passwordRef.current?.focus()
+                }}
+                blurOnSubmit={false} // prevents flickering due to onSubmitEditing going to next field
+                editable={!isProcessing}
+                accessibilityHint={_(
+                  msg`Enter the username or email address you used when you created your account`,
+                )}
+              />
+            </TextField.Root>
 
-          <TextField.Root isInvalid={errorField === 'password'}>
-            <TextField.Icon icon={Lock} />
-            <TextField.Input
-              testID="loginPasswordInput"
-              inputRef={passwordRef}
-              label={_(msg`Password`)}
-              autoCapitalize="none"
-              autoCorrect={false}
-              autoComplete="current-password"
-              returnKeyType="done"
-              enablesReturnKeyAutomatically={true}
-              secureTextEntry={true}
-              clearButtonMode="while-editing"
-              onChangeText={v => {
-                passwordValueRef.current = v
-                if (errorField) setErrorField('none')
-              }}
-              onSubmitEditing={onPressNext}
-              blurOnSubmit={false} // HACK: https://github.com/facebook/react-native/issues/21911#issuecomment-558343069 Keyboard blur behavior is now handled in onSubmitEditing
-              editable={!isProcessing}
-              accessibilityHint={_(msg`Enter your password`)}
-              onLayout={ios(() => {
-                if (hasFocusedOnce.current) return
-                hasFocusedOnce.current = true
-                // kinda dumb, but if we use `autoFocus` to focus
-                // the username input, it happens before the password
-                // input gets rendered. this breaks the password autofill
-                // on iOS (it only does the username part). delaying
-                // it until both inputs are rendered fixes the autofill -sfn
-                identifierRef.current?.focus()
-              })}
-            />
-            <Button
-              testID="forgotPasswordButton"
-              onPress={onPressForgotPassword}
-              label={_(msg`Forgot password?`)}
-              accessibilityHint={_(msg`Opens password reset form`)}
-              variant="solid"
-              color="secondary"
-              style={[
-                a.rounded_sm,
-                // t.atoms.bg_contrast_100,
-                {marginLeft: 'auto', left: 6, padding: 6},
-                a.z_10,
-              ]}>
-              <ButtonText>
-                <Trans>Forgot?</Trans>
-              </ButtonText>
-            </Button>
-          </TextField.Root>
+            <TextField.Root isInvalid={errorField === 'password'}>
+              <TextField.Icon icon={Lock} />
+              <TextField.Input
+                testID="loginPasswordInput"
+                inputRef={passwordRef}
+                label={_(msg`Password`)}
+                autoCapitalize="none"
+                autoCorrect={false}
+                autoComplete="current-password"
+                returnKeyType="done"
+                enablesReturnKeyAutomatically={true}
+                secureTextEntry={true}
+                clearButtonMode="while-editing"
+                onChangeText={v => {
+                  passwordValueRef.current = v
+                  if (errorField) setErrorField('none')
+                }}
+                onSubmitEditing={onPressNext}
+                blurOnSubmit={false} // HACK: https://github.com/facebook/react-native/issues/21911#issuecomment-558343069 Keyboard blur behavior is now handled in onSubmitEditing
+                editable={!isProcessing}
+                accessibilityHint={_(msg`Enter your password`)}
+                onLayout={ios(() => {
+                  if (hasFocusedOnce.current) return
+                  hasFocusedOnce.current = true
+                  // kinda dumb, but if we use `autoFocus` to focus
+                  // the username input, it happens before the password
+                  // input gets rendered. this breaks the password autofill
+                  // on iOS (it only does the username part). delaying
+                  // it until both inputs are rendered fixes the autofill -sfn
+                  identifierRef.current?.focus()
+                })}
+              />
+              <Button
+                testID="forgotPasswordButton"
+                onPress={onPressForgotPassword}
+                label={_(msg`Forgot password?`)}
+                accessibilityHint={_(msg`Opens password reset form`)}
+                variant="solid"
+                color="secondary"
+                style={[
+                  a.rounded_sm,
+                  // t.atoms.bg_contrast_100,
+                  {marginLeft: 'auto', left: 6, padding: 6},
+                  a.z_10,
+                ]}>
+                <ButtonText>
+                  <Trans>Forgot?</Trans>
+                </ButtonText>
+              </Button>
+            </TextField.Root>
+          </View>
         </View>
-      </View>
-      {isAuthFactorTokenNeeded && (
+      )}
+      {!isOAuthExpanded && isAuthFactorTokenNeeded && (
         <View>
           <TextField.LabelText>
             <Trans>2FA Confirmation</Trans>
@@ -360,31 +375,33 @@ export const LoginForm = ({
         </View>
       )}
       <FormError error={error} />
-      <View style={[a.pt_md, web([a.justify_between, a.flex_row])]}>
-        {IS_WEB && (
+      {!isOAuthExpanded && (
+        <View style={[a.pt_md, web([a.justify_between, a.flex_row])]}>
+          {IS_WEB && (
+            <Button
+              label={_(msg`Back`)}
+              color="secondary"
+              size="large"
+              onPress={onPressBack}>
+              <ButtonText>
+                <Trans>Back</Trans>
+              </ButtonText>
+            </Button>
+          )}
           <Button
-            label={_(msg`Back`)}
-            color="secondary"
+            testID="loginNextButton"
+            label={_(msg`Log in`)}
+            accessibilityHint={_(msg`Navigates to the next screen`)}
+            color="primary"
             size="large"
-            onPress={onPressBack}>
+            onPress={onPressNext}>
             <ButtonText>
-              <Trans>Back</Trans>
+              <Trans>Log in</Trans>
             </ButtonText>
+            {isProcessing && <ButtonIcon icon={Loader} />}
           </Button>
-        )}
-        <Button
-          testID="loginNextButton"
-          label={_(msg`Log in`)}
-          accessibilityHint={_(msg`Navigates to the next screen`)}
-          color="primary"
-          size="large"
-          onPress={onPressNext}>
-          <ButtonText>
-            <Trans>Log in</Trans>
-          </ButtonText>
-          {isProcessing && <ButtonIcon icon={Loader} />}
-        </Button>
-      </View>
+        </View>
+      )}
     </FormContainer>
   )
 }
