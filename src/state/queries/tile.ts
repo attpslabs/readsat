@@ -1,10 +1,10 @@
 import {useQuery} from '@tanstack/react-query'
 
+import {PUBLIC_BSKY_SERVICE} from '#/lib/constants'
 import {loadTileContent} from '#/lib/tiles/loader'
 import {getTileHandle} from '#/lib/tiles/resolve'
 import {type TileManifest, type TileMaslRecord} from '#/lib/tiles/types'
 import {STALE} from '#/state/queries'
-import {useAgent} from '#/state/session'
 
 const TILE_COLLECTION = 'ing.dasl.masl'
 const TILE_RKEY = 'goodreads'
@@ -31,19 +31,41 @@ async function resolvePdsUrl(did: string): Promise<string> {
   return pds.serviceEndpoint.replace(/\/$/, '')
 }
 
-function useTileQuery({did}: {did: string | undefined}) {
-  const agent = useAgent()
+/**
+ * Resolve a handle to a DID via the public API.
+ * Uses the public appview instead of the session agent so it works
+ * regardless of which PDS the logged-in user is on.
+ */
+async function resolveHandlePublic(handle: string): Promise<string> {
+  const url = `${PUBLIC_BSKY_SERVICE}/xrpc/com.atproto.identity.resolveHandle?handle=${encodeURIComponent(handle)}`
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`Failed to resolve handle: ${res.status}`)
+  const data = await res.json()
+  return data.did
+}
 
+/**
+ * Fetch an AT Protocol record via the public API.
+ */
+async function getRecordPublic(
+  repo: string,
+  collection: string,
+  rkey: string,
+): Promise<unknown> {
+  const url = `${PUBLIC_BSKY_SERVICE}/xrpc/com.atproto.repo.getRecord?repo=${encodeURIComponent(repo)}&collection=${encodeURIComponent(collection)}&rkey=${encodeURIComponent(rkey)}`
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`Failed to fetch record: ${res.status}`)
+  const data = await res.json()
+  return data.value
+}
+
+function useTileQuery({did}: {did: string | undefined}) {
   return useQuery<TileManifest | null>({
     queryKey: RQKEY_MANIFEST(did ?? ''),
     queryFn: async () => {
       try {
-        const res = await agent.com.atproto.repo.getRecord({
-          repo: did!,
-          collection: TILE_COLLECTION,
-          rkey: TILE_RKEY,
-        })
-        const record = res.data.value as unknown as TileMaslRecord
+        const value = await getRecordPublic(did!, TILE_COLLECTION, TILE_RKEY)
+        const record = value as TileMaslRecord
         const tile = record.tile
         if (!tile?.name || !tile?.resources?.['/']) return null
         return tile
@@ -59,13 +81,11 @@ function useTileQuery({did}: {did: string | undefined}) {
 
 export function useTileForUrl(url: string) {
   const handle = getTileHandle(url)
-  const agent = useAgent()
 
   const {data: did} = useQuery({
     queryKey: RQKEY_DID(handle ?? ''),
     queryFn: async () => {
-      const res = await agent.resolveHandle({handle: handle!})
-      return res.data.did
+      return resolveHandlePublic(handle!)
     },
     staleTime: STALE.INFINITY,
     enabled: !!handle,
