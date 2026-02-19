@@ -18,7 +18,10 @@ export async function initOAuthClient() {
 }
 
 export async function startOAuthSignIn(handle?: string): Promise<never> {
-  if (!oauthClient) throw new Error('OAuth client not initialized')
+  if (!oauthClient)
+    throw new Error(
+      'OAuth client not initialized — check browser console for details',
+    )
   return oauthClient.signInRedirect(handle || 'bsky.social')
 }
 

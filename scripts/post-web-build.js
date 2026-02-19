@@ -46,3 +46,8 @@ function copyFiles(sourceDir, targetDir) {
 copyFiles('web-build/static/js', 'bskyweb/static/js')
 copyFiles('web-build/static/css', 'bskyweb/static/css')
 copyFiles('web-build/static/media', 'bskyweb/static/media')
+
+// Copy OAuth client metadata into web-build so Cloudflare Pages can serve it
+const oauthTargetDir = path.join(projectRoot, 'web-build', 'oauth')
+fs.mkdirSync(oauthTargetDir, {recursive: true})
+copyFiles('bskyweb/static/oauth', 'web-build/oauth')
