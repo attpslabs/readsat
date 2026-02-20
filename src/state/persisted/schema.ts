@@ -181,8 +181,8 @@ export const defaults: Schema = {
   kawaii: false,
   hasCheckedForStarterPack: false,
   subtitlesEnabled: true,
-  trendingDisabled: false,
-  trendingVideoDisabled: false,
+  trendingDisabled: true,
+  trendingVideoDisabled: true,
   pinnedBookClubs: {},
 }
 
