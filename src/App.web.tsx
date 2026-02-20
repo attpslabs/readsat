@@ -92,17 +92,28 @@ function InnerApp() {
   useEffect(() => {
     async function onLaunch(account?: SessionAccount) {
       try {
+        // Capture OAuth callback params before init — the library strips
+        // them from the URL during initCallback(), so we must check now.
+        const searchParams = new URLSearchParams(window.location.search)
+        const isOAuthCallback =
+          searchParams.has('state') &&
+          (searchParams.has('code') || searchParams.has('error'))
+
         // Initialize OAuth client and check for callback redirect
         const oauthResult = await initOAuthClient().catch(e => {
           logger.warn('session: OAuth init failed', {message: e})
           return null
         })
 
-        if (oauthResult?.session) {
-          // Returning from an OAuth redirect — complete the login
-          // Replace /oauth/callback URL with /books so the NavigationContainer
-          // initializes at the Books screen instead of NotFound
+        if (oauthResult?.session && isOAuthCallback) {
+          // Returning from an OAuth redirect — complete the login.
+          // Replace the callback URL with /books so the NavigationContainer
+          // initializes at the Books screen instead of NotFound.
           window.history.replaceState(null, '', '/books')
+          await loginWithOAuth(oauthResult.session)
+        } else if (oauthResult?.session) {
+          // Session restored from IndexedDB — keep the current URL intact
+          // so deep links (e.g. /user/post/rkey) resolve correctly.
           await loginWithOAuth(oauthResult.session)
         } else if (account?.isOAuth) {
           // Restore an existing OAuth session from IndexedDB
