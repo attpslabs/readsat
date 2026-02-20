@@ -128,6 +128,10 @@ msgstr "{0, plural, one {berpost} other {berpost}}"
 msgid "{0, plural, one {save} other {saves}}"
 msgstr "{0, plural, one {gordea} other {gordeta}}"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:77
+msgid "{0, plural, one {Synced # book from Goodreads} other {Synced # books from Goodreads}}"
+msgstr ""
+
 #. Number of users (always at least 25) who have joined Bluesky using a specific starter pack
 #: src/screens/StarterPack/StarterPackScreen.tsx:499
 msgid "{0, plural, other {# people have}} joined Bluesky via this starter pack!"
@@ -538,7 +542,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 ordu"
 
-#: src/screens/Login/LoginForm.tsx:327
+#: src/screens/Login/LoginForm.tsx:342
 msgid "2FA Confirmation"
 msgstr "2FA Baieztapena"
 
@@ -635,7 +639,7 @@ msgid "Accessibility Settings"
 msgstr "Erabilerraztasun Doikuntzak"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:241
+#: src/screens/Login/LoginForm.tsx:255
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -799,6 +803,14 @@ msgstr "Gehitu Aplikazio Pasahitza"
 msgid "Add emoji reaction"
 msgstr "Gehitu emoji erreakzioa"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:187
+msgid "Add Goodreads profile"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:193
+msgid "Add Goodreads Profile"
+msgstr ""
+
 #: src/view/com/feeds/ComposerPrompt.tsx:223
 msgid "Add image"
 msgstr "Gehitu irudia"
@@ -876,6 +888,10 @@ msgstr "Gehitu erabiltzailea zerrendara"
 #: src/ageAssurance/components/NoAccessScreen.tsx:228
 msgid "Add your birthdate"
 msgstr "Gehitu zure jaiotze data"
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:182
+msgid "Add your Goodreads profile to sync your bookshelves."
+msgstr ""
 
 #: src/components/dialogs/lists/ListAddRemoveUsersDialog.tsx:109
 #: src/view/com/modals/UserAddRemoveLists.tsx:162
@@ -1433,8 +1449,8 @@ msgstr "Eskuragarri"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:104
 #: src/screens/Login/ForgotPasswordForm.tsx:109
-#: src/screens/Login/LoginForm.tsx:366
-#: src/screens/Login/LoginForm.tsx:371
+#: src/screens/Login/LoginForm.tsx:382
+#: src/screens/Login/LoginForm.tsx:387
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1848,6 +1864,8 @@ msgstr "Kamera"
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:43
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:52
 #: src/view/shell/desktop/LeftNav.tsx:217
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:165
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:174
 msgid "Cancel"
 msgstr "Utzi"
 
@@ -2034,7 +2052,7 @@ msgstr "Txatak"
 msgid "Check my status"
 msgstr "Egiaztatu nire egoera"
 
-#: src/screens/Login/LoginForm.tsx:356
+#: src/screens/Login/LoginForm.tsx:371
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Egiaztatu zure e-posta, saioa hasteko kodea hartu eta sartu hemen."
 
@@ -2393,7 +2411,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:348
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -3645,7 +3663,7 @@ msgstr "Sartu erabili nahi duzun domeinua"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Sartu zure kontua sortzeko erabili duzun posta elektronikoa. \"Berrezarri kodea\" bidaliko dizugu pasahitz berri bat ezar dezazun."
 
-#: src/screens/Login/LoginForm.tsx:267
+#: src/screens/Login/LoginForm.tsx:281
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Sartu kontua sortu zenuenean erabili zenuen erabiltzaile-izena edo helbide elektronikoa"
 
@@ -3658,7 +3676,7 @@ msgstr "Sartu zure jaiotze data"
 msgid "Enter your email address"
 msgstr "Sartu zure posta elektroniko helbidea"
 
-#: src/screens/Login/LoginForm.tsx:292
+#: src/screens/Login/LoginForm.tsx:306
 msgid "Enter your password"
 msgstr "Sartu zure pasahitza"
 
@@ -3666,7 +3684,7 @@ msgstr "Sartu zure pasahitza"
 msgid "Enter your username"
 msgstr ""
 
-#: src/screens/Login/index.tsx:111
+#: src/screens/Login/index.tsx:112
 msgid "Enter your username and password"
 msgstr "Sartu zure erabiltzaile-izena eta pasahitza"
 
@@ -4018,6 +4036,10 @@ msgstr ""
 msgid "Failed to save draft"
 msgstr "Ezin izan da zirriborroa gorde"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:58
+msgid "Failed to save Goodreads profile"
+msgstr ""
+
 #: src/lib/media/save-image.ios.ts:27
 #: src/lib/media/save-image.ts:31
 msgid "Failed to save image: {0}"
@@ -4046,7 +4068,7 @@ msgstr "Ezin izan da bidali"
 msgid "Failed to send email, please try again."
 msgstr "Ezin izan da posta elektronikoa bidali. Mesedez, saiatu berriro."
 
-#: src/screens/Login/LoginForm.tsx:170
+#: src/screens/Login/LoginForm.tsx:183
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4138,8 +4160,8 @@ msgstr "Feeda aktibatu/desaktibatu"
 msgid "Feed unavailable"
 msgstr "Feeda ez dago erabilgarri"
 
-#: src/view/shell/desktop/RightNav.tsx:120
-#: src/view/shell/desktop/RightNav.tsx:121
+#: src/view/shell/desktop/RightNav.tsx:122
+#: src/view/shell/desktop/RightNav.tsx:123
 #: src/view/shell/Drawer.tsx:407
 msgid "Feedback"
 msgstr "Feedbacka"
@@ -4484,16 +4506,16 @@ msgstr "Betirako"
 msgid "Forget the noise"
 msgstr "Ahaztu zarata"
 
-#: src/screens/Login/index.tsx:138
-#: src/screens/Login/index.tsx:152
+#: src/screens/Login/index.tsx:139
+#: src/screens/Login/index.tsx:153
 msgid "Forgot Password"
 msgstr "Pasahitza Ahaztua"
 
-#: src/screens/Login/LoginForm.tsx:307
+#: src/screens/Login/LoginForm.tsx:321
 msgid "Forgot password?"
 msgstr "Pasahitza ahaztu duzu?"
 
-#: src/screens/Login/LoginForm.tsx:318
+#: src/screens/Login/LoginForm.tsx:332
 msgid "Forgot?"
 msgstr "Ahaztuta?"
 
@@ -4741,8 +4763,21 @@ msgstr ""
 msgid "Goodreads Profile"
 msgstr ""
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:56
+msgid "Goodreads profile saved"
+msgstr ""
+
 #: src/screens/Profile/Header/EditProfileDialog.tsx:432
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:135
 msgid "Goodreads profile URL"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:131
+msgid "Goodreads Profile URL"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:96
+msgid "Goodreads Sync"
 msgstr ""
 
 #: src/screens/Profile/components/GermButton.tsx:251
@@ -4841,8 +4876,8 @@ msgstr "Bluesky-k 7 egunez gordetzen du gehiegikeria saihesteko, eta gero ezabat
 
 #: src/screens/Settings/Settings.tsx:252
 #: src/screens/Settings/Settings.tsx:256
-#: src/view/shell/desktop/RightNav.tsx:141
-#: src/view/shell/desktop/RightNav.tsx:144
+#: src/view/shell/desktop/RightNav.tsx:143
+#: src/view/shell/desktop/RightNav.tsx:146
 #: src/view/shell/Drawer.tsx:420
 msgid "Help"
 msgstr "Laguntza"
@@ -5218,7 +5253,7 @@ msgstr "Aplikazioan, Push, Jarraitzen duzun jendea"
 msgid "Inbox zero!"
 msgstr "Sarrera-ontzia hutsik!"
 
-#: src/screens/Login/LoginForm.tsx:135
+#: src/screens/Login/LoginForm.tsx:148
 msgid "Incorrect username or password"
 msgstr "Erabiltzaile-izen edo pasahitz baliogabea"
 
@@ -5238,7 +5273,7 @@ msgstr "Idatzi pasahitz berria"
 msgid "Input password for account deletion"
 msgstr "Sartu pasahitza kontua ezabatzeko"
 
-#: src/screens/Login/LoginForm.tsx:348
+#: src/screens/Login/LoginForm.tsx:363
 msgid "Input the code which has been emailed to you"
 msgstr "Sartu posta elektronikoz bidali zaizun kodea"
 
@@ -5266,7 +5301,7 @@ msgstr "Kontaktuen bidez lagunak aurkitzea aurkeztea"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Gordetako postak, hau da, laster-markak, aurkeztea"
 
-#: src/screens/Login/LoginForm.tsx:126
+#: src/screens/Login/LoginForm.tsx:139
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "2FA baieztapen kode baliogabea."
@@ -5563,8 +5598,8 @@ msgstr "joateko utzi."
 msgid "Let me choose"
 msgstr "Utzidazu aukeratzen"
 
-#: src/screens/Login/index.tsx:139
-#: src/screens/Login/index.tsx:153
+#: src/screens/Login/index.tsx:140
+#: src/screens/Login/index.tsx:154
 msgid "Let's get your password reset!"
 msgstr "Lor dezagun pasahitza berrezartzea!"
 
@@ -5834,9 +5869,9 @@ msgstr "Kargatzen..."
 msgid "Log"
 msgstr "Erregistroa"
 
-#: src/screens/Login/LoginForm.tsx:175
-#: src/screens/Login/LoginForm.tsx:377
-#: src/screens/Login/LoginForm.tsx:383
+#: src/screens/Login/LoginForm.tsx:188
+#: src/screens/Login/LoginForm.tsx:393
+#: src/screens/Login/LoginForm.tsx:399
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5850,11 +5885,11 @@ msgstr "Saioa itxita"
 msgid "Logged-out visibility"
 msgstr "Saioa amaitutako ikusgarritasuna"
 
-#: src/view/shell/desktop/RightNav.tsx:153
+#: src/view/shell/desktop/RightNav.tsx:155
 msgid "Logo by @sawaratsuki.bsky.social"
 msgstr "@sawaratsuki.bsky.social-ren logotipoa"
 
-#: src/view/shell/desktop/RightNav.tsx:150
+#: src/view/shell/desktop/RightNav.tsx:152
 #: src/view/shell/Drawer.tsx:839
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr "<0>@sawaratsuki.bsky.social</0>-ren logotipoa"
@@ -6122,6 +6157,10 @@ msgstr "Pelikulak"
 msgid "Music"
 msgstr "Musika"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:146
+msgid "Must be a goodreads.com URL"
+msgstr ""
+
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoEmbedInnerNative.tsx:169
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/web-controls/VolumeControl.tsx:97
 msgctxt "video"
@@ -6249,7 +6288,7 @@ msgstr "Joan abio multzora"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:117
 #: src/screens/Login/ForgotPasswordForm.tsx:141
-#: src/screens/Login/LoginForm.tsx:378
+#: src/screens/Login/LoginForm.tsx:394
 msgid "Navigates to the next screen"
 msgstr "Hurrengo pantailara nabigatzen da"
 
@@ -6944,7 +6983,7 @@ msgstr "Arazketa-sarrera baten xehetasun gehigarriak irekitzen ditu"
 msgid "Opens alt text dialog"
 msgstr "Aukerazko testuaren elkarrizketa-koadroa irekitzen du"
 
-#: src/screens/Login/LoginForm.tsx:183
+#: src/screens/Login/LoginForm.tsx:196
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7011,7 +7050,7 @@ msgstr "{0} esteka irekitzen du"
 msgid "Opens live status dialog"
 msgstr "Zuzeneko egoeraren elkarrizketa-koadroa irekitzen du"
 
-#: src/screens/Login/LoginForm.tsx:308
+#: src/screens/Login/LoginForm.tsx:322
 msgid "Opens password reset form"
 msgstr "Pasahitza berrezartzeko formularioa irekitzen du"
 
@@ -7036,7 +7075,7 @@ msgstr "Profil hau irekitzen du"
 msgid "Options:"
 msgstr "Aukerak:"
 
-#: src/screens/Login/LoginForm.tsx:234
+#: src/screens/Login/LoginForm.tsx:247
 msgid "or"
 msgstr ""
 
@@ -7125,7 +7164,7 @@ msgstr "Orria ez da aurkitu"
 msgid "Page Not Found"
 msgstr "Orria Ez da Aurkitu"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:291
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7143,7 +7182,7 @@ msgstr "Pasahitza aldatu da"
 msgid "Password must be at least 8 characters long."
 msgstr "Pasahitzak 8 karaktereko luzera izan behar du gutxienez."
 
-#: src/screens/Login/index.tsx:166
+#: src/screens/Login/index.tsx:167
 msgid "Password updated"
 msgstr "Pasahitza eguneratu da"
 
@@ -7401,7 +7440,7 @@ msgstr "Mesedez, sartu zure gonbidapen kodea."
 msgid "Please enter your new email address."
 msgstr "Mesedez, sartu zure helbide elektroniko berria."
 
-#: src/screens/Login/LoginForm.tsx:82
+#: src/screens/Login/LoginForm.tsx:95
 msgid "Please enter your password"
 msgstr "Mesedez, sartu zure pasahitza"
 
@@ -7409,7 +7448,7 @@ msgstr "Mesedez, sartu zure pasahitza"
 msgid "Please enter your password as well:"
 msgstr "Mesedez, sartu zure pasahitza ere:"
 
-#: src/screens/Login/LoginForm.tsx:76
+#: src/screens/Login/LoginForm.tsx:89
 msgid "Please enter your username"
 msgstr "Mesedez, sartu zure erabiltzaile-izena"
 
@@ -7446,8 +7485,8 @@ msgstr "Mesedez, aukeratu moderazio zerbitzu bat"
 msgid "Please select a reason for this report"
 msgstr "Mesedez, aukeratu arrazoi bat salaketa honetarako"
 
-#: src/lib/hooks/useAccountSwitcher.ts:46
-#: src/lib/hooks/useAccountSwitcher.ts:56
+#: src/lib/hooks/useAccountSwitcher.ts:53
+#: src/lib/hooks/useAccountSwitcher.ts:63
 msgid "Please sign in as @{0}"
 msgstr "Hasi saioa @{0} gisa"
 
@@ -7639,8 +7678,8 @@ msgstr "Lehen hizkuntza"
 msgid "Primary Language"
 msgstr "Lehen Hizkuntza"
 
-#: src/view/shell/desktop/RightNav.tsx:129
-#: src/view/shell/desktop/RightNav.tsx:130
+#: src/view/shell/desktop/RightNav.tsx:131
+#: src/view/shell/desktop/RightNav.tsx:132
 msgid "Privacy"
 msgstr "Pribatutasuna"
 
@@ -8512,6 +8551,8 @@ msgstr "Aurreko urratsera itzultzen da"
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:75
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:157
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:167
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:151
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:160
 msgid "Save"
 msgstr "Gorde"
 
@@ -8836,7 +8877,7 @@ msgstr "Aukeratu edukien hizkuntzak"
 msgid "Select duration"
 msgstr "Hautatu iraupena"
 
-#: src/screens/Login/index.tsx:128
+#: src/screens/Login/index.tsx:129
 msgid "Select from an existing account"
 msgstr "Aukeratu lehendik dagoen kontu batetik"
 
@@ -9328,10 +9369,10 @@ msgstr "Edukia erakusten du"
 #: src/components/WelcomeModal.tsx:187
 #: src/components/WelcomeModal.tsx:199
 #: src/screens/Hashtag.tsx:240
-#: src/screens/Login/index.tsx:110
-#: src/screens/Login/index.tsx:127
-#: src/screens/Login/LoginForm.tsx:216
-#: src/screens/Login/LoginForm.tsx:222
+#: src/screens/Login/index.tsx:111
+#: src/screens/Login/index.tsx:128
+#: src/screens/Login/LoginForm.tsx:229
+#: src/screens/Login/LoginForm.tsx:235
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9376,8 +9417,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "Hasi saioa posta ikusteko"
 
-#: src/screens/Login/LoginForm.tsx:181
-#: src/screens/Login/LoginForm.tsx:190
+#: src/screens/Login/LoginForm.tsx:194
+#: src/screens/Login/LoginForm.tsx:203
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -9407,7 +9448,8 @@ msgstr "Saioa amaitu?"
 msgid "Sign-in Required"
 msgstr "Saioa hasi behar da"
 
-#: src/lib/hooks/useAccountSwitcher.ts:42
+#: src/lib/hooks/useAccountSwitcher.ts:37
+#: src/lib/hooks/useAccountSwitcher.ts:49
 #: src/screens/Login/ChooseAccountForm.tsx:55
 msgid "Signed in as @{0}"
 msgstr "@{0} gisa hasi duzu saioa"
@@ -9521,7 +9563,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "Barkatu, ezin ditugu kontu-iradokizunak kargatu une honetan."
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:126
+#: src/App.web.tsx:139
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "Barkatu! Zure saioa iraungi da. Mesedez, hasi saioa berriro."
 
@@ -9769,6 +9811,27 @@ msgstr "Kontuak aldatu"
 msgid "Switch to {0}"
 msgstr "Aldatu {0}-ra"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:85
+msgid "Sync failed. Please try again."
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:109
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:123
+msgid "Sync from Goodreads"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:103
+msgid "Sync your latest shelves from Goodreads to keep your library up to date."
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:71
+msgid "Synced {0} books. {1} not found in catalog — we'll import them soon!"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:121
+msgid "Syncing..."
+msgstr ""
+
 #: src/components/dialogs/Embed.tsx:158
 #: src/components/dialogs/Embed.tsx:160
 #: src/screens/Settings/AppearanceSettings.tsx:85
@@ -9849,8 +9912,8 @@ msgstr "Kontaiguzu zure buruari buruz pixka bat"
 msgid "Tell us a little more"
 msgstr "Kontaiguzu apur bat gehiago"
 
-#: src/view/shell/desktop/RightNav.tsx:136
-#: src/view/shell/desktop/RightNav.tsx:137
+#: src/view/shell/desktop/RightNav.tsx:138
+#: src/view/shell/desktop/RightNav.tsx:139
 msgid "Terms"
 msgstr "Baldintzak"
 
@@ -10576,7 +10639,7 @@ msgid "Unable to contact your service. Please check your internet connection and
 msgstr "Ezin da zure zerbitzuarekin harremanetan jarri. Mesedez, egiaztatu zure interneteko konexioa eta saiatu berriro."
 
 #: src/screens/Login/ForgotPasswordForm.tsx:57
-#: src/screens/Login/LoginForm.tsx:140
+#: src/screens/Login/LoginForm.tsx:153
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11016,7 +11079,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "Erabiltzaile-izenak letrak (a-z), zenbakiak eta marratxoak bakarrik izan behar ditu"
 
-#: src/screens/Login/LoginForm.tsx:249
+#: src/screens/Login/LoginForm.tsx:263
 msgid "Username or email address"
 msgstr "Erabiltzaile-izena edo helbide elektronikoa"
 
@@ -11807,7 +11870,7 @@ msgstr "Gehienez {MAX_HIDDEN_REPLIES} erantzun ezkutatu ditzakezu."
 msgid "You can now choose to be notified when specific people post. If there’s someone you want timely updates from, go to their profile and find the new bell icon near the follow button."
 msgstr "Orain pertsona zehatzek posteatzen dutenean jakinarazpenak jasotzea aukera dezakezu. Norbaitengandik puntualki eguneratzeak jaso nahi badituzu, joan haren profilera eta bilatu kanpai ikono berria jarraitu botoiaren ondoan."
 
-#: src/screens/Login/index.tsx:167
+#: src/screens/Login/index.tsx:168
 #: src/screens/Login/PasswordUpdatedForm.tsx:26
 msgid "You can now sign in with your new password."
 msgstr "Orain pasahitz berriarekin saioa hasi dezakezu."
@@ -12101,7 +12164,7 @@ msgstr "Zu: {defaultEmbeddedContentMessage}"
 msgid "You: {short}"
 msgstr "Zu: {short}"
 
-#: src/screens/Login/LoginForm.tsx:201
+#: src/screens/Login/LoginForm.tsx:214
 msgid "you.bsky.social"
 msgstr ""
 

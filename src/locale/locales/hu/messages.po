@@ -128,6 +128,10 @@ msgstr "{0, plural, one {megosztás} other {megosztás}}"
 msgid "{0, plural, one {save} other {saves}}"
 msgstr "{0, plural, other {mentés}}"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:77
+msgid "{0, plural, one {Synced # book from Goodreads} other {Synced # books from Goodreads}}"
+msgstr ""
+
 #. Number of users (always at least 25) who have joined Bluesky using a specific starter pack
 #: src/screens/StarterPack/StarterPackScreen.tsx:499
 msgid "{0, plural, other {# people have}} joined Bluesky via this starter pack!"
@@ -538,7 +542,7 @@ msgstr ""
 msgid "24 hours"
 msgstr "24 óráig"
 
-#: src/screens/Login/LoginForm.tsx:327
+#: src/screens/Login/LoginForm.tsx:342
 msgid "2FA Confirmation"
 msgstr "Kétlépcsős azonosítás"
 
@@ -635,7 +639,7 @@ msgid "Accessibility Settings"
 msgstr "Akadálymentesítés"
 
 #: src/Navigation.tsx:407
-#: src/screens/Login/LoginForm.tsx:241
+#: src/screens/Login/LoginForm.tsx:255
 #: src/screens/Settings/AccountSettings.tsx:51
 #: src/screens/Settings/Settings.tsx:178
 #: src/screens/Settings/Settings.tsx:181
@@ -799,6 +803,14 @@ msgstr "Alkalmazásjelszó létrehozása"
 msgid "Add emoji reaction"
 msgstr "Emoji-reakció hozzáfűzése"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:187
+msgid "Add Goodreads profile"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:193
+msgid "Add Goodreads Profile"
+msgstr ""
+
 #: src/view/com/feeds/ComposerPrompt.tsx:223
 msgid "Add image"
 msgstr "Kép csatolása"
@@ -876,6 +888,10 @@ msgstr "Személy felvétele a listára"
 #: src/ageAssurance/components/NoAccessScreen.tsx:228
 msgid "Add your birthdate"
 msgstr "Születési dátum megadása"
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:182
+msgid "Add your Goodreads profile to sync your bookshelves."
+msgstr ""
 
 #: src/components/dialogs/lists/ListAddRemoveUsersDialog.tsx:109
 #: src/view/com/modals/UserAddRemoveLists.tsx:162
@@ -1433,8 +1449,8 @@ msgstr "Elérhető"
 #: src/screens/Login/ChooseAccountForm.tsx:101
 #: src/screens/Login/ForgotPasswordForm.tsx:104
 #: src/screens/Login/ForgotPasswordForm.tsx:109
-#: src/screens/Login/LoginForm.tsx:366
-#: src/screens/Login/LoginForm.tsx:371
+#: src/screens/Login/LoginForm.tsx:382
+#: src/screens/Login/LoginForm.tsx:387
 #: src/screens/Login/SetNewPasswordForm.tsx:171
 #: src/screens/Login/SetNewPasswordForm.tsx:177
 #: src/screens/Messages/components/ChatDisabled.tsx:145
@@ -1848,6 +1864,8 @@ msgstr "Kamera"
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:43
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:52
 #: src/view/shell/desktop/LeftNav.tsx:217
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:165
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:174
 msgid "Cancel"
 msgstr "Mégse"
 
@@ -2034,7 +2052,7 @@ msgstr "Csevegések"
 msgid "Check my status"
 msgstr "Állapot ellenőrzése"
 
-#: src/screens/Login/LoginForm.tsx:356
+#: src/screens/Login/LoginForm.tsx:371
 msgid "Check your email for a sign in code and enter it here."
 msgstr "Add meg az e-mailben kapott megerősítőkódot."
 
@@ -2393,7 +2411,7 @@ msgid "Confirm your password"
 msgstr ""
 
 #: src/components/dialogs/EmailDialog/components/TokenField.tsx:36
-#: src/screens/Login/LoginForm.tsx:333
+#: src/screens/Login/LoginForm.tsx:348
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:186
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:190
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:144
@@ -3645,7 +3663,7 @@ msgstr "Add meg a használni kívánt tartományt"
 msgid "Enter the email you used to create your account. We'll send you a \"reset code\" so you can set a new password."
 msgstr "Add meg a regisztrációkor használt e-mail-címedet. Küldeni fogunk egy „helyreállítási kódot”, amivel megváltoztathatod a jelszavad."
 
-#: src/screens/Login/LoginForm.tsx:267
+#: src/screens/Login/LoginForm.tsx:281
 msgid "Enter the username or email address you used when you created your account"
 msgstr "Add meg a fiók létrehozásakor használt felhasználónevet vagy e-mail-címet."
 
@@ -3658,7 +3676,7 @@ msgstr "Születési dátum megadása"
 msgid "Enter your email address"
 msgstr "Add meg az e-mail-címedet"
 
-#: src/screens/Login/LoginForm.tsx:292
+#: src/screens/Login/LoginForm.tsx:306
 msgid "Enter your password"
 msgstr "Jelszó megadása"
 
@@ -3666,7 +3684,7 @@ msgstr "Jelszó megadása"
 msgid "Enter your username"
 msgstr ""
 
-#: src/screens/Login/index.tsx:111
+#: src/screens/Login/index.tsx:112
 msgid "Enter your username and password"
 msgstr "Add meg a felhasználóneved és a jelszavad"
 
@@ -4018,6 +4036,10 @@ msgstr ""
 msgid "Failed to save draft"
 msgstr "A piszkozat mentése meghiúsult"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:58
+msgid "Failed to save Goodreads profile"
+msgstr ""
+
 #: src/lib/media/save-image.ios.ts:27
 #: src/lib/media/save-image.ts:31
 msgid "Failed to save image: {0}"
@@ -4046,7 +4068,7 @@ msgstr "A küldés meghiúsult"
 msgid "Failed to send email, please try again."
 msgstr "Az e-mail elküldése meghiúsult. Próbáld újra."
 
-#: src/screens/Login/LoginForm.tsx:170
+#: src/screens/Login/LoginForm.tsx:183
 msgid "Failed to start sign in. Please try again."
 msgstr ""
 
@@ -4138,8 +4160,8 @@ msgstr "Hírfolyam ki/be"
 msgid "Feed unavailable"
 msgstr "A hírfolyam nem elérhető"
 
-#: src/view/shell/desktop/RightNav.tsx:120
-#: src/view/shell/desktop/RightNav.tsx:121
+#: src/view/shell/desktop/RightNav.tsx:122
+#: src/view/shell/desktop/RightNav.tsx:123
 #: src/view/shell/Drawer.tsx:407
 msgid "Feedback"
 msgstr "Visszajelzés"
@@ -4484,16 +4506,16 @@ msgstr "Örökké"
 msgid "Forget the noise"
 msgstr "Szűrd ki a zajt!"
 
-#: src/screens/Login/index.tsx:138
-#: src/screens/Login/index.tsx:152
+#: src/screens/Login/index.tsx:139
+#: src/screens/Login/index.tsx:153
 msgid "Forgot Password"
 msgstr "Elfelejtett jelszó"
 
-#: src/screens/Login/LoginForm.tsx:307
+#: src/screens/Login/LoginForm.tsx:321
 msgid "Forgot password?"
 msgstr "Elfelejtett jelszó"
 
-#: src/screens/Login/LoginForm.tsx:318
+#: src/screens/Login/LoginForm.tsx:332
 msgid "Forgot?"
 msgstr "Elfelejtetted?"
 
@@ -4741,8 +4763,21 @@ msgstr ""
 msgid "Goodreads Profile"
 msgstr ""
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:56
+msgid "Goodreads profile saved"
+msgstr ""
+
 #: src/screens/Profile/Header/EditProfileDialog.tsx:432
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:135
 msgid "Goodreads profile URL"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:131
+msgid "Goodreads Profile URL"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:96
+msgid "Goodreads Sync"
 msgstr ""
 
 #: src/screens/Profile/components/GermButton.tsx:251
@@ -4841,8 +4876,8 @@ msgstr "A visszaélések elkerülése érdekében a Bluesky 7 napig megtartja, m
 
 #: src/screens/Settings/Settings.tsx:252
 #: src/screens/Settings/Settings.tsx:256
-#: src/view/shell/desktop/RightNav.tsx:141
-#: src/view/shell/desktop/RightNav.tsx:144
+#: src/view/shell/desktop/RightNav.tsx:143
+#: src/view/shell/desktop/RightNav.tsx:146
 #: src/view/shell/Drawer.tsx:420
 msgid "Help"
 msgstr "Súgó"
@@ -5218,7 +5253,7 @@ msgstr "Alkalmazáson belüli, leküldéses, az Általad követett személyektő
 msgid "Inbox zero!"
 msgstr "Elfogytak a beérkező üzenetek."
 
-#: src/screens/Login/LoginForm.tsx:135
+#: src/screens/Login/LoginForm.tsx:148
 msgid "Incorrect username or password"
 msgstr "Érvénytelen felhasználónév vagy jelszó"
 
@@ -5238,7 +5273,7 @@ msgstr "Új jelszó megadása"
 msgid "Input password for account deletion"
 msgstr "Jelszó megadása a fiók törléséhez"
 
-#: src/screens/Login/LoginForm.tsx:348
+#: src/screens/Login/LoginForm.tsx:363
 msgid "Input the code which has been emailed to you"
 msgstr "E-mailben kapott kód megadása"
 
@@ -5266,7 +5301,7 @@ msgstr "Mostantól a névjegyeid alapján is találhatsz ismerősöket!"
 msgid "Introducing saved posts AKA bookmarks"
 msgstr "Bejegyzések mentése (más néven: könyvjelzők)"
 
-#: src/screens/Login/LoginForm.tsx:126
+#: src/screens/Login/LoginForm.tsx:139
 #: src/screens/Settings/components/DisableEmail2FADialog.tsx:70
 msgid "Invalid 2FA confirmation code."
 msgstr "Érvénytelen kétlépcsős azonosítási kód."
@@ -5563,8 +5598,8 @@ msgstr "maradt."
 msgid "Let me choose"
 msgstr "Fiókok választása kézileg"
 
-#: src/screens/Login/index.tsx:139
-#: src/screens/Login/index.tsx:153
+#: src/screens/Login/index.tsx:140
+#: src/screens/Login/index.tsx:154
 msgid "Let's get your password reset!"
 msgstr "Állítsuk helyre a jelszavad!"
 
@@ -5834,9 +5869,9 @@ msgstr "Betöltés…"
 msgid "Log"
 msgstr "Napló"
 
-#: src/screens/Login/LoginForm.tsx:175
-#: src/screens/Login/LoginForm.tsx:377
-#: src/screens/Login/LoginForm.tsx:383
+#: src/screens/Login/LoginForm.tsx:188
+#: src/screens/Login/LoginForm.tsx:393
+#: src/screens/Login/LoginForm.tsx:399
 #: src/screens/Signup/SignupForm.tsx:344
 #: src/screens/Signup/SignupForm.tsx:351
 msgid "Log in"
@@ -5850,11 +5885,11 @@ msgstr "Kijelentkezve"
 msgid "Logged-out visibility"
 msgstr "Láthatóság kijelentkezett felhasználók számára"
 
-#: src/view/shell/desktop/RightNav.tsx:153
+#: src/view/shell/desktop/RightNav.tsx:155
 msgid "Logo by @sawaratsuki.bsky.social"
 msgstr "A logó szerzője: @sawaratsuki.bsky.social"
 
-#: src/view/shell/desktop/RightNav.tsx:150
+#: src/view/shell/desktop/RightNav.tsx:152
 #: src/view/shell/Drawer.tsx:839
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr "A logó szerzője: <0>@sawaratsuki.bsky.social</0>"
@@ -6122,6 +6157,10 @@ msgstr "Filmek"
 msgid "Music"
 msgstr "Zene"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:146
+msgid "Must be a goodreads.com URL"
+msgstr ""
+
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoEmbedInnerNative.tsx:169
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/web-controls/VolumeControl.tsx:97
 msgctxt "video"
@@ -6249,7 +6288,7 @@ msgstr "Ugrás a kezdőcsomaghoz"
 
 #: src/screens/Login/ForgotPasswordForm.tsx:117
 #: src/screens/Login/ForgotPasswordForm.tsx:141
-#: src/screens/Login/LoginForm.tsx:378
+#: src/screens/Login/LoginForm.tsx:394
 msgid "Navigates to the next screen"
 msgstr "Ugrás a következő képernyőre"
 
@@ -6944,7 +6983,7 @@ msgstr "Hibakeresési bejegyzés részleteinek megnyitása"
 msgid "Opens alt text dialog"
 msgstr "Helyettesítő szöveget tartalmazó ablak megnyitása"
 
-#: src/screens/Login/LoginForm.tsx:183
+#: src/screens/Login/LoginForm.tsx:196
 msgid "Opens Bluesky authorization page to sign in"
 msgstr ""
 
@@ -7011,7 +7050,7 @@ msgstr "A(z) „{0}” hivatkozás megnyitása"
 msgid "Opens live status dialog"
 msgstr "Élőadásos állapoti párbeszédablak megnyitása"
 
-#: src/screens/Login/LoginForm.tsx:308
+#: src/screens/Login/LoginForm.tsx:322
 msgid "Opens password reset form"
 msgstr "Jelszóvisszaállítási űrlap megnyitása"
 
@@ -7036,7 +7075,7 @@ msgstr "Saját profil megnyitása"
 msgid "Options:"
 msgstr "További lehetőségek:"
 
-#: src/screens/Login/LoginForm.tsx:234
+#: src/screens/Login/LoginForm.tsx:247
 msgid "or"
 msgstr ""
 
@@ -7125,7 +7164,7 @@ msgstr "Az oldal nem található"
 msgid "Page Not Found"
 msgstr "Az oldal nem található"
 
-#: src/screens/Login/LoginForm.tsx:277
+#: src/screens/Login/LoginForm.tsx:291
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
 #: src/screens/Signup/SignupForm.tsx:214
@@ -7143,7 +7182,7 @@ msgstr "Jelszó megváltoztatva"
 msgid "Password must be at least 8 characters long."
 msgstr "A jelszónak legalább 8 karakter hosszúnak kell lennie."
 
-#: src/screens/Login/index.tsx:166
+#: src/screens/Login/index.tsx:167
 msgid "Password updated"
 msgstr "Megváltoztattad a jelszavad"
 
@@ -7401,7 +7440,7 @@ msgstr "Add meg a meghívókódodat."
 msgid "Please enter your new email address."
 msgstr "Add meg az új e-mail-címedet."
 
-#: src/screens/Login/LoginForm.tsx:82
+#: src/screens/Login/LoginForm.tsx:95
 msgid "Please enter your password"
 msgstr "Add meg a jelszót"
 
@@ -7409,7 +7448,7 @@ msgstr "Add meg a jelszót"
 msgid "Please enter your password as well:"
 msgstr "Add meg a jelszót is:"
 
-#: src/screens/Login/LoginForm.tsx:76
+#: src/screens/Login/LoginForm.tsx:89
 msgid "Please enter your username"
 msgstr "Add meg a felhasználónevedet"
 
@@ -7446,8 +7485,8 @@ msgstr "Moderálási szolgáltatás megadása"
 msgid "Please select a reason for this report"
 msgstr "Add meg a jelentés okát."
 
-#: src/lib/hooks/useAccountSwitcher.ts:46
-#: src/lib/hooks/useAccountSwitcher.ts:56
+#: src/lib/hooks/useAccountSwitcher.ts:53
+#: src/lib/hooks/useAccountSwitcher.ts:63
 msgid "Please sign in as @{0}"
 msgstr "Jelentkezz be, mint @{0}."
 
@@ -7639,8 +7678,8 @@ msgstr "Elsődleges nyelv"
 msgid "Primary Language"
 msgstr "Elsődleges nyelv"
 
-#: src/view/shell/desktop/RightNav.tsx:129
-#: src/view/shell/desktop/RightNav.tsx:130
+#: src/view/shell/desktop/RightNav.tsx:131
+#: src/view/shell/desktop/RightNav.tsx:132
 msgid "Privacy"
 msgstr "Adatvédelem"
 
@@ -8512,6 +8551,8 @@ msgstr "Vissza az előző lépéshez"
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:75
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:157
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:167
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:151
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:160
 msgid "Save"
 msgstr "Mentés"
 
@@ -8836,7 +8877,7 @@ msgstr "Nyelvek kiválasztása"
 msgid "Select duration"
 msgstr "Hossz megadása"
 
-#: src/screens/Login/index.tsx:128
+#: src/screens/Login/index.tsx:129
 msgid "Select from an existing account"
 msgstr "Fiók kiválasztása"
 
@@ -9328,10 +9369,10 @@ msgstr "Tartalom megjelenítése"
 #: src/components/WelcomeModal.tsx:187
 #: src/components/WelcomeModal.tsx:199
 #: src/screens/Hashtag.tsx:240
-#: src/screens/Login/index.tsx:110
-#: src/screens/Login/index.tsx:127
-#: src/screens/Login/LoginForm.tsx:216
-#: src/screens/Login/LoginForm.tsx:222
+#: src/screens/Login/index.tsx:111
+#: src/screens/Login/index.tsx:128
+#: src/screens/Login/LoginForm.tsx:229
+#: src/screens/Login/LoginForm.tsx:235
 #: src/screens/Search/SearchResults.tsx:296
 #: src/view/com/auth/SplashScreen.tsx:111
 #: src/view/com/auth/SplashScreen.tsx:117
@@ -9376,8 +9417,8 @@ msgstr ""
 msgid "Sign in to view post"
 msgstr "A megtekintéshez bejelentkezés szükséges"
 
-#: src/screens/Login/LoginForm.tsx:181
-#: src/screens/Login/LoginForm.tsx:190
+#: src/screens/Login/LoginForm.tsx:194
+#: src/screens/Login/LoginForm.tsx:203
 msgid "Sign in with Bluesky"
 msgstr ""
 
@@ -9407,7 +9448,8 @@ msgstr "Kijelentkezés"
 msgid "Sign-in Required"
 msgstr "Bejelentkezés szükséges"
 
-#: src/lib/hooks/useAccountSwitcher.ts:42
+#: src/lib/hooks/useAccountSwitcher.ts:37
+#: src/lib/hooks/useAccountSwitcher.ts:49
 #: src/screens/Login/ChooseAccountForm.tsx:55
 msgid "Signed in as @{0}"
 msgstr "Bejelentkezve, mint @{0}"
@@ -9521,7 +9563,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr "Sajnáljuk, de a javasolt fiókok betöltése meghiúsult."
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:126
+#: src/App.web.tsx:139
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr "Sajnáljuk, de lejárt a munkameneted. Jelentkezz be újra."
 
@@ -9769,6 +9811,27 @@ msgstr "Fiókváltás"
 msgid "Switch to {0}"
 msgstr "Váltás rá: {0}"
 
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:85
+msgid "Sync failed. Please try again."
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:109
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:123
+msgid "Sync from Goodreads"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:103
+msgid "Sync your latest shelves from Goodreads to keep your library up to date."
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:71
+msgid "Synced {0} books. {1} not found in catalog — we'll import them soon!"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:121
+msgid "Syncing..."
+msgstr ""
+
 #: src/components/dialogs/Embed.tsx:158
 #: src/components/dialogs/Embed.tsx:160
 #: src/screens/Settings/AppearanceSettings.tsx:85
@@ -9851,8 +9914,8 @@ msgstr "Mesélj magadról!"
 msgid "Tell us a little more"
 msgstr "További részletek"
 
-#: src/view/shell/desktop/RightNav.tsx:136
-#: src/view/shell/desktop/RightNav.tsx:137
+#: src/view/shell/desktop/RightNav.tsx:138
+#: src/view/shell/desktop/RightNav.tsx:139
 msgid "Terms"
 msgstr "Feltételek"
 
@@ -10578,7 +10641,7 @@ msgid "Unable to contact your service. Please check your internet connection and
 msgstr "A kiszolgáló nem található. Ellenőrizd az internetkapcsolatot, majd próbáld újra."
 
 #: src/screens/Login/ForgotPasswordForm.tsx:57
-#: src/screens/Login/LoginForm.tsx:140
+#: src/screens/Login/LoginForm.tsx:153
 #: src/screens/Login/SetNewPasswordForm.tsx:82
 #: src/screens/Signup/index.tsx:57
 msgid "Unable to contact your service. Please check your Internet connection."
@@ -11018,7 +11081,7 @@ msgstr ""
 msgid "Username must only contain letters (a-z), numbers, and hyphens"
 msgstr "A felhasználónév csak az angol ábécé betűit (A–Z), számokat és kötőjeleket tartalmazhat"
 
-#: src/screens/Login/LoginForm.tsx:249
+#: src/screens/Login/LoginForm.tsx:263
 msgid "Username or email address"
 msgstr "Felhasználónév vagy e-mail-cím"
 
@@ -11809,7 +11872,7 @@ msgstr "Legfeljebb {MAX_HIDDEN_REPLIES} választ rejthetsz el."
 msgid "You can now choose to be notified when specific people post. If there’s someone you want timely updates from, go to their profile and find the new bell icon near the follow button."
 msgstr "Mostantól feliratkozhatsz egyes személyek tevékenységeire. Ha van olyasvalaki, akinek a bejegyzéseiről szeretnél értesítéseket kapni, akkor nyisd meg a profilját és kattints a Követés gomb mellett található harang ikonra."
 
-#: src/screens/Login/index.tsx:167
+#: src/screens/Login/index.tsx:168
 #: src/screens/Login/PasswordUpdatedForm.tsx:26
 msgid "You can now sign in with your new password."
 msgstr "Mostantól bejelentkezhetsz az új jelszóval."
@@ -12103,7 +12166,7 @@ msgstr "Te: {defaultEmbeddedContentMessage}"
 msgid "You: {short}"
 msgstr "Te: {short}"
 
-#: src/screens/Login/LoginForm.tsx:201
+#: src/screens/Login/LoginForm.tsx:214
 msgid "you.bsky.social"
 msgstr ""
 

@@ -11,6 +11,7 @@ import {useSession} from '#/state/session'
 import {DesktopFeeds} from '#/view/shell/desktop/Feeds'
 import {DesktopSearch} from '#/view/shell/desktop/Search'
 import {SidebarGenres} from '#/view/shell/desktop/SidebarGenres'
+import {SidebarGoodreadsSync} from '#/view/shell/desktop/SidebarGoodreadsSync'
 import {SidebarTrendingTopics} from '#/view/shell/desktop/SidebarTrendingTopics'
 import {BookClubSidebar} from '#/screens/BookClubs/BookClubSidebar'
 import {
@@ -102,6 +103,7 @@ export function DesktopRightNav({routeName}: {routeName: string}) {
             </>
           )}
 
+          {isBooks && <SidebarGoodreadsSync />}
           {isBooks && <SidebarGenres />}
 
           {showExploreScreenDuplicatedContent && (
