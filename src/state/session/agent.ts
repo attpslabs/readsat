@@ -32,6 +32,7 @@ import {
   setCreatedAtForDid,
 } from '#/ageAssurance/data'
 import {features} from '#/analytics'
+import {IS_WEB} from '#/env'
 import {emitNetworkConfirmed, emitNetworkLost} from '../events'
 import {addSessionErrorLog} from './logging'
 import {
@@ -385,6 +386,18 @@ class BskyAppAgent extends BskyAgent {
     super({
       service,
       async fetch(...args) {
+        // On web, route createAccount through our proxy
+        // so the server can inject the X-App-Secret header
+        if (IS_WEB) {
+          const url = args[0]
+          if (
+            url instanceof URL &&
+            url.pathname === '/xrpc/com.atproto.server.createAccount'
+          ) {
+            args[0] = new URL('/api/create-account', window.location.origin)
+          }
+        }
+
         let success = false
         try {
           const result = await realFetch(...args)
