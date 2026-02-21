@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {View} from 'react-native'
 import {WebView} from 'react-native-webview'
 
@@ -11,9 +11,11 @@ import {Loader} from '#/components/Loader'
 export function TileEmbed({
   manifest,
   did,
+  onError,
 }: {
   manifest: TileManifest
   did: string
+  onError?: () => void
 }) {
   const t = useTheme()
   const {data: html, isLoading, isError} = useTileContentQuery(manifest, did)
@@ -21,7 +23,11 @@ export function TileEmbed({
   const sizing = manifest.sizing || {width: 1, height: 1}
   const aspectRatio = sizing.width / sizing.height
 
-  if (isError) return null
+  useEffect(() => {
+    if (isError) {
+      onError?.()
+    }
+  }, [isError, onError])
   if (isLoading || !html) {
     return (
       <View

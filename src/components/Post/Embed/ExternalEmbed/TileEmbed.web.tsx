@@ -9,9 +9,11 @@ import {Loader} from '#/components/Loader'
 export function TileEmbed({
   manifest,
   did,
+  onError,
 }: {
   manifest: TileManifest
   did: string
+  onError?: () => void
 }) {
   const t = useTheme()
   const containerRef = useRef<HTMLDivElement>(null)
@@ -60,7 +62,11 @@ export function TileEmbed({
     }
   }, [blobUrl])
 
-  if (isError) return null
+  useEffect(() => {
+    if (isError) {
+      onError?.()
+    }
+  }, [isError, onError])
 
   return (
     <div ref={containerRef} style={{width: '100%'}}>

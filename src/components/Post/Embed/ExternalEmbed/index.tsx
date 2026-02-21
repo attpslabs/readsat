@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react'
+import React, {useCallback, useState} from 'react'
 import {type StyleProp, View, type ViewStyle} from 'react-native'
 import {Image} from 'expo-image'
 import {type AppBskyEmbedExternal} from '@atproto/api'
@@ -39,6 +39,7 @@ export const ExternalEmbed = ({
   const playHaptic = useHaptics()
   const externalEmbedPrefs = useExternalEmbedsPrefs()
   const {manifest: tileManifest, did: tileDid} = useTileForUrl(link.uri)
+  const [tileError, setTileError] = useState(false)
   const niceUrl = toNiceDomain(link.uri)
   const imageUri = link.thumb
   const embedPlayerParams = React.useMemo(() => {
@@ -62,10 +63,14 @@ export const ExternalEmbed = ({
     }
   }, [link.uri, playHaptic])
 
-  if (tileManifest && tileDid) {
+  if (tileManifest && tileDid && !tileError) {
     return (
       <View style={style}>
-        <TileEmbed manifest={tileManifest} did={tileDid} />
+        <TileEmbed
+          manifest={tileManifest}
+          did={tileDid}
+          onError={() => setTileError(true)}
+        />
       </View>
     )
   }
