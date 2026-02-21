@@ -28,6 +28,9 @@ export function TileEmbed({
       onError?.()
     }
   }, [isError, onError])
+
+  if (isError) return null
+
   if (isLoading || !html) {
     return (
       <View

@@ -41,7 +41,11 @@ export const ExternalEmbed = ({
   const {manifest: tileManifest, did: tileDid} = useTileForUrl(link.uri)
   const [tileError, setTileError] = useState(false)
   const niceUrl = toNiceDomain(link.uri)
-  const imageUri = link.thumb
+  const imageUri =
+    link.thumb ||
+    (link.title && link.title !== link.uri
+      ? `https://cardyb.bsky.app/v1/image?url=${encodeURIComponent(link.uri)}`
+      : undefined)
   const embedPlayerParams = React.useMemo(() => {
     const params = parseEmbedPlayerFromUrl(link.uri)
 

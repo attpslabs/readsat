@@ -68,6 +68,8 @@ export function TileEmbed({
     }
   }, [isError, onError])
 
+  if (isError) return null
+
   return (
     <div ref={containerRef} style={{width: '100%'}}>
       {isLoading || !blobUrl ? (
