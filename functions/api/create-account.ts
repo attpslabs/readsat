@@ -1,11 +1,11 @@
 interface Env {
-  APP_SECRET: string
+  APP_SHARED_SECRET: string
 }
 
 export const onRequestPost: PagesFunction<Env> = async context => {
   const {request, env} = context
 
-  if (!env.APP_SECRET) {
+  if (!env.APP_SHARED_SECRET) {
     return new Response(JSON.stringify({error: 'Server configuration error'}), {
       status: 500,
       headers: {'Content-Type': 'application/json'},
@@ -20,7 +20,7 @@ export const onRequestPost: PagesFunction<Env> = async context => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-App-Secret': env.APP_SECRET,
+        'X-App-Secret': env.APP_SHARED_SECRET,
       },
       body,
     },
