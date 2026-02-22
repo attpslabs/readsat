@@ -40,6 +40,7 @@ export const ExternalEmbed = ({
   const externalEmbedPrefs = useExternalEmbedsPrefs()
   const {manifest: tileManifest, did: tileDid} = useTileForUrl(link.uri)
   const [tileError, setTileError] = useState(false)
+  const [imageError, setImageError] = useState(false)
   const niceUrl = toNiceDomain(link.uri)
   const imageUri =
     link.thumb ||
@@ -53,7 +54,7 @@ export const ExternalEmbed = ({
       return params
     }
   }, [link.uri, externalEmbedPrefs])
-  const hasMedia = Boolean(imageUri || embedPlayerParams)
+  const hasMedia = Boolean((imageUri && !imageError) || embedPlayerParams)
 
   const onPress = useCallback(() => {
     playHaptic('Light')
@@ -115,12 +116,13 @@ export const ExternalEmbed = ({
               ? t.atoms.border_contrast_high
               : t.atoms.border_contrast_low,
           ]}>
-          {imageUri && !embedPlayerParams ? (
+          {imageUri && !embedPlayerParams && !imageError ? (
             <Image
               style={[a.aspect_card]}
               source={{uri: imageUri}}
               accessibilityIgnoresInvertColors
               loading="lazy"
+              onError={() => setImageError(true)}
             />
           ) : undefined}
 

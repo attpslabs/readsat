@@ -31,12 +31,19 @@ export interface DownloadAndResizeOpts {
 export async function downloadAndResize(opts: DownloadAndResizeOpts) {
   const controller = new AbortController()
   const to = setTimeout(() => controller.abort(), opts.timeout || 5e3)
-  const res = await fetch(opts.uri, {signal: controller.signal})
-  const resBody = await res.blob()
-  clearTimeout(to)
-
-  const dataUri = await blobToDataUri(resBody)
-  return await doResize(dataUri, opts)
+  try {
+    const res = await fetch(opts.uri, {signal: controller.signal})
+    const resBody = await res.blob()
+    const dataUri = await blobToDataUri(resBody)
+    return await doResize(dataUri, opts)
+  } catch (e) {
+    if (e instanceof DOMException && e.name === 'AbortError') {
+      throw new Error(`Download timed out: ${opts.uri}`)
+    }
+    throw e
+  } finally {
+    clearTimeout(to)
+  }
 }
 
 export async function shareImageModal(_opts: {uri: string}) {
