@@ -5,6 +5,7 @@ const ALLOWED_ORIGINS = [
 ]
 
 const HANDLE_SUFFIX = '.self.surf'
+const PDS_BASE = 'https://self.surf'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const USERNAME_RE = /^[a-z0-9]([a-z0-9-]{1,18}[a-z0-9])?$/
 
@@ -14,11 +15,13 @@ const PDS_ERROR_MESSAGES: Record<string, string> = {
   InvalidEmail: 'The email address you entered is not valid.',
   EmailNotAvailable: 'An account with that email address already exists.',
   InvalidPassword: 'The password you entered does not meet requirements.',
+  InvalidInviteCode:
+    'Account creation temporarily unavailable. Please try again.',
   RateLimitExceeded: 'Too many attempts. Please wait a moment and try again.',
 }
 
 interface Env {
-  APP_SHARED_SECRET: string
+  PDS_ADMIN_PASSWORD: string
 }
 
 function getAllowedOrigin(request: Request): string | null {
@@ -136,7 +139,7 @@ export const onRequestPost: PagesFunction<Env> = async context => {
   }
 
   // 2. Server config check
-  if (!env.APP_SHARED_SECRET) {
+  if (!env.PDS_ADMIN_PASSWORD) {
     return jsonResponse({error: 'Server configuration error'}, 500, origin)
   }
 
@@ -165,20 +168,49 @@ export const onRequestPost: PagesFunction<Env> = async context => {
   }
   const {email, handle, password} = validation.data
 
-  // 6. Forward only sanitized fields to PDS
+  // 6. Mint a single-use invite code via PDS admin API
+  const adminAuth = 'Basic ' + btoa('admin:' + env.PDS_ADMIN_PASSWORD)
+  let inviteCode: string
+  try {
+    const inviteResponse = await fetch(
+      `${PDS_BASE}/xrpc/com.atproto.server.createInviteCode`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: adminAuth,
+        },
+        body: JSON.stringify({useCount: 1}),
+      },
+    )
+    if (!inviteResponse.ok) {
+      return jsonResponse(
+        {error: 'Account creation temporarily unavailable. Please try again.'},
+        500,
+        origin,
+      )
+    }
+    const inviteBody = (await inviteResponse.json()) as {code: string}
+    inviteCode = inviteBody.code
+  } catch {
+    return jsonResponse(
+      {error: 'Account creation temporarily unavailable. Please try again.'},
+      500,
+      origin,
+    )
+  }
+
+  // 7. Create the account using the invite code
   const pdsResponse = await fetch(
-    'https://self.surf/xrpc/com.atproto.server.createAccount',
+    `${PDS_BASE}/xrpc/com.atproto.server.createAccount`,
     {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-App-Secret': env.APP_SHARED_SECRET,
-      },
-      body: JSON.stringify({email, handle, password}),
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, handle, password, inviteCode}),
     },
   )
 
-  // 7. Handle PDS errors with friendly messages
+  // 8. Handle PDS errors with friendly messages
   if (!pdsResponse.ok) {
     const responseContentType =
       pdsResponse.headers.get('Content-Type') || 'application/json'
@@ -212,13 +244,33 @@ export const onRequestPost: PagesFunction<Env> = async context => {
     }
   }
 
-  // 8. Success — pass through PDS response
-  return new Response(pdsResponse.body, {
-    status: pdsResponse.status,
-    headers: {
-      'Content-Type':
-        pdsResponse.headers.get('Content-Type') || 'application/json',
-      ...corsHeaders(origin),
-    },
-  })
+  // 9. Parse success response to get credentials for profile creation
+  const accountData = (await pdsResponse.json()) as {
+    did: string
+    handle: string
+    accessJwt: string
+    refreshJwt: string
+  }
+
+  // 10. Create empty profile record (non-fatal)
+  try {
+    await fetch(`${PDS_BASE}/xrpc/com.atproto.repo.putRecord`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accountData.accessJwt}`,
+      },
+      body: JSON.stringify({
+        repo: accountData.did,
+        collection: 'app.bsky.actor.profile',
+        rkey: 'self',
+        record: {$type: 'app.bsky.actor.profile'},
+      }),
+    })
+  } catch {
+    // Profile creation is best-effort; the client will also attempt this
+  }
+
+  // 11. Return account data to client
+  return jsonResponse(accountData, 200, origin)
 }

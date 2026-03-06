@@ -10,7 +10,7 @@
 // Minimal type that mirrors what the handlers actually use from the CF context
 interface MinimalContext {
   request: Request
-  env: {APP_SHARED_SECRET: string}
+  env: {PDS_ADMIN_PASSWORD: string}
 }
 
 const mod = require('../create-account') as {
@@ -23,7 +23,8 @@ const {onRequestOptions, onRequestPost} = mod
 const VALID_ORIGIN = 'https://reads.at'
 const LOCALHOST_ORIGIN = 'http://localhost:8080'
 const BAD_ORIGIN = 'https://evil.com'
-const SECRET = 'test-secret-123'
+const ADMIN_PASSWORD = 'test-admin-pw'
+const INVITE_CODE = 'self-surf-test-1234-5678'
 
 function makeRequest(
   body: object | string | null,
@@ -54,14 +55,51 @@ function makeRequest(
   })
 }
 
-function ctx(request: Request, secret: string = SECRET): MinimalContext {
-  return {request, env: {APP_SHARED_SECRET: secret}}
+function ctx(
+  request: Request,
+  password: string = ADMIN_PASSWORD,
+): MinimalContext {
+  return {request, env: {PDS_ADMIN_PASSWORD: password}}
 }
 
 const validBody = {
   email: 'user@example.com',
   handle: 'testuser.self.surf',
   password: 'securepass123',
+}
+
+const accountResponse = {
+  did: 'did:plc:testuser123',
+  handle: 'testuser.self.surf',
+  accessJwt: 'jwt-token',
+  refreshJwt: 'refresh-token',
+}
+
+/** Mock fetch for the normal 3-step flow: invite code → create account → put profile */
+function mockSuccessFlow() {
+  global.fetch = jest
+    .fn()
+    // Step 1: createInviteCode
+    .mockResolvedValueOnce(
+      new Response(JSON.stringify({code: INVITE_CODE}), {
+        status: 200,
+        headers: {'Content-Type': 'application/json'},
+      }),
+    )
+    // Step 2: createAccount
+    .mockResolvedValueOnce(
+      new Response(JSON.stringify(accountResponse), {
+        status: 200,
+        headers: {'Content-Type': 'application/json'},
+      }),
+    )
+    // Step 3: putRecord (profile)
+    .mockResolvedValueOnce(
+      new Response(JSON.stringify({}), {
+        status: 200,
+        headers: {'Content-Type': 'application/json'},
+      }),
+    )
 }
 
 // ─── CORS Preflight ────────────────────────────────────────────────
@@ -134,7 +172,7 @@ describe('onRequestPost - origin validation', () => {
 // ─── Server Config ─────────────────────────────────────────────────
 
 describe('onRequestPost - server config', () => {
-  it('returns 500 when APP_SHARED_SECRET is empty', async () => {
+  it('returns 500 when PDS_ADMIN_PASSWORD is empty', async () => {
     const req = makeRequest(validBody)
     const res = await onRequestPost(ctx(req, ''))
     expect(res.status).toBe(500)
@@ -163,12 +201,7 @@ describe('onRequestPost - Content-Type check', () => {
   })
 
   it('accepts application/json; charset=utf-8', async () => {
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(JSON.stringify({did: 'did:plc:test'}), {
-        status: 200,
-        headers: {'Content-Type': 'application/json'},
-      }),
-    )
+    mockSuccessFlow()
     const req = makeRequest(validBody, {
       contentType: 'application/json; charset=utf-8',
     })
@@ -293,13 +326,7 @@ describe('onRequestPost - input validation', () => {
   })
 
   it('accepts valid handle with mixed case (normalizes to lowercase)', async () => {
-    // This will pass validation but fail at fetch since we aren't mocking it
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(JSON.stringify({did: 'did:plc:test'}), {
-        status: 200,
-        headers: {'Content-Type': 'application/json'},
-      }),
-    )
+    mockSuccessFlow()
     const req = makeRequest({
       email: 'a@b.com',
       handle: 'TestUser.self.surf',
@@ -308,9 +335,9 @@ describe('onRequestPost - input validation', () => {
     const res = await onRequestPost(ctx(req))
     // Should not be a 400 validation error
     expect(res.status).not.toBe(400)
-    // Check that the forwarded handle is lowercased
-    const fetchCall = (global.fetch as jest.Mock).mock.calls[0]
-    const forwardedBody = JSON.parse(fetchCall[1].body)
+    // The second fetch call is createAccount — check the handle is lowercased
+    const createAccountCall = (global.fetch as jest.Mock).mock.calls[1]
+    const forwardedBody = JSON.parse(createAccountCall[1].body)
     expect(forwardedBody.handle).toBe('testuser.self.surf')
   })
 
@@ -335,12 +362,7 @@ describe('onRequestPost - input validation', () => {
   })
 
   it('accepts 3-char username (minimum)', async () => {
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(JSON.stringify({did: 'did:plc:test'}), {
-        status: 200,
-        headers: {'Content-Type': 'application/json'},
-      }),
-    )
+    mockSuccessFlow()
     const req = makeRequest({
       email: 'a@b.com',
       handle: 'abc.self.surf',
@@ -351,12 +373,7 @@ describe('onRequestPost - input validation', () => {
   })
 
   it('accepts 20-char username (maximum)', async () => {
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(JSON.stringify({did: 'did:plc:test'}), {
-        status: 200,
-        headers: {'Content-Type': 'application/json'},
-      }),
-    )
+    mockSuccessFlow()
     const req = makeRequest({
       email: 'a@b.com',
       handle: 'abcdefghijklmnopqrst.self.surf', // 20 chars
@@ -367,56 +384,134 @@ describe('onRequestPost - input validation', () => {
   })
 })
 
-// ─── Field Stripping ───────────────────────────────────────────────
+// ─── Invite Code & Account Creation ─────────────────────────────────
 
-describe('onRequestPost - field stripping', () => {
+describe('onRequestPost - invite code flow', () => {
   const originalFetch = global.fetch
 
   afterEach(() => {
     global.fetch = originalFetch
   })
 
-  it('only forwards email, handle, password to PDS', async () => {
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(JSON.stringify({did: 'did:plc:test'}), {
-        status: 200,
-        headers: {'Content-Type': 'application/json'},
-      }),
-    )
+  it('mints invite code with Basic auth before creating account', async () => {
+    mockSuccessFlow()
+    const req = makeRequest(validBody)
+    await onRequestPost(ctx(req))
+
+    const calls = (global.fetch as jest.Mock).mock.calls
+    // First call: createInviteCode
+    expect(calls[0][0]).toContain('createInviteCode')
+    const expectedAuth = 'Basic ' + btoa('admin:' + ADMIN_PASSWORD)
+    expect(calls[0][1].headers.Authorization).toBe(expectedAuth)
+    const inviteBody = JSON.parse(calls[0][1].body)
+    expect(inviteBody).toEqual({useCount: 1})
+  })
+
+  it('creates account with invite code and sanitized fields', async () => {
+    mockSuccessFlow()
     const req = makeRequest({
       ...validBody,
-      inviteCode: 'invite-123',
+      inviteCode: 'user-supplied-should-be-stripped',
       verificationPhone: '+1234567890',
-      verificationCode: '123456',
       extraField: 'should be stripped',
     })
-    const res = await onRequestPost(ctx(req))
-    expect(res.status).toBe(200)
+    await onRequestPost(ctx(req))
 
-    const fetchCall = (global.fetch as jest.Mock).mock.calls[0]
-    const forwardedBody = JSON.parse(fetchCall[1].body)
+    const calls = (global.fetch as jest.Mock).mock.calls
+    // Second call: createAccount
+    expect(calls[1][0]).toContain('createAccount')
+    const forwardedBody = JSON.parse(calls[1][1].body)
     expect(Object.keys(forwardedBody).sort()).toEqual([
       'email',
       'handle',
+      'inviteCode',
       'password',
     ])
     expect(forwardedBody.email).toBe(validBody.email)
     expect(forwardedBody.handle).toBe(validBody.handle)
     expect(forwardedBody.password).toBe(validBody.password)
+    expect(forwardedBody.inviteCode).toBe(INVITE_CODE)
   })
 
-  it('sends X-App-Secret header to PDS', async () => {
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(JSON.stringify({did: 'did:plc:test'}), {
-        status: 200,
+  it('does not send X-App-Secret header on any call', async () => {
+    mockSuccessFlow()
+    const req = makeRequest(validBody)
+    await onRequestPost(ctx(req))
+
+    const calls = (global.fetch as jest.Mock).mock.calls
+    for (const call of calls) {
+      expect(call[1].headers['X-App-Secret']).toBeUndefined()
+    }
+  })
+
+  it('creates empty profile record after account creation', async () => {
+    mockSuccessFlow()
+    const req = makeRequest(validBody)
+    await onRequestPost(ctx(req))
+
+    const calls = (global.fetch as jest.Mock).mock.calls
+    expect(calls.length).toBe(3)
+    // Third call: putRecord
+    expect(calls[2][0]).toContain('putRecord')
+    expect(calls[2][1].headers.Authorization).toBe(
+      `Bearer ${accountResponse.accessJwt}`,
+    )
+    const profileBody = JSON.parse(calls[2][1].body)
+    expect(profileBody.repo).toBe(accountResponse.did)
+    expect(profileBody.collection).toBe('app.bsky.actor.profile')
+    expect(profileBody.rkey).toBe('self')
+    expect(profileBody.record.$type).toBe('app.bsky.actor.profile')
+  })
+
+  it('returns 500 when invite code minting fails', async () => {
+    global.fetch = jest.fn().mockResolvedValueOnce(
+      new Response(JSON.stringify({error: 'InternalError'}), {
+        status: 500,
         headers: {'Content-Type': 'application/json'},
       }),
     )
     const req = makeRequest(validBody)
-    await onRequestPost(ctx(req))
+    const res = await onRequestPost(ctx(req))
+    expect(res.status).toBe(500)
+    const body = await res.json()
+    expect(body.error).toContain('temporarily unavailable')
+  })
 
-    const fetchCall = (global.fetch as jest.Mock).mock.calls[0]
-    expect(fetchCall[1].headers['X-App-Secret']).toBe(SECRET)
+  it('returns 500 when invite code minting throws', async () => {
+    global.fetch = jest.fn().mockRejectedValueOnce(new Error('network error'))
+    const req = makeRequest(validBody)
+    const res = await onRequestPost(ctx(req))
+    expect(res.status).toBe(500)
+    const body = await res.json()
+    expect(body.error).toContain('temporarily unavailable')
+  })
+
+  it('succeeds even when profile creation fails', async () => {
+    global.fetch = jest
+      .fn()
+      // Step 1: createInviteCode - success
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({code: INVITE_CODE}), {
+          status: 200,
+          headers: {'Content-Type': 'application/json'},
+        }),
+      )
+      // Step 2: createAccount - success
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify(accountResponse), {
+          status: 200,
+          headers: {'Content-Type': 'application/json'},
+        }),
+      )
+      // Step 3: putRecord - failure
+      .mockRejectedValueOnce(new Error('profile creation failed'))
+
+    const req = makeRequest(validBody)
+    const res = await onRequestPost(ctx(req))
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body.did).toBe(accountResponse.did)
+    expect(body.accessJwt).toBe(accountResponse.accessJwt)
   })
 })
 
@@ -430,15 +525,25 @@ describe('onRequestPost - PDS error mapping', () => {
   })
 
   it('maps HandleNotAvailable to friendly message', async () => {
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(
-        JSON.stringify({
-          error: 'HandleNotAvailable',
-          message: 'Handle already taken',
+    global.fetch = jest
+      .fn()
+      // Step 1: createInviteCode - success
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({code: INVITE_CODE}), {
+          status: 200,
+          headers: {'Content-Type': 'application/json'},
         }),
-        {status: 400, headers: {'Content-Type': 'application/json'}},
-      ),
-    )
+      )
+      // Step 2: createAccount - error
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            error: 'HandleNotAvailable',
+            message: 'Handle already taken',
+          }),
+          {status: 400, headers: {'Content-Type': 'application/json'}},
+        ),
+      )
     const req = makeRequest(validBody)
     const res = await onRequestPost(ctx(req))
     expect(res.status).toBe(400)
@@ -452,7 +557,13 @@ describe('onRequestPost - PDS error mapping', () => {
   it('maps RateLimitExceeded to friendly message', async () => {
     global.fetch = jest
       .fn()
-      .mockResolvedValue(
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({code: INVITE_CODE}), {
+          status: 200,
+          headers: {'Content-Type': 'application/json'},
+        }),
+      )
+      .mockResolvedValueOnce(
         new Response(
           JSON.stringify({error: 'RateLimitExceeded', message: 'slow down'}),
           {status: 429, headers: {'Content-Type': 'application/json'}},
@@ -469,15 +580,23 @@ describe('onRequestPost - PDS error mapping', () => {
   })
 
   it('passes through unmapped PDS errors', async () => {
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(
-        JSON.stringify({
-          error: 'SomeUnknownError',
-          message: 'Something weird happened',
+    global.fetch = jest
+      .fn()
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({code: INVITE_CODE}), {
+          status: 200,
+          headers: {'Content-Type': 'application/json'},
         }),
-        {status: 500, headers: {'Content-Type': 'application/json'}},
-      ),
-    )
+      )
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            error: 'SomeUnknownError',
+            message: 'Something weird happened',
+          }),
+          {status: 500, headers: {'Content-Type': 'application/json'}},
+        ),
+      )
     const req = makeRequest(validBody)
     const res = await onRequestPost(ctx(req))
     expect(res.status).toBe(500)
@@ -489,7 +608,13 @@ describe('onRequestPost - PDS error mapping', () => {
   it('includes CORS headers on PDS error responses', async () => {
     global.fetch = jest
       .fn()
-      .mockResolvedValue(
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({code: INVITE_CODE}), {
+          status: 200,
+          headers: {'Content-Type': 'application/json'},
+        }),
+      )
+      .mockResolvedValueOnce(
         new Response(
           JSON.stringify({error: 'HandleNotAvailable', message: 'taken'}),
           {status: 400, headers: {'Content-Type': 'application/json'}},
@@ -511,23 +636,13 @@ describe('onRequestPost - success', () => {
   })
 
   it('returns PDS success response with CORS headers', async () => {
-    const pdsResponseBody = {
-      did: 'did:plc:testuser123',
-      handle: 'testuser.self.surf',
-      accessJwt: 'jwt-token',
-      refreshJwt: 'refresh-token',
-    }
-    global.fetch = jest.fn().mockResolvedValue(
-      new Response(JSON.stringify(pdsResponseBody), {
-        status: 200,
-        headers: {'Content-Type': 'application/json'},
-      }),
-    )
+    mockSuccessFlow()
     const req = makeRequest(validBody)
     const res = await onRequestPost(ctx(req))
     expect(res.status).toBe(200)
     const body = await res.json()
     expect(body.did).toBe('did:plc:testuser123')
+    expect(body.accessJwt).toBe('jwt-token')
     expect(res.headers.get('Access-Control-Allow-Origin')).toBe(VALID_ORIGIN)
   })
 })

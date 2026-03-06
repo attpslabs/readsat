@@ -387,7 +387,7 @@ class BskyAppAgent extends BskyAgent {
       service,
       async fetch(...args) {
         // On web, route createAccount through our proxy
-        // so the server can inject the X-App-Secret header
+        // so the server can mint an invite code via PDS admin API
         if (IS_WEB) {
           const url = args[0]
           if (
