@@ -1,6 +1,6 @@
 import {useMutation, useQuery, useQueryClient} from '@tanstack/react-query'
 
-import {READS_AT_ACCOUNT_DID} from '#/lib/constants'
+import {READS_AT_ACCOUNT_DID, SELF_SURF_SERVICE} from '#/lib/constants'
 import {logger} from '#/logger'
 import {STALE} from '#/state/queries'
 import {useAgent, useSession} from '#/state/session'
@@ -10,6 +10,39 @@ const BOOKCLUB_BOOK_COLLECTION = 'at.reads.bookclub.book'
 const BOOKCLUB_MEMBER_COLLECTION = 'at.reads.bookclub.member'
 
 const BOOKCLUB_API = 'https://bookclub-api.attps.workers.dev'
+
+/**
+ * Fetch records from the reads.at service repo via the self.surf PDS directly.
+ * This avoids routing through the user's PDS which may not have access.
+ */
+async function listReadsAtRecords(
+  collection: string,
+  options?: {limit?: number; reverse?: boolean},
+): Promise<{records: Array<{uri: string; value: unknown}>}> {
+  const url = new URL(`${SELF_SURF_SERVICE}/xrpc/com.atproto.repo.listRecords`)
+  url.searchParams.set('repo', READS_AT_ACCOUNT_DID)
+  url.searchParams.set('collection', collection)
+  if (options?.limit) url.searchParams.set('limit', String(options.limit))
+  if (options?.reverse) url.searchParams.set('reverse', 'true')
+
+  const res = await fetch(url.toString())
+  if (!res.ok) throw new Error(`Failed to fetch ${collection}`)
+  return res.json()
+}
+
+async function getReadsAtRecord(
+  collection: string,
+  rkey: string,
+): Promise<{uri: string; value: unknown}> {
+  const url = new URL(`${SELF_SURF_SERVICE}/xrpc/com.atproto.repo.getRecord`)
+  url.searchParams.set('repo', READS_AT_ACCOUNT_DID)
+  url.searchParams.set('collection', collection)
+  url.searchParams.set('rkey', rkey)
+
+  const res = await fetch(url.toString())
+  if (!res.ok) throw new Error(`Record not found`)
+  return res.json()
+}
 
 const RQKEY_ROOT = 'bookclubs'
 export const RQKEY_LIST = () => [RQKEY_ROOT, 'list']
@@ -99,7 +132,6 @@ async function callBookclubApi(
   path: string,
   body: Record<string, unknown>,
   accessJwt: string,
-  pdsUrl?: string,
 ): Promise<Record<string, unknown>> {
   const res = await fetch(`${BOOKCLUB_API}${path}`, {
     method: 'POST',
@@ -107,7 +139,7 @@ async function callBookclubApi(
       'Content-Type': 'application/json',
       Authorization: `Bearer ${accessJwt}`,
     },
-    body: JSON.stringify({...body, pdsUrl}),
+    body: JSON.stringify(body),
   })
   if (!res.ok) {
     const data = (await res.json().catch(() => ({}))) as {error?: string}
@@ -122,35 +154,28 @@ async function callBookclubApi(
  * Also fetches the most recent book for each club.
  */
 export function useBookClubsQuery() {
-  const agent = useAgent()
-
   return useQuery<BookClubEntry[]>({
     queryKey: RQKEY_LIST(),
     queryFn: async () => {
-      // Fetch all clubs from the reads.at repo
-      const clubsRes = await agent.com.atproto.repo.listRecords({
-        repo: READS_AT_ACCOUNT_DID,
-        collection: BOOKCLUB_COLLECTION,
+      // Fetch all clubs from the reads.at repo (direct to self.surf PDS)
+      const clubsRes = await listReadsAtRecords(BOOKCLUB_COLLECTION, {
         limit: 100,
       })
 
-      // Fetch all book records from the reads.at repo
-      const booksRes = await agent.com.atproto.repo.listRecords({
-        repo: READS_AT_ACCOUNT_DID,
-        collection: BOOKCLUB_BOOK_COLLECTION,
+      // Fetch all book records
+      const booksRes = await listReadsAtRecords(BOOKCLUB_BOOK_COLLECTION, {
         limit: 100,
-        reverse: true, // newest first
+        reverse: true,
       })
 
-      const allBooks = booksRes.data.records.map(r => ({
+      const allBooks = booksRes.records.map(r => ({
         uri: r.uri,
         rkey: r.uri.split('/').pop()!,
         record: r.value as BookClubBookRecord,
       }))
 
-      return clubsRes.data.records.map(record => {
+      return clubsRes.records.map(record => {
         const clubUri = record.uri
-        // Find the most recent book for this club (list is newest-first)
         const currentBook = allBooks.find(b => b.record.club === clubUri)
 
         return {
@@ -169,27 +194,19 @@ export function useBookClubsQuery() {
  * Fetch a single bookclub by rkey from the reads.at service account repo.
  */
 export function useBookClubQuery(rkey: string) {
-  const agent = useAgent()
-
   return useQuery<BookClubEntry | null>({
     queryKey: RQKEY_DETAIL(rkey),
     queryFn: async () => {
-      const res = await agent.com.atproto.repo.getRecord({
-        repo: READS_AT_ACCOUNT_DID,
-        collection: BOOKCLUB_COLLECTION,
-        rkey,
-      })
+      const res = await getReadsAtRecord(BOOKCLUB_COLLECTION, rkey)
 
-      const clubUri = res.data.uri
+      const clubUri = res.uri
 
       // Fetch the most recent book for this club
-      const booksRes = await agent.com.atproto.repo.listRecords({
-        repo: READS_AT_ACCOUNT_DID,
-        collection: BOOKCLUB_BOOK_COLLECTION,
+      const booksRes = await listReadsAtRecords(BOOKCLUB_BOOK_COLLECTION, {
         limit: 100,
         reverse: true,
       })
-      const currentBook = booksRes.data.records
+      const currentBook = booksRes.records
         .map(r => ({
           uri: r.uri,
           rkey: r.uri.split('/').pop()!,
@@ -200,7 +217,7 @@ export function useBookClubQuery(rkey: string) {
       return {
         uri: clubUri,
         rkey,
-        record: res.data.value as BookClubRecord,
+        record: res.value as BookClubRecord,
         currentBook,
       }
     },
@@ -213,17 +230,13 @@ export function useBookClubQuery(rkey: string) {
  * Fetch all books for a specific club (full history, oldest first).
  */
 export function useClubBooksQuery(clubUri: string) {
-  const agent = useAgent()
-
   return useQuery<BookClubBookEntry[]>({
     queryKey: RQKEY_BOOKS(clubUri),
     queryFn: async () => {
-      const res = await agent.com.atproto.repo.listRecords({
-        repo: READS_AT_ACCOUNT_DID,
-        collection: BOOKCLUB_BOOK_COLLECTION,
+      const res = await listReadsAtRecords(BOOKCLUB_BOOK_COLLECTION, {
         limit: 100,
       })
-      return res.data.records
+      return res.records
         .map(r => ({
           uri: r.uri,
           rkey: r.uri.split('/').pop()!,
@@ -248,19 +261,13 @@ export function useClubBooksQuery(clubUri: string) {
 export function useCreateBookClubMutation() {
   const agent = useAgent()
   const queryClient = useQueryClient()
-  const {currentAccount} = useSession()
 
   return useMutation<BookClubEntry, Error, {name: string}>({
     mutationFn: async ({name}) => {
       const accessJwt = agent.session?.accessJwt
       if (!accessJwt) throw new Error('Not logged in')
 
-      const data = await callBookclubApi(
-        '/club',
-        {name},
-        accessJwt,
-        currentAccount?.pdsUrl,
-      )
+      const data = await callBookclubApi('/club', {name}, accessJwt)
       return {
         uri: data.uri as string,
         rkey: data.rkey as string,
@@ -282,19 +289,13 @@ export function useCreateBookClubMutation() {
 export function useUpdateBookClubMutation() {
   const agent = useAgent()
   const queryClient = useQueryClient()
-  const {currentAccount} = useSession()
 
   return useMutation<void, Error, {rkey: string; name: string}>({
     mutationFn: async ({rkey, name}) => {
       const accessJwt = agent.session?.accessJwt
       if (!accessJwt) throw new Error('Not logged in')
 
-      await callBookclubApi(
-        '/club/update',
-        {rkey, name},
-        accessJwt,
-        currentAccount?.pdsUrl,
-      )
+      await callBookclubApi('/club/update', {rkey, name}, accessJwt)
     },
     onSuccess: (_, {rkey}) => {
       void queryClient.invalidateQueries({queryKey: RQKEY_LIST()})
@@ -313,7 +314,6 @@ export function useUpdateBookClubMutation() {
 export function useAddBookToClubMutation() {
   const agent = useAgent()
   const queryClient = useQueryClient()
-  const {currentAccount} = useSession()
 
   return useMutation<
     BookClubBookEntry,
@@ -340,7 +340,6 @@ export function useAddBookToClubMutation() {
         '/book',
         {clubUri, bookTitle, bookAuthors, bookCover, bookHiveId},
         accessJwt,
-        currentAccount?.pdsUrl,
       )
       return {
         uri: data.uri as string,
@@ -461,7 +460,6 @@ export function useJoinBookClubMutation() {
           '/member/request',
           {clubUri, handle: currentAccount.handle},
           accessJwt,
-          currentAccount.pdsUrl,
         )
       } catch (e) {
         logger.error('Failed to mirror join request', {safeMessage: e})
@@ -510,12 +508,10 @@ export function useCancelJoinRequestMutation() {
       // Find and cancel ALL mirrored records on reads.at (best-effort)
       // There may be duplicates if a previous cancel failed silently.
       try {
-        const mirrorRes = await agent.com.atproto.repo.listRecords({
-          repo: READS_AT_ACCOUNT_DID,
-          collection: BOOKCLUB_MEMBER_COLLECTION,
+        const mirrorRes = await listReadsAtRecords(BOOKCLUB_MEMBER_COLLECTION, {
           limit: 100,
         })
-        const mirrors = mirrorRes.data.records.filter(r => {
+        const mirrors = mirrorRes.records.filter(r => {
           const val = r.value as BookClubMemberRecord
           return (
             val.club === clubUri &&
@@ -530,7 +526,6 @@ export function useCancelJoinRequestMutation() {
               '/member/cancel',
               {clubUri, rkey: mirrorRkey},
               accessJwt,
-              currentAccount.pdsUrl,
             )
           }),
         )
@@ -557,17 +552,13 @@ export function useCancelJoinRequestMutation() {
  * Only useful for the club admin.
  */
 export function usePendingMembersQuery(clubUri: string, isAdmin: boolean) {
-  const agent = useAgent()
-
   return useQuery<BookClubMemberEntry[]>({
     queryKey: RQKEY_PENDING_MEMBERS(clubUri),
     queryFn: async () => {
-      const res = await agent.com.atproto.repo.listRecords({
-        repo: READS_AT_ACCOUNT_DID,
-        collection: BOOKCLUB_MEMBER_COLLECTION,
+      const res = await listReadsAtRecords(BOOKCLUB_MEMBER_COLLECTION, {
         limit: 100,
       })
-      const pending = res.data.records
+      const pending = res.records
         .map(r => ({
           uri: r.uri,
           rkey: r.uri.split('/').pop()!,
@@ -595,19 +586,13 @@ export function usePendingMembersQuery(clubUri: string, isAdmin: boolean) {
 export function useApproveMemberMutation() {
   const agent = useAgent()
   const queryClient = useQueryClient()
-  const {currentAccount} = useSession()
 
   return useMutation<void, Error, {clubUri: string; rkey: string}>({
     mutationFn: async ({rkey}) => {
       const accessJwt = agent.session?.accessJwt
       if (!accessJwt) throw new Error('Not logged in')
 
-      await callBookclubApi(
-        '/member/approve',
-        {rkey},
-        accessJwt,
-        currentAccount?.pdsUrl,
-      )
+      await callBookclubApi('/member/approve', {rkey}, accessJwt)
     },
     onSuccess: (_, {clubUri}) => {
       void queryClient.invalidateQueries({
@@ -626,19 +611,13 @@ export function useApproveMemberMutation() {
 export function useDenyMemberMutation() {
   const agent = useAgent()
   const queryClient = useQueryClient()
-  const {currentAccount} = useSession()
 
   return useMutation<void, Error, {clubUri: string; rkey: string}>({
     mutationFn: async ({rkey}) => {
       const accessJwt = agent.session?.accessJwt
       if (!accessJwt) throw new Error('Not logged in')
 
-      await callBookclubApi(
-        '/member/deny',
-        {rkey},
-        accessJwt,
-        currentAccount?.pdsUrl,
-      )
+      await callBookclubApi('/member/deny', {rkey}, accessJwt)
     },
     onSuccess: (_, {clubUri}) => {
       void queryClient.invalidateQueries({
