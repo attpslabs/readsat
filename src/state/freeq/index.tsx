@@ -10,7 +10,7 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import {FREEQ_WS_URL} from '#/lib/constants'
 import {FreeqClient} from '#/lib/freeq/client'
 import type {ChatMember, ChatMessage, ConnectionStatus} from '#/lib/freeq/types'
-import {useSession} from '#/state/session'
+import {useAgent, useSession} from '#/state/session'
 
 /**
  * Hook for book club chat. Manages connection, auth, channel join,
@@ -26,6 +26,7 @@ export function useBookClubChat(
   isAdmin?: boolean,
 ) {
   const {currentAccount} = useSession()
+  const agent = useAgent()
   const [status, setStatus] = useState<ConnectionStatus>('disconnected')
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [members, setMembers] = useState<Map<string, ChatMember>>(new Map())
@@ -41,7 +42,7 @@ export function useBookClubChat(
     if (!enabled || !currentAccount?.did) return
 
     const accessJwt = currentAccount.accessJwt
-    const pdsUrl = currentAccount.pdsUrl
+    const pdsUrl = currentAccount.pdsUrl || agent.pdsUrl?.toString()
     if (!accessJwt || !pdsUrl) return
 
     const client = new FreeqClient(FREEQ_WS_URL, {
@@ -111,6 +112,7 @@ export function useBookClubChat(
     currentAccount?.accessJwt,
     currentAccount?.pdsUrl,
     currentAccount?.handle,
+    agent,
   ])
 
   // Derive whether current user is an operator
