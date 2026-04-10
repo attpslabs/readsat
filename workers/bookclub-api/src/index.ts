@@ -177,29 +177,84 @@ async function getRecord(
   collection: string,
   rkey: string,
 ): Promise<{uri: string; value: Record<string, unknown>} | null> {
-  const res = await fetch(
-    `${env.READSAT_PDS_URL}/xrpc/com.atproto.repo.getRecord?` +
-      `repo=${session.did}&collection=${collection}&rkey=${rkey}`,
-    {
-      headers: {Authorization: `Bearer ${session.accessJwt}`},
-    },
-  )
+  const url = new URL(`${env.READSAT_PDS_URL}/xrpc/com.atproto.repo.getRecord`)
+  url.searchParams.set('repo', session.did)
+  url.searchParams.set('collection', collection)
+  url.searchParams.set('rkey', rkey)
+  const res = await fetch(url.toString(), {
+    headers: {Authorization: `Bearer ${session.accessJwt}`},
+  })
   if (!res.ok) return null
   return await res.json()
 }
 
 /**
- * Verify caller's identity by validating their access token against the PDS.
- * Returns the caller's DID if valid.
+ * Resolve PDS URL from a DID by fetching the DID document.
+ * Supports did:plc (via plc.directory) and did:web.
  */
-async function verifyCallerDid(
-  authHeader: string | null,
-  pdsUrl: string,
-): Promise<string> {
+async function resolvePdsUrl(did: string): Promise<string> {
+  let didDocUrl: string
+  if (did.startsWith('did:plc:')) {
+    didDocUrl = `https://plc.directory/${did}`
+  } else if (did.startsWith('did:web:')) {
+    const host = did.slice('did:web:'.length).replace(/:/g, '/')
+    didDocUrl = `https://${host}/.well-known/did.json`
+  } else {
+    throw new Error('Unsupported DID method')
+  }
+
+  const res = await fetch(didDocUrl)
+  if (!res.ok) {
+    throw new Error('Failed to resolve DID document')
+  }
+  const doc = await res.json()
+
+  // Find the atproto PDS service endpoint
+  const services = doc.service as
+    | Array<{id: string; type: string; serviceEndpoint: string}>
+    | undefined
+  const pds = services?.find(
+    (s: {id: string; type: string}) =>
+      s.id === '#atproto_pds' || s.type === 'AtprotoPersonalDataServer',
+  )
+  if (!pds?.serviceEndpoint) {
+    throw new Error('No PDS service found in DID document')
+  }
+  return pds.serviceEndpoint
+}
+
+/**
+ * Verify caller's identity by:
+ * 1. Decoding the JWT to extract the DID (without trusting it yet)
+ * 2. Resolving the PDS URL from the DID document (server-side, not client-provided)
+ * 3. Validating the token against the resolved PDS
+ */
+async function verifyCallerDid(authHeader: string | null): Promise<string> {
   if (!authHeader?.startsWith('Bearer ')) {
     throw new Error('Missing or invalid Authorization header')
   }
   const token = authHeader.slice(7)
+
+  // Decode JWT payload to get the claimed DID (not trusted yet)
+  const parts = token.split('.')
+  if (parts.length !== 3) {
+    throw new Error('Invalid token format')
+  }
+  let payload: {sub?: string; iss?: string}
+  try {
+    payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')))
+  } catch {
+    throw new Error('Invalid token payload')
+  }
+  const claimedDid = payload.sub || payload.iss
+  if (!claimedDid?.startsWith('did:')) {
+    throw new Error('Token does not contain a valid DID')
+  }
+
+  // Resolve PDS from the DID document (trusted source, not client-provided)
+  const pdsUrl = await resolvePdsUrl(claimedDid)
+
+  // Verify the token against the resolved PDS
   const res = await fetch(`${pdsUrl}/xrpc/com.atproto.server.getSession`, {
     headers: {Authorization: `Bearer ${token}`},
   })
@@ -248,7 +303,7 @@ async function handleUpdateClub(
   // Fetch the existing record to verify admin ownership
   const getRes = await fetch(
     `${env.READSAT_PDS_URL}/xrpc/com.atproto.repo.getRecord?` +
-      `repo=${session.did}&collection=${BOOKCLUB_COLLECTION}&rkey=${rkey}`,
+      `repo=${encodeURIComponent(session.did)}&collection=${encodeURIComponent(BOOKCLUB_COLLECTION)}&rkey=${encodeURIComponent(rkey)}`,
     {
       headers: {Authorization: `Bearer ${session.accessJwt}`},
     },
@@ -284,7 +339,7 @@ async function handleDeleteClub(
   // Verify admin ownership
   const getRes = await fetch(
     `${env.READSAT_PDS_URL}/xrpc/com.atproto.repo.getRecord?` +
-      `repo=${session.did}&collection=${BOOKCLUB_COLLECTION}&rkey=${rkey}`,
+      `repo=${encodeURIComponent(session.did)}&collection=${encodeURIComponent(BOOKCLUB_COLLECTION)}&rkey=${encodeURIComponent(rkey)}`,
     {
       headers: {Authorization: `Bearer ${session.accessJwt}`},
     },
@@ -327,7 +382,7 @@ async function handleAddBook(
   const clubRkey = clubUri.split('/').pop()!
   const getRes = await fetch(
     `${env.READSAT_PDS_URL}/xrpc/com.atproto.repo.getRecord?` +
-      `repo=${session.did}&collection=${BOOKCLUB_COLLECTION}&rkey=${clubRkey}`,
+      `repo=${encodeURIComponent(session.did)}&collection=${encodeURIComponent(BOOKCLUB_COLLECTION)}&rkey=${encodeURIComponent(clubRkey)}`,
     {
       headers: {Authorization: `Bearer ${session.accessJwt}`},
     },
@@ -514,16 +569,9 @@ export default {
     try {
       const body = await request.json()
 
-      // The client sends its PDS URL so we verify the token against the right server
-      const pdsUrl =
-        typeof body.pdsUrl === 'string' && body.pdsUrl
-          ? body.pdsUrl
-          : env.READSAT_PDS_URL
-
-      // Verify the caller's identity
+      // Verify the caller's identity (PDS resolved server-side from DID document)
       const callerDid = await verifyCallerDid(
         request.headers.get('Authorization'),
-        pdsUrl,
       )
 
       // Authenticate as the reads.at service account
