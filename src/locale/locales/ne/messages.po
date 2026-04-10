@@ -128,7 +128,7 @@ msgstr "{0, plural, one {पुन: पोष्ट} other {पुन: पोष
 msgid "{0, plural, one {save} other {saves}}"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:77
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:82
 msgid "{0, plural, one {Synced # book from Goodreads} other {Synced # books from Goodreads}}"
 msgstr ""
 
@@ -803,11 +803,11 @@ msgstr "एप पासवर्ड थप्नुहोस्"
 msgid "Add emoji reaction"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:187
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:188
 msgid "Add Goodreads profile"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:193
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:194
 msgid "Add Goodreads Profile"
 msgstr ""
 
@@ -889,7 +889,7 @@ msgstr ""
 msgid "Add your birthdate"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:182
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:185
 msgid "Add your Goodreads profile to sync your bookshelves."
 msgstr ""
 
@@ -910,6 +910,7 @@ msgstr ""
 msgid "Additional details (limit 300 characters)"
 msgstr ""
 
+#: src/screens/BookClubs/BookClubMemberList.tsx:148
 #: src/screens/BookClubs/BookClubSidebar.tsx:146
 msgid "Admin"
 msgstr ""
@@ -1433,6 +1434,10 @@ msgctxt "Name of app icon variant"
 msgid "Aurora"
 msgstr ""
 
+#: src/screens/BookClubs/BookClubChat.tsx:87
+msgid "Authenticating..."
+msgstr ""
+
 #: src/screens/Settings/ContentAndMediaSettings.tsx:117
 #: src/screens/Settings/ContentAndMediaSettings.tsx:123
 msgid "Autoplay videos and GIFs"
@@ -1864,8 +1869,8 @@ msgstr "क्यामेरा"
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:43
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:52
 #: src/view/shell/desktop/LeftNav.tsx:217
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:165
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:174
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:168
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:177
 msgid "Cancel"
 msgstr "रद्द गर्नुहोस्"
 
@@ -1990,14 +1995,14 @@ msgstr ""
 msgid "Chat"
 msgstr "कुराकानी"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:210
-msgid "Chat coming soon"
-msgstr ""
-
 #: src/screens/Messages/components/RequestButtons.tsx:78
 #: src/screens/Messages/components/RequestButtons.tsx:313
 msgctxt "toast"
 msgid "Chat deleted"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubMemberList.tsx:35
+msgid "Chat members"
 msgstr ""
 
 #: src/lib/hooks/useNotificationHandler.ts:117
@@ -2421,6 +2426,10 @@ msgstr ""
 msgid "Confirmation code"
 msgstr "पुष्टिकरण कोड"
 
+#: src/screens/BookClubs/BookClubChat.tsx:76
+msgid "Connecting to chat..."
+msgstr ""
+
 #: src/ageAssurance/components/RedirectOverlay.tsx:296
 #: src/components/ageAssurance/AgeAssuranceRedirectDialog.tsx:208
 msgid "Connection issue"
@@ -2730,7 +2739,7 @@ msgstr ""
 msgid "Couldn't load book details. Tap to retry."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:75
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:87
 msgid "Couldn't load bookclub. Tap to retry."
 msgstr ""
 
@@ -2856,7 +2865,7 @@ msgid "Culture"
 msgstr "संस्कृति"
 
 #: src/screens/BookClubs/BookClubCard.tsx:95
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:154
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:166
 #: src/screens/BookClubs/EditBookClubDialog.tsx:249
 msgid "Currently reading"
 msgstr ""
@@ -3047,6 +3056,11 @@ msgstr ""
 #: src/view/com/feeds/MissingFeed.tsx:127
 #: src/view/com/feeds/MissingFeed.tsx:135
 msgid "Deleted list"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubMemberList.tsx:165
+#: src/screens/BookClubs/BookClubMemberList.tsx:170
+msgid "Demote"
 msgstr ""
 
 #: src/screens/BookClubs/PendingRequests.tsx:120
@@ -4036,7 +4050,7 @@ msgstr ""
 msgid "Failed to save draft"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:58
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:63
 msgid "Failed to save Goodreads profile"
 msgstr ""
 
@@ -4519,6 +4533,10 @@ msgstr "पासवर्ड बिर्सनुभयो?"
 msgid "Forgot?"
 msgstr "बिर्सनुभयो?"
 
+#: src/screens/BookClubs/BookClubMemberList.tsx:131
+msgid "Founder"
+msgstr ""
+
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:12
 msgid "Free your feed"
 msgstr ""
@@ -4649,8 +4667,8 @@ msgstr ""
 #: src/components/Layout/Header/index.tsx:128
 #: src/components/moderation/ScreenHider.tsx:160
 #: src/components/moderation/ScreenHider.tsx:169
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:101
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:112
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:113
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:124
 #: src/screens/Login/components/AuthLayout/Header/index.tsx:75
 #: src/screens/Messages/Inbox.tsx:251
 #: src/screens/Profile/ProfileFeed/index.tsx:95
@@ -4763,20 +4781,20 @@ msgstr ""
 msgid "Goodreads Profile"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:56
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:61
 msgid "Goodreads profile saved"
 msgstr ""
 
 #: src/screens/Profile/Header/EditProfileDialog.tsx:432
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:135
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:138
 msgid "Goodreads profile URL"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:131
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:134
 msgid "Goodreads Profile URL"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:96
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:99
 msgid "Goodreads Sync"
 msgstr ""
 
@@ -5977,7 +5995,19 @@ msgstr ""
 msgid "Media that may be disturbing or inappropriate for some audiences."
 msgstr "केही दर्शकहरूको लागि असुविधाजनक वा अनुचित हुन सक्ने मिडिया।"
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:88
+#: src/screens/BookClubs/BookClubChat.tsx:126
+msgid "member online"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubMemberList.tsx:38
+msgid "Members ({0})"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubChat.tsx:128
+msgid "members online"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:100
 msgid "Members only"
 msgstr ""
 
@@ -6157,7 +6187,7 @@ msgstr "चलचित्रहरू"
 msgid "Music"
 msgstr "संगीत"
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:146
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:149
 msgid "Must be a goodreads.com URL"
 msgstr ""
 
@@ -6534,6 +6564,10 @@ msgstr ""
 #: src/screens/Messages/components/ChatListItem.tsx:142
 msgid "No messages yet"
 msgstr "अहिलेसम्म कुनै सन्देश छैन"
+
+#: src/screens/BookClubs/BookClubChat.tsx:147
+msgid "No messages yet. Start the conversation!"
+msgstr ""
 
 #: src/screens/Onboarding/StepFinished/ValuePropositionPager.shared.tsx:14
 msgid "No more doomscrolling junk-filled algorithms. Find feeds that work for you, not against you."
@@ -6917,7 +6951,7 @@ msgstr ""
 msgid "Open Goodreads profile"
 msgstr ""
 
-#: src/components/Post/Embed/ExternalEmbed/index.tsx:90
+#: src/components/Post/Embed/ExternalEmbed/index.tsx:100
 msgid "Open link to {niceUrl}"
 msgstr "{niceUrl} को लिङ्क खोल्नुहोस्"
 
@@ -7056,6 +7090,10 @@ msgstr "पासवर्ड रिसेट फारम खोल्नुह
 
 #: src/view/com/composer/select-language/PostLanguageSelect.tsx:129
 msgid "Opens post language settings"
+msgstr ""
+
+#: src/screens/BookClubs/BookClubChat.tsx:110
+msgid "Opens the member list"
 msgstr ""
 
 #: src/view/com/feeds/ComposerPrompt.tsx:147
@@ -7749,6 +7787,11 @@ msgctxt "toast"
 msgid "Profile updated"
 msgstr "प्रोफाइल अद्यावधिक गरियो।"
 
+#: src/screens/BookClubs/BookClubMemberList.tsx:175
+#: src/screens/BookClubs/BookClubMemberList.tsx:180
+msgid "Promote"
+msgstr ""
+
 #: src/components/moderation/ReportDialog/utils/useReportOptions.ts:223
 msgid "Promoting or selling prohibited items or services"
 msgstr ""
@@ -7983,6 +8026,8 @@ msgstr "वार्तालाप पुनः लोड गर्नुहो
 #: src/components/FeedCard.tsx:375
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:105
 #: src/components/StarterPack/Wizard/WizardListCard.tsx:112
+#: src/screens/BookClubs/BookClubMemberList.tsx:185
+#: src/screens/BookClubs/BookClubMemberList.tsx:190
 #: src/screens/BookClubs/CreateBookClubScreen.tsx:208
 #: src/screens/Bookmarks/index.tsx:267
 #: src/screens/Settings/Settings.tsx:682
@@ -8551,8 +8596,8 @@ msgstr ""
 #: src/view/com/composer/photos/EditImageDialog.web.tsx:75
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:157
 #: src/view/com/composer/photos/ImageAltTextDialog.tsx:167
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:151
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:160
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:154
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:163
 msgid "Save"
 msgstr "सुरक्षित गर्नुहोस्"
 
@@ -9012,6 +9057,7 @@ msgstr "इमेल पठाउनुहोस्"
 msgid "Send feedback"
 msgstr "प्रतिक्रिया पठाउनुहोस्"
 
+#: src/screens/BookClubs/BookClubChat.tsx:191
 #: src/screens/Messages/components/MessageInput.tsx:192
 #: src/screens/Messages/components/MessageInput.web.tsx:235
 msgid "Send message"
@@ -9049,6 +9095,10 @@ msgstr "प्रत्यक्ष सन्देश मार्फत पठ
 #: src/view/com/modals/DeleteAccount.tsx:147
 msgid "Sends email with confirmation code for account deletion"
 msgstr "खाता मेटाउनेको लागि पुष्टि कोड सहित इमेल पठाउँछ"
+
+#: src/screens/BookClubs/BookClubChat.tsx:192
+msgid "Sends your message to the chat"
+msgstr ""
 
 #: src/components/contacts/screens/PhoneInput.tsx:282
 msgid "Sent to our phone number verification provider Plivo"
@@ -9563,7 +9613,7 @@ msgid "Sorry, we're unable to load account suggestions at this time."
 msgstr ""
 
 #: src/App.native.tsx:137
-#: src/App.web.tsx:139
+#: src/App.web.tsx:140
 msgid "Sorry! Your session expired. Please sign in again."
 msgstr ""
 
@@ -9811,24 +9861,24 @@ msgstr ""
 msgid "Switch to {0}"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:85
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:90
 msgid "Sync failed. Please try again."
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:109
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:123
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:112
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:126
 msgid "Sync from Goodreads"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:103
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:106
 msgid "Sync your latest shelves from Goodreads to keep your library up to date."
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:71
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:76
 msgid "Synced {0} books. {1} not found in catalog — we'll import them soon!"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:121
+#: src/view/shell/desktop/SidebarGoodreadsSync.tsx:124
 msgid "Syncing..."
 msgstr ""
 
@@ -10616,6 +10666,7 @@ msgstr "टीभी"
 msgid "Two-factor authentication (2FA)"
 msgstr "दुई-कारक प्रमाणीकरण (2FA)"
 
+#: src/screens/BookClubs/BookClubChat.tsx:173
 #: src/screens/Messages/components/MessageInput.tsx:153
 msgid "Type your message here"
 msgstr "यहाँ तपाईंको सन्देश टाइप गर्नुहोस्"
@@ -11309,6 +11360,10 @@ msgstr "पूरा थ्रेड हेर्नुहोस्"
 msgid "View information about these labels"
 msgstr "यी लेबलहरूको जानकारी हेर्नुहोस्"
 
+#: src/screens/BookClubs/BookClubChat.tsx:109
+msgid "View members"
+msgstr ""
+
 #: src/components/interstitials/TrendingVideos.tsx:199
 #: src/components/interstitials/TrendingVideos.tsx:221
 #: src/screens/Search/modules/ExploreTrendingVideos.tsx:190
@@ -11716,11 +11771,15 @@ msgstr ""
 msgid "Would you like to save this as a draft to edit later?"
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:250
+#: src/screens/BookClubs/BookClubChat.tsx:172
 #: src/screens/Messages/components/MessageInput.tsx:154
 #: src/screens/Messages/components/MessageInput.web.tsx:214
 msgid "Write a message"
 msgstr "सन्देश लेख्नुहोस्"
+
+#: src/screens/BookClubs/BookClubChat.tsx:180
+msgid "Write a message..."
+msgstr ""
 
 #: src/view/screens/Profile.tsx:435
 #: src/view/screens/Profile.tsx:436
@@ -11911,7 +11970,6 @@ msgstr ""
 msgid "You cannot update your birthdate while using an app password. Please sign in with your main password to update your birthdate."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:201
 #: src/screens/BookClubs/BookClubSidebar.tsx:208
 msgid "You created this club"
 msgstr ""
@@ -12102,7 +12160,7 @@ msgstr "QR कोड बचत गर्नको लागि तपाईं�
 msgid "You need to allow access to your media library."
 msgstr ""
 
-#: src/screens/BookClubs/BookClubDetailScreen.tsx:96
+#: src/screens/BookClubs/BookClubDetailScreen.tsx:108
 msgid "You need to be a member of this bookclub to view it."
 msgstr ""
 

@@ -137,6 +137,9 @@ export const MAX_POST_LINES = 25
 export const BSKY_APP_ACCOUNT_DID = 'did:plc:z72i7hdynmk6r22z27h6tvur'
 export const READS_AT_ACCOUNT_DID = 'did:plc:j62tft4dizsntyugubmw43t4'
 
+export const FREEQ_WS_URL = 'wss://chat.reads.at/irc'
+export const FREEQ_API_URL = 'https://chat.reads.at/api/v1'
+
 export const BSKY_FEED_OWNER_DIDS = [
   BSKY_APP_ACCOUNT_DID,
   'did:plc:vpkhqolt662uhesyj6nxm7ys',
