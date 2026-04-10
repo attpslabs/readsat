@@ -76,7 +76,7 @@ export function BookClubDetailScreen({route}: Props) {
         <Layout.Header.Slot />
       </Layout.Header.Outer>
 
-      <View style={[a.flex_1]}>
+      <Layout.Center style={[a.flex_1]}>
         {isLoading || isMembershipLoading ? (
           <View style={[a.flex_1, a.align_center, a.justify_center]}>
             <Loader size="xl" />
@@ -224,7 +224,7 @@ export function BookClubDetailScreen({route}: Props) {
             />
           </View>
         ) : null}
-      </View>
+      </Layout.Center>
     </Layout.Screen>
   )
 }
